@@ -13,8 +13,14 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@revisão
+- ed@busca-em-profundidade
 - ed@side-quests
-tasks: {}
+- ed@main-quest
+- ed@recursão
+tasks:
+  ed@pintando: '{rate:100}'
+  ed@mumia: '{rate:100}'
 flags:
   painel: 0
   quests: 0
@@ -23,4 +29,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@recursão-extra
+selected: ed@fuga

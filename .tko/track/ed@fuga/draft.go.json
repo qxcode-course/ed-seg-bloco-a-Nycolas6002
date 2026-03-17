@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_22-16-02",
+            "content": "@@ -111,32 +111,8 @@\n &d)%0A\n-    fmt.Println(h,p,f,d)\n %0A   \n@@ -116,19 +116,16 @@\n     %0A   \n- //\n  if(d ==\n@@ -135,23 +135,20 @@\n )%7B%0A%0A    \n-//\n     \n- \n for i :=\n@@ -165,27 +165,24 @@\n ; i-- %7B%0A%0A   \n- //\n          if \n@@ -189,27 +189,24 @@\n f == h %7B%0A   \n- //\n             \n@@ -222,27 +222,24 @@\n tln(%22S%22)%0A   \n- //\n          %7D%0A%0A\n@@ -241,19 +241,16 @@\n   %7D%0A%0A   \n- //\n      %7D%0A%0A\n@@ -256,11 +256,8 @@\n %0A   \n- //\n  %7D%0A%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-16_22-16-36",
+            "content": "@@ -36,19 +36,16 @@\n () %7B%0A   \n- //\n  fmt.Pri\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-16_22-16-47",
+            "content": "@@ -138,164 +138,8 @@\n f,d)\n-%0A%0A    if(d == -1)%7B%0A        modulo := 16 %25 f%0A        posicao := f - modulo%0A        if(posicao == h)%7B%0A            fmt.Println(%22S%22)%0A        %7D%0A    %7Delse%7B%0A%0A    %7D\n %0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-16_22-33-17",
+            "content": "@@ -109,27 +109,24 @@\n p,&f,&d)%0A   \n- //\n  fmt.Println\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-16_22-33-39",
+            "content": "@@ -270,52 +270,8 @@\n S%22)%0A\n-        %7Delse%7B%0A            fmt.Println(%22N%22)%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-16_22-34-09",
+            "content": "@@ -264,24 +264,16 @@\n ntln(%22S%22\n-,posicao\n )%0A      \n@@ -312,16 +312,8 @@\n (%22N%22\n-,posicao\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_22-34-27",
+            "content": "@@ -175,17 +175,17 @@\n ulo := 1\n-5\n+6\n  %25 f%0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_22-34-38",
+            "content": "@@ -33,16 +33,46 @@\n ain() %7B%0A\n+    // fmt.Println(%22qxcode%22)%0A%0A\n     var \n@@ -174,28 +174,30 @@\n dulo := \n-%25 16\n+15 %25 f\n %0A       \n  // posi\n@@ -188,19 +188,16 @@\n %0A       \n- //\n  posicao\n@@ -218,19 +218,16 @@\n %0A       \n- //\n  if(posi\n@@ -236,35 +236,32 @@\n o == h)%7B%0A       \n- //\n      fmt.Println\n@@ -281,19 +281,16 @@\n %0A       \n- //\n  %7Delse%7B%0A\n@@ -296,19 +296,16 @@\n %0A       \n- //\n      fmt\n@@ -333,19 +333,16 @@\n %0A       \n- //\n  %7D%0A    %7D\n@@ -351,83 +351,8 @@\n se%7B%0A\n-                // 7%0A        posicao := f %25 16%0A        fmt.Println(posicao)\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_22-46-52",
+            "content": "@@ -133,19 +133,16 @@\n %0A       \n- //\n  modulo \n@@ -139,26 +139,24 @@\n    modulo :=\n- f\n  %25 16%0A      \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_22-47-03",
+            "content": "@@ -382,15 +382,9 @@\n  := \n-(f + h)\n+f\n  %25 1\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_22-56-26",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var h,p,f,d int\n\n    fmt.Scan(&h,&p,&f,&d)\n    // fmt.Println(h,p,f,d)\n\n    if(d == -1){\n        // modulo := f % 16\n        // posicao := f - modulo\n        // if(posicao == h){\n        //     fmt.Println(\"S\",posicao)\n        // }else{\n        //     fmt.Println(\"N\",posicao)\n        // }\n    }else{\n                // 7\n        posicao := (f + h) % 16\n        fmt.Println(posicao)\n    }\n    \n    // if(d == -1){\n\n    //     for i := f; i < 15; i-- {\n\n    //         if f == h {\n    //             fmt.Println(\"S\")\n    //         }\n\n    //     }\n\n    // }\n}\n",
+            "lines": "34"
+        }
+    ]
+}
