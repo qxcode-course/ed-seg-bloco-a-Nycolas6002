@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_13-56-07",
+            "content": "@@ -261,38 +261,16 @@\n     \n-listaDeCartas%5Bcarta%5D++\n %0A       \n  // \n@@ -265,19 +265,16 @@\n %0A       \n- //\n  if(list\n@@ -295,35 +295,32 @@\n a%5D %3E 0)%7B%0A       \n- //\n      listaDeCart\n@@ -338,19 +338,16 @@\n %0A       \n- //\n  %7Delse%7B%0A\n@@ -353,19 +353,16 @@\n %0A       \n- //\n      lis\n@@ -394,11 +394,8 @@\n     \n- //\n  %7D%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-18_13-56-54",
+            "content": "@@ -74,17 +74,16 @@\n uel int%0A\n-%0A\n     fmt.\n@@ -123,203 +123,8 @@\n el)%0A\n-    %0A    figBaruel := make(%5B%5Dint, qtdCartasBaruel)%0A%0A    for i := 0; i %3C qtdCartasBaruel; i++ %7B%0A        fmt.Scan(&figBaruel%5Bi%5D)%0A    %7D%0A%0A    fmt.Println(figBaruel)%0A%0A    %0A%7D%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A/*%0A%0A%0A\n     \n@@ -444,320 +444,8 @@\n %0A   \n- var repetidas bool%0A%0A    for i := 0; i %3C qtdCartasBaruel; i++ %7B%0A        %0A        if()%7B%0A            repetidas = true%0A        %7D%0A    %7D%0A%0A    // cartasFaltosas := make(%5B%5Dint)%0A%0A    // for i := 1; i %3C= qtdTotalFig; i++ %7B%0A    //     if(listaDeCartas%5Bi%5D %3C 0)%7B%0A    //         fmt.Println(%22N%22)%0A    //     %7D%0A    // %7D%0A%0A    //\n  fmt\n@@ -472,7 +472,6 @@\n as)%0A\n+%7D\n %0A\n-*/\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-18_22-47-30",
+            "content": "@@ -286,38 +286,8 @@\n l)%0A%0A\n-    fmt.Println(figBaruel%5B1%5D)%0A\n     \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-18_22-48-25",
+            "content": "@@ -129,21 +129,19 @@\n    %0A    \n-album\n+fig\n Baruel :\n@@ -175,139 +175,50 @@\n el)%0A\n+%0A\n     f\n-igurasRepetidas := make(%5B%5Dint, 0, qtdCartasBaruel)%0A    figurasUnicas := make(map%5Bint%5Dbool)%0A%0A    for i := range qtdCartasBaruel\n+or i := 0; i %3C qtdCartasBaruel; i++ \n %7B%0A  \n@@ -233,21 +233,19 @@\n t.Scan(&\n-album\n+fig\n Baruel%5Bi\n@@ -263,444 +263,60 @@\n    f\n-or _, figura := range albumBaruel%7B%0A        if(figurasUnicas%5Bfigura%5D)%7B%0A            // 1%0A            figurasRepetidas = append(figurasRepetidas, figura)%0A            %0A        %7Delse%7B%0A            figurasUnicas%5Bfigura%5D = true%0A        %7D%0A    %7D%0A%0A        if(len(figurasRepetidas) == 0)%7B%0A            fmt.Println(%220%22)%0A        %7Delse%7B%0A            for _, valor := range figurasRepetidas%7B%0A                fmt.Printf(%22%25v %22,valor)%0A            %7D%0A        %7D\n+mt.Println(figBaruel)%0A%0A    fmt.Println(figBaruel%5B1%5D)\n %0A   \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-18_23-22-10",
+            "content": "@@ -650,25 +650,25 @@\n mt.Println(%22\n-N\n+0\n %22)%0A        %7D\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-03-18_23-22-34",
+            "content": "@@ -792,220 +792,8 @@\n    %7D\n-%0A%0A        for i := 1; i %3C= qtdTotalFig; i++ %7B%0A            %0A            // figuraFaltosa, existe := figurasUnicas%5Bi%5D%0A%0A            if(figurasUnicas%5Bi%5D)%7B%0A                fmt.Println(%22teste%22)%0A            %7D%0A%0A        %7D\n %0A   \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-03-18_23-28-28",
+            "content": "@@ -924,9 +924,8 @@\n  if(\n-!\n figu\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-03-18_23-29-22",
+            "content": "@@ -969,19 +969,18 @@\n rint\n-f(%22%25v %5Cn%22,i\n+ln(%22teste%22\n )%0A  \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-03-18_23-29-52",
+            "content": "@@ -794,33 +794,8 @@\n  %7D%0A%0A\n-        fmt.Println(%22%22)%0A%0A\n     \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-03-18_23-30-12",
+            "content": "@@ -689,17 +689,17 @@\n     for \n-i\n+_\n , valor \n@@ -729,88 +729,8 @@\n as%7B%0A\n-                if(i != 0)%7B%0A                    fmt.Print(%22%22)%0A                %7D%0A\n     \n@@ -755,16 +755,17 @@\n intf(%22%25v\n+ \n %22,valor)\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-03-18_23-32-11",
+            "content": "@@ -784,17 +784,16 @@\n .Print(%22\n- \n %22)%0A     \n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-03-18_23-32-28",
+            "content": "@@ -351,25 +351,8 @@\n  %7D%0A%0A\n-    //repetidos%0A%0A\n     \n@@ -418,24 +418,41 @@\n s%5Bfigura%5D)%7B%0A\n+            // 1%0A\n             \n@@ -750,36 +750,12 @@\n f(i \n-== len(figurasRepetidas) -1 \n+!= 0\n )%7B%0A \n@@ -783,21 +783,19 @@\n t.Print(\n-valor\n+%22 %22\n )%0A      \n@@ -836,17 +836,16 @@\n intf(%22%25v\n- \n %22,valor)\n@@ -870,25 +870,24 @@\n      %7D%0A%0A\n-%0A\n         \n //unicos\n@@ -882,16 +882,23 @@\n     \n-//unicos\n+fmt.Println(%22%22)\n %0A%0A  \n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-03-18_23-36-06",
+            "content": "@@ -746,17 +746,18 @@\n    if(i \n-%3C\n+==\n  len(fig\n@@ -810,16 +810,9 @@\n rint\n-f(%22%25v %22,\n+(\n valo\n@@ -862,18 +862,17 @@\n intf(%22%25v\n-%5Cn\n+ \n %22,valor)\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-03-18_23-36-46",
+            "content": "@@ -805,17 +805,24 @@\n mt.Print\n-(\n+f(%22%25v %22,\n valor)%0A \n@@ -860,33 +860,34 @@\n   fmt.Printf(%22%25v\n- \n+%5Cn\n %22,valor)%0A       \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-03-18_23-37-18",
+            "content": "@@ -787,32 +787,33 @@\n                 \n+ \n fmt.Printf(%22%25v %22\n@@ -809,16 +809,9 @@\n rint\n-f(%22%25v %22,\n+(\n valo\n@@ -839,32 +839,55 @@\n                 \n+fmt.Printf(%22%25v %22,valor)\n %0A            %7D%0A \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-03-18_23-37-50",
+            "content": "@@ -840,71 +840,8 @@\n    %7D\n-else%7B%0A                    fmt.Println(valor)%0A                %7D%0A\n %0A   \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-03-18_23-38-11",
+            "content": "@@ -891,32 +891,33 @@\n               %7D%0A\n+%0A\n                 \n@@ -1142,16 +1142,18 @@\n ntf(%22%25v \n+%5Cn\n %22,i)%0A   \n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-03-18_23-38-58",
+            "content": "@@ -962,60 +962,8 @@\n icos\n-%0A        figFaltantes := make(%5B%5Dint, 0 ,qtdTotalFig)\n %0A%0A  \n@@ -1131,401 +1131,27 @@\n    f\n-igFaltantes = append(figFaltantes, i)%0A            %7D%0A%0A        %7D%0A%0A%0A        //imprimindo figuras faltantes%0A%0A        if (len(figFaltantes) == 0) %7B%0A            fmt.Println(%22N%22)%0A        %7Delse%7B%0A            for i, valor := range figFaltantes%7B%0A                if(i %3C len(figFaltantes) - 1)%7B%0A                    fmt.Printf(%22%25v %22, valor)%0A                %7Delse%7B%0A                    fmt.Println(valor)%0A    \n+mt.Printf(%22%25v %22,i)%0A\n     \n@@ -1160,29 +1160,16 @@\n       %7D%0A\n-            %7D\n %0A       \n@@ -1167,25 +1167,24 @@\n %0A%0A        %7D%0A\n-%0A\n     %0A%7D%0A%0A%0A%0A%0A%0A\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-03-18_23-46-45",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtdTotalFig, qtdCartasBaruel int\n\n    fmt.Scan(&qtdTotalFig, &qtdCartasBaruel)\n    \n    albumBaruel := make([]int, qtdCartasBaruel)\n    figurasRepetidas := make([]int, 0, qtdCartasBaruel)\n    figurasUnicas := make(map[int]bool)\n\n    for i := range qtdCartasBaruel{\n        fmt.Scan(&albumBaruel[i])\n    }\n\n    //repetidos\n\n    for _, figura := range albumBaruel{\n        if(figurasUnicas[figura]){\n            figurasRepetidas = append(figurasRepetidas, figura)\n            \n        }else{\n            figurasUnicas[figura] = true\n        }\n    }\n\n        if(len(figurasRepetidas) == 0){\n            fmt.Println(\"N\")\n        }else{\n            for i, valor := range figurasRepetidas{\n                if(i < len(figurasRepetidas) -1 ){\n                   fmt.Printf(\"%v \",valor)\n                }else{\n                    fmt.Println(valor)\n                }\n                \n            }\n        }\n\n\n        //unicos\n        figFaltantes := make([]int, 0 ,qtdTotalFig)\n\n        for i := 1; i <= qtdTotalFig; i++ {\n            \n            // figuraFaltosa, existe := figurasUnicas[i]\n\n            if(!figurasUnicas[i]){\n                figFaltantes = append(figFaltantes, i)\n            }\n\n        }\n\n\n        //imprimindo figuras faltantes\n\n        if (len(figFaltantes) == 0) {\n            fmt.Println(\"N\")\n        }else{\n            for i, valor := range figFaltantes{\n                if(i < len(figFaltantes) - 1){\n                    fmt.Printf(\"%v \", valor)\n                }else{\n                    fmt.Println(valor)\n                }\n            }\n        }\n\n    \n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*\n\n\n    listaDeCartas := make(map[int]int)\n\n    for i := 0; i < qtdCartasBaruel; i++ {\n        var carta int\n        fmt.Scan(&carta)\n        listaDeCartas[carta]++\n        // if(listaDeCartas[carta] > 0){\n        //     listaDeCartas[carta]++\n        // }else{\n        //     listaDeCartas[carta] = 1\n        // }\n    }\n\n    var repetidas bool\n\n    for i := 0; i < qtdCartasBaruel; i++ {\n        \n        if(){\n            repetidas = true\n        }\n    }\n\n    // cartasFaltosas := make([]int)\n\n    // for i := 1; i <= qtdTotalFig; i++ {\n    //     if(listaDeCartas[i] < 0){\n    //         fmt.Println(\"N\")\n    //     }\n    // }\n\n    // fmt.Println(listaDeCartas)\n\n*/",
+            "lines": "127"
+        }
+    ]
+}

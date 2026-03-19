@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_00-26-59",
+            "content": "@@ -305,17 +305,17 @@\n lano%5Bi%5D.\n-y\n+x\n )%0A%0A    %7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-19_00-27-18",
+            "content": "@@ -203,11 +203,8 @@\n as, \n-0 ,\n qtdG\n@@ -209,16 +209,16 @@\n dGomos)%0A\n+\n %0A%0A%0A%0A    \n@@ -253,29 +253,8 @@\n + %7B%0A\n-        var x, y int%0A\n     \n@@ -271,24 +271,8 @@\n an(&\n-x, &y)%0A%0A        \n pont\n@@ -284,18 +284,16 @@\n lano\n- = append(\n+%5Bi%5D.x, &\n pont\n@@ -305,32 +305,15 @@\n lano\n-, coordenadas%7Bx:x, y:y%7D)\n+%5Bi%5D.y)%0A\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-19_00-29-37",
+            "content": "@@ -152,17 +152,16 @@\n tdGomos,\n-&\n dir)%0A%0A  \n@@ -214,16 +214,18 @@\n omos)%0A%0A%0A\n+%0A%0A\n     for \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-19_00-30-32",
+            "content": "@@ -267,80 +267,40 @@\n var \n-coordenadaX, coordenadaY int%0A        fmt.Scan(&coordenadaX, &coordenadaY\n+x, y int%0A        fmt.Scan(&x, &y\n )%0A%0A \n@@ -362,34 +362,14 @@\n s%7Bx:\n-coordenadaX, y:coordenadaY\n+x, y:y\n %7D)%0A \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-19_00-31-24",
+            "content": "@@ -442,309 +442,35 @@\n     \n-// switch(dir)%7B%0A    //     case %22U%22:%0A%0A    //     case %22D%22:%0A%0A    //     case %22L%22:%0A    //         for i := 0; i %3C qtdGomos; i++ %7B%0A    //             pontosNoPlano%5Bi%5D.x--%0A    //         %7D%0A%0A    //     case %22R%22:%0A    // %7D%0A%0A    for _, valor := range pontosNoPlano%7B%0A        fmt.Println(valor.x, valor.y)%0A    %7D\n+fmt.Println(pontosNoPlano)%0A\n %0A%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-19_00-36-49",
+            "content": "@@ -437,16 +437,19 @@\n   %7D%0A%0A   \n+ //\n  switch(\n@@ -453,24 +453,27 @@\n ch(dir)%7B%0A   \n+ //\n      case %22U\n@@ -475,24 +475,27 @@\n se %22U%22:%0A%0A   \n+ //\n      case %22D\n@@ -498,28 +498,31 @@\n e %22D%22:%0A%0A    \n+//\n     \n+ \n case %22L%22:%0A  \n@@ -523,24 +523,26 @@\n L%22:%0A    \n+//\n         \n for i :=\n@@ -529,24 +529,25 @@\n   //        \n+ \n for i := 0; \n@@ -565,24 +565,27 @@\n s; i++ %7B%0A   \n+ //\n             \n@@ -605,24 +605,27 @@\n o%5Bi%5D.x--%0A   \n+ //\n          %7D%0A%0A\n@@ -623,24 +623,27 @@\n       %7D%0A%0A   \n+ //\n      case %22R\n@@ -644,24 +644,27 @@\n ase %22R%22:%0A   \n+ //\n  %7D%0A%0A    for \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-19_00-37-06",
+            "content": "@@ -473,216 +473,26 @@\n U%22:%0A\n-            for i := 0; i %3C qtdGomos; i++ %7B%0A                pontosNoPlano%5Bi%5D.y--%0A            %7D%0A%0A        case %22D%22:%0A            for i := 0; i %3C qtdGomos; i++ %7B%0A                pontosNoPlano%5Bi%5D.y++%0A            %7D\n+%0A        case %22D%22:\n %0A%0A  \n@@ -625,103 +625,8 @@\n R%22:%0A\n-            for i := 0; i %3C qtdGomos; i++ %7B%0A                pontosNoPlano%5Bi%5D.x++%0A            %7D%0A\n     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-19_00-38-13",
+            "content": "@@ -472,35 +472,32 @@\n %22U%22:%0A           \n- //\n  for i := 0; i %3C\n@@ -516,35 +516,32 @@\n ++ %7B%0A           \n- //\n      pontosNoPla\n@@ -553,35 +553,32 @@\n .y--%0A           \n- //\n  %7D%0A%0A        case\n@@ -586,35 +586,32 @@\n %22D%22:%0A           \n- //\n  for i := 0; i %3C\n@@ -630,35 +630,32 @@\n ++ %7B%0A           \n- //\n      pontosNoPla\n@@ -675,19 +675,16 @@\n         \n- //\n  %7D%0A%0A    \n@@ -775,152 +775,9 @@\n ano%5B\n-0%5D.x--%0A                %0A                tempA := pontosNoPlano%5Bi%5D.x%0A                tempB := pontosNoPlano%5Bi%5D.y%0A%0A                pontosNoPlano%5B0\n+i\n %5D.x-\n@@ -822,19 +822,16 @@\n         \n- //\n  for i :\n@@ -866,19 +866,16 @@\n         \n- //\n      pon\n@@ -903,19 +903,16 @@\n         \n- //\n  %7D%0A    %7D\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-19_18-14-44",
+            "content": "@@ -796,17 +796,16 @@\n %5B0%5D.x--%0A\n-%0A\n         \n@@ -816,35 +816,8 @@\n     \n-tempX := pontosNoPlano%5Bi%5D.x\n %0A   \n@@ -833,17 +833,17 @@\n     temp\n-Y\n+A\n  := pont\n@@ -859,11 +859,12 @@\n %5Bi%5D.\n-y%0A%0A\n+x%0A  \n     \n@@ -865,33 +865,40 @@\n                 \n- \n+tempB :=\n  pontosNoPlano%5Bi\n@@ -903,17 +903,10 @@\n %5Bi%5D.\n-x = tempX\n+y%0A\n %0A   \n@@ -936,20 +936,14 @@\n ano%5B\n-i%5D.y = tempY\n+0%5D.x--\n %0A   \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-03-19_18-15-32",
+            "content": "@@ -789,17 +789,17 @@\n NoPlano%5B\n-i\n+0\n %5D.x--%0A%0A \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-03-19_18-16-10",
+            "content": "@@ -719,47 +719,8 @@\n L%22:%0A\n-             pontosNoPlano%5B0%5D.x--%0A     \n     \n@@ -735,45 +735,34 @@\n for \n- \n i := \n-1\n+0\n ; i %3C\n-= len(pontosNoPlano)\n+ qtdGomos\n ; i++\n+ \n %7B%0A  \n@@ -778,22 +778,8 @@\n     \n-     pAtual :=\n  pon\n@@ -794,215 +794,26 @@\n no%5Bi\n- -1%5D%0A                    fmt.Println(pAtual.x, pAtual.y)%0A                    // fmt.Println(valor.x, valor.y)%0A                %7D%0A%0A            // for i := 0; i %3C qtdGomos; i++ %7B%0A               %0A%0A            //\n+%5D.x--%0A%0A           \n     \n@@ -848,27 +848,24 @@\n %0A           \n- //\n      tempY :\n@@ -889,35 +889,32 @@\n %5D.y%0A%0A           \n- //\n      pontosNoPla\n@@ -933,39 +933,36 @@\n mpX%0A            \n-//\n     \n- \n pontosNoPlano%5Bi%5D\n@@ -975,35 +975,32 @@\n empY%0A           \n- //\n  %7D%0A%0A        case\n@@ -1115,27 +1115,24 @@\n %7D%0A    %7D%0A%0A   \n- //\n  for _, valo\n@@ -1161,23 +1161,20 @@\n no%7B%0A    \n-//\n     \n- \n fmt.Prin\n@@ -1198,19 +1198,16 @@\n r.y)%0A   \n- //\n  %7D%0A%0A%7D%0A%0A \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-03-19_18-27-07",
+            "content": "@@ -726,19 +726,16 @@\n         \n- //\n   pontos\n@@ -776,16 +776,23 @@\n r  i := \n+1; i %3C=\n  len(pon\n@@ -809,89 +809,165 @@\n ); i\n- %3E 0; i--%7B%0A                    fmt.Println(pontosNoPlano%5Bi%5D.x, pontosNoPlano%5Bi%5D.x\n+++%7B%0A                    pAtual := pontosNoPlano%5Bi -1%5D%0A                    fmt.Println(pAtual.x, pAtual.y)%0A                    // fmt.Println(valor.x, valor.y\n )%0A  \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-19_18-29-42",
+            "content": "@@ -802,12 +802,8 @@\n ano)\n- - 1\n ; i \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-19_18-29-49",
+            "content": "@@ -807,17 +807,16 @@\n - 1; i %3E\n-=\n  0; i--%7B\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-19_18-30-18",
+            "content": "@@ -807,16 +807,17 @@\n - 1; i %3E\n+=\n  0; i--%7B\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-19_18-31-14",
+            "content": "@@ -820,66 +820,8 @@\n --%7B%0A\n-                    pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A\n     \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-19_18-32-09",
+            "content": "@@ -718,32 +718,35 @@\n %22L%22:%0A           \n+ //\n   pontosNoPlano%5B\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-19_18-32-37",
+            "content": "@@ -726,19 +726,16 @@\n         \n- //\n   pontos\n@@ -890,19 +890,16 @@\n         \n- //\n  fmt.Pri\n@@ -1359,24 +1359,27 @@\n %7D%0A    %7D%0A%0A   \n+ //\n  for _, valo\n@@ -1404,28 +1404,31 @@\n oPlano%7B%0A    \n+//\n     \n+ \n fmt.Println(\n@@ -1444,24 +1444,27 @@\n valor.y)%0A   \n+ //\n  %7D%0A%0A%7D%0A%0A    /\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-19_18-34-28",
+            "content": "@@ -970,47 +970,8 @@\n    %7D\n-%0A                  pontosNoPlano%5B0%5D.x--\n %0A%0A  \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-19_18-35-01",
+            "content": "@@ -473,176 +473,8 @@\n U%22:%0A\n-            for  i :=  len(pontosNoPlano) - 1; i %3E 0; i--%7B%0A                    pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A            %7D%0A                pontosNoPlano%5B0%5D.y--%0A\n     \n@@ -699,197 +699,8 @@\n // %7D\n-%0A                             for  i :=  len(pontosNoPlano) - 1; i %3E 0; i--%7B%0A                    pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A                %7D%0A                pontosNoPlano%5B0%5D.y++\n %0A%0A  \n@@ -882,34 +882,111 @@\n                 \n-%7D%0A\n+    // fmt.Println(pontosNoPlano%5Bi%5D.x, pontosNoPlano%5Bi%5D.x)%0A                %7D%0A  \n                 \n@@ -1402,197 +1402,8 @@\n / %7D%0A\n-                             for  i :=  len(pontosNoPlano) - 1; i %3E 0; i--%7B%0A                    pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A                %7D%0A                pontosNoPlano%5B0%5D.x++%0A\n     \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-19_18-36-49",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -47,19 +47,24 @@\n ruct\n- \n %7B%0A\n-%09\n+    \n x int%0A\n-%09\n+    \n y in\n@@ -68,16 +68,17 @@\n  int%0A%7D%0A%0A\n+%0A\n func mai\n@@ -83,18 +83,25 @@\n ain() %7B%0A\n-%0A%09\n+    %0A    \n var qtdG\n@@ -109,17 +109,20 @@\n mos int%0A\n-%09\n+    \n var dir \n@@ -129,17 +129,20 @@\n string%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -156,17 +156,19 @@\n mos,\n- \n &dir)%0A%0A\n-%09\n+    \n pont\n@@ -201,18 +201,18 @@\n nadas, 0\n-,\n  \n+,\n qtdGomos\n@@ -214,17 +214,21 @@\n Gomos)%0A%0A\n-%09\n+%0A    \n for i :=\n@@ -251,18 +251,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n var coor\n@@ -292,18 +292,24 @@\n daY int%0A\n-%09%09\n+        \n fmt.Scan\n@@ -338,18 +338,24 @@\n nadaY)%0A%0A\n-%09%09\n+        \n pontosNo\n@@ -398,17 +398,16 @@\n nadas%7Bx:\n- \n coordena\n@@ -413,17 +413,16 @@\n adaX, y:\n- \n coordena\n@@ -431,27 +431,40 @@\n Y%7D)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n switch\n- dir %7B%0A%09\n+(dir)%7B%0A        \n case\n@@ -469,26 +469,38 @@\n se %22U%22:%0A\n-%09%09\n+            \n for \n+ \n i :=\n+ \n  len(pon\n@@ -518,38 +518,54 @@\n  - 1; i %3E 0; i--\n- \n %7B%0A\n-%09%09%09\n+                    \n pontosNoPlano%5Bi%5D\n@@ -590,57 +590,325 @@\n -1%5D%0A\n-%09%09%7D%0A%09%09pontosNoPlano%5B0%5D.y--%0A%0A%09case %22D%22:%0A%09%09for i :=\n+            %7D%0A                pontosNoPlano%5B0%5D.y--%0A            // for i := 0; i %3C qtdGomos; i++ %7B%0A            //     pontosNoPlano%5Bi%5D.y--%0A            // %7D%0A%0A        case %22D%22:%0A            // for i := 0; i %3C qtdGomos; i++ %7B%0A            //     pontosNoPlano%5Bi%5D.y++%0A            // %7D%0A                             for  i := \n  len\n@@ -930,38 +930,54 @@\n  - 1; i %3E 0; i--\n- \n %7B%0A\n-%09%09%09\n+                    \n pontosNoPlano%5Bi%5D\n@@ -990,38 +990,66 @@\n tosNoPlano%5Bi-1%5D%0A\n-%09%09%7D%0A%09%09\n+                %7D%0A                \n pontosNoPlano%5B0%5D\n@@ -1054,17 +1054,24 @@\n 0%5D.y++%0A%0A\n-%09\n+        \n case %22L%22\n@@ -1072,26 +1072,80 @@\n se %22L%22:%0A\n-%09%09\n+            //  pontosNoPlano%5B0%5D.x--%0A                 \n for \n+ \n i :=\n+ \n  len(pon\n@@ -1163,38 +1163,54 @@\n  - 1; i %3E 0; i--\n- \n %7B%0A\n-%09%09%09\n+                    \n pontosNoPlano%5Bi%5D\n@@ -1235,58 +1235,494 @@\n -1%5D%0A\n-%09%09%7D%0A%09%09pontosNoPlano%5B0%5D.x--%0A%0A%09case %22R%22:%0A%0A%09%09\n+                %7D%0A                pontosNoPlano%5B0%5D.x--%0A%0A            // for i := 0; i %3C qtdGomos; i++ %7B%0A               %0A%0A            //     tempX := pontosNoPlano%5Bi%5D.x%0A            //     tempY := pontosNoPlano%5Bi%5D.y%0A%0A            //     pontosNoPlano%5Bi%5D.x = tempX%0A            //     pontosNoPlano%5Bi%5D.y = tempY%0A            // %7D%0A%0A        case %22R%22:%0A            // for i := 0; i %3C qtdGomos; i++ %7B%0A            //     pontosNoPlano%5Bi%5D.x++%0A            // %7D%0A                             \n for \n+ \n i :=\n+ \n  len\n@@ -1756,14 +1756,30 @@\n  i--\n- \n %7B%0A\n-%09%09%09\n+                    \n pont\n@@ -1816,14 +1816,42 @@\n -1%5D%0A\n-%09%09%7D%0A%09%09\n+                %7D%0A                \n pont\n@@ -1871,13 +1871,19 @@\n x++%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n for \n@@ -1917,13 +1917,18 @@\n lano\n- \n %7B%0A\n-%09%09\n+        \n fmt.\n@@ -1957,9 +1957,53 @@\n .y)%0A\n-%09%7D%0A%0A%7D\n+    %7D%0A%0A%7D%0A%0A    // for i := range gomos%7B%0A%0A    // %7D%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-19_18-37-42",
+            "content": "@@ -414,27 +414,24 @@\n case %22U%22:%0A%09%09\n-// \n for i := len\n@@ -458,35 +458,32 @@\n  i %3E 0; i-- %7B%0A%09%09\n-// \n %09pontosNoPlano%5Bi\n@@ -499,35 +499,32 @@\n sNoPlano%5Bi-1%5D%0A%09%09\n-// \n %7D%0A%09%09pontosNoPlan\n@@ -542,27 +542,24 @@\n case %22D%22:%0A%09%09\n-// \n for i := len\n@@ -586,35 +586,32 @@\n  i %3E 0; i-- %7B%0A%09%09\n-// \n %09pontosNoPlano%5Bi\n@@ -627,35 +627,32 @@\n sNoPlano%5Bi-1%5D%0A%09%09\n-// \n %7D%0A%09%09pontosNoPlan\n@@ -674,19 +674,16 @@\n  %22L%22:%0A%09%09\n-// \n for i :=\n@@ -714,35 +714,32 @@\n  i %3E 0; i-- %7B%0A%09%09\n-// \n %09pontosNoPlano%5Bi\n@@ -755,35 +755,32 @@\n sNoPlano%5Bi-1%5D%0A%09%09\n-// \n %7D%0A%09%09pontosNoPlan\n@@ -803,19 +803,16 @@\n %22R%22:%0A%0A%09%09\n-// \n for i :=\n@@ -851,19 +851,16 @@\n i-- %7B%0A%09%09\n-// \n %09pontosN\n@@ -896,11 +896,8 @@\n %5D%0A%09%09\n-// \n %7D%0A%09%09\n@@ -926,17 +926,17 @@\n %7D%0A%0A%09for \n-i\n+_\n , valor \n@@ -964,54 +964,8 @@\n o %7B%0A\n-        pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A\n %09%09fm\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-19_18-39-36",
+            "content": "@@ -395,103 +395,8 @@\n %09%7D%0A%0A\n-    for i := len(pontosNoPlano) - 1; i %3E 0; i-- %7B%0A%09%09%09pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A%09%7D%0A%0A\n %09swi\n@@ -966,9 +966,9 @@\n for \n-_\n+i\n , va\n@@ -996,16 +996,62 @@\n Plano %7B%0A\n+        pontosNoPlano%5Bi%5D = pontosNoPlano%5Bi-1%5D%0A\n %09%09fmt.Pr\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-19_18-41-36",
+            "content": "package main\n\nimport \"fmt\"\n\ntype coordenadas struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\n\tvar qtdGomos int\n\tvar dir string\n\n\tfmt.Scan(&qtdGomos, &dir)\n\n\tpontosNoPlano := make([]coordenadas, 0, qtdGomos)\n\n\tfor i := 0; i < qtdGomos; i++ {\n\t\tvar coordenadaX, coordenadaY int\n\t\tfmt.Scan(&coordenadaX, &coordenadaY)\n\n\t\tpontosNoPlano = append(pontosNoPlano, coordenadas{x: coordenadaX, y: coordenadaY})\n\t}\n\n    for i := len(pontosNoPlano) - 1; i > 0; i-- {\n\t\t\tpontosNoPlano[i] = pontosNoPlano[i-1]\n\t}\n\n\tswitch dir {\n\tcase \"U\":\n\t\t// for i := len(pontosNoPlano) - 1; i > 0; i-- {\n\t\t// \tpontosNoPlano[i] = pontosNoPlano[i-1]\n\t\t// }\n\t\tpontosNoPlano[0].y--\n\n\tcase \"D\":\n\t\t// for i := len(pontosNoPlano) - 1; i > 0; i-- {\n\t\t// \tpontosNoPlano[i] = pontosNoPlano[i-1]\n\t\t// }\n\t\tpontosNoPlano[0].y++\n\n\tcase \"L\":\n\t\t// for i := len(pontosNoPlano) - 1; i > 0; i-- {\n\t\t// \tpontosNoPlano[i] = pontosNoPlano[i-1]\n\t\t// }\n\t\tpontosNoPlano[0].x--\n\n\tcase \"R\":\n\n\t\t// for i := len(pontosNoPlano) - 1; i > 0; i-- {\n\t\t// \tpontosNoPlano[i] = pontosNoPlano[i-1]\n\t\t// }\n\t\tpontosNoPlano[0].x++\n\t}\n\n\tfor _, valor := range pontosNoPlano {\n\t\tfmt.Println(valor.x, valor.y)\n\t}\n\n}",
+            "lines": "61"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_18-27-28",
+            "content": "@@ -17,742 +17,52 @@\n ort \n-(%0A    %22fmt%22%0A    %22math%22%0A)%0A%0A%0Atype lancamentos struct %7B%0A    a int%0A    b int%0A%7D%0A%0Afunc main() %7B%0A    %0A    var numeroDeCompetidores int%0A    fmt.Scan(&numeroDeCompetidores)%0A%0A    var indiceDoCompetidorVencedor = -1%0A    var resultadoDoValorAbsoluto = 0%0A%0A    for i := 0; i %3C numeroDeCompetidores; i++%7B%0A        var a,b int%0A        fmt.Scan(&a,&b)%0A        if(a %3C 10 %7C%7C b %3C 10)%7B%0A            continue%0A        %7Delse%7B%7B%0A           var valorAbsoluto = math.Abs(a,b)%0A           if(valorAbsoluto %3E= float64(resultadoDoValorAbsoluto))%7B%0A                indiceDoCompetidorVencedor = i%0A           %7D%0A        %7D%0A%0A    %7D%0A%7D%0A%0A    if(indiceDoCompetidorVencedor == -1)%7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7Delse%7B%0A        fmt.Println(indiceDoCompetidorVencedor)%0A    %7D%0A%0A%7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_18-40-50",
+            "content": "@@ -40,19 +40,16 @@\n th%22%0A)%0A%0A%0A\n-// \n type lan\n@@ -66,19 +66,16 @@\n truct %7B%0A\n-// \n     a in\n@@ -76,19 +76,16 @@\n   a int%0A\n-// \n     b in\n@@ -90,11 +90,8 @@\n int%0A\n-// \n %7D%0A%0Af\n@@ -319,23 +319,19 @@\n var a,b \n-float64\n+int\n %0A       \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_18-41-12",
+            "content": "@@ -329,17 +329,16 @@\n   var a,\n- \n b float6\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_18-41-29",
+            "content": "@@ -332,28 +332,9 @@\n ar a\n- float64%0A        var\n+,\n  b f\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-17_18-41-52",
+            "content": "@@ -495,11 +495,9 @@\n bs(a\n- - \n+,\n b)%0A \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-17_18-42-30",
+            "content": "@@ -39,16 +39,78 @@\n ath%22%0A)%0A%0A\n+%0A// type lancamentos struct %7B%0A//     a int%0A//     b int%0A// %7D%0A%0A\n func mai\n@@ -328,17 +328,37 @@\n    var a\n-,\n+ float64%0A        var \n b float6\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-17_18-43-04",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"math\"\n)\n\nfunc main() {\n    \n    var numeroDeCompetidores int\n    fmt.Scan(&numeroDeCompetidores)\n\n    var indiceDoCompetidorVencedor = -1\n    var resultadoDoValorAbsoluto = 0\n\n    for i := 0; i < numeroDeCompetidores; i++{\n        var a,b float64\n        fmt.Scan(&a,&b)\n        if(a < 10 || b < 10){\n            continue\n        }else{{\n           var valorAbsoluto = math.Abs(a - b)\n           if(valorAbsoluto >= float64(resultadoDoValorAbsoluto)){\n                indiceDoCompetidorVencedor = i\n           }\n        }\n\n    }\n}\n\n    if(indiceDoCompetidorVencedor == -1){\n        fmt.Println(\"sem ganhador\")\n    }else{\n        fmt.Println(indiceDoCompetidorVencedor)\n    }\n\n}",
+            "lines": "36"
+        }
+    ]
+}

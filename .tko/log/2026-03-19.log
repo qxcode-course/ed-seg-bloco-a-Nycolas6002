@@ -1,0 +1,52 @@
+2026-03-19 00:26:59, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:34
+2026-03-19 00:27:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:34
+2026-03-19 00:29:37, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:36
+2026-03-19 00:30:32, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:34
+2026-03-19 00:31:24, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:34
+2026-03-19 00:36:49, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:48
+2026-03-19 00:37:06, EXEC, v:1, k:ed@gomos, mode:FULL, rate:16, size:48
+2026-03-19 00:38:13, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:57
+2026-03-19 00:38:47, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-19 00:38:55, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-19 00:39:00, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66
+2026-03-19 00:50:42, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-19 18:03:15, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-19 18:03:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66
+2026-03-19 18:14:44, EXEC, v:1, k:ed@gomos, mode:FULL, size:62, fail:COMP
+2026-03-19 18:15:32, EXEC, v:1, k:ed@gomos, mode:FULL, rate:16, size:63
+2026-03-19 18:16:10, EXEC, v:1, k:ed@gomos, mode:FULL, rate:16, size:63
+2026-03-19 18:27:07, EXEC, v:1, k:ed@gomos, mode:FULL, rate:16, size:70
+2026-03-19 18:29:42, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:68
+2026-03-19 18:29:49, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:68
+2026-03-19 18:30:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:68
+2026-03-19 18:31:14, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:68
+2026-03-19 18:32:09, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:69
+2026-03-19 18:32:37, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:69
+2026-03-19 18:34:28, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:69
+2026-03-19 18:35:01, EXEC, v:1, k:ed@gomos, mode:FULL, rate:33, size:70
+2026-03-19 18:36:49, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:81
+2026-03-19 18:37:42, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:57
+2026-03-19 18:37:43, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-19 18:39:34, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-19 18:39:36, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:58
+2026-03-19 18:41:36, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:61
+2026-03-19 18:42:04, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-19 18:43:57, SELF, v:1, k:ed@pintando, self:1, rate:100, study:10, friend:nao, concept:1, refactor:1
+2026-03-19 18:44:00, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-19 18:44:02, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-19 18:45:01, SELF, v:1, k:ed@mumia, self:1, rate:100, study:7, friend:nao, concept:1, problem:1
+2026-03-19 18:45:03, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-19 18:45:05, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-19 18:45:52, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-19 18:46:04, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-19 18:47:10, SELF, v:1, k:ed@fuga, self:1, rate:100, study:1000, friend:nao, concept:1, problem:1, code:1
+2026-03-19 18:47:10, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-19 18:47:11, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-19 18:47:34, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-19 18:47:36, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-19 18:48:34, SELF, v:1, k:ed@gomos, self:1, rate:100, study:80, friend:nao
+2026-03-19 18:49:07, SELF, v:1, k:ed@baruel, self:1, rate:100, study:70, friend:nao, concept:1
+2026-03-19 18:49:09, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-19 18:49:10, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-19 18:50:01, SELF, v:1, k:ed@casais, self:1, rate:100, study:40, friend:nao, concept:1
+2026-03-19 18:50:39, SELF, v:1, k:ed@pedra, self:1, rate:100, study:30, friend:nao, concept:1

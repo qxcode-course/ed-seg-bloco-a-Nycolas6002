@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_13-29-32",
+            "content": "@@ -250,32 +250,33 @@\n iste := animais%5B\n+-\n animal%5D %0A%0A      \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-30-04",
+            "content": "@@ -384,16 +384,17 @@\n animal%5D \n++\n = 1%0A    \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-30-35",
+            "content": "@@ -383,18 +383,20 @@\n %5Banimal%5D\n-++\n+ = 1\n %0A       \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-32-14",
+            "content": "@@ -387,12 +387,10 @@\n mal%5D\n- = 1\n+++\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-33-53",
+            "content": "@@ -360,41 +360,8 @@\n se%7B%0A\n-            fmt.Println(%22teste%22)%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-34-09",
+            "content": "@@ -237,19 +237,17 @@\n         \n-qtd\n+_\n , existe\n@@ -283,27 +283,14 @@\n  if(\n-qtd %3E 0 && \n existe\n-  \n )%7B%0A \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_13-37-33",
+            "content": "@@ -431,18 +431,20 @@\n %5Banimal%5D\n-++\n+ = 1\n %0A       \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_13-37-45",
+            "content": "@@ -246,9 +246,14 @@\n td, \n-_\n+existe\n  := \n@@ -288,16 +288,28 @@\n (qtd %3E 0\n+ && existe  \n )%7B%0A     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_13-39-12",
+            "content": "@@ -1,430 +1,119 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A    var qtdElementos int%0A    fmt.Scan(&qtdElementos)%0A%0A    animais := make(map%5Bint%5Dint)%0A    var pares int%0A%0A    for i := 0; i %3C qtdElementos; i++ %7B%0A        var animal int%0A        fmt.Scan(&animal)%0A%0A        qtd, _ := animais%5Banimal%5D %0A%0A        if(qtd %3E 0)%7B%0A            animais%5Banimal%5D--%0A            pares++%0A        %7Delse%7B%0A            animais%5Banimal%5D++%0A        %7D%0A    %7D%0A%0A    fmt.Println(pares)%0A%7D\n+@@ -317,10 +317,13 @@%0A mal%255D%0A---%0A+ -= 1%0A %250A   %0A@@ -366,16 +366,36 @@%0A         %0A+fmt.Println(%2522teste%2522)%0A %250A       \n %0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-18_13-39-52",
+            "content": "@@ -306,17 +306,16 @@\n animais%5B\n--\n animal%5D-\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-42-21",
+            "content": "@@ -240,11 +240,8 @@\n     \n- //\n  qtd\n@@ -280,25 +280,11 @@\n  if(\n- animais%5B-animal%5D\n+qtd\n  %3E 0\n@@ -302,24 +302,25 @@\n     animais%5B\n+-\n animal%5D--%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-44-31",
+            "content": "@@ -319,25 +319,24 @@\n     animais%5B\n--\n animal%5D--%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-44-41",
+            "content": "@@ -229,16 +229,55 @@\n nimal)%0A%0A\n+        // qtd, _ := animais%5Banimal%5D %0A%0A\n         \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-18_13-56-01",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtdElementos int\n    fmt.Scan(&qtdElementos)\n\n    animais := make(map[int]int)\n    var pares int\n\n    for i := 0; i < qtdElementos; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        if( animais[-animal] > 0){\n            animais[-animal]--\n            pares++\n        }else{\n            animais[animal]++\n        }\n    }\n\n    fmt.Println(pares)\n}\n",
+            "lines": "23"
+        }
+    ]
+}
