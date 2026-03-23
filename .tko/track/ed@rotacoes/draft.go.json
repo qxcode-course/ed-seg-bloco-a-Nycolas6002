@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_00-45-40",
+            "content": "@@ -300,242 +300,8 @@\n  %7D%0A%0A\n-    listaFinal := make(%5B%5Dint, tamanhoLista)%0A%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C len(listaDeNumeros); i++ %7B%0A        pos := (i + elementos) %25 len(listaDeNumeros)%0A        listaFinal%5Bpos%5D = listaDeNumeros%5Bi%5D%0A    %7D%0A    fmt.Print(%22%5D%22)%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-23_00-55-00",
+            "content": "@@ -551,17 +551,21 @@\n ln(lista\n-Final\n+DeNumeros\n )%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-23_00-55-42",
+            "content": "@@ -340,25 +340,41 @@\n oLista)%0A%0A   \n+ fmt.Print(%22%5B %22)\n %0A\n-\n     for i :=\n@@ -514,139 +514,8 @@\n    %7D\n-%0A%0A    //imprimindo%0A    fmt.Print(%22%5B %22)%0A   %0A    for i := 0; i %3C len(listaFinal); i++ %7B%0A        fmt.Printf(%22%25v %22,listaFinal%5B0%5D)%0A    %7D\n %0A   \n@@ -530,22 +530,19 @@\n nt(%22%5D%22)%0A\n+\n    \n- //\n  fmt.Pri\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-23_00-56-53",
+            "content": "@@ -616,17 +616,17 @@\n taFinal%5B\n-i\n+0\n %5D)%0A    %7D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_00-57-01",
+            "content": "@@ -639,18 +639,16 @@\n mt.Print\n-ln\n (%22%5D%22)%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_00-57-09",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var tamanhoLista, elementos int\n\n    fmt.Scan(&tamanhoLista,&elementos)\n\n    listaDeNumeros := make([]int, tamanhoLista)\n\n    for i := 0; i < len(listaDeNumeros); i++ {\n        // var valor int\n        fmt.Scan(&listaDeNumeros[i])\n        // listaDenu\n    }\n\n    listaFinal := make([]int, tamanhoLista)\n\n   \n    for i := 0; i < len(listaDeNumeros); i++ {\n        pos := (i + elementos) % len(listaDeNumeros)\n        listaFinal[pos] = listaDeNumeros[i]\n    }\n\n    //imprimindo\n    fmt.Print(\"[ \")\n   \n    for i := 0; i < len(listaFinal); i++ {\n        fmt.Printf(\"%v \",listaFinal[i])\n    }\n    fmt.Println(\"]\")\n    // fmt.Println(listaFinal)\n}\n",
+            "lines": "32"
+        }
+    ]
+}

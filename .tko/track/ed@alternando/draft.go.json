@@ -1,0 +1,229 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_18-27-18",
+            "content": "@@ -56,20 +56,21 @@\n oas, pos\n-icao\n+Atual\n , sinal \n@@ -108,12 +108,13 @@\n &pos\n-icao\n+Atual\n , &s\n@@ -213,24 +213,34 @@\n + %7B%0A        \n+fmt.Scan(&\n listaPartici\n@@ -252,22 +252,17 @@\n s%5Bi%5D\n- = i+1\n+)\n %0A    %7D%0A%0A\n %0A%0A  \n@@ -257,18 +257,16 @@\n %0A    %7D%0A%0A\n-%0A%0A\n     fmt.\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-22_18-29-04",
+            "content": "@@ -23,912 +23,244 @@\n mt%22%0A\n-%0Afunc imprimir (slice %5B%5Dint, pos int)%7B%0A%0A    fmt.Print(%22%5B %22)%0A    for i,valor := range slice %7B%0A            %0A        if(pos == i )%7B%0A            fmt.Printf(%22%25v%3E %22, valor)%0A        %7Delse%7B%0A            fmt.Printf(%22%25v %22, valor)%0A        %7D        %0A    %7D%0A    fmt.Printf(%22 %5D%5Cn%22)%0A%0A%0A%7D%0A%0Afunc main() %7B%0A    var qtdPessoas, posicao, sinal int%0A%0A    fmt.Scan(&qtdPessoas, &posicao, &sinal)%0A%0A    listaParticipantes := make(%5B%5Dint, qtdPessoas)%0A%0A    for i := 0; i %3C qtdPessoas; i++ %7B%0A        listaParticipantes%5Bi%5D = i+1%0A    %7D%0A%0A    posAtual := posicao -1%0A%0A    for len(listaParticipantes) %3E 0 %7B%0A        imprimir(listaParticipantes, posAtual)%0A%0A        morto := posAtual + 1 %25 len(listaParticipantes)%0A%0A        if(len(listaParticipantes) == 0)%7B%0A            break%0A        %7D%0A%0A        listaParticipantes = append(listaParticipantes%5B:morto%5D, listaParticipantes%5Bmorto:%5D...)%0A%0A        posAtual = morto %25 len(listaParticipantes)%0A    %7D%0A%0A    //\n+func main() %7B%0A    var qtdPessoas, posicao, sinal int%0A%0A    fmt.Scan(&qtdPessoas, &posicao, &sinal)%0A%0A    listaParticipantes := make(%5B%5Dint, qtdPessoas)%0A%0A    for i := 0; i %3C qtdPessoas; i++ %7B%0A        listaParticipantes%5Bi%5D = i+1%0A    %7D%0A%0A%0A%0A   \n  fmt\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-22_18-38-45",
+            "content": "@@ -278,16 +278,17 @@\n Printf(%22\n+ \n %5D%5Cn%22)%0A%0A%0A\n@@ -730,17 +730,17 @@\n tes) == \n-1\n+0\n )%7B%0A     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_18-40-09",
+            "content": "@@ -850,18 +850,16 @@\n es%5Bmorto\n-+1\n :%5D...)%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_18-41-49",
+            "content": "@@ -651,17 +651,16 @@\n orto := \n-(\n posAtual\n@@ -663,17 +663,16 @@\n tual + 1\n-)\n  %25 len(l\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_18-42-36",
+            "content": "@@ -24,646 +24,8 @@\n t%22%0A%0A\n-%0A%0Afunc main() %7B%0A%0A    var qtdNumeros, posicao, sinal int%0A%0A    fmt.Scan(&qtdNumeros, &posicao, &sinal)%0A%0A    listaNumeros := make(%5B%5Dint, qtdNumeros)%0A%0A    for i := 0; i %3C len(listaNumeros); i++ %7B%0A        %0A        var num int%0A        fmt.Scan(num)%0A%0A        if(sinal == -1)%7B%0A            if(num %25 2 == 1)%7B%0A                listaNumeros%5Bi%5D = -num%0A            %7Delse%7B%0A                listaNumeros%5Bi%5D = num%0A            %7D%0A        %7Delse%7B%0A            if(num %25 2 == 0)%7B%0A                listaNumeros%5Bi%5D = num%0A            %7Delse%7B%0A                listaNumeros%5Bi%5D = -num%0A            %7D%0A        %7D%0A%0A    %7D%0A%0A    fmt.Println(listaNumeros)%0A%7D%0A%0A%0A%0A//solu%C3%A7%C3%A3o da V1%0A%0A%0A// \n func\n@@ -59,19 +59,16 @@\n  int)%7B%0A%0A\n-// \n     fmt.\n@@ -79,23 +79,20 @@\n t(%22%5B %22)%0A\n-//\n     \n- \n for i,va\n@@ -121,27 +121,24 @@\n            %0A\n-// \n         if(p\n@@ -148,18 +148,16 @@\n == i )%7B%0A\n-//\n         \n@@ -152,33 +152,32 @@\n  )%7B%0A            \n- \n fmt.Printf(%22%25v%3E \n@@ -178,35 +178,32 @@\n (%22%25v%3E %22, valor)%0A\n-// \n         %7Delse%7B%0A/\n@@ -201,18 +201,16 @@\n  %7Delse%7B%0A\n-//\n         \n@@ -205,33 +205,32 @@\n se%7B%0A            \n- \n fmt.Printf(%22%25v %22\n@@ -238,19 +238,16 @@\n  valor)%0A\n-// \n         \n@@ -260,20 +260,14 @@\n    %0A\n-//\n     \n- \n %7D%0A\n-// \n     \n@@ -290,21 +290,28 @@\n )%0A%0A%0A\n-// \n %7D%0A%0A\n+func main() %7B\n %0A   \n- //\n  var\n@@ -346,19 +346,16 @@\n int%0A%0A   \n- //\n  fmt.Sca\n@@ -391,19 +391,16 @@\n al)%0A%0A   \n- //\n  listaPa\n@@ -438,27 +438,24 @@\n essoas)%0A%0A   \n- //\n  for i := 0;\n@@ -477,31 +477,28 @@\n ; i++ %7B%0A    \n-//\n     \n- \n listaPartici\n@@ -516,29 +516,23 @@\n  i+1%0A   \n- //\n  %7D%0A%0A   \n- //\n  posAtua\n@@ -551,19 +551,16 @@\n  -1%0A%0A   \n- //\n  for len\n@@ -590,23 +590,20 @@\n 0 %7B%0A    \n-//\n     \n- \n imprimir\n@@ -633,27 +633,24 @@\n sAtual)%0A%0A   \n- //\n      morto :\n@@ -692,27 +692,24 @@\n pantes)%0A%0A   \n- //\n      if(len(\n@@ -734,27 +734,24 @@\n ) == 1)%7B%0A   \n- //\n          bre\n@@ -761,24 +761,18 @@\n     \n-//\n     \n- \n %7D%0A%0A   \n- //\n     \n@@ -865,19 +865,16 @@\n ..)%0A%0A   \n- //\n      pos\n@@ -916,19 +916,16 @@\n tes)%0A   \n- //\n  %7D%0A%0A    \n@@ -926,19 +926,16 @@\n %0A%0A    //\n- //\n  fmt.Pri\n@@ -939,28 +939,30 @@\n Println(listaParticipantes)%0A\n+%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_19-00-01",
+            "content": "@@ -351,37 +351,18 @@\n eros\n- = append(listaNumeros,\n+%5Bi%5D =\n  -num\n-)\n %0A   \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-22_19-00-39",
+            "content": "@@ -258,17 +258,16 @@\n mt.Scan(\n-&\n num)%0A%0A  \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-22_19-01-02",
+            "content": "@@ -212,16 +212,67 @@\n ; i++ %7B%0A\n+        %0A        var num int%0A        fmt.Scan(&num)\n %0A%0A      \n@@ -297,35 +297,35 @@\n %0A            if(\n-i+1\n+num\n  %25 2 == 1)%7B%0A    \n@@ -373,21 +373,19 @@\n meros, -\n-(i+1)\n+num\n )%0A      \n@@ -423,35 +423,35 @@\n staNumeros%5Bi%5D = \n-i+1\n+num\n %0A            %7D%0A \n@@ -479,19 +479,19 @@\n      if(\n-i+1\n+num\n  %25 2 == \n@@ -524,27 +524,27 @@\n umeros%5Bi%5D = \n-i+1\n+num\n %0A           \n@@ -590,13 +590,11 @@\n  = -\n-(i+1)\n+num\n %0A   \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-22_19-03-03",
+            "content": "@@ -209,24 +209,25 @@\n os); i++ %7B%0A%0A\n+%0A\n         if(s\n@@ -479,22 +479,19 @@\n os%5Bi%5D = \n--(\n i+1\n-)\n %0A       \n@@ -528,35 +528,38 @@\n staNumeros%5Bi%5D = \n+-(\n i+1\n+)\n %0A            %7D%0A \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-03-22_19-04-34",
+            "content": "@@ -432,33 +432,33 @@\n   if(i+1 %25 2 == \n-1\n+0\n )%7B%0A             \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-03-22_19-05-32",
+            "content": "@@ -292,36 +292,55 @@\n listaNumeros\n-%5Bi%5D =\n+ = append(listaNumeros,\n  -(i+1)\n+)\n %0A           \n@@ -440,17 +440,17 @@\n  %25 2 == \n-0\n+1\n )%7B%0A     \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-03-22_19-06-41",
+            "content": "@@ -253,21 +253,19 @@\n      if(\n-(\n i+1\n-)\n  %25 2 == \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-03-22_19-07-44",
+            "content": "@@ -404,37 +404,35 @@\n %0A            if(\n-(\n i+1\n-)\n  %25 2 == 0)%7B%0A    \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-03-22_19-08-05",
+            "content": "@@ -24,521 +24,8 @@\n t%22%0A%0A\n-func imprimir(listaNumeros %5B%5Dint, posAtual int)%7B%0A%0A    fmt.Print(%22%5B %22)%0A    for i,valor := range listaNumeros %7B%0A        %0A        if(valor %3C= 0)%7B%0A            if(valor == i )%7B%0A                    fmt.Printf(%22%3C%25v %22, valor)%0A            %7Delse%7B%0A                    fmt.Printf(%22%25v %22, valor)%0A            %7D%0A        %7Delse%7B%0A            if(valor == i )%7B%0A                fmt.Printf(%22%25v%3E %22, valor)%0A            %7Delse%7B%0A                fmt.Printf(%22%25v %22, valor)%0A            %7D    %0A        %7D       %0A    %0A    %7D%0A    fmt.Printf(%22%5D%5Cn%22)%0A%0A%0A%7D\n %0A%0Afu\n@@ -547,24 +547,25 @@\n %7D%0A        %7D%0A\n+%0A\n     %7D%0A%0A    p\n@@ -567,327 +567,33 @@\n     \n-posicaoAtual := posicao  -1%0A    fmt.Println(listaNumeros)%0A    %0A    for i:= 0; len(listaNumeros) %3E 0; i++ %7B%0A        imprimir(listaNumeros, posicaoAtual)%0A%0A            // if(len(listaNumeros) %3E 0)%7B%0A                        //     break%0A                                // %7D%0A%0A            // if()%7B%0A%0A            // %7D%0A%0A%0A%0A    %7D%0A%0A\n+fmt.Println(listaNumeros)\n %0A%7D%0A%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-03-22_19-33-01",
+            "content": "@@ -1133,24 +1133,28 @@\n umeros)%0A\n+    \n %0A    for\n  len(lis\n@@ -1141,24 +1141,31 @@\n     %0A    for\n+ i:= 0;\n  len(listaNu\n@@ -1170,24 +1170,29 @@\n Numeros) %3E 0\n+; i++\n  %7B%0A        i\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-22_19-33-22",
+            "content": "@@ -174,32 +174,29 @@\n          if(\n-posAtual\n+valor\n  == i )%7B%0A   \n@@ -346,24 +346,21 @@\n      if(\n-posAtual\n+valor\n  == i )%7B\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-22_19-34-16",
+            "content": "@@ -1147,24 +1147,16 @@\n %0A    for\n- i := 0;\n  len(lis\n@@ -1169,21 +1169,16 @@\n ros) %3E 0\n-; i++\n  %7B%0A     \n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-22_19-34-36",
+            "content": "@@ -1139,27 +1139,24 @@\n umeros)%0A%0A   \n- //\n  for i := 0;\n@@ -1184,27 +1184,24 @@\n 0; i++ %7B%0A   \n- //\n      imprimi\n@@ -1230,27 +1230,24 @@\n oAtual)%0A%0A   \n- //\n          // \n@@ -1272,27 +1272,24 @@\n s) %3E 0)%7B%0A   \n- //\n             \n@@ -1309,27 +1309,24 @@\n    break%0A   \n- //\n             \n@@ -1347,27 +1347,24 @@\n    // %7D%0A%0A   \n- //\n          // \n@@ -1369,27 +1369,24 @@\n / if()%7B%0A%0A   \n- //\n          // \n@@ -1389,27 +1389,24 @@\n  // %7D%0A%0A%0A%0A   \n- //\n  %7D%0A%0A%0A%7D%0A%0A%0A%0A//\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-22_19-34-48",
+            "content": "@@ -1076,27 +1076,24 @@\n %7D%0A    %7D%0A%0A   \n- //\n  posicaoAtua\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-22_19-34-54",
+            "content": "@@ -1145,38 +1145,8 @@\n ros)\n-%0A    imprimir(listaNumeros, 0)\n %0A%0A  \n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-22_19-36-09",
+            "content": "@@ -1111,27 +1111,24 @@\n icao  -1%0A   \n- //\n  fmt.Println\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-03-22_19-36-31",
+            "content": "@@ -1172,17 +1172,17 @@\n umeros, \n-1\n+0\n )%0A%0A    /\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-03-22_19-37-09",
+            "content": "@@ -157,16 +157,17 @@\n (valor %3C\n+=\n  0)%7B%0A   \n@@ -1080,16 +1080,19 @@\n   %7D%0A%0A   \n+ //\n  posicao\n@@ -1108,18 +1108,18 @@\n posicao \n--\n  \n+-\n 1%0A    //\n@@ -1148,19 +1148,16 @@\n ros)%0A   \n- //\n  imprimi\n@@ -1175,24 +1175,27 @@\n ros, 1)%0A%0A   \n+ //\n  for i := 0;\n@@ -1217,22 +1217,29 @@\n os) %3E 0;\n+ i++\n  %7B%0A   \n+ //\n      imp\n@@ -1273,31 +1273,37 @@\n Atual)%0A%0A    \n+//\n        \n+  //\n  if(len(list\n@@ -1314,32 +1314,34 @@\n eros) %3E 0)%7B%0A    \n+//\n             brea\n@@ -1340,158 +1340,36 @@\n     \n-break%0A            %7D%0A%0A            if(listaNumeros%5Bi%5D %3C 0)%7B%0A                //morto%0A                morto := (posicaoAtual - 1) %25 len(listaNumeros)\n+         //     break\n %0A    \n+//\n     \n@@ -1380,465 +1380,62 @@\n     \n-listaNumeros = append(listaNumeros%5B:morto%5D,listaNumeros%5Bmorto+1:%5D...)%0A                posicaoAtual = morto %25 len(listaNumeros)%0A%0A                //slice%0A%0A                //atualizar posic%C3%A3o%0A%0A            %7Delse%7B%0A                morto := (posicaoAtual + 1) %25 len(listaNumeros)%0A                listaNumeros = append(listaNumeros%5B:morto%5D,listaNumeros%5Bmorto+1:%5D...)%0A                posicaoAtual = morto %25 len(listaNumeros)%0A            %7D%0A%0A%0A            // if()%7B%0A%0A   \n+                 // %7D%0A%0A    //         // if()%7B%0A%0A    //\n     \n@@ -1446,24 +1446,27 @@\n  // %7D%0A%0A%0A%0A   \n+ //\n  %7D%0A%0A%0A%7D%0A%0A%0A%0A//\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-03-22_19-53-55",
+            "content": "@@ -1112,24 +1112,8 @@\n - 1%0A\n-    morto := -1%0A\n     \n@@ -1413,32 +1413,33 @@\n           morto \n+:\n = (posicaoAtual \n@@ -1467,49 +1467,8 @@\n os)%0A\n-                %0A                //slice%0A\n     \n@@ -1569,101 +1569,110 @@\n     \n-%0A                //atualizar posic%C3%A3o%0A                posicaoAtual = morto %25 len(listaNumeros)\n+posicaoAtual = morto %25 len(listaNumeros)%0A%0A                //slice%0A%0A                //atualizar posic%C3%A3o\n %0A%0A  \n@@ -1710,16 +1710,17 @@\n   morto \n+:\n = (posic\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-22_19-57-03",
+            "content": "@@ -1311,20 +1311,19 @@\n umeros) \n-== 1\n+%3E 0\n )%7B%0A     \n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-22_19-57-28",
+            "content": "@@ -1111,19 +1111,16 @@\n  - 1%0A   \n- //\n  morto :\n@@ -1430,33 +1430,32 @@\n           morto \n-:\n = (posicaoAtual \n@@ -1754,25 +1754,24 @@\n       morto \n-:\n = (posicaoAt\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-22_19-57-43",
+            "content": "@@ -1958,24 +1958,67 @@\n          %7D%0A%0A\n+%0A            // if()%7B%0A%0A            // %7D%0A%0A%0A%0A\n     %7D%0A%0A%0A%7D%0A%0A%0A\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-22_19-59-55",
+            "content": "@@ -1596,33 +1596,23 @@\n Numeros%5B\n-len(listaNumeros)\n+morto+1\n :%5D...)%0A \n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-22_20-02-55",
+            "content": "@@ -1386,28 +1386,17 @@\n Numeros%5B\n-posicaoAtual\n+i\n %5D %3C 0)%7B%0A\n@@ -1596,16 +1596,33 @@\n Numeros%5B\n+len(listaNumeros)\n :%5D...)%0A \n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-23_00-02-24",
+            "content": "@@ -1283,32 +1283,8 @@\n ual)\n-%0A        i++%0A        i--\n %0A%0A  \n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-23_00-02-50",
+            "content": "@@ -1623,39 +1623,32 @@\n o%5D,listaNumeros%5B\n-morto+1\n :%5D...)%0A         \n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-23_00-03-32",
+            "content": "@@ -1636,17 +1636,17 @@\n os%5Bmorto\n--\n++\n 1:%5D...)%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-23_00-03-40",
+            "content": "@@ -1628,33 +1628,33 @@\n staNumeros%5Bmorto\n-+\n+-\n 1:%5D...)%0A        \n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-23_00-06-36",
+            "content": "@@ -1521,127 +1521,8 @@\n ros)\n-%0A%0A                if(morto %3C 0)%7B%0A                    um := -1 %0A                    morto = morto * um%0A                %7D\n %0A   \n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-23_00-10-15",
+            "content": "@@ -1852,18 +1852,13 @@\n l = \n-(\n morto\n- -1)\n  %25 l\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-19-56",
+            "content": "@@ -1848,22 +1848,26 @@\n Atual = \n+(\n morto \n+-1)\n  %25 len(l\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-20-18",
+            "content": "@@ -1519,16 +1519,133 @@\n meros)%0A%0A\n+                if(morto %3C 0)%7B%0A                    um := -1 %0A                    morto = morto * um%0A                %7D\n %0A       \n@@ -1854,19 +1854,16 @@\n = morto \n-+ 1\n  %25 len(l\n@@ -1880,143 +1880,8 @@\n s)%0A%0A\n-                                if(morto %3C 0)%7B%0A                    um := -1 %0A                    morto = morto * um%0A                %7D%0A%0A\n     \n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-26-19",
+            "content": "@@ -1523,125 +1523,8 @@\n s)%0A%0A\n-                if(morto %3C 0)%7B%0A                    um := -1 %0A                    morto = morto * um%0A                %7D\n %0A   \n@@ -1729,32 +1729,36 @@\n aoAtual = morto \n++ 1 \n %25 len(listaNumer\n@@ -1758,24 +1758,159 @@\n taNumeros)%0A%0A\n+                                if(morto %3C 0)%7B%0A                    um := -1 %0A                    morto = morto * um%0A                %7D%0A%0A\n             \n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-03-23_00-26-31",
+            "content": "@@ -1500,28 +1500,8 @@\n  - 1\n- + len(listaNumeros)\n ) %25 \n@@ -1534,19 +1534,16 @@\n         \n- //\n  if(mort\n@@ -1561,27 +1561,24 @@\n             \n- //\n      um := -\n@@ -1595,19 +1595,16 @@\n         \n- //\n      mor\n@@ -1634,19 +1634,16 @@\n         \n- //\n  %7D%0A     \n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-31-26",
+            "content": "@@ -1886,20 +1886,16 @@\n = morto \n-- 1 \n %25 len(li\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-33-09",
+            "content": "@@ -1880,17 +1880,16 @@\n Atual = \n-(\n morto - \n@@ -1889,17 +1889,16 @@\n orto - 1\n-)\n  %25 len(l\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-33-19",
+            "content": "@@ -1890,36 +1890,16 @@\n orto - 1\n- + len(listaNumeros)\n ) %25 len(\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-34-13",
+            "content": "@@ -1197,24 +1197,32 @@\n  1)%0A%0A    for\n+ i := 0;\n  len(listaNu\n@@ -1227,24 +1227,25 @@\n Numeros) %3E 0\n+;\n  %7B%0A        i\n@@ -1280,17 +1280,40 @@\n oAtual)%0A\n+        i++%0A        i--\n %0A\n-\n %0A       \n@@ -1531,32 +1531,179 @@\n (listaNumeros)%0A%0A\n+                // if(morto %3C 0)%7B%0A                //     um := -1 %0A                //     morto = morto * um%0A                // %7D%0A                %0A\n                 \n@@ -1956,32 +1956,8 @@\n se%7B%0A\n-                //morto%0A\n     \n@@ -2020,49 +2020,8 @@\n os)%0A\n-                %0A                //slice%0A\n     \n@@ -2105,45 +2105,8 @@\n ...)\n-%0A%0A                //atualizar posic%C3%A3o\n %0A   \n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-03-23_00-35-41",
+            "content": "package main\nimport \"fmt\"\n\nfunc imprimir(listaNumeros []int, posAtual int){\n\n    fmt.Print(\"[ \")\n    for i,valor := range listaNumeros {\n        \n        if(valor < 0){\n            if(posAtual == i ){\n                    fmt.Printf(\"<%v \", valor)\n            }else{\n                    fmt.Printf(\"%v \", valor)\n            }\n        }else{\n            if(posAtual == i ){\n                fmt.Printf(\"%v> \", valor)\n            }else{\n                fmt.Printf(\"%v \", valor)\n            }    \n        }       \n    \n    }\n    fmt.Printf(\"]\\n\")\n\n\n}\n\nfunc main() {\n\n    var qtdNumeros, posicao, sinal int\n\n    fmt.Scan(&qtdNumeros, &posicao, &sinal)\n\n    listaNumeros := make([]int, qtdNumeros)\n\n    for i := 0; i < len(listaNumeros); i++ {\n\n        if(sinal == -1){\n            if((i+1) % 2 == 1){\n                listaNumeros[i] = -(i+1)\n            }else{\n                listaNumeros[i] = i+1\n            }\n        }else{\n            if((i+1) % 2 == 0){\n                listaNumeros[i] = -(i+1)\n            }else{\n                listaNumeros[i] = i+1\n            }\n        }\n    }\n\n    posicaoAtual := posicao - 1\n    // morto := -1\n    // fmt.Println(listaNumeros)\n    // imprimir(listaNumeros, 1)\n\n    for len(listaNumeros) > 0 {\n        imprimir(listaNumeros, posicaoAtual)\n\n\n            if(len(listaNumeros) == 1){\n                break\n            }\n\n            if(listaNumeros[posicaoAtual] < 0){\n                //morto\n                morto := (posicaoAtual - 1 + len(listaNumeros)) % len(listaNumeros)\n\n                //slice\n                listaNumeros = append(listaNumeros[:morto],listaNumeros[morto+1:]...)\n                \n                //atualizar posic\u00e3o\n                posicaoAtual = (morto - 1 + len(listaNumeros)) % len(listaNumeros)\n\n            }else{\n                //morto\n                morto := (posicaoAtual + 1) % len(listaNumeros)\n                \n                //slice\n                listaNumeros = append(listaNumeros[:morto],listaNumeros[morto+1:]...)\n\n                //atualizar posic\u00e3o\n                posicaoAtual = morto % len(listaNumeros)\n            }\n\n    }\n\n\n}\n\n\n\n//solu\u00e7\u00e3o da V1\n\n\n// func imprimir (slice []int, pos int){\n\n//     fmt.Print(\"[ \")\n//     for i,valor := range slice {\n            \n//         if(pos == i ){\n//             fmt.Printf(\"%v> \", valor)\n//         }else{\n//             fmt.Printf(\"%v \", valor)\n//         }        \n//     }\n//     fmt.Printf(\"]\\n\")\n\n\n// }\n\n\n    // var qtdPessoas, posicao, sinal int\n\n    // fmt.Scan(&qtdPessoas, &posicao, &sinal)\n\n    // listaParticipantes := make([]int, qtdPessoas)\n\n    // for i := 0; i < qtdPessoas; i++ {\n    //     listaParticipantes[i] = i+1\n    // }\n\n    // posAtual := posicao -1\n\n    // for len(listaParticipantes) > 0 {\n    //     imprimir(listaParticipantes, posAtual)\n\n    //     morto := (posAtual + 1) % len(listaParticipantes)\n\n    //     if(len(listaParticipantes) == 1){\n    //         break\n    //     }\n\n    //     listaParticipantes = append(listaParticipantes[:morto], listaParticipantes[morto+1:]...)\n\n    //     posAtual = morto % len(listaParticipantes)\n    // }\n\n    // // fmt.Println(listaParticipantes)\n",
+            "lines": "141"
+        }
+    ]
+}

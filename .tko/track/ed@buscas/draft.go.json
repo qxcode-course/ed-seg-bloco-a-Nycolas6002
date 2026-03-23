@@ -1,0 +1,314 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_21-16-31",
+            "content": "@@ -310,24 +310,27 @@\n Buscas)%0A%0A   \n+ //\n  fmt.Scan(&q\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-21_21-16-51",
+            "content": "@@ -10,37 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22slices%22%0A)%0A\n func\n@@ -112,52 +112,43 @@\n     \n-listaDeConsultas := make(%5B%5Dint, qtdConsultas\n+mapaDeBuscas := make(map%5Bstring%5Dint\n )%0A%0A \n@@ -196,54 +196,39 @@\n     \n-fmt.Scan(&listaDeConsultas%5Bi%5D)\n+var palavra string\n %0A    \n-%7D%0A%0A\n     fmt.\n Prin\n@@ -227,117 +227,68 @@\n fmt.\n-Println(listaDeConsultas)%0A%0A    fmt.Scan(&qtdBuscas)%0A%0A%0A%7D%0A%0A%0A    // mapaDeBuscas := make(map%5Bstring%5Dint)\n+Scan(&palavra)%0A%0A        mapaDeBuscas%5Bpalavra%5D = 0%0A    %7D\n %0A%0A   \n- //\n  fmt\n@@ -315,159 +315,31 @@\n s)%0A%0A\n-%0A%0A%0A\n     \n-%0A    // for i :=0; i %3C qtdConsultas; i++%7B%0A    //     var palavra string%0A    //     fmt.Scan(&palavra)%0A%0A    //     mapaDeBuscas%5Bpalavra%5D = 0%0A    // %7D\n+fmt.Scan(&qtdBuscas)%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-21_21-21-04",
+            "content": "@@ -24,19 +24,16 @@\n %09%22fmt%22%0A%09\n-// \n %22slices%22\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-21_21-21-19",
+            "content": "@@ -154,22 +154,19 @@\n  make(%5B%5D\n-str\n in\n-g\n+t\n , qtdCon\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-21_21-22-47",
+            "content": "@@ -322,33 +322,38 @@\n uscas)%0A%0A\n+%0A%7D%0A%0A%0A\n    \n+ //\n  mapaDe\n-Consult\n+Busc\n as := ma\n@@ -376,181 +376,8 @@\n t)%0A%0A\n-    for i :=0; i %3C qtdBuscas; i++%7B%0A        var palavra string%0A        fmt.Scan(&palavra)%0A        mapaDeConsultas%5Bpalavra%5D = 0%0A    %7D%0A%0A    fmt.Println(mapaDeConsultas)%0A%0A%7D%0A%0A%0A%0A%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-21_21-26-55",
+            "content": "@@ -538,199 +538,8 @@\n s)%0A%0A\n-    fmt.Println(%22-------------%22)%0A%0A    for _,valor := range listaDeConsultas %7B%0A%0A        for chaveMapa, _ := range mapaDeConsultas%7B%0A%0A            fmt.Println(valor,chaveMapa)%0A        %7D%0A%0A%0A    %7D%0A%0A\n %7D%0A%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-21_21-43-41",
+            "content": "@@ -676,19 +676,16 @@\n         \n- //\n  fmt.Pri\n@@ -710,151 +710,25 @@\n pa)%0A\n-%0A            if(valor == chaveMapa)%7B%0A                mapaDeConsultas%5Bvalor%5D++%0A            %7D%0A        %7D%0A%0A%0A    %7D%0A%0A    fmt.Println(mapaDeConsultas)\n+        %7D%0A%0A%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-21_21-45-21",
+            "content": "@@ -808,24 +808,25 @@\n %0A        %7D%0A%0A\n+%0A\n     %7D%0A%0A    f\n@@ -856,46 +856,8 @@\n tas)\n-%0A    fmt.Println(len(mapaDeConsultas))\n %0A%0A%7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-21_21-47-16",
+            "content": "@@ -495,35 +495,32 @@\n %5D = 0%0A    %7D%0A%0A   \n- //\n  fmt.Println(map\n@@ -533,27 +533,24 @@\n sultas)%0A%0A   \n- //\n  fmt.Println\n@@ -828,208 +828,54 @@\n    f\n-or i := 0; i %3C len(mapaDeConsultas); i++ %7B%0A        %0A        if(i == len(mapaDeConsultas) - 1)%7B%0A            fmt.Printf(%22%25v %5Cn%22)%0A        %7Delse%7B%0A            fmt.Printf(%22%25v %22)%0A        %7D%0A%0A    // fmt.Printl\n+mt.Println(mapaDeConsultas)%0A    fmt.Println(le\n n(ma\n@@ -888,16 +888,17 @@\n nsultas)\n+)\n %0A%0A%7D%0A%0A%0A%0A%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-21_21-49-12",
+            "content": "@@ -1051,17 +1051,16 @@\n ltas)%0A%0A%7D\n-%7D\n %0A%0A%0A%0A%0A   \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-21_21-49-29",
+            "content": "@@ -256,35 +256,32 @@\n s%5Bi%5D)%0A    %7D%0A%0A   \n- //\n  fmt.Println(lis\n@@ -833,33 +833,32 @@\n     for \n-_,valor := range \n+i := 0; i %3C len(\n mapaDeCo\n@@ -864,17 +864,22 @@\n onsultas\n- \n+); i++\n  %7B%0A     \n@@ -955,23 +955,16 @@\n (%22%25v %5Cn%22\n-, valor\n )%0A      \n@@ -1004,15 +1004,8 @@\n %25v %22\n-, valor\n )%0A  \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-21_21-50-34",
+            "content": "@@ -828,20 +828,16 @@\n %0A    %7D%0A%0A\n-    \n     for \n@@ -884,25 +884,8 @@\n     \n- %0A        i := 0%0A\n %0A   \n@@ -955,22 +955,22 @@\n %22%25v %5Cn%22,\n+ \n valor\n- \n )%0A      \n@@ -1028,20 +1028,8 @@\n    %7D\n-%0A        i++\n %0A%0A  \n@@ -1066,274 +1066,10 @@\n as)%0A\n-    %7D%0A%0A    // for i := 0; i %3C len(mapaDeConsultas); i++  %7B%0A        %0A    //     if(i == len(mapaDeConsultas) - 1)%7B%0A    //         fmt.Printf(%22%25v %5Cn%22, )%0A    //     %7Delse%7B%0A    //         fmt.Printf(%22%25v %22, )%0A    //     %7D%0A%0A    // // fmt.Println(mapaDeConsultas)%0A    // %7D\n %0A\n+%7D\n %7D%0A%0A%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-21_21-53-50",
+            "content": "@@ -971,16 +971,17 @@\n intf(%22%25v\n+ \n %5Cn%22,valo\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-21_21-54-17",
+            "content": "@@ -910,20 +910,16 @@\n         \n-    \n if(i == \n@@ -945,20 +945,16 @@\n ) - 1)%7B%0A\n-    \n         \n@@ -967,25 +967,24 @@\n t.Printf(%22%25v\n- \n %5Cn%22,valor )%0A\n@@ -991,20 +991,16 @@\n         \n-    \n %7Delse%7B%0A \n@@ -1002,36 +1002,32 @@\n se%7B%0A            \n-  \n-  \n fmt.Printf(%22%25v t\n@@ -1029,13 +1029,8 @@\n %22%25v \n-teste\n %22, v\n@@ -1039,34 +1039,26 @@\n or)%0A        \n- \n-   %7D%0A    \n+%7D%0A\n         i++%0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-21_21-54-52",
+            "content": "@@ -942,16 +942,20 @@\n nsultas)\n+ - 1\n )%7B%0A     \n@@ -1042,16 +1042,21 @@\n ntf(%22%25v \n+teste\n %22, valor\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-21_21-55-16",
+            "content": "@@ -1042,13 +1042,8 @@\n %22%25v \n-teste\n %22, v\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-21_21-55-24",
+            "content": "@@ -1131,34 +1131,8 @@\n  %7D%0A%0A\n-    fmt.Println(%22teste%22)%0A%0A\n     \n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-21_21-55-50",
+            "content": "@@ -1153,9 +1153,8 @@\n este\n-2\n %22)%0A%0A\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-55-57",
+            "content": "@@ -938,28 +938,24 @@\n DeConsultas)\n- - 1\n )%7B%0A         \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-56-16",
+            "content": "@@ -899,17 +899,17 @@\n    i := \n-1\n+0\n %0A%0A      \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-56-23",
+            "content": "@@ -1042,16 +1042,21 @@\n ntf(%22%25v \n+teste\n %22, valor\n@@ -1126,35 +1126,32 @@\n ltas)%0A    %7D%0A%0A   \n- //\n  fmt.Println(%22te\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-56-35",
+            "content": "@@ -943,16 +943,19 @@\n sultas) \n+- 1\n )%7B%0A     \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-56-47",
+            "content": "@@ -894,20 +894,16 @@\n         \n-    \n i := 1%0A%0A\n@@ -982,24 +982,25 @@\n %25v %5Cn%22,valor\n+ \n )%0A          \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-57-33",
+            "content": "@@ -832,47 +832,8 @@\n  %7D%0A%0A\n-    fmt.Println(len(mapaDeConsultas))%0A%0A\n     \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-21_21-58-16",
+            "content": "@@ -1019,16 +1019,17 @@\n intf(%22%25v\n+ \n %5Cn%22,valo\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-03-21_21-58-30",
+            "content": "@@ -823,35 +823,32 @@\n    %7D%0A%0A    %7D%0A%0A   \n- //\n  fmt.Println(len\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-03-21_21-58-45",
+            "content": "@@ -951,52 +951,8 @@\n = 1%0A\n-            fmt.Printf(%22i no inicio:%25v:%22, i)\n %0A   \n@@ -1126,52 +1126,8 @@\n  i++\n-%0A            fmt.Printf(%22i no final:%25v:%22, i)\n %0A%0A  \n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-03-21_22-00-15",
+            "content": "@@ -985,18 +985,17 @@\n nicio:%25v\n-%5Cn\n+:\n %22, i)%0A  \n@@ -1204,18 +1204,17 @@\n final:%25v\n-%5Cn\n+:\n %22, i)%0A%0A \n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-03-21_22-00-32",
+            "content": "@@ -1004,19 +1004,16 @@\n         \n- //\n  if(i ==\n@@ -1040,35 +1040,32 @@\n ) )%7B%0A           \n- //\n      fmt.Printf(\n@@ -1089,19 +1089,16 @@\n         \n- //\n  %7Delse%7B%0A\n@@ -1108,19 +1108,16 @@\n         \n- //\n      fmt\n@@ -1149,19 +1149,16 @@\n         \n- //\n  %7D%0A     \n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-03-21_22-00-49",
+            "content": "@@ -1000,24 +1000,27 @@\n %0A           \n+ //\n  if(i == len\n@@ -1043,32 +1043,35 @@\n ) )%7B%0A           \n+ //\n      fmt.Printf(\n@@ -1091,24 +1091,27 @@\n %0A           \n+ //\n  %7Delse%7B%0A    \n@@ -1113,24 +1113,27 @@\n %0A           \n+ //\n      fmt.Pri\n@@ -1153,32 +1153,35 @@\n lor)%0A           \n+ //\n  %7D%0A            i\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-03-21_22-01-06",
+            "content": "@@ -950,35 +950,32 @@\n := 1%0A           \n- //\n  fmt.Printf(%22i n\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-03-21_22-01-36",
+            "content": "@@ -872,19 +872,8 @@\n as))\n-%0A    i := 1\n %0A%0A  \n@@ -939,19 +939,16 @@\n         \n- //\n  i := 1%0A\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-03-21_22-02-14",
+            "content": "@@ -878,17 +878,17 @@\n    i := \n-0\n+1\n %0A%0A      \n@@ -1054,11 +1054,8 @@\n tas)\n- -1\n  )%7B%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-21_22-02-36",
+            "content": "@@ -1191,35 +1191,32 @@\n  i++%0A           \n- //\n  fmt.Printf(%22i n\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-21_22-02-51",
+            "content": "@@ -1050,16 +1050,19 @@\n nsultas)\n+ -1\n  )%7B%0A    \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-22_00-28-16",
+            "content": "@@ -1050,20 +1050,16 @@\n nsultas)\n- - 1\n  )%7B%0A    \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-22_00-28-24",
+            "content": "@@ -585,91 +585,236 @@\n     \n-listaFinal := make(%5B%5Dint, qtdBuscas)%0A%0A    for _,\n+for _,valor := range listaDeConsultas %7B%0A%0A        for chaveMapa, _ := range mapaDeConsultas%7B%0A%0A            // fmt.Println(valor,chaveMapa)%0A%0A            if(\n valor \n-:= range listaDeConsultas %7B%0A%0A\n+== chaveMapa)%7B%0A                mapaDeConsultas%5Bvalor%5D++%0A            %7D\n %0A   \n@@ -825,16 +825,17 @@\n  %7D%0A%0A    \n+%7D\n %0A%0A    //\n@@ -873,11 +873,900 @@\n s))%0A\n-%0A%0A%0A%7D%0A%0A%0A\n+    i := 0%0A%0A        for _,valor := range mapaDeConsultas  %7B%0A         %0A            // i := 1%0A            // fmt.Printf(%22i no inicio:%25v%5Cn%22, i)%0A            if(i == len(mapaDeConsultas) - 1 )%7B%0A                fmt.Printf(%22%25v%5Cn%22,valor)%0A            %7Delse%7B%0A                fmt.Printf(%22%25v %22, valor)%0A            %7D%0A            i++%0A            // fmt.Printf(%22i no final:%25v%5Cn%22, i)%0A%0A    // fmt.Println(mapaDeConsultas)%0A    %7D%0A%0A    // fmt.Println(%22teste2%22)%0A%0A    // for i := 0; i %3C len(mapaDeConsultas); i++  %7B%0A        %0A    //     if(i == len(mapaDeConsultas) - 1)%7B%0A    //         fmt.Printf(%22%25v %5Cn%22, )%0A    //     %7Delse%7B%0A    //         fmt.Printf(%22%25v %22, )%0A    //     %7D%0A%0A    // // fmt.Println(mapaDeConsultas)%0A    // %7D%0A%7D%0A%0A%0A%0A%0A    // fmt.Println(mapaDeBuscas)%0A%0A%0A%0A%0A    %0A    // for i :=0; i %3C qtdConsultas; i++%7B%0A    //     var palavra string%0A    //     fmt.Scan(&palavra)%0A%0A    //     mapaDeBuscas%5Bpalavra%5D = 0%0A    // %7D\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-22_17-34-10",
+            "content": "@@ -507,42 +507,8 @@\n  %7D%0A%0A\n-    fmt.Println(mapaDeConsultas)%0A%0A\n     \n@@ -580,19 +580,16 @@\n -%22)%0A%0A   \n- //\n  listaFi\n@@ -622,19 +622,16 @@\n as)%0A%0A   \n- //\n  for _,v\n@@ -668,19 +668,16 @@\n  %7B%0A%0A%0A   \n- //\n      %7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-22_17-35-14",
+            "content": "@@ -541,410 +541,8 @@\n s)%0A%0A\n-    // i = 0 %0A    for _,valor := range mapaDeConsultas %7B%0A        i := 1 // fmt.Printf(%22i no inicio:%25v%5Cn%22, i) %0A        if(i == len(mapaDeConsultas) - 1 )%7B%0A             fmt.Printf(%22%25v%5Cn%22,valor) %0A        %7Delse%7B%0A                 fmt.Printf(%22%25v %22, valor) %0A                %7D%0A        i++ %0A        // fmt.Printf(%22i no final:%25v%5Cn%22, i)%0A        // fmt.Println(mapaDeConsultas)%0A        %7D%0A%0A%7D%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A      %0A\n     \n@@ -565,32 +565,32 @@\n apaDeConsultas)%0A\n+\n %0A    // fmt.Prin\n@@ -725,16 +725,16 @@\n %0A%0A    %0A%0A\n-\n     // f\n@@ -766,8 +766,15 @@\n ultas))%0A\n+%0A%0A%0A%7D%0A%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-22_17-39-41",
+            "content": "@@ -545,205 +545,129 @@\n     \n-for\n+//\n  i \n-:\n = 0\n-; i %3C qtdBuscas; i++ %7B%0A        _, existe:= mapaDeConsultas%5BlistaDeConsultas%5Bi%5D%5D%0A        if(existe)%7B%0A            mapaDeConsultas%5BlistaDeConsultas%5Bi%5D%5D++%0A        %7D\n+ %0A    for _,valor := range mapaDeConsultas %7B%0A        i := 1 // fmt.Printf(%22i no inicio:%25v%5Cn%22, i) \n %0A    \n-%7D%0A%0A\n     \n-for i := 0; i %3C\n+if(i ==\n  len\n@@ -687,14 +687,14 @@\n tas)\n-; i++ \n+ - 1 )\n %7B%0A  \n@@ -704,43 +704,57 @@\n     \n-if(i == len(mapaDeConsultas) - 1)%7B%0A\n+    fmt.Printf(%22%25v%5Cn%22,valor) %0A        %7Delse%7B%0A    \n     \n@@ -781,19 +781,27 @@\n %22%25v \n-%5Cn\n %22, \n-) // %0A\n+valor) %0A        \n     \n@@ -797,37 +797,32 @@\n                %7D\n-else%7B\n %0A            fmt\n@@ -814,38 +814,103 @@\n         \n-    fmt.Printf(%22%25v \n+i++ %0A        // fmt.Printf(%22i no final:%25v%5Cn\n %22, \n+i)%0A        // fmt.Println(mapaDeConsultas\n )%0A      \n@@ -912,17 +912,16 @@\n        %7D\n-%0A\n %0A%0A%7D%0A%0A%0A%0A%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-22_17-43-53",
+            "content": "@@ -911,17 +911,16 @@\n   %7D%0A%0A%0A%7D%0A\n-%7D\n %0A%0A%0A%0A%0A%0A%0A%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-03-22_17-44-04",
+            "content": "@@ -911,17 +911,13 @@\n   %7D%0A\n-    %7D\n %0A%0A%7D%0A\n+%7D\n %0A%0A%0A%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-03-22_17-44-30",
+            "content": "@@ -847,31 +847,14 @@\n %5Cn%22,\n- mapaDeConsultas%5Bi%5D\n  ) /\n+/ \n %0A   \n@@ -899,42 +899,277 @@\n  %22, \n-mapaDeConsultas%5Bi%5D)%0A   \n+)%0A        %7D%0A    %7D%0A%0A%7D%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A      %0A    // fmt.Println(mapaDeConsultas)%0A%0A    // fmt.Println(%22-------------%22)%0A%0A    // listaFinal := make(%5B%5Dint, qtdBuscas)%0A%0A    // for _,valor := range listaDeConsultas %7B%0A%0A%0A    //\n      %7D%0A\n+%0A\n     \n-%7D\n %0A%0A\n-%7D\n+    // fmt.Println(len(mapaDeConsultas))%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-03-22_17-46-37",
+            "content": "@@ -864,31 +864,14 @@\n tas%5B\n-listaDeConsultas%5Bi%5D\n+i\n %5D ) \n+/\n %0A   \n@@ -928,35 +928,17 @@\n nsultas%5B\n-listaDeConsultas%5Bi%5D\n+i\n %5D)%0A     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_17-47-59",
+            "content": "@@ -56,273 +56,78 @@\n ) %7B%0A\n-%0A    //----------------------------declara%C3%A7%C3%A3o de variaveis----------------------------%0A    %0A    var qtdConsultas, qtdBuscas int%0A%0A    fmt.Scan(&qtdConsultas)%0A%0A    ////----------------------------inser%C3%A7%C3%A3o de elementos na lista de Consultas----------------------------\n+    %0A    var qtdConsultas, qtdBuscas int%0A%0A    fmt.Scan(&qtdConsultas)%0A\n %0A   \n@@ -303,116 +303,8 @@\n s)%0A%0A\n-%0A  ////----------------------------inser%C3%A7%C3%A3o de elementos no mapa de Consultas----------------------------%0A%0A%0A\n     \n@@ -498,35 +498,32 @@\n %5D = 0%0A    %7D%0A%0A   \n- //\n  fmt.Println(map\n@@ -726,45 +726,8 @@\n %0A   \n- fmt.Println(mapaDeConsultas)%0A%0A    //\n  for\n@@ -771,24 +771,21 @@\n + %7B%0A    \n-//\n      \n- \n if(i == \n@@ -811,26 +811,24 @@\n ) - 1)%7B%0A    \n-//\n           fm\n@@ -816,33 +816,32 @@\n )%7B%0A             \n- \n fmt.Printf(%22%25v %5C\n@@ -883,27 +883,24 @@\n s%5Bi%5D%5D ) %0A   \n- //\n      %7Delse%7B%0A\n@@ -898,27 +898,24 @@\n   %7Delse%7B%0A   \n- //\n          fmt\n@@ -969,17 +969,13 @@\n %5Bi%5D%5D\n- \n )%0A   \n- //\n     \n@@ -980,16 +980,13 @@\n    %7D%0A   \n- //\n  %7D%0A%0A%7D\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-22_17-50-37",
+            "content": "@@ -843,16 +843,20 @@\n ultas)%0A%0A\n+    \n for i :=\n@@ -862,31 +862,28 @@\n = 0; i %3C qtd\n-Consult\n+Busc\n as; i++ %7B%0A  \n@@ -884,18 +884,19 @@\n + %7B%0A    \n-if\n+   \n  _, exis\n@@ -897,17 +897,16 @@\n , existe\n- \n := mapaD\n@@ -940,19 +940,33 @@\n %5Bi%5D%5D\n-; \n+%0A        if(\n existe\n- \n+)\n %7B%0A\n+    \n     \n@@ -1012,18 +1012,26 @@\n %5D++%0A    \n-%7D%0A\n+    %7D%0A    \n %7D%0A%0A    f\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-22_17-53-10",
+            "content": "@@ -835,36 +835,32 @@\n paDeConsultas)%0A%0A\n-    \n for i := 0; i %3C \n@@ -858,28 +858,31 @@\n = 0; i %3C qtd\n-Busc\n+Consult\n as; i++ %7B%0A  \n@@ -883,19 +883,18 @@\n + %7B%0A    \n-   \n+if\n  _, exis\n@@ -939,33 +939,19 @@\n %5Bi%5D%5D\n-%0A        if(\n+; \n existe\n-)\n+ \n %7B%0A\n-    \n     \n@@ -997,26 +997,18 @@\n %5D++%0A    \n-    %7D%0A    \n+%7D%0A\n %7D%0A%0A    f\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-22_17-53-36",
+            "content": "@@ -862,31 +862,28 @@\n = 0; i %3C qtd\n-Consult\n+Busc\n as; i++ %7B%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-22_17-54-28",
+            "content": "@@ -681,121 +681,91 @@\n     \n-listaDeBuscas := make(%5B%5Dstring, qtdBuscas)%0A%0A    for i :=0; i %3C qtdBuscas; i++%7B%0A        fmt.Scan(&listaDeBuscas%5Bi%5D\n+for i :=0; i %3C qtdBuscas; i++%7B%0A        var palavra string%0A        fmt.Scan(&palavra\n )%0A  \n@@ -790,24 +790,15 @@\n tas%5B\n-listaDeBuscas%5Bi%5D\n+palavra\n %5D = \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-22_17-58-53",
+            "content": "@@ -1097,32 +1097,35 @@\n eConsultas)%0A%0A   \n+ //\n  for i := 0; i %3C\n@@ -1129,27 +1129,29 @@\n i %3C len(\n-listaDeBusc\n+mapaDeConsult\n as); i++\n@@ -1157,21 +1157,24 @@\n + %7B%0A    \n+//\n      \n+ \n if(i == \n@@ -1199,24 +1199,27 @@\n s) - 1)%7B%0A   \n+ //\n           fm\n@@ -1251,36 +1251,39 @@\n onsultas%5BlistaDe\n-Busc\n+Consult\n as%5Bi%5D%5D ) %0A      \n@@ -1275,24 +1275,27 @@\n s%5Bi%5D%5D ) %0A   \n+ //\n      %7Delse%7B%0A\n@@ -1293,24 +1293,27 @@\n   %7Delse%7B%0A   \n+ //\n          fmt\n@@ -1346,28 +1346,31 @@\n ltas%5BlistaDe\n-Busc\n+Consult\n as%5Bi%5D%5D )%0A   \n@@ -1365,24 +1365,27 @@\n as%5Bi%5D%5D )%0A   \n+ //\n      %7D%0A    %7D\n@@ -1378,17 +1378,20 @@\n //     %7D%0A   \n+ //\n  %7D%0A%0A%7D\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-22_18-00-34",
+            "content": "@@ -1063,35 +1063,32 @@\n     %7D%0A    %7D%0A%0A   \n- //\n  fmt.Println(map\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-22_18-01-04",
+            "content": "@@ -1222,16 +1222,17 @@\n intf(%22%25v\n+ \n %5Cn%22, map\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-22_18-01-13",
+            "content": "@@ -210,24 +210,26 @@\n ultas)%0A%0A    \n+//\n //----------\n@@ -632,27 +632,29 @@\n s)%0A%0A    \n-listaDeBusc\n+mapaDeConsult\n as := ma\n@@ -660,51 +660,40 @@\n ake(\n+map\n %5B\n-%5D\n string\n-, qtdBuscas)%0A    %0A    mapaDeConsult\n+%5Dint)%0A%0A    listaDeBusc\n as :\n@@ -695,38 +695,43 @@\n cas := make(\n-map\n %5B\n+%5D\n string\n-%5Dint\n+, qtdBuscas\n )%0A%0A    for i\n@@ -1189,16 +1189,19 @@\n sultas) \n+- 1\n )%7B%0A     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-22_18-06-52",
+            "content": "@@ -1195,11 +1195,8 @@\n as) \n-- 1\n )%7B%0A \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-22_18-07-23",
+            "content": "@@ -1368,42 +1368,5 @@\n  %7D%0A%0A\n-    fmt.Println(len(listaDeBuscas))%0A%0A\n %7D\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-22_18-10-26",
+            "content": "@@ -1359,35 +1359,32 @@\n     %7D%0A    %7D%0A%0A   \n- //\n  fmt.Println(len\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-22_18-11-03",
+            "content": "@@ -1126,17 +1126,16 @@\n = 0; i %3C\n-=\n  len(lis\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-22_18-13-11",
+            "content": "@@ -1191,16 +1191,20 @@\n nsultas)\n+ - 1\n )%7B%0A     \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-22_18-13-17",
+            "content": "@@ -1195,12 +1195,8 @@\n tas)\n- - 1\n )%7B%0A \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-22_18-13-46",
+            "content": "@@ -1126,16 +1126,17 @@\n = 0; i %3C\n+=\n  len(lis\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-22_18-13-56",
+            "content": "@@ -1174,27 +1174,29 @@\n  == len(\n-listaDeBusc\n+mapaDeConsult\n as) - 1)\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-22_18-14-35",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t// \"slices\"\n)\nfunc main() {\n\n    //----------------------------declara\u00e7\u00e3o de variaveis----------------------------\n    \n    var qtdConsultas, qtdBuscas int\n\n    fmt.Scan(&qtdConsultas)\n\n    //----------------------------inser\u00e7\u00e3o de elementos na lista de Consultas----------------------------\n    listaDeConsultas := make([]string, qtdConsultas)\n\n    for i :=0; i < qtdConsultas; i++{\n        fmt.Scan(&listaDeConsultas[i])\n    }\n\n    // fmt.Println(listaDeConsultas)\n\n\n  ////----------------------------inser\u00e7\u00e3o de elementos no mapa de Consultas----------------------------\n\n\n    fmt.Scan(&qtdBuscas)\n\n    listaDeBuscas := make([]string, qtdBuscas)\n    \n    mapaDeConsultas := make(map[string]int)\n\n    for i :=0; i < qtdBuscas; i++{\n        fmt.Scan(&listaDeBuscas[i])\n        mapaDeConsultas[listaDeBuscas[i]] = 0\n    }\n\n    // fmt.Println(mapaDeConsultas)\n\n    for i := 0; i < qtdConsultas; i++ {\n        _, existe := mapaDeConsultas[listaDeConsultas[i]]\n        if(existe){\n            mapaDeConsultas[listaDeConsultas[i]]++\n        }\n    }\n\n    // fmt.Println(mapaDeConsultas)\n\n    for i := 0; i < len(listaDeBuscas); i++ {\n         if(i == len(listaDeBuscas) - 1){\n             fmt.Printf(\"%v\\n\", mapaDeConsultas[listaDeBuscas[i]] ) \n        }else{\n            fmt.Printf(\"%v \", mapaDeConsultas[listaDeBuscas[i]] )\n        }\n    }\n\n    // fmt.Println(len(listaDeBuscas))\n\n}",
+            "lines": "60"
+        }
+    ]
+}

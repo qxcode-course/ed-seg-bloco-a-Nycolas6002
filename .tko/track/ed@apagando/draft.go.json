@@ -1,0 +1,159 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_21-57-20",
+            "content": "@@ -37,877 +37,6 @@\n ) %7B%0A\n-%0A%09//resolvendo primeiro com slice%0A%09//depois irei resolver com map%0A%0A%09//captura%0A%0A%09var qtdPessoas, qtdImpacientes int%0A%0A%09fmt.Scan(&qtdPessoas)%0A%0A%09listaDePessoas := make(%5B%5Dint, qtdPessoas)%0A%0A%0A%09for i := 0; i %3C len(listaDePessoas); i++ %7B%0A%09%09fmt.Scan(&listaDePessoas%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Scan(&qtdImpacientes)%0A%0A%09listaDeImpacientes :=  make(%5B%5Dint, qtdImpacientes)%0A%0A%09for i := 0; i %3C len(listaDeImpacientes); i++ %7B%0A%09%09fmt.Scan(&listaDeImpacientes%5Bi%5D)%0A%09%7D%0A%0A%09//remoc%C3%A3o%0A%0A%09for i, valorPessoa := range listaDePessoas %7B%0A%09%09%0A%09%09for  _, valorImpaciente := range listaDeImpacientes %7B%0A%09%09%09if(valorPessoa == valorImpaciente)%7B%0A%09%09%09%09listaDePessoas = append(listaDePessoas%5B:i%5D,listaDeImpacientes%5Bi+1:%5D...)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09//exibi%C3%A7%C3%A3o%0A%0A%09for i := 0; i %3C len(listaDePessoas); i++ %7B%0A%09%09%0A%09%09if(i == len(listaDePessoas) - 1)%7B%0A%09%09%09fmt.Printf(%22%25v%5Cn%22, listaDePessoas%5Bi%5D)%0A%09%09%7Delse%7B%0A%09%09%09fmt.Printf(%22%25v %22, listaDePessoas%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-03-21_18-26-02",
+            "content": "@@ -688,16 +688,18 @@\n ientes%5Bi\n++1\n :%5D...)%0A%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_18-26-27",
+            "content": "@@ -485,17 +485,27 @@\n %09for i, \n-_\n+valorPessoa\n  := rang\n@@ -537,12 +537,26 @@\n or  \n-j, _\n+_, valorImpaciente\n  := \n@@ -592,36 +592,28 @@\n %09if(\n-listaDePessoas%5Bi%5D == listaDe\n+valorPessoa == valor\n Impa\n@@ -622,12 +622,8 @@\n ente\n-s%5Bj%5D\n )%7B%0A%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_18-28-25",
+            "content": "@@ -680,10 +680,8 @@\n es%5Bi\n-+1\n :%5D..\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_18-28-54",
+            "content": "@@ -617,35 +617,8 @@\n %09%09%09%09\n-fmt.Println(%22test%22)%0A%09%09%09%09// \n list\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_18-29-39",
+            "content": "@@ -637,16 +637,19 @@\n t%22)%0A%09%09%09%09\n+// \n listaDeP\n@@ -716,28 +716,8 @@\n ..)%0A\n-%09%09%09%7Delse%7B%0A%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-21_18-30-42",
+            "content": "@@ -709,16 +709,26 @@\n 1:%5D...)%0A\n+%09%09%09%7Delse%7B%0A\n %09%09%09%09brea\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-21_18-31-50",
+            "content": "@@ -478,19 +478,16 @@\n moc%C3%A3o%0A%0A%09\n-// \n for i, _\n@@ -517,19 +517,16 @@\n s %7B%0A%09%09%0A%09\n-// \n %09for  j,\n@@ -559,19 +559,16 @@\n ntes %7B%0A%09\n-// \n %09%09if(lis\n@@ -610,19 +610,16 @@\n s%5Bj%5D)%7B%0A%09\n-// \n %09%09%09fmt.P\n@@ -634,19 +634,16 @@\n test%22)%0A%09\n-// \n %09%09%09lista\n@@ -714,92 +714,8 @@\n .)%0A%09\n-// %09%09%09listaDeImpacientes = append(listaDeImpacientes%5B:%5D,listaDeImpacientes%5B:%5D )%0A%09// \n %09%09%09b\n@@ -724,26 +724,17 @@\n ak%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-21_18-38-52",
+            "content": "@@ -1038,40 +1038,6 @@\n %09%7D%0A%0A\n-%09fmt.Println(listaDeImpacientes)%0A%0A\n %7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-21_18-39-18",
+            "content": "@@ -844,83 +844,42 @@\n  %7D%0A%0A\n-%0A%09filaFinal := make(%5B%5Dint, qtdPessoas - qtdImpacientes)\n+%09//exibi%C3%A7%C3%A3o%0A\n %0A%09for i\n-, _\n  := \n-range \n+0; i %3C len(\n list\n@@ -888,24 +888,30 @@\n ePessoas\n+); i++\n  %7B%0A%09%09%0A%09%09\n for  j, \n@@ -906,117 +906,63 @@\n %09%0A%09%09\n-for  j, _ := range listaDeImpacientes %7B%0A%09%09%09if(listaDePessoas%5Bi%5D != listaDeImpacientes%5Bj%5D)%7B%0A%09%09%09%09filaFinal%5Bi%5D =\n+if(i == len(listaDePessoas) - 1)%7B%0A%09%09%09fmt.Printf(%22%25v%5Cn%22,\n  lis\n@@ -979,118 +979,18 @@\n s%5Bi%5D\n+)\n %0A%09%09\n-%09\n %7Delse%7B\n-%0A%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09//exibi%C3%A7%C3%A3o%0A%0A%09for i := 0; i %3C len(filaFinal); i++ %7B%0A%09%09%0A%09%09if(i == len(filaFinal) - 1)%7B\n %0A%09%09%09\n@@ -1007,77 +1007,71 @@\n (%22%25v\n-%5Cn%22, filaFinal%5Bi%5D)%0A%09%09%7Delse%7B%0A%09%09%09fmt.Printf(%22%25v %22, filaFinal%5Bi%5D)%0A%09%09%7D%0A%09%7D\n+ %22, listaDePessoas%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(listaDeImpacientes)\n %0A%0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-21_18-43-03",
+            "content": "@@ -904,21 +904,17 @@\n %09for i, \n-valor\n+_\n  := rang\n@@ -1051,13 +1051,25 @@\n %5D = \n-valor\n+listaDePessoas%5Bi%5D\n %0A%09%09%09\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-21_18-43-42",
+            "content": "@@ -1061,18 +1061,8 @@\n lor%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-21_18-44-25",
+            "content": "@@ -1067,16 +1067,27 @@\n %09%09break%0A\n+%09%09%09%7Delse%7B%0A%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-21_18-44-45",
+            "content": "@@ -1036,19 +1036,16 @@\n %5D)%7B%0A%09%09%09%09\n-// \n filaFina\n@@ -1061,49 +1061,8 @@\n lor%0A\n-%09%09%09%09filaFinal = append(filaFinal, valor)%0A\n %09%09%09%09\n@@ -1260,15 +1260,4 @@\n %0A%0A%7D%0A\n-/*%0A%0A%0A%0A%0A%0A%0A*/\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-21_18-47-05",
+            "content": "@@ -867,17 +867,16 @@\n (%5B%5Dint, \n-(\n qtdPesso\n@@ -895,17 +895,16 @@\n cientes)\n-)\n %0A%09for i,\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-47-28",
+            "content": "@@ -1107,19 +1107,16 @@\n or)%0A%09%09%09%09\n-// \n break%0A%09%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-48-00",
+            "content": "@@ -478,36 +478,37 @@\n moc%C3%A3o%0A%0A%09\n+// \n for i\n+, _\n  := \n-0; i %3C len(\n+range \n listaDeP\n@@ -517,43 +517,38 @@\n soas\n-); i++\n  %7B%0A%09%09%0A%09\n+// \n %09for  j\n+, _\n  := \n-0; j %3C len(\n+range \n list\n@@ -565,17 +565,15 @@\n ntes\n-); i++%7B%0A%09\n+ %7B%0A%09// \n %09%09if\n@@ -619,16 +619,19 @@\n s%5Bj%5D)%7B%0A%09\n+// \n %09%09%09fmt.P\n@@ -646,16 +646,19 @@\n test%22)%0A%09\n+// \n %09%09%09lista\n@@ -725,16 +725,19 @@\n :%5D...)%0A%09\n+// \n %09%09%09lista\n@@ -779,17 +779,16 @@\n ientes%5B:\n-j\n %5D,listaD\n@@ -805,18 +805,16 @@\n es%5B:\n-j+1%5D...)%0A%09\n+%5D )%0A%09// \n %09%09%09b\n@@ -823,25 +823,31 @@\n ak%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%0A%09\n-// \n fila\n@@ -899,19 +899,16 @@\n ntes))%0A%09\n-// \n for i, v\n@@ -934,35 +934,32 @@\n DePessoas %7B%0A%09%09%0A%09\n-// \n %09for  j, _ := ra\n@@ -976,35 +976,32 @@\n eImpacientes %7B%0A%09\n-// \n %09%09if(listaDePess\n@@ -1035,19 +1035,16 @@\n s%5Bj%5D)%7B%0A%09\n-// \n %09%09%09// fi\n@@ -1063,19 +1063,16 @@\n  valor%0A%09\n-// \n %09%09%09filaF\n@@ -1108,39 +1108,30 @@\n r)%0A%09\n-// \n %09%09%09\n+// \n break%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n@@ -1139,27 +1139,24 @@\n /exibi%C3%A7%C3%A3o%0A%0A%09\n-// \n for i := 0; \n@@ -1185,19 +1185,16 @@\n + %7B%0A%09%09%0A%09\n-// \n %09if(i ==\n@@ -1216,19 +1216,16 @@\n  - 1)%7B%0A%09\n-// \n %09%09fmt.Pr\n@@ -1252,19 +1252,16 @@\n al%5Bi%5D)%0A%09\n-// \n %09%7Delse%7B%0A\n@@ -1261,19 +1261,16 @@\n %7Delse%7B%0A%09\n-// \n %09%09fmt.Pr\n@@ -1296,26 +1296,20 @@\n al%5Bi%5D)%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%7D%0A/*%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-52-18",
+            "content": "@@ -1157,24 +1157,27 @@\n /exibi%C3%A7%C3%A3o%0A%0A%09\n+// \n for i := 0; \n@@ -1180,38 +1180,33 @@\n  0; i %3C len(\n-listaDePessoas\n+filaFinal\n ); i++ %7B%0A%09%09%0A\n@@ -1206,16 +1206,19 @@\n + %7B%0A%09%09%0A%09\n+// \n %09if(i ==\n@@ -1222,30 +1222,25 @@\n  == len(\n-listaDePessoas\n+filaFinal\n ) - 1)%7B%0A\n@@ -1240,16 +1240,19 @@\n  - 1)%7B%0A%09\n+// \n %09%09fmt.Pr\n@@ -1264,36 +1264,34 @@\n %22%25v%5Cn%22, \n-listaDePessoas\n+filaFinal\n %5Bi%5D)%0A%09\n+// \n %09%7Delse%7B%0A\n@@ -1291,16 +1291,19 @@\n %7Delse%7B%0A%09\n+// \n %09%09fmt.Pr\n@@ -1318,32 +1318,33 @@\n  %22, \n-listaDePessoas\n+filaFinal\n %5Bi%5D)%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%7D\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-52-55",
+            "content": "@@ -702,22 +702,26 @@\n ,listaDe\n-Pessoa\n+Impaciente\n s%5Bi+1:%5D.\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-54-04",
+            "content": "@@ -798,12 +798,12 @@\n tes%5B\n+:\n j+1\n-:\n %5D...\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-55-38",
+            "content": "@@ -568,17 +568,17 @@\n entes); \n-j\n+i\n ++%7B%0A%09%09%09i\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-56-16",
+            "content": "@@ -804,16 +804,25 @@\n 1:%5D...)%0A\n+%09%09%09%09break\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-56-49",
+            "content": "@@ -804,20 +804,16 @@\n 1:%5D...)%0A\n-%09%09%09%09\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-58-12",
+            "content": "@@ -724,19 +724,16 @@\n ..)%0A%09%09%09%09\n-// \n listaDeI\n@@ -804,16 +804,20 @@\n 1:%5D...)%0A\n+%09%09%09%09\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-58-36",
+            "content": "@@ -480,64 +480,8 @@\n c%C3%A3o%0A\n-%09filaFinal := make(%5B%5Dint, (qtdPessoas - qtdImpacientes))\n %0A%09fo\n@@ -656,74 +656,8 @@\n %09%09%09%09\n-filaFinal = append(filaFinal, listaDePessoas%5Bi%5D)%0A%09%09%09%09break%0A%09%09%09%09// \n list\n@@ -1171,25 +1171,30 @@\n i %3C len(\n-filaFinal\n+listaDePessoas\n ); i++ %7B\n@@ -1211,25 +1211,30 @@\n  == len(\n-filaFinal\n+listaDePessoas\n ) - 1)%7B%0A\n@@ -1255,25 +1255,30 @@\n %22%25v%5Cn%22, \n-filaFinal\n+listaDePessoas\n %5Bi%5D)%0A%09%09%7D\n@@ -1304,25 +1304,30 @@\n (%22%25v %22, \n-filaFinal\n+listaDePessoas\n %5Bi%5D)%0A%09%09%7D\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-21_18-59-49",
+            "content": "@@ -477,19 +477,16 @@\n emoc%C3%A3o%0A%09\n-// \n filaFina\n@@ -533,16 +533,16 @@\n entes))%0A\n+\n %09for i :\n@@ -708,19 +708,16 @@\n t%22)%0A%09%09%09%09\n-// \n filaFina\n@@ -761,19 +761,16 @@\n i%5D)%0A%09%09%09%09\n-// \n break%0A%09%09\n@@ -767,24 +767,27 @@\n %09%09break%0A%09%09%09%09\n+// \n listaDePesso\n@@ -850,16 +850,11 @@\n %09%09%09%09\n-i--%0A%09%09%09%09\n+// \n list\n@@ -933,15 +933,8 @@\n ..)%0A\n-%09%09%09%09j--\n %0A%09%09%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-21_19-18-16",
+            "content": "@@ -1307,38 +1307,33 @@\n  0; i %3C len(\n-listaDePessoas\n+filaFinal\n ); i++ %7B%0A%09%09%0A\n@@ -1346,30 +1346,25 @@\n  == len(\n-listaDePessoas\n+filaFinal\n ) - 1)%7B%0A\n@@ -1385,30 +1385,25 @@\n %22%25v%5Cn%22, \n-listaDePessoas\n+filaFinal\n %5Bi%5D)%0A%09%09%7D\n@@ -1429,30 +1429,25 @@\n (%22%25v %22, \n-listaDePessoas\n+filaFinal\n %5Bi%5D)%0A%09%09%7D\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-03-21_19-18-33",
+            "content": "@@ -767,16 +767,24 @@\n i%5D)%0A%09%09%09%09\n+// break\n %0A%09%09%09%09lis\n@@ -952,18 +952,8 @@\n j--%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-03-21_19-19-02",
+            "content": "@@ -683,16 +683,40 @@\n es%5Bj%5D)%7B%0A\n+%09%09%09%09fmt.Println(%22test%22)%0A\n %09%09%09%09// f\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-03-21_19-19-25",
+            "content": "@@ -1368,17 +1368,16 @@\n intf(%22%25v\n- \n %5Cn%22, lis\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-03-21_19-19-52",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n\t//resolvendo primeiro com slice\n\t//depois irei resolver com map\n\n\t//captura\n\n\tvar qtdPessoas, qtdImpacientes int\n\n\tfmt.Scan(&qtdPessoas)\n\n\tlistaDePessoas := make([]int, qtdPessoas)\n\n\n\tfor i := 0; i < len(listaDePessoas); i++ {\n\t\tfmt.Scan(&listaDePessoas[i])\n\t}\n\n\tfmt.Scan(&qtdImpacientes)\n\n\tlistaDeImpacientes :=  make([]int, qtdImpacientes)\n\n\tfor i := 0; i < len(listaDeImpacientes); i++ {\n\t\tfmt.Scan(&listaDeImpacientes[i])\n\t}\n\n\t//remoc\u00e3o\n\t// filaFinal := make([]int, (qtdPessoas - qtdImpacientes))\n\tfor i := 0; i < len(listaDePessoas); i++ {\n\t\t\n\t\tfor  j := 0; j < len(listaDeImpacientes); j++{\n\t\t\tif(listaDePessoas[i] == listaDeImpacientes[j]){\n\t\t\t\t// filaFinal = append(filaFinal, listaDePessoas[i])\n\t\t\t\t\n\t\t\t\tlistaDePessoas = append(listaDePessoas[:i],listaDePessoas[i+1:]...)\n\t\t\t\ti--\n\t\t\t\tlistaDeImpacientes = append(listaDeImpacientes[:j],listaDeImpacientes[j+1:]...)\n\t\t\t\tj--\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\n\n\t// filaFinal := make([]int, (qtdPessoas - qtdImpacientes))\n\t// for i, valor := range listaDePessoas {\n\t\t\n\t// \tfor  j, _ := range listaDeImpacientes {\n\t// \t\tif(listaDePessoas[i] != listaDeImpacientes[j]){\n\t// \t\t\t// filaFinal[i] = valor\n\t// \t\t\tfilaFinal = append(filaFinal, valor)\n\t// \t\t\tbreak\n\t// \t\t}\n\t// \t}\n\t// }\n\n\t//exibi\u00e7\u00e3o\n\n\tfor i := 0; i < len(listaDePessoas); i++ {\n\t\t\n\t\tif(i == len(listaDePessoas) - 1){\n\t\t\tfmt.Printf(\"%v \\n\", listaDePessoas[i])\n\t\t}else{\n\t\t\tfmt.Printf(\"%v \", listaDePessoas[i])\n\t\t}\n\t}\n\n}\n/*\n\n\n\n\n\n\n*/",
+            "lines": "78"
+        }
+    ]
+}
