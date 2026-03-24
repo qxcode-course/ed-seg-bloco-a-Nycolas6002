@@ -13,6 +13,49 @@ func main() {
 
 	listaDePessoas := make([]int, qtdPessoas)
 
+	for i := 0; i < len(listaDePessoas); i++ {
+		fmt.Scan(&listaDePessoas[i])
+	}
+
+	fmt.Scan(&qtdImpacientes)
+
+	mapaDeImpacientes := make(map[int]bool, qtdImpacientes)
+
+	for i := 0; i < qtdImpacientes; i++ {
+		var valor int
+		fmt.Scan(&valor)
+		mapaDeImpacientes[valor] = true
+	}
+
+	for _, valorLista := range listaDePessoas{
+		
+		_,existe:= mapaDeImpacientes[valorLista] 
+
+		if(existe){
+			continue
+		}else{
+			fmt.Printf("%v ", valorLista)
+		}
+		
+	}
+	fmt.Println()
+
+}
+
+//Primeira Solução
+/*
+
+	//resolvendo primeiro com slice
+	//depois irei resolver com map
+
+	//captura
+
+	var qtdPessoas, qtdImpacientes int
+
+	fmt.Scan(&qtdPessoas)
+
+	listaDePessoas := make([]int, qtdPessoas)
+
 
 	for i := 0; i < len(listaDePessoas); i++ {
 		fmt.Scan(&listaDePessoas[i])
@@ -44,18 +87,6 @@ func main() {
 	}
 
 
-	// filaFinal := make([]int, (qtdPessoas - qtdImpacientes))
-	// for i, valor := range listaDePessoas {
-		
-	// 	for  j, _ := range listaDeImpacientes {
-	// 		if(listaDePessoas[i] != listaDeImpacientes[j]){
-	// 			// filaFinal[i] = valor
-	// 			filaFinal = append(filaFinal, valor)
-	// 			break
-	// 		}
-	// 	}
-	// }
-
 	//exibição
 
 	for i := 0; i < len(listaDePessoas); i++ {
@@ -66,13 +97,5 @@ func main() {
 			fmt.Printf("%v ", listaDePessoas[i])
 		}
 	}
-
-}
-/*
-
-
-
-
-
 
 */

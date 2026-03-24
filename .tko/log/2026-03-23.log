@@ -40,3 +40,40 @@
 2026-03-23 01:04:37, MOVE, v:1, k:ed@buscas, mode:PICK
 2026-03-23 01:04:59, MOVE, v:1, k:ed@buscas, mode:BACK
 2026-03-23 01:05:49, SELF, v:1, k:ed@buscas, self:1, rate:100, study:160, friend:nao, concept:1, debug:1
+2026-03-23 16:18:32, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-23 16:19:08, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-23 16:19:11, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-23 19:03:57, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 19:04:48, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 19:05:00, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 19:05:13, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 19:26:53, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 19:26:56, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:92
+2026-03-23 19:31:30, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 19:40:56, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-23 19:40:58, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-23 19:47:18, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-23 19:47:26, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 19:47:27, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:102
+2026-03-23 19:48:25, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:105
+2026-03-23 19:48:54, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:107
+2026-03-23 19:49:04, EXEC, v:1, k:ed@apagando, mode:FULL, rate:66, size:107
+2026-03-23 19:51:32, EXEC, v:1, k:ed@apagando, mode:FULL, rate:66, size:109
+2026-03-23 19:52:44, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:107
+2026-03-23 19:52:52, EXEC, v:1, k:ed@apagando, mode:FULL, rate:66, size:107
+2026-03-23 19:58:50, EXEC, v:1, k:ed@apagando, mode:FULL, rate:25, size:107
+2026-03-23 19:58:56, EXEC, v:1, k:ed@apagando, mode:FULL, rate:16, size:107
+2026-03-23 20:00:16, EXEC, v:1, k:ed@apagando, mode:FULL, size:103, fail:COMP
+2026-03-23 20:00:25, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:103
+2026-03-23 20:01:00, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100, size:101
+2026-03-23 20:01:05, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 20:01:29, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-23 20:05:53, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-23 20:06:00, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-03-23 23:11:14, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-23 23:11:38, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-23 23:13:52, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-23 23:14:20, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-23 23:14:28, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-03-23 23:14:39, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-03-23 23:14:41, MOVE, v:1, k:ed@alternando, mode:PICK
