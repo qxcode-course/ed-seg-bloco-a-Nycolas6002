@@ -1,0 +1,359 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-25_23-20-09",
+            "content": "@@ -215,268 +215,9 @@\n t %7B%0A\n-%0A%09listaOrdenada := make(%5B%5Dint, len(vet))%0A%09copy(listaOrdenada,vet)%0A%0A%0A%09for i:= 0; i %3C n-1; i++%7B%0A%09%09for j:= 0; j %3C n-1-i; j++%7B%0A%09%09%09if(lista%5Bi%5D %3E lista%5Bj+1%5D)%7B%0A%09%09%09%09temp := lista%5Bi%5D%0A%09%09%09%09lista%5Bi%5D = lista%5Bj+1%5D%0A%09%09%09%09lista%5Bi%5D = temp%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return listaOrdenada%0A%0A%09// \n+%09\n _ = \n@@ -225,11 +225,8 @@\n et%0A%09\n-// \n retu\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-03-29_16-08-33",
+            "content": "@@ -281,32 +281,8 @@\n et)%0A\n-%09n := len(listaOrdenada)\n %0A%0A%09f\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-29_16-09-00",
+            "content": "@@ -365,32 +365,24 @@\n %0A%09%09%09if(lista\n-Ordenada\n %5Bi%5D %3E listaO\n@@ -376,32 +376,24 @@\n a%5Bi%5D %3E lista\n-Ordenada\n %5Bj+1%5D)%7B%0A%09%09%09%09\n@@ -405,24 +405,16 @@\n := lista\n-Ordenada\n %5Bi%5D%0A%09%09%09%09\n@@ -414,32 +414,24 @@\n i%5D%0A%09%09%09%09lista\n-Ordenada\n %5Bi%5D = listaO\n@@ -429,24 +429,16 @@\n  = lista\n-Ordenada\n %5Bj+1%5D%0A%09%09\n@@ -444,24 +444,16 @@\n %09%09%09lista\n-Ordenada\n %5Bi%5D = te\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-29_16-09-14",
+            "content": "@@ -378,17 +378,17 @@\n rdenada%5B\n-j\n+i\n %5D %3E list\n@@ -430,17 +430,17 @@\n rdenada%5B\n-j\n+i\n %5D%0A%09%09%09%09li\n@@ -447,25 +447,25 @@\n staOrdenada%5B\n-j\n+i\n %5D = listaOrd\n@@ -493,17 +493,17 @@\n rdenada%5B\n-j\n+i\n %5D = temp\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-29_16-10-16",
+            "content": "@@ -494,18 +494,16 @@\n denada%5Bj\n-+1\n %5D = temp\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-29_16-10-41",
+            "content": "@@ -541,16 +541,43 @@\n denada%0A%0A\n+%09// _ = vet%0A%09// return nil%0A\n %7D%0A%0Afunc \n@@ -666,333 +666,28 @@\n t %7B%0A\n-%0A%09listaInvertida := make(%5B%5Dint, len(vet))%0A%09copy(listaInvertida, vet)%0A%09n = len(listaInvertida)%0A%0A%09for ( i := 0; i %3C n-1 ;i++ )%7B%0A%09%09for( j := 0; i %3C n-1-i ; j++ )%7B%0A%09%09%09if(listaInvertida%5Bj%5D %3C listaInvertida%5Bj+1%5D)%7B%0A%09%09%09%09temp = listaInvertida%5Bj%5D%0A%09%09%09%09listaInvertida%5Bj%5D = listaInvertida%5Bj+1%5D%0A%09%09%09%09listaInvertida%5Bj+1%5D = temp%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n+%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-29_16-16-17",
+            "content": "@@ -772,25 +772,25 @@\n or( j := 0; \n-j\n+i\n  %3C n-1-i ; j\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-29_16-16-31",
+            "content": "@@ -735,16 +735,17 @@\n )%0A%0A%09for \n+(\n  i := 0;\n@@ -758,23 +758,25 @@\n -1 ;i++ \n+)\n %7B%0A%09%09for\n+(\n  j := 0;\n@@ -792,16 +792,17 @@\n i ; j++ \n+)\n %7B%0A%09%09%09if(\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-29_16-16-42",
+            "content": "@@ -699,33 +699,32 @@\n ertida, vet)%0A%09n \n-:\n = len(listaInver\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-29_16-16-49",
+            "content": "@@ -845,25 +845,24 @@\n )%7B%0A%09%09%09%09temp \n-:\n = listaInver\n@@ -961,32 +961,8 @@\n %09%7D%0A%0A\n-%09return listaInvertida%0A%0A\n %0A%7D%0A%0A\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-29_16-17-04",
+            "content": "@@ -978,24 +978,25 @@\n aInvertida%0A%0A\n+%0A\n %7D%0A%0Afunc uniq\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-29_16-18-45",
+            "content": "@@ -98,181 +98,28 @@\n t %7B%0A\n-%0A%09listaHomens := make(%5B%5Dint, len(vet))%0A%09%0A%0A%09for(i := 0; i %3C len(listaHomens); i++)%7B%0A%09%09if(vet%5Bi%5D %3E 0)%7B%0A%09%09%09listaHomens = append(listaHomens, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09return listaHomens\n+%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n@@ -637,19 +637,16 @@\n int %7B%0A%0A%09\n-// \n listaInv\n@@ -678,19 +678,16 @@\n (vet))%0A%09\n-// \n copy(lis\n@@ -705,19 +705,16 @@\n , vet)%0A%09\n-// \n n := len\n@@ -732,19 +732,16 @@\n tida)%0A%0A%09\n-// \n for  i :\n@@ -761,19 +761,16 @@\n ;i++ %7B%0A%09\n-// \n %09for j :\n@@ -793,19 +793,16 @@\n  j++ %7B%0A%09\n-// \n %09%09if(lis\n@@ -841,19 +841,16 @@\n j+1%5D)%7B%0A%09\n-// \n %09%09%09temp \n@@ -871,19 +871,16 @@\n ida%5Bj%5D%0A%09\n-// \n %09%09%09lista\n@@ -915,19 +915,16 @@\n a%5Bj+1%5D%0A%09\n-// \n %09%09%09lista\n@@ -950,33 +950,21 @@\n mp%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n-// \n retu\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-03-29_16-26-49",
+            "content": "@@ -144,16 +144,15 @@\n %09for\n- \n+(\n i := 0\n- \n ; i \n@@ -174,17 +174,17 @@\n ns); i++\n- \n+)\n %7B%0A%09%09if(v\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-03-29_16-27-04",
+            "content": "@@ -1179,30 +1179,8 @@\n da%0A%0A\n-%09_ = vet%0A%09return nil%0A%0A\n %7D%0A%0Af\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-03-29_16-27-25",
+            "content": "@@ -132,16 +132,18 @@\n en(vet))\n+%0A%09\n %0A%0A%09for i\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-03-29_16-30-57",
+            "content": "@@ -92,27 +92,24 @@\n ) %5B%5Dint %7B%0A%0A%09\n-// \n listaHomens \n@@ -131,27 +131,24 @@\n len(vet))%0A%0A%09\n-// \n for i := 0 ;\n@@ -177,19 +177,16 @@\n  i++ %7B%0A%09\n-// \n %09if(vet%5B\n@@ -195,19 +195,16 @@\n  %3E 0)%7B%0A%09\n-// \n %09%09listaH\n@@ -240,33 +240,24 @@\n et%5Bi%5D)%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n-// \n return l\n@@ -270,31 +270,8 @@\n mens\n-%0A%0A%09%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-03-29_16-31-18",
+            "content": "@@ -836,145 +836,8 @@\n  %7B%0A%0A\n-%09listaReversa := make(%5B%5Dint, len(vet))%0A%0A%09for i := len(listaReversa) -1; i %3E 0 ;i--;  %7B%0A%09%09listaReversa = append(listaReversa, vet%5Bi%5D)%0A%09%7D%0A%0A\n %09// \n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-03-29_16-33-34",
+            "content": "@@ -915,12 +915,13 @@\n  0 ;\n- \n i--\n+; \n  %7B%0A%09\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-03-29_16-34-38",
+            "content": "@@ -972,30 +972,8 @@\n %09%7D%0A%0A\n-%09return listaReversa%0A%0A\n %09// \n@@ -1354,19 +1354,16 @@\n rtida%0A%0A%09\n-// \n _ = vet%0A\n@@ -1363,19 +1363,16 @@\n  = vet%0A%09\n-// \n return n\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-03-29_16-38-08",
+            "content": "@@ -833,20 +833,16 @@\n int %7B%0A%0A%09\n-var \n listaRev\n@@ -850,15 +850,32 @@\n rsa \n+:\n = \n-%5B%5Dint\n+make(%5B%5Dint, len(vet))\n %0A%0A%09f\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-29_16-38-38",
+            "content": "@@ -849,16 +849,18 @@\n aReversa\n+ =\n  %5B%5Dint%0A%0A\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-29_16-38-46",
+            "content": "@@ -892,17 +892,16 @@\n  -1; i %3E\n-=\n  0 ; i--\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-29_16-39-10",
+            "content": "@@ -871,19 +871,28 @@\n  := len(\n-vet\n+listaReversa\n ) -1; i \n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-29_16-39-18",
+            "content": "@@ -92,27 +92,26 @@\n ) %5B%5Dint %7B%0A%0A%09\n-var\n+//\n  listaHomens\n@@ -111,24 +111,46 @@\n aHomens \n-%5B%5Dint%0A%0A%09\n+:= make(%5B%5Dint, len(vet))%0A%0A%09// \n for i :=\n@@ -147,24 +147,25 @@\n / for i := 0\n+ \n ; i %3C len(ve\n@@ -166,23 +166,35 @@\n len(\n-vet\n+listaHomens\n );\n+ \n i++\n+ \n %7B%0A%09\n-%09for\n+// %09if\n (vet\n@@ -204,16 +204,19 @@\n  %3E 0)%7B%0A%09\n+// \n %09%09listaH\n@@ -252,24 +252,33 @@\n et%5Bi%5D)%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09\n+// \n return l\n@@ -287,16 +287,39 @@\n taHomens\n+%0A%0A%09%09_ = vet%0A%09return nil\n %0A%7D%0A%0Afunc\n@@ -967,16 +967,429 @@\n eversa%0A%0A\n+%09// listaInvertida := make(%5B%5Dint, len(vet))%0A%09// copy(listaInvertida, vet)%0A%09// n := len(listaInvertida)%0A%0A%09// for  i := 0; i %3C n-1 ;i++ %7B%0A%09// %09for j := 0; j %3C n-1-i ; j++ %7B%0A%09// %09%09if(listaInvertida%5Bj%5D %3C listaInvertida%5Bj+1%5D)%7B%0A%09// %09%09%09temp := listaInvertida%5Bj%5D%0A%09// %09%09%09listaInvertida%5Bj%5D = listaInvertida%5Bj+1%5D%0A%09// %09%09%09listaInvertida%5Bj+1%5D = temp%0A%09// %09%09%7D%0A%09// %09%7D%0A%09// %7D%0A%0A%09// return listaInvertida%0A%0A%09// _ = vet%0A%09// return nil%0A%0A\n %7D%0A%0Afunc \n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-29_16-41-41",
+            "content": "@@ -118,17 +118,16 @@\n s %5B%5Dint%0A\n-%09\n %0A%09for i \n@@ -128,16 +128,17 @@\n for i :=\n+ \n 0; i %3C l\n@@ -148,18 +148,19 @@\n vet)\n- \n+;\n i++%7B%0A%09%09\n-i\n f\n+or\n (vet\n@@ -196,16 +196,32 @@\n pend(lis\n+taHomens, vet%5Bi%5D\n )%0A%09%09%7D%0A%09%7D\n@@ -246,39 +246,8 @@\n ens%0A\n-%0A%0A%0A%09// %09_ = vet%0A%09// return nil%0A\n %7D%0A%0Af\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-03-29_16-53-50",
+            "content": "@@ -96,19 +96,16 @@\n int %7B%0A%0A%09\n-// \n var list\n@@ -121,19 +121,16 @@\n %5Dint%0A%09%0A%09\n-// \n for i :=\n@@ -151,19 +151,16 @@\n ) i++%7B%0A%09\n-// \n %09if(vet%5B\n@@ -169,19 +169,16 @@\n  %3E 0)%7B%0A%09\n-// \n %09%09listaH\n@@ -202,25 +202,16 @@\n s)%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n-// \n retu\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-29_16-54-02",
+            "content": "@@ -250,16 +250,19 @@\n ens%0A%0A%0A%0A%09\n+// \n %09_ = vet\n@@ -255,32 +255,35 @@\n %0A%0A%09// %09_ = vet%0A%09\n+// \n return nil%0A%7D%0A%0Afu\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-29_16-54-11",
+            "content": "@@ -88,32 +88,35 @@\n %5Dint) %5B%5Dint %7B%0A%0A%09\n+// \n var listaHomens \n@@ -124,16 +124,19 @@\n %5Dint%0A%09%0A%09\n+// \n for i :=\n@@ -157,16 +157,19 @@\n ) i++%7B%0A%09\n+// \n %09if(vet%5B\n@@ -178,16 +178,19 @@\n  %3E 0)%7B%0A%09\n+// \n %09%09listaH\n@@ -211,29 +211,28 @@\n (lis\n-ta, vet%5Bi%5D\n )%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09\n+// \n retu\n@@ -250,19 +250,16 @@\n ens%0A%0A%0A%0A%09\n-// \n %09_ = vet\n@@ -260,19 +260,16 @@\n  = vet%0A%09\n-// \n return n\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-29_16-54-28",
+            "content": "@@ -130,17 +130,16 @@\n or i :=0\n- \n ; i %3C le\n@@ -144,17 +144,16 @@\n len(vet)\n-;\n  i++%7B%0A%09%09\n@@ -154,17 +154,17 @@\n ++%7B%0A%09%09if\n- \n+(\n vet%5Bi%5D %3E\n@@ -161,25 +161,25 @@\n f(vet%5Bi%5D %3E 0\n- \n+)\n %7B%0A%09%09%09listaHo\n@@ -236,16 +236,46 @@\n Homens%0A%0A\n+%0A%0A%09// %09_ = vet%0A%09// return nil%0A\n %7D%0A%0Afunc \n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-29_16-58-02",
+            "content": "@@ -199,22 +199,16 @@\n nd(lista\n-Homens\n , vet%5Bi%5D\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-29_16-58-22",
+            "content": "@@ -713,365 +713,27 @@\n  %7B%0A%09\n-%0A%09listaEstressados:= make(%5B%5Dint, len(vet))%0A%09copy(listaEstressados,vet)%0A%09n := len(listaEstressados)%0A%0A%09for i:= 0; i %3C n-1; i++%7B%0A%09%09for j:= 0; j %3C n-1-i; j++%7B%0A%09%09%09if(listaEstressados%5Bj%5D %3C listaEstressados%5Bj+1%5D)%7B%0A%09%09%09%09temp := listaEstressados%5Bj%5D%0A%09%09%09%09listaEstressados%5Bj%5D = listaEstressados%5Bj+1%5D%0A%09%09%09%09listaEstressados%5Bj+1%5D = temp%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return listaEstressados\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-29_17-01-13",
+            "content": "@@ -288,204 +288,9 @@\n t %7B%0A\n-%0A%09listaMulheresEstressadas %5B%5Dint%0A%0A%09for i := 0; i %3C len(vet); i++%7B%0A%09%09if(vet %3E -10 && vet%5Bi%5D %3C 0)%7B%0A%09%09%09listaEstressados = append(listaEstressados,vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09return listaMulheresEstressadas%0A%09// \n+%09\n _ = \n@@ -294,19 +294,16 @@\n  = vet%0A%09\n-// \n return n\n@@ -711,19 +711,16 @@\n nt %7B%0A%09%0A%09\n-// \n listaEst\n@@ -753,19 +753,16 @@\n (vet))%0A%09\n-// \n copy(lis\n@@ -781,19 +781,16 @@\n s,vet)%0A%09\n-// \n n := len\n@@ -810,19 +810,16 @@\n ados)%0A%0A%09\n-// \n for i:= \n@@ -836,19 +836,16 @@\n ; i++%7B%0A%09\n-// \n %09for j:=\n@@ -865,19 +865,16 @@\n ; j++%7B%0A%09\n-// \n %09%09if(lis\n@@ -917,19 +917,16 @@\n j+1%5D)%7B%0A%09\n-// \n %09%09%09temp \n@@ -949,19 +949,16 @@\n dos%5Bj%5D%0A%09\n-// \n %09%09%09lista\n@@ -997,19 +997,16 @@\n s%5Bj+1%5D%0A%09\n-// \n %09%09%09lista\n@@ -1034,33 +1034,21 @@\n mp%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n-// \n retu\n@@ -1070,30 +1070,8 @@\n ados\n-%0A%0A%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-03-29_17-10-21",
+            "content": "@@ -282,28 +282,24 @@\n ) %5B%5Dint %7B%0A%0A%09\n-var \n listaMulhere\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-03-29_17-10-32",
+            "content": "@@ -362,19 +362,16 @@\n %09%09if(vet\n-%5Bi%5D\n  %3E -10 &\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-03-29_17-10-43",
+            "content": "@@ -392,32 +392,24 @@\n 0)%7B%0A%09%09%09lista\n-Mulheres\n Estressadas \n@@ -405,17 +405,17 @@\n stressad\n-a\n+o\n s = appe\n@@ -418,32 +418,24 @@\n append(lista\n-Mulheres\n Estressadas,\n@@ -431,17 +431,17 @@\n stressad\n-a\n+o\n s,vet%5Bi%5D\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-03-29_17-10-53",
+            "content": "@@ -499,16 +499,42 @@\n essadas%0A\n+%09// _ = vet%0A%09// return nil\n %0A%7D%0A%0Afunc\n@@ -932,16 +932,19 @@\n nt %7B%0A%09%0A%09\n+// \n listaEst\n@@ -969,32 +969,35 @@\n int, len(vet))%0A%09\n+// \n copy(listaEstres\n@@ -1004,24 +1004,27 @@\n sados,vet)%0A%09\n+// \n n := len(lis\n@@ -1036,24 +1036,27 @@\n ressados)%0A%0A%09\n+// \n for i:= 0; i\n@@ -1061,32 +1061,35 @@\n  i %3C n-1; i++%7B%0A%09\n+// \n %09for j:= 0; j %3C \n@@ -1093,32 +1093,35 @@\n  %3C n-1-i; j++%7B%0A%09\n+// \n %09%09if(listaEstres\n@@ -1148,32 +1148,35 @@\n essados%5Bj+1%5D)%7B%0A%09\n+// \n %09%09%09temp := lista\n@@ -1187,24 +1187,27 @@\n essados%5Bj%5D%0A%09\n+// \n %09%09%09listaEstr\n@@ -1238,24 +1238,27 @@\n sados%5Bj+1%5D%0A%09\n+// \n %09%09%09listaEstr\n@@ -1274,37 +1274,49 @@\n +1%5D = temp%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n+// \n %7D%0A%0A%09\n+// \n return lista\n@@ -1329,19 +1329,16 @@\n sados%0A%0A%09\n-// \n _ = vet%0A\n@@ -1330,35 +1330,32 @@\n ados%0A%0A%09_ = vet%0A%09\n-// \n return nil%0A%7D%0A%0Afu\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-03-29_17-11-50",
+            "content": "@@ -1081,25 +1081,25 @@\n ressados%5Bj%5D \n-%3E\n+%3C\n  listaEstres\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-03-29_17-12-09",
+            "content": "@@ -1085,17 +1085,17 @@\n ados%5Bj%5D \n-%3C\n+%3E\n  listaEs\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-03-29_17-12-57",
+            "content": "@@ -1141,18 +1141,16 @@\n ssados%5Bj\n-+1\n %5D%0A%09%09%09%09li\n@@ -1165,18 +1165,16 @@\n ssados%5Bj\n-+1\n %5D = list\n@@ -1179,32 +1179,34 @@\n staEstressados%5Bj\n++1\n %5D%0A%09%09%09%09listaEstre\n@@ -1209,24 +1209,26 @@\n stressados%5Bj\n++1\n %5D = temp%0A%09%09%09\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-03-29_17-13-30",
+            "content": "@@ -1132,83 +1132,95 @@\n ista\n-Ordenada%5Bj%5D%0A%09%09%09%09listaOrdenada%5Bj%5D = listaOrdenada%5Bj+1%5D%0A%09%09%09%09listaOrdenada%5Bj+1\n+Estressados%5Bj+1%5D%0A%09%09%09%09listaEstressados%5Bj+1%5D = listaEstressados%5Bj%5D%0A%09%09%09%09listaEstressados%5Bj\n %5D = \n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-03-29_17-15-05",
+            "content": "@@ -1081,25 +1081,25 @@\n ressados%5Bj%5D \n-%3E\n+%3C\n  listaEstres\n@@ -1128,27 +1128,24 @@\n := lista\n-Estressados\n+Ordenada\n %5Bj%5D%0A%09%09%09%09\n@@ -1153,41 +1153,35 @@\n ista\n-Estressados%5Bj%5D = listaEstressados\n+Ordenada%5Bj%5D = listaOrdenada\n %5Bj+1\n@@ -1187,35 +1187,32 @@\n 1%5D%0A%09%09%09%09lista\n-Estressados\n+Ordenada\n %5Bj+1%5D = temp\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-03-29_17-15-18",
+            "content": "@@ -1059,17 +1059,16 @@\n i; j++%7B%0A\n-%0A\n %09%09%09if(li\n@@ -1084,21 +1084,16 @@\n sados%5Bj%5D\n- * -1\n  %3E lista\n@@ -1112,13 +1112,8 @@\n j+1%5D\n- * -1\n )%7B%0A%09\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-03-29_17-17-58",
+            "content": "@@ -1064,68 +1064,8 @@\n +%7B%0A%0A\n-%09%09%09if(listaEstressados%5Bj%5D %3C 0 && listaEstressados%5Bj%5D %3C 0)%7B%0A%09\n %09%09%09i\n@@ -1122,17 +1122,16 @@\n  * -1)%7B%0A\n-%09\n %09%09%09%09temp\n@@ -1150,33 +1150,32 @@\n ressados%5Bj%5D%0A%09%09%09%09\n-%09\n listaEstressados\n@@ -1198,33 +1198,32 @@\n ssados%5Bj+1%5D%0A%09%09%09%09\n-%09\n listaEstressados\n@@ -1242,459 +1242,9 @@\n %0A%09%09%09\n-%09%7D%0A%09%09%09%7D%0A%0A%0A%09%09%09if(listaEstressados%5Bj%5D %3C 0)%7B%0A%09%09%09%09if(listaEstressados%5Bj%5D * -1 %3E listaEstressados%5Bj+1%5D)%7B%0A%09%09%09%09%09temp := listaEstressados%5Bj%5D%0A%09%09%09%09%09listaEstressados%5Bj%5D = listaEstressados%5Bj+1%5D%0A%09%09%09%09%09listaEstressados%5Bj+1%5D = temp%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%09if(listaEstressados%5Bj+1%5D %3C 0)%7B%0A%09%09%09%09if(listaEstressados%5Bj%5D %3E listaEstressados%5Bj+1%5D  * -1 )%7B%0A%09%09%09%09%09temp := listaEstressados%5Bj%5D%0A%09%09%09%09%09listaEstressados%5Bj%5D = listaEstressados%5Bj+1%5D%0A%09%09%09%09%09listaEstressados%5Bj+1%5D = temp%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%0A\n+%7D\n %0A%09%09%7D\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-03-29_17-22-25",
+            "content": "@@ -1063,19 +1063,16 @@\n ++%7B%0A%0A%09%09%09\n-// \n if(lista\n@@ -1122,19 +1122,16 @@\n  0)%7B%0A%09%09%09\n-// \n %09if(list\n@@ -1185,19 +1185,16 @@\n -1)%7B%0A%09%09%09\n-// \n %09%09temp :\n@@ -1214,27 +1214,24 @@\n sados%5Bj%5D%0A%09%09%09\n-// \n %09%09listaEstre\n@@ -1267,19 +1267,16 @@\n j+1%5D%0A%09%09%09\n-// \n %09%09listaE\n@@ -1305,20 +1305,14 @@\n %0A%09%09%09\n-// \n %09%7D%0A%09%09%09\n-// \n %7D%0A%0A%0A\n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-03-29_17-22-42",
+            "content": "@@ -1059,24 +1059,27 @@\n i; j++%7B%0A%0A%09%09%09\n+// \n if(listaEstr\n@@ -1129,22 +1129,15 @@\n %0A%09%09%09\n-%09elemento1 := \n+// %09if(\n list\n@@ -1157,27 +1157,13 @@\n j%5D *\n+ \n -1\n-%0A%09%09%09%09elemento2 :=\n+ %3E\n  lis\n@@ -1182,49 +1182,24 @@\n s%5Bj+\n-2\n+1\n %5D *\n+ \n -1\n-%0A%09%09%09%09if(elemento1 %3E elemento2\n )%7B%0A%09%09%09\n+// \n %09%09te\n@@ -1219,32 +1219,35 @@\n tressados%5Bj%5D%0A%09%09%09\n+// \n %09%09listaEstressad\n@@ -1271,32 +1271,35 @@\n essados%5Bj+1%5D%0A%09%09%09\n+// \n %09%09listaEstressad\n@@ -1312,30 +1312,36 @@\n %5D = temp%0A%09%09%09\n+// \n %09%7D%0A%09%09%09\n+// \n %7D%0A%0A%0A%09%09%09if(li\n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-03-29_17-24-34",
+            "content": "@@ -1362,27 +1362,24 @@\n %7D%0A%09%09%09%7D%0A%0A%0A%09%09%09\n-// \n if(listaEstr\n@@ -1390,35 +1390,32 @@\n dos%5Bj%5D %3C 0)%7B%0A%09%09%09\n-// \n %09if(listaEstress\n@@ -1452,27 +1452,24 @@\n s%5Bj+1%5D)%7B%0A%09%09%09\n-// \n %09%09temp := li\n@@ -1481,35 +1481,32 @@\n tressados%5Bj%5D%0A%09%09%09\n-// \n %09%09listaEstressad\n@@ -1530,35 +1530,32 @@\n essados%5Bj+1%5D%0A%09%09%09\n-// \n %09%09listaEstressad\n@@ -1576,29 +1576,20 @@\n %0A%09%09%09\n-// \n %09%7D%0A%09%09%09\n-// \n %7D%0A%0A%09%09%09\n-// \n if(l\n@@ -1618,19 +1618,16 @@\n  0)%7B%0A%09%09%09\n-// \n %09if(list\n@@ -1678,19 +1678,16 @@\n 1 )%7B%0A%09%09%09\n-// \n %09%09temp :\n@@ -1707,27 +1707,24 @@\n sados%5Bj%5D%0A%09%09%09\n-// \n %09%09listaEstre\n@@ -1760,19 +1760,16 @@\n j+1%5D%0A%09%09%09\n-// \n %09%09listaE\n@@ -1798,20 +1798,14 @@\n %0A%09%09%09\n-// \n %09%7D%0A%09%09%09\n-// \n %7D%0A%0A%0A\n",
+            "lines": "188"
+        },
+        {
+            "label": "2026-03-29_17-24-41",
+            "content": "@@ -1094,10 +1094,10 @@\n %3C 0 \n-%7C%7C\n+&&\n  lis\n",
+            "lines": "188"
+        },
+        {
+            "label": "2026-03-29_17-25-00",
+            "content": "@@ -1010,145 +1010,656 @@\n %0A%0A%09f\n-unc abs(elemento x) int%7B%0A\n+or i:= 0; i %3C n-1; i++%7B%0A%09%09for j:= 0; j %3C n-1-i; j++%7B%0A%0A%09%09%09if(listaEstressados%5Bj%5D %3C 0 %7C%7C listaEstressados%5Bj%5D %3C 0)%7B%0A%09%09%09%09elemento1 := listaEstressados%5Bj%5D *-1%0A%09%09%09%09elemento2 := listaEstressados%5Bj+2%5D *-1%0A%09%09\n %09%09if(\n-x %3C 0)%7B%0A%09%09%09return -x%0A%09%09%7D%0A%0A%09%09return x%0A%09%7D%0A%0A%09for i:= 0; i %3C n-1; i++%7B%0A%09%09for j:= 0; j %3C n-1-i; j++\n+elemento1 %3E elemento2)%7B%0A%09%09%09%09%09temp := listaEstressados%5Bj%5D%0A%09%09%09%09%09listaEstressados%5Bj%5D = listaEstressados%5Bj+1%5D%0A%09%09%09%09%09listaEstressados%5Bj+1%5D = temp%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%0A%09%09%09// if(listaEstressados%5Bj%5D %3C 0)%7B%0A%09%09%09// %09if(listaEstressados%5Bj%5D * -1 %3E listaEstressados%5Bj+1%5D)%7B%0A%09%09%09// %09%09temp := listaEstressados%5Bj%5D%0A%09%09%09// %09%09listaEstressados%5Bj%5D = listaEstressados%5Bj+1%5D%0A%09%09%09// %09%09listaEstressados%5Bj+1%5D = temp%0A%09%09%09// %09%7D%0A%09%09%09// %7D%0A%0A%09%09%09// if(listaEstressados%5Bj+1%5D %3C 0)\n %7B%0A%09%09%09\n+// %09\n if(lista\n Orde\n@@ -1658,46 +1658,63 @@\n ista\n-Ordenada%5Bj%5D %3E listaOrdenada%5Bj+1%5D\n+Estressados%5Bj%5D %3E listaEstressados%5Bj+1%5D  * -1 \n )%7B%0A%09%09%09\n+// %09\n %09tem\n@@ -1727,56 +1727,69 @@\n ista\n-Ordenada\n+Estressados\n %5Bj%5D%0A%09%09%09\n+// %09\n %09lista\n-Ordenada%5Bj%5D = listaOrdenada\n+Estressados%5Bj%5D = listaEstressados\n %5Bj+1\n@@ -1789,38 +1789,45 @@\n dos%5Bj+1%5D%0A%09%09%09\n+// %09\n %09lista\n-Ordenada\n+Estressados\n %5Bj+1%5D = temp\n@@ -1822,33 +1822,48 @@\n %5Bj+1%5D = temp%0A%09%09%09\n-%7D\n+// %09%7D%0A%09%09%09// %7D%0A%0A%0A\n %0A%09%09%7D%0A%09%7D%0A%0A%09return\n",
+            "lines": "188"
+        },
+        {
+            "label": "2026-03-29_17-27-36",
+            "content": "@@ -1138,20 +1138,16 @@\n %7B%0A%09%09%09if(\n-abs(\n listaOrd\n@@ -1158,16 +1158,11 @@\n a%5Bj%5D\n-)\n  %3E \n-abs(\n list\n@@ -1176,17 +1176,16 @@\n da%5Bj+1%5D)\n-)\n %7B%0A%09%09%09%09te\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-03-29_17-27-50",
+            "content": "@@ -1018,13 +1018,18 @@\n abs(\n-x int\n+elemento x\n ) in\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-03-29_17-28-02",
+            "content": "@@ -1034,14 +1034,15 @@\n %09%09if\n- \n+(\n x %3C 0\n+)\n %7B%0A%09%09\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-03-29_17-29-12",
+            "content": "@@ -872,75 +872,8 @@\n %0A%7D%0A%0A\n-%09func abs(x int) int%7B%0A%09%09if x %3C 0%7B%0A%09%09%09return -x%0A%09%09%7D%0A%0A%09%09return x%0A%09%7D%0A%0A\n func\n@@ -1004,16 +1004,81 @@\n sados)%0A%0A\n+%09func abs(x int) int%7B%0A%09%09if x %3C 0%7B%0A%09%09%09return -x%0A%09%09%7D%0A%0A%09%09return x%0A%09%7D\n %0A%0A%09for i\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-03-29_17-29-25",
+            "content": "@@ -1143,27 +1143,24 @@\n bs(lista\n-Estressados\n+Ordenada\n %5Bj%5D) %3E a\n@@ -1163,35 +1163,32 @@\n  %3E abs(lista\n-Estressados\n+Ordenada\n %5Bj+1%5D))%7B%0A%09%09%09\n@@ -1201,27 +1201,24 @@\n := lista\n-Estressados\n+Ordenada\n %5Bj%5D%0A%09%09%09%09\n@@ -1226,41 +1226,35 @@\n ista\n-Estressados%5Bj%5D = listaEstressados\n+Ordenada%5Bj%5D = listaOrdenada\n %5Bj+1\n@@ -1264,27 +1264,24 @@\n %09%09%09lista\n-Estressados\n+Ordenada\n %5Bj+1%5D = \n",
+            "lines": "173"
+        },
+        {
+            "label": "2026-03-29_17-29-58",
+            "content": "@@ -868,16 +868,81 @@\n ada%0A%0A%7D%0A%0A\n+%09func abs(x int) int%7B%0A%09%09if x %3C 0%7B%0A%09%09%09return -x%0A%09%09%7D%0A%0A%09%09return x%0A%09%7D\n %0A%0Afunc s\n@@ -1075,73 +1075,8 @@\n s)%0A%0A\n-%09func abs(x int) int%7B%0A%09%09if x %3C 0%7B%0A%09%09%09return -x%0A%09%09%7D%0A%0A%09%09return x%0A%7D%0A\n %0A%0A%09f\n",
+            "lines": "173"
+        },
+        {
+            "label": "2026-03-29_17-30-20",
+            "content": "@@ -1011,20 +1011,16 @@\n )%0A%0A%09\n- abs := \n func\n+ abs\n (x i\n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-03-29_17-31-12",
+            "content": "@@ -1073,18 +1073,18 @@\n eturn x%0A\n-%09\n %7D\n+%0A\n %0A%0A%09for i\n@@ -1346,16 +1346,43 @@\n ssados%0A%0A\n+%09// _ = vet%0A%09// return nil%0A\n %7D%0A%0Afunc \n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-03-29_17-31-25",
+            "content": "@@ -1612,15 +1612,9 @@\n t %7B%0A\n-%0A%0A%0A%09// \n+%09\n _ = \n@@ -1622,11 +1622,8 @@\n et%0A%09\n-// \n retu\n",
+            "lines": "171"
+        },
+        {
+            "label": "2026-03-29_17-58-51",
+            "content": "@@ -1612,16 +1612,19 @@\n t %7B%0A%0A%0A%0A%09\n+// \n _ = vet%0A\n@@ -1616,32 +1616,35 @@\n %0A%0A%0A%09// _ = vet%0A%09\n+// \n return nil%0A%7D%0A%0Afu\n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-03-29_17-59-23",
+            "content": "@@ -864,24 +864,26 @@\n rdenada%0A%0A%7D%0A%0A\n+%0A%0A\n func sortStr\n@@ -1613,408 +1613,20 @@\n  %7B%0A%0A\n-%09mapaRepetidos :=%5Bmap%5Bint%5Dint, len(vet)%5D%0A%09var listaRepetidos %5B%5Dint%0A%0A%09for _,elementoVet := range\n+%0A%0A%09_ =\n  vet\n-%7B\n %0A%09\n-%09_, existe := mapaRepetidos%5BelementoVet%5D%0A%09%09if(!existe)%7B%0A%09%09%09mapaRepetidos%5BelementoVet%5D = 1%0A%09%09%7Delse%7B%0A%09%09%09mapaRepetidos%5BelementoVet%5D++%0A%09%09%7D%0A%09%7D%0A%0A%09for chave, valor := range mapaRepetidos%7B%0A%09%09if(valor %3E= 2)%7B%0A%09%09%09listaRepetidos = append(listaRepetidos, chave)%0A%09%09%7D%0A%09%7D%0A%0A%09return listaRepetidos%0A%0A%0A%09// _ = vet%0A%09// \n retu\n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-03-29_20-53-49",
+            "content": "@@ -1646,16 +1646,17 @@\n len(vet)\n+%5D\n %0A%09var li\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-03-29_20-54-07",
+            "content": "@@ -1624,22 +1624,17 @@\n tidos :=\n- make(\n+%5B\n map%5Bint%5D\n@@ -1646,17 +1646,16 @@\n len(vet)\n-)\n %0A%09var li\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-03-29_20-54-22",
+            "content": "@@ -1917,39 +1917,8 @@\n 2)%7B%0A\n-%09%09%09for i :=0; i %3C valor ;i++%7B%0A%09\n %09%09%09l\n@@ -1963,21 +1963,16 @@\n  chave)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-03-29_21-03-05",
+            "content": "@@ -1936,18 +1936,16 @@\n  %3C valor\n--1\n  ;i++%7B%0A%09\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-03-29_21-03-28",
+            "content": "@@ -1936,16 +1936,18 @@\n  %3C valor\n+-1\n  ;i++%7B%0A%09\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-03-29_21-03-45",
+            "content": "@@ -1936,18 +1936,16 @@\n  %3C valor\n--1\n  ;i++%7B%0A%09\n@@ -2011,283 +2011,8 @@\n %09%7D%0A%0A\n-%09tamanhoLista := len(listaRepetidos)%0A%0A%09for i:=0; i %3C tamanhoLista-1; i++%7B%0A%09%09for(j :=0; j %3C tamanhoLista-1-i)%7B%0A%09%09%09if(listaRepetidos%5Bj%5D %3E listaRepetidos%5Bj+1%5D)%7B%0A%09%09%09%09temp = listaRepetidos%5Bj%5D%0A%09%09%09%09listaRepetidos%5Bj%5D = listaRepetidos%5Bj+1%5D%0A%09%09%09%09listaRepetidos%5Bj+1%5D = temp%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-03-29_21-10-50",
+            "content": "@@ -2116,21 +2116,16 @@\n ista-1-i\n-; i++\n )%7B%0A%09%09%09if\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-03-29_21-11-04",
+            "content": "@@ -2094,17 +2094,16 @@\n or(j :=0\n- \n ; j %3C ta\n@@ -2118,17 +2118,17 @@\n ta-1-i; \n-j\n+i\n ++)%7B%0A%09%09%09\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-03-29_21-11-22",
+            "content": "@@ -2088,17 +2088,17 @@\n +%7B%0A%09%09for\n- \n+(\n j :=0 ; \n@@ -2122,17 +2122,17 @@\n 1-i; j++\n- \n+)\n %7B%0A%09%09%09if(\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-03-29_21-11-44",
+            "content": "@@ -2178,25 +2178,24 @@\n )%7B%0A%09%09%09%09temp \n-:\n = listaRepet\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-03-29_21-11-51",
+            "content": "@@ -1553,358 +1553,18 @@\n t %7B%0A\n-%0A%09mapaUnicos := make(map%5Bint%5Dint, len(vet))%0A%09var listaUnicos%5B%5Dint%0A%0A%09for _,elementoVet := range\n+%09_ =\n  vet\n-%7B\n %0A%09\n-%09_, existe := mapaUnicos%5BelementoVet%5D%0A%09%09if(!existe)%7B%0A%09%09%09mapaUnicos%5BelementoVet%5D = 1%0A%09%09%7Delse%7B%0A%09%09%09mapaUnicos%5BelementoVet%5D++%0A%09%09%7D%0A%09%7D%0A%0A%09for chave,_ := range mapaUnicos%7B%0A%09%09listaUnicos = append(listaUnicos, chave)%0A%09%7D%0A%0A%09return listaUnicos%0A%0A%0A%09// _ = vet%0A%09// \n retu\n@@ -2314,16 +2314,45 @@\n petidos%0A\n+%0A%0A%09// _ = vet%0A%09// return nil%0A\n %7D%0A%0Afunc \n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-03-29_21-17-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\n\tvar listaHomens []int\n\t\n\tfor i :=0 ; i < len(vet); i++{\n\t\tif vet[i] > 0 {\n\t\t\tlistaHomens = append(listaHomens, vet[i])\n\t\t}\n\t}\n\n\treturn listaHomens\n\n}\n\nfunc getCalmWomen(vet []int) []int {\n\n\tvar listaMulheresEstressadas []int\n\n\tfor i := 0; i < len(vet); i++{\n\t\tif(vet[i] > -10 && vet[i] < 0){\n\t\t\tlistaMulheresEstressadas = append(listaMulheresEstressadas,vet[i])\n\t\t}\n\t}\n\n\treturn listaMulheresEstressadas\n\n}\n\nfunc sortVet(vet []int) []int {\n\n\tlistaOrdenada := make([]int, len(vet))\n\tcopy(listaOrdenada,vet)\n\tn := len(listaOrdenada)\n\n\tfor i:= 0; i < n-1; i++{\n\t\tfor j:= 0; j < n-1-i; j++{\n\t\t\tif(listaOrdenada[j] > listaOrdenada[j+1]){\n\t\t\t\ttemp := listaOrdenada[j]\n\t\t\t\tlistaOrdenada[j] = listaOrdenada[j+1]\n\t\t\t\tlistaOrdenada[j+1] = temp\n\t\t\t}\n\t\t}\n\t}\n\n\treturn listaOrdenada\n\n}\n\nfunc sortStress(vet []int) []int {\n\t\n\tlistaEstressados:= make([]int, len(vet))\n\tcopy(listaEstressados,vet)\n\tn := len(listaEstressados)\n\n\t abs := func(x int) int{\n\t\tif x < 0{\n\t\t\treturn -x\n\t\t}\n\n\t\treturn x\n\t}\n\n\tfor i:= 0; i < n-1; i++{\n\t\tfor j:= 0; j < n-1-i; j++{\n\t\t\tif(abs(listaEstressados[j]) > abs(listaEstressados[j+1])){\n\t\t\t\ttemp := listaEstressados[j]\n\t\t\t\tlistaEstressados[j] = listaEstressados[j+1]\n\t\t\t\tlistaEstressados[j+1] = temp\n\t\t\t}\n\t\t}\n\t}\n\n\treturn listaEstressados\n\n}\n\nfunc reverse(vet []int) []int {\n\n\tvar listaReversa []int\n\n\tfor i := len(vet) -1; i >= 0 ; i-- {\n\t\tlistaReversa = append(listaReversa, vet[i])\n\t}\n\n\treturn listaReversa\n\n}\n\nfunc unique(vet []int) []int {\n\n\tmapaUnicos := make(map[int]int, len(vet))\n\tvar listaUnicos[]int\n\n\tfor _,elementoVet := range vet{\n\t\t_, existe := mapaUnicos[elementoVet]\n\t\tif(!existe){\n\t\t\tmapaUnicos[elementoVet] = 1\n\t\t}else{\n\t\t\tmapaUnicos[elementoVet]++\n\t\t}\n\t}\n\n\tfor chave,_ := range mapaUnicos{\n\t\tlistaUnicos = append(listaUnicos, chave)\n\t}\n\n\treturn listaUnicos\n\n\n\t// _ = vet\n\t// return nil\n}\n\nfunc repeated(vet []int) []int {\n\n\tmapaRepetidos := make(map[int]int, len(vet))\n\tvar listaRepetidos []int\n\n\tfor _,elementoVet := range vet{\n\t\t_, existe := mapaRepetidos[elementoVet]\n\t\tif(!existe){\n\t\t\tmapaRepetidos[elementoVet] = 1\n\t\t}else{\n\t\t\tmapaRepetidos[elementoVet]++\n\t\t}\n\t}\n\n\tfor chave, valor := range mapaRepetidos{\n\t\tif(valor >= 2){\n\t\t\tfor i :=0; i < valor-1 ;i++{\n\t\t\t\tlistaRepetidos = append(listaRepetidos, chave)\n\t\t\t}\n\t\t}\n\t}\n\n\ttamanhoLista := len(listaRepetidos)\n\n\tfor i:=0; i < tamanhoLista-1; i++{\n\t\tfor j :=0 ; j < tamanhoLista-1-i; j++ {\n\t\t\tif(listaRepetidos[j] > listaRepetidos[j+1]){\n\t\t\t\ttemp := listaRepetidos[j]\n\t\t\t\tlistaRepetidos[j] = listaRepetidos[j+1]\n\t\t\t\tlistaRepetidos[j+1] = temp\n\t\t\t}\n\t\t}\n\t}\n\n\treturn listaRepetidos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "lines": "221"
+        }
+    ]
+}
