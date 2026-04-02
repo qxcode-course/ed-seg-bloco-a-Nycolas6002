@@ -51,7 +51,7 @@ func main() {
 
     for i := 0; i < len(listaDeBuscas); i++ {
          if(i == len(listaDeBuscas) - 1){
-             fmt.Printf("%v\n", mapaDeConsultas[listaDeBuscas[i]] ) 
+            fmt.Printf("%v\n", mapaDeConsultas[listaDeBuscas[i]] ) 
         }else{
             fmt.Printf("%v ", mapaDeConsultas[listaDeBuscas[i]] )
         }

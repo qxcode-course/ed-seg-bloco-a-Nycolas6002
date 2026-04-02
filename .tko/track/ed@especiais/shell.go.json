@@ -1,0 +1,719 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-31_14-05-17",
+            "content": "@@ -107,101 +107,8 @@\n %0A%7D%0A%0A\n-func abs(valor int) int%7B%0A    if(valor %3E 0)%7B%0A        return valor%0A    %7D%0A%0A    return -valor%0A%7D%0A%0A\n func\n@@ -135,16 +135,41 @@\n %5DPair %7B%0A\n+ vetor := %5B%5Dint%7B1,3,-3,4%7D\n %0A    map\n@@ -199,16 +199,18 @@\n  len(vet\n+or\n ))%0A%0A    \n@@ -233,16 +233,18 @@\n ange vet\n+or\n %7B%0A      \n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-03-31_14-06-11",
+            "content": "@@ -445,19 +445,17 @@\n    info.\n-Two\n+b\n ++%0A     \n@@ -481,19 +481,17 @@\n    info.\n-One\n+a\n  = eleme\n@@ -511,19 +511,17 @@\n    info.\n-Two\n+b\n  = 1    \n@@ -601,16 +601,104 @@\n %5DPair%7B%7D%0A\n+    // contagem := make(%5B%5DPair, len(mapa))%0A    // contagem := make(%5B%5DPair)%0A    // i := 0\n %0A    for\n@@ -722,16 +722,47 @@\n e mapa%7B%0A\n+        // info := mapa%5Bchave%5D%0A\n         \n@@ -800,22 +800,76 @@\n or)%0A    \n-%7D%0A\n     \n+// contagem%5Bi%5D = mapa%5Bchave%5D%0A        // i++%0A    %7D%0A    %0A%0A\n %0A%09return\n",
+            "lines": "173"
+        },
+        {
+            "label": "2026-03-31_14-10-50",
+            "content": "@@ -336,19 +336,16 @@\n or)%0A\n-%09%09%0A\n         \n _,ex\n@@ -344,16 +344,12 @@\n     \n-_,existe\n+info\n  := \n@@ -363,24 +363,25 @@\n emento%5D%0A\n+%0A\n         \n info := \n@@ -364,36 +364,40 @@\n mento%5D%0A%0A        \n-info\n+_,existe\n  := mapa%5Belement\n@@ -611,19 +611,16 @@\n r%7B%7D%0A%0A   \n- //\n  for _, \n@@ -643,19 +643,16 @@\n apa%7B%0A   \n- //\n      con\n@@ -691,235 +691,59 @@\n     \n-// %7D%0A%0A%09//teste%0A%0A%09for i := 0; i %3C len(mapa);i++%7B%0A%09%09//vetor%0A%09%09for chave,valor := range mapa%7B%0A%09%09%09//mapa%0A%09%09%09if(vet%5Bi%5D == chave)%7B%0A%09%09%09%09//add contagem na pos i%0A%09%09%09%09contagem = append(contagem, valor)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A    %0A%09return contagem%0A\n+%7D%0A    %0A%09return contagem%0A%0A%09// _ = vet%0A%09// return nil\n %0A%7D%0A%0A\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-03-31_14-27-00",
+            "content": "@@ -864,19 +864,34 @@\n agem\n-%5Bi%5D =\n+ = append(contagem,\n  valor\n+)\n %0A%09%09%09\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-03-31_14-27-59",
+            "content": "@@ -869,32 +869,14 @@\n i%5D =\n- append(contagem,\n  valor\n-)\n %0A%09%09%09\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-03-31_14-28-11",
+            "content": "@@ -852,32 +852,35 @@\n s i%0A%09%09%09%09contagem\n+%5Bi%5D\n  = append(contag\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-03-31_14-29-40",
+            "content": "@@ -732,19 +732,20 @@\n i %3C len(\n-vet\n+mapa\n );i++%7B%0A%09\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-03-31_14-31-16",
+            "content": "@@ -732,20 +732,19 @@\n i %3C len(\n-mapa\n+vet\n );i++%7B%0A%09\n@@ -805,19 +805,14 @@\n %09if(\n-abs(\n vet%5Bi%5D\n-)\n  == \n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-03-31_14-32-34",
+            "content": "@@ -904,16 +904,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n     %0A%09re\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-03-31_14-42-04",
+            "content": "@@ -713,17 +713,11 @@\n este\n- 01%0A%0A%09// \n+%0A%0A%09\n for \n@@ -744,19 +744,16 @@\n );i++%7B%0A%09\n-// \n %09//vetor\n@@ -754,19 +754,16 @@\n /vetor%0A%09\n-// \n %09for cha\n@@ -787,19 +787,16 @@\n  mapa%7B%0A%09\n-// \n %09%09//mapa\n@@ -797,19 +797,16 @@\n //mapa%0A%09\n-// \n %09%09if(abs\n@@ -826,19 +826,16 @@\n have)%7B%0A%09\n-// \n %09%09%09//add\n@@ -857,166 +857,8 @@\n s i%0A\n-%09// %09%09%09contagem = append(contagem, valor)%0A%09// %09%09%7D%0A%09// %09%7D%0A%09// %7D%0A%0A%09%0A%09for i := 0; i %3C len(vet);i++%7B%0A%09%09%0A%09%09for chave, valor := range mapa%7B%0A%09%09%09if(vet%5Bi%5D == chave)%7B%0A\n %09%09%09%09\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-03-31_14-53-47",
+            "content": "@@ -273,30 +273,8 @@\n et))\n-%0A%09contagem := %5B%5DPair%7B%7D\n %0A%0A  \n@@ -533,46 +533,8 @@\n    %0A\n-%09%09%09contagem = append(contagem, info)%0A%0A\n     \n@@ -579,24 +579,49 @@\n       %0A    %7D\n+%0A    contagem := %5B%5DPair%7B%7D\n %0A%0A    // for\n@@ -943,23 +943,10 @@\n %7D%0A%0A%09\n-// teste 2%0A%09// \n+%0A%09\n for \n@@ -975,19 +975,16 @@\n ++%7B%0A%09%09%0A%09\n-// \n %09for cha\n@@ -1009,19 +1009,16 @@\n  mapa%7B%0A%09\n-// \n %09%09if(vet\n@@ -1033,19 +1033,16 @@\n have)%7B%0A%09\n-// \n %09%09%09conta\n@@ -1072,34 +1072,25 @@\n valor)%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A    %0A%09\n",
+            "lines": "187"
+        },
+        {
+            "label": "2026-03-31_14-57-57",
+            "content": "@@ -586,26 +586,14 @@\n em, \n-Pair%7Belemento, 1%7D)\n+info)%0A\n %0A   \n",
+            "lines": "189"
+        },
+        {
+            "label": "2026-03-31_15-00-22",
+            "content": "@@ -275,19 +275,22 @@\n ))%0A%09\n-ord\n+contag\n em := %5B%5D\n int%7B\n@@ -289,15 +289,15 @@\n = %5B%5D\n-int\n+Pair\n %7B%7D%0A\n-%09\n %0A   \n@@ -323,18 +323,24 @@\n ge vet%7B%0A\n-%09%09\n+        \n elemento\n@@ -456,36 +456,58 @@\n e)%7B%0A\n-%09%09%09info.Two++%0A%09%09%09%7Delse%7B%0A%09%09%09%09\n+            info.Two++%0A        %7Delse%7B%0A            \n info\n@@ -522,20 +522,28 @@\n lemento%0A\n-%09%09%09%09\n+            \n info.Two\n@@ -553,53 +553,13 @@\n 1   \n-%0A%09%09%09%09ordem : append(ordem, elemento)\n  %0A%09%09%09\n-%09// \n cont\n@@ -605,16 +605,26 @@\n 1%7D)%0A\n-%09%09%09%7D%0A%09%09%09\n+        %7D%0A        \n mapa\n@@ -645,132 +645,22 @@\n nfo%0A\n-%09%09%09%0A%09%09%7D%0A%09%09%0A%09contagem := %5B%5DPair%7B%7D%0A%09%0A%09for _,valor := range ordem%7B%0A%09%09contagem = append(contagem,valor)%0A%09%7D%0A    %0A%09return contagem\n+        %0A    %7D\n %0A%0A  \n@@ -1161,16 +1161,37 @@\n %7D%0A%09// %7D%0A\n+    %0A%09return contagem\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "188"
+        },
+        {
+            "label": "2026-03-31_15-18-55",
+            "content": "@@ -522,17 +522,16 @@\n %09ordem :\n-=\n  append(\n",
+            "lines": "196"
+        },
+        {
+            "label": "2026-03-31_15-19-13",
+            "content": "@@ -521,16 +521,17 @@\n %09%09ordem \n+:\n = append\n",
+            "lines": "196"
+        },
+        {
+            "label": "2026-03-31_15-19-27",
+            "content": "@@ -729,16 +729,13 @@\n gem,\n- mapa%5Bv%5D\n+valor\n )%0A%09%7D\n",
+            "lines": "196"
+        },
+        {
+            "label": "2026-03-31_15-19-45",
+            "content": "@@ -732,20 +732,16 @@\n , mapa%5Bv\n-alor\n %5D)%0A%09%7D%0A  \n",
+            "lines": "196"
+        },
+        {
+            "label": "2026-03-31_15-19-54",
+            "content": "@@ -515,19 +515,16 @@\n    %0A%09%09%09%09\n-// \n ordem = \n@@ -552,16 +552,19 @@\n o) %0A%09%09%09%09\n+// \n contagem\n@@ -644,19 +644,16 @@\n %09%09%7D%0A%09%09%0A%09\n-// \n contagem\n@@ -668,19 +668,16 @@\n ir%7B%7D%0A%09%0A%09\n-// \n for _,va\n@@ -697,19 +697,16 @@\n ordem%7B%0A%09\n-// \n %09contage\n@@ -744,33 +744,9 @@\n %5D)%0A%09\n-// %7D%0A%0A%09sort.Int(contagem)\n+%7D\n %0A   \n",
+            "lines": "196"
+        },
+        {
+            "label": "2026-03-31_15-24-02",
+            "content": "@@ -764,17 +764,16 @@\n sort.Int\n-s\n (contage\n",
+            "lines": "198"
+        },
+        {
+            "label": "2026-03-31_15-24-07",
+            "content": "@@ -64,16 +64,8 @@\n gs%22%0A\n-%09%22sort%22%0A\n )%0A%0At\n@@ -271,19 +271,16 @@\n (vet))%0A%09\n-// \n ordem :=\n",
+            "lines": "198"
+        },
+        {
+            "label": "2026-03-31_15-24-25",
+            "content": "@@ -282,30 +282,8 @@\n t))%0A\n-%09contagem := %5B%5DPair%7B%7D%0A\n %09// \n@@ -658,16 +658,36 @@\n %0A%09%09%0A%09// \n+contagem := %5B%5DPair%7B%7D\n %0A%09%0A%09// f\n",
+            "lines": "199"
+        },
+        {
+            "label": "2026-03-31_15-24-42",
+            "content": "@@ -114,10 +114,8 @@\n t%0A%7D%0A\n-/*\n %0Afun\n@@ -1322,669 +1322,8 @@\n %7D%0A%0A%0A\n-%7D*/%0A%0Afunc abs(valor int) int %7B%0A    if valor %3E= 0 %7B // corrigido aqui%0A        return valor%0A    %7D%0A    return -valor%0A%7D%0A%0Afunc occurr(vet %5B%5Dint) %5B%5DPair %7B%0A%0A    mapa := make(map%5Bint%5DPair)%0A    ordem := %5B%5Dint%7B%7D%0A%0A    for _, valor := range vet %7B%0A        elemento := abs(valor)%0A%0A        info, existe := mapa%5Belemento%5D // 1 acesso ao map%0A%0A        if existe %7B%0A            info.Two++%0A        %7D else %7B%0A            info = Pair%7BOne: elemento, Two: 1%7D%0A            ordem = append(ordem, elemento)%0A        %7D%0A%0A        mapa%5Belemento%5D = info%0A    %7D%0A%0A    contagem := %5B%5DPair%7B%7D%0A%0A    for _, valor := range ordem %7B%0A        contagem = append(contagem, mapa%5Bvalor%5D)%0A    %7D%0A%0A    return contagem%0A\n %7D%0A%0Af\n",
+            "lines": "200"
+        },
+        {
+            "label": "2026-03-31_15-26-30",
+            "content": "@@ -60,16 +60,24 @@\n trings%22%0A\n+%09%22sort%22%0A\n )%0A%0Atype \n",
+            "lines": "236"
+        },
+        {
+            "label": "2026-03-31_15-26-39",
+            "content": "@@ -64,16 +64,8 @@\n gs%22%0A\n-%09%22sort%22%0A\n )%0A%0At\n@@ -1497,30 +1497,11 @@\n ir)%0A\n-%09sort.Ints(vet)%0A    //\n+   \n  ord\n@@ -1756,19 +1756,16 @@\n         \n- //\n  ordem =\n@@ -1889,20 +1889,21 @@\n = range \n-mapa\n+ordem\n  %7B%0A     \n",
+            "lines": "235"
+        },
+        {
+            "label": "2026-03-31_15-32-38",
+            "content": "@@ -1911,35 +1911,36 @@\n  valor := range \n-vet\n+mapa\n  %7B%0A        conta\n",
+            "lines": "237"
+        },
+        {
+            "label": "2026-03-31_15-32-52",
+            "content": "@@ -1919,16 +1919,19 @@\n = range \n+vet\n  %7B%0A     \n",
+            "lines": "237"
+        },
+        {
+            "label": "2026-04-01_12-28-10",
+            "content": "@@ -1920,20 +1920,16 @@\n  range  \n-mapa\n %7B%0A      \n",
+            "lines": "237"
+        },
+        {
+            "label": "2026-04-01_12-28-31",
+            "content": "@@ -1920,24 +1920,20 @@\n  range  \n-len(vet)\n+mapa\n %7B%0A      \n",
+            "lines": "237"
+        },
+        {
+            "label": "2026-04-01_12-28-41",
+            "content": "@@ -1474,24 +1474,8 @@\n  %7B%0A%0A\n-%09sort.Ints(vet)%0A\n     \n@@ -1501,16 +1501,32 @@\n t%5DPair)%0A\n+%09sort.Ints(vet)%0A\n     // o\n@@ -1895,29 +1895,8 @@\n ir%7B%7D\n-%0A%09tamnho := len(mapa)\n %0A%0A  \n",
+            "lines": "237"
+        },
+        {
+            "label": "2026-04-01_12-31-53",
+            "content": "@@ -1897,15 +1897,11 @@\n %7B%7D%0A%09\n-// \n tam\n-a\n nho \n",
+            "lines": "238"
+        },
+        {
+            "label": "2026-04-01_12-32-15",
+            "content": "@@ -1945,20 +1945,24 @@\n  range  \n-mapa\n+len(vet)\n %7B%0A      \n",
+            "lines": "238"
+        },
+        {
+            "label": "2026-04-01_12-32-28",
+            "content": "@@ -1930,16 +1930,16 @@\n for \n-chave, _\n+_, valor\n  := \n@@ -1992,21 +1992,21 @@\n m, mapa%5B\n-chave\n+valor\n %5D)%0A    %7D\n",
+            "lines": "238"
+        },
+        {
+            "label": "2026-04-01_12-32-50",
+            "content": "@@ -1471,16 +1471,35 @@\n air %7B%0A%0A%09\n+sort.Ints(vet)%0A    \n mapa := \n@@ -1521,21 +1521,24 @@\n ir)%0A    \n-chave\n+// ordem\n  := %5B%5Din\n@@ -1533,33 +1533,32 @@\n rdem := %5B%5Dint%7B%7D%0A\n-%09\n %0A    for _, valo\n@@ -1574,18 +1574,24 @@\n e vet %7B%0A\n-%09%09\n+        \n elemento\n@@ -1597,34 +1597,32 @@\n o := abs(valor)%0A\n-%09%09\n %0A        info, e\n@@ -1664,18 +1664,16 @@\n  ao map%0A\n-%09%09\n %0A       \n@@ -1685,19 +1685,28 @@\n xiste %7B%0A\n-%09%09%09\n+            \n info.Two\n@@ -1708,19 +1708,24 @@\n o.Two++%0A\n-%09%09%09\n+        \n %7D else %7B\n@@ -1725,20 +1725,28 @@\n  else %7B%0A\n-%09%09%09%09\n+            \n info = P\n@@ -1776,17 +1776,28 @@\n  1%7D%0A\n-%09%09%09%09chave\n+            // ordem\n  = a\n@@ -1802,21 +1802,21 @@\n  append(\n-chave\n+ordem\n , elemen\n@@ -1823,20 +1823,27 @@\n to)%0A\n-%09%09%09%7D%0A%09%09%09%0A%09%09%09\n+        %7D%0A%0A        \n mapa\n@@ -1864,33 +1864,14 @@\n nfo%0A\n-%09%09%7D%0A%09%09%0A%09%09sort.Ints(chave)\n+    %7D%0A\n %0A   \n@@ -1891,16 +1891,41 @@\n %5B%5DPair%7B%7D\n+%0A%09// tamanho := len(mapa)\n %0A%0A    fo\n@@ -1922,32 +1922,32 @@\n a)%0A%0A    for \n-_, valor\n+chave, _\n  := range ch\n@@ -1944,21 +1944,21 @@\n = range \n-chave\n+ mapa\n %7B%0A      \n@@ -1992,21 +1992,21 @@\n m, mapa%5B\n-valor\n+chave\n %5D)%0A    %7D\n",
+            "lines": "238"
+        },
+        {
+            "label": "2026-04-01_12-38-30",
+            "content": "@@ -1804,16 +1804,17 @@\n %0A%09%09%7D%0A%09%09%0A\n+%09\n %09sort.In\n@@ -1823,16 +1823,16 @@\n (chave)%0A\n-\n     cont\n@@ -1997,315 +1997,8 @@\n  %7B%0A%09\n-%0A%09// mapa := make(map%5Bint%5Dint)%0A%0A%09times := %5B%5DPair%7B%7D%0A%0A%09for i := 0; i %3C len(vet); i++%7B%0A%09%09valorAtual := vet%5Bi%5D%0A%09%09proximoValor := i+1%0A%09%09contador := 0%0A%0A%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contador++%0A%09%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contador %7D)%0A%09%09%7Delse%7B%0A%09%09%09contador = 0%0A%09%09%7D%0A%0A%09%7D%0A%0A%09return times%0A%09%0A%09// \n _ = \n@@ -2002,19 +2002,16 @@\n  = vet%0A%09\n-// \n return n\n",
+            "lines": "237"
+        },
+        {
+            "label": "2026-04-01_12-53-04",
+            "content": "@@ -2135,382 +2135,170 @@\n ador\n-DeRepetido := 0%0A%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contador %7D)%0A%0A%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contador++%0A%09%09%7Delse%7B%0A%09%09%09contador = 0%0A%09%09%7D%0A%0A%09%7D%0A%0A%09return times%0A%0A%09/*%0A%09vetor%0A%09struct (a,b)%0A%09variavel contadorDeRepetido%0A%0A%09add no vetor do tipo Struct, o valor e a quantidade%0A%0A%09alterar valor do %22b%22 quando o proximo o valor de %22a%22 for igual a %22a%22\n+ := 0%0A%0A%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contador++%0A%09%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contador %7D)%0A%09%09%7Delse%7B%0A%09%09%09contador = 0%0A%09%09%7D%0A%0A%09%7D\n %0A%0A%09ret\n-o\n+u\n rn\n-a\n  times%0A\n-%0A%0A%09*/%0A%0A\n %09%0A%09/\n",
+            "lines": "258"
+        },
+        {
+            "label": "2026-04-01_12-58-17",
+            "content": "@@ -2141,17 +2141,16 @@\n Repetido\n-s\n  := 0%0A%09%09\n@@ -2201,27 +2201,16 @@\n contador\n-DeRepetidos\n  %7D)%0A%0A%09%09i\n@@ -2251,27 +2251,16 @@\n contador\n-DeRepetidos\n ++%0A%09%09%7Del\n@@ -2278,19 +2278,8 @@\n ador\n-DeRepetidos\n  = 0\n",
+            "lines": "273"
+        },
+        {
+            "label": "2026-04-01_12-58-34",
+            "content": "@@ -2281,49 +2281,8 @@\n s++%0A\n-%09%09%09valorAtual.Two =  contadorDeRepetidos%0A\n %09%09%7De\n",
+            "lines": "273"
+        },
+        {
+            "label": "2026-04-01_12-59-37",
+            "content": "@@ -2284,16 +2284,18 @@\n %0A%09%09%09\n-times%5Bi%5D\n+valorAtual\n .Two\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_12-59-54",
+            "content": "@@ -2234,17 +2234,17 @@\n orAtual \n-!\n+=\n = proxim\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_13-01-06",
+            "content": "@@ -2220,19 +2220,16 @@\n s %7D)%0A%0A%09%09\n-// \n if(valor\n@@ -2234,17 +2234,17 @@\n orAtual \n-=\n+!\n = proxim\n@@ -2250,27 +2250,24 @@\n moValor)%7B%0A%09%09\n-// \n %09contadorDeR\n@@ -2279,19 +2279,16 @@\n dos++%0A%09%09\n-// \n %09times%5Bi\n@@ -2318,19 +2318,16 @@\n tidos%0A%09%09\n-// \n %7Delse%7B%0A%09\n@@ -2327,19 +2327,16 @@\n else%7B%0A%09%09\n-// \n %09contado\n@@ -2354,19 +2354,16 @@\n s = 0%0A%09%09\n-// \n %7D%0A%0A%09%7D%0A%0A%09\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_13-01-34",
+            "content": "@@ -2078,19 +2078,16 @@\n  i++%7B%0A%09%09\n-// \n valorAtu\n@@ -2101,19 +2101,16 @@\n et%5Bi%5D%0A%09%09\n-// \n proximoV\n@@ -2123,19 +2123,16 @@\n = i+1%0A%09%09\n-// \n contador\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_13-01-44",
+            "content": "@@ -2129,16 +2129,19 @@\n = i+1%0A%09%09\n+// \n contador\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_13-01-51",
+            "content": "@@ -2152,17 +2152,17 @@\n idos := \n-1\n+0\n %0A%09%09times\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_13-02-03",
+            "content": "@@ -2078,16 +2078,19 @@\n  i++%7B%0A%09%09\n+// \n valorAtu\n@@ -2104,16 +2104,19 @@\n et%5Bi%5D%0A%09%09\n+// \n proximoV\n@@ -2127,18 +2127,11 @@\n  := \n-vetor%5B\n i+1\n-%5D\n %0A%09%09c\n@@ -2228,111 +2228,8 @@\n %7D)%0A%0A\n-%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contadorDeRepetidos++%0A%09%09%09times%5Bi%5D.Two = contadorDeRepetidos%0A%09%09%7D%0A%0A%0A\n %09%09//\n",
+            "lines": "274"
+        },
+        {
+            "label": "2026-04-01_13-03-52",
+            "content": "@@ -2120,16 +2120,18 @@\n r := vet\n+or\n %5Bi+1%5D%0A%09%09\n",
+            "lines": "280"
+        },
+        {
+            "label": "2026-04-01_13-04-06",
+            "content": "@@ -2073,11 +2073,8 @@\n vet)\n- +1\n ; i+\n",
+            "lines": "280"
+        },
+        {
+            "label": "2026-04-01_13-06-25",
+            "content": "@@ -2070,17 +2070,17 @@\n en(vet) \n--\n++\n 1; i++%7B%0A\n",
+            "lines": "280"
+        },
+        {
+            "label": "2026-04-01_13-06-33",
+            "content": "@@ -2073,18 +2073,18 @@\n vet)\n+ -1\n ; i++%7B%0A\n-%09%09%0A\n %09%09va\n@@ -2160,129 +2160,8 @@\n = 1%0A\n-%0A%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contadorDeRepetidos++%0A%09%09%09valor%5Bi%5D.Two = contadorDeRepetidos%0A%09%09%09//alterar%0A%09%09%7Delse%7B%0A%09\n %09%09ti\n@@ -2229,48 +2229,11 @@\n  %7D)%0A\n+%0A\n %09%09\n-%09contadorDeRepetidos = 0%0A%09%09%7D%0A%0A%0A%0A%0A%09%09// \n if(v\n@@ -2254,35 +2254,32 @@\n roximoValor)%7B%0A%09%09\n-// \n %09contadorDeRepet\n@@ -2279,35 +2279,32 @@\n DeRepetidos++%0A%09%09\n-// \n %09times%5Bi%5D.Two = \n@@ -2325,19 +2325,16 @@\n tidos%0A%09%09\n-// \n %7D%0A%0A%0A%09%09//\n",
+            "lines": "280"
+        },
+        {
+            "label": "2026-04-01_13-16-30",
+            "content": "@@ -2224,21 +2224,19 @@\n %09%09%09valor\n-Atual\n+%5Bi%5D\n .Two = c\n",
+            "lines": "292"
+        },
+        {
+            "label": "2026-04-01_13-16-41",
+            "content": "@@ -2219,24 +2219,26 @@\n os++%0A%09%09%09\n-times%5Bi%5D\n+valorAtual\n .Two = c\n",
+            "lines": "292"
+        },
+        {
+            "label": "2026-04-01_13-16-55",
+            "content": "@@ -2069,19 +2069,16 @@\n len(vet)\n- -1\n ; i++%7B%0A%09\n@@ -2157,17 +2157,16 @@\n s := 1%0A%0A\n-%0A\n %09%09if(val\n",
+            "lines": "292"
+        },
+        {
+            "label": "2026-04-01_13-17-16",
+            "content": "@@ -2164,76 +2164,8 @@\n  1%0A%0A\n-%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contadorDeRepetidos %7D)\n %0A%09%09i\n@@ -2375,17 +2375,17 @@\n tidos = \n-1\n+0\n %0A%09%09%7D%0A%0A%0A%0A\n",
+            "lines": "293"
+        },
+        {
+            "label": "2026-04-01_13-19-41",
+            "content": "@@ -2046,34 +2046,8 @@\n ir%7B%7D\n-%0A%09contadorDeRepetidos := 1\n %0A%0A%09f\n@@ -2131,16 +2131,43 @@\n vet%5Bi+1%5D\n+%0A%09%09contadorDeRepetidos := 1\n %0A%0A%09%09time\n",
+            "lines": "293"
+        },
+        {
+            "label": "2026-04-01_13-20-13",
+            "content": "@@ -2163,68 +2163,8 @@\n 1%5D%0A%0A\n-%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contadorDeRepetidos++%0A%09\n %09%09ti\n@@ -2228,16 +2228,75 @@\n idos %7D)%0A\n+%09%09if(valorAtual == proximoValor)%7B%0A%09%09%09contadorDeRepetidos++%0A\n %09%09%09times\n@@ -2446,24 +2446,26 @@\n s = 1%0A%09%09%7D%0A%0A%0A\n+%0A%0A\n %09%09// if(valo\n",
+            "lines": "293"
+        },
+        {
+            "label": "2026-04-01_13-20-45",
+            "content": "@@ -2222,70 +2222,8 @@\n s++%0A\n-%09%09%09times%5Bi%5D.Two = contadorDeRepetidos%0A%09%09%09//alterar%0A%09%09%09%7Delse%7B%0A%09\n %09%09%09t\n@@ -2287,25 +2287,39 @@\n tidos %7D)%0A%09%09%09\n-%09\n+times%5Bi%5D.Two = \n contadorDeRe\n@@ -2329,24 +2329,34 @@\n idos\n- = 1%0A%09%09%09%7D%0A%09%09%09\n+%0A%09%09%09//alterar%0A%09%09%7Delse%7B\n %0A%09%09\n+%09\n time\n@@ -2418,16 +2418,48 @@\n idos %7D)%0A\n+%09%09%09contadorDeRepetidos = 1%0A%09%09%7D%0A%0A\n %0A%09%09// if\n",
+            "lines": "291"
+        },
+        {
+            "label": "2026-04-01_13-22-23",
+            "content": "@@ -2217,27 +2217,24 @@\n etidos++%0A%09%09%09\n-// \n times%5Bi%5D.Two\n@@ -2386,19 +2386,19 @@\n %09%09%09%7D%0A%09%09%09\n-// \n+%0A%09%09\n times = \n@@ -2455,20 +2455,16 @@\n tidos %7D)\n-%0A%09%09%09\n %0A%0A%09%09// i\n",
+            "lines": "291"
+        },
+        {
+            "label": "2026-04-01_13-24-00",
+            "content": "@@ -2286,19 +2286,16 @@\n se%7B%0A%09%09%09%09\n-// \n times = \n@@ -2389,16 +2389,19 @@\n %09%09%09%7D%0A%09%09%09\n+// \n times = \n",
+            "lines": "291"
+        },
+        {
+            "label": "2026-04-01_13-24-23",
+            "content": "@@ -2286,16 +2286,19 @@\n se%7B%0A%09%09%09%09\n+// \n times = \n@@ -2396,24 +2396,78 @@\n %0A%09%09%09\n-%0A%09%09%09return times\n+times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contadorDeRepetidos %7D)%0A%09%09%09\n %0A%0A%09%09\n@@ -2740,16 +2740,30 @@\n  %7D%0A%0A%09%7D%0A%0A\n+%09return times%0A\n %0A%09/*%0A%09ve\n",
+            "lines": "291"
+        },
+        {
+            "label": "2026-04-01_13-25-08",
+            "content": "@@ -2393,18 +2393,30 @@\n %0A%09%09%09%0A%09%09%09\n+return times%0A\n %0A\n-%09\n %09%09// if(\n@@ -2446,18 +2446,16 @@\n lor)%7B%0A%09%09\n-%09%09\n // %09cont\n@@ -2472,18 +2472,16 @@\n tidos++%0A\n-%09%09\n %09%09// %09ti\n@@ -2519,27 +2519,15 @@\n s%0A%09%09\n-%09%09\n // %7D%0A\n-%09%09%09%09%0A%09%09%09%09%0A%09%09\n+%0A%0A\n %09%09//\n@@ -2559,19 +2559,16 @@\n Valor)%7B%0A\n-%09%09%09\n %09%09// %09co\n@@ -2587,19 +2587,16 @@\n tidos++%0A\n-%09%09%09\n %09%09// %09ti\n@@ -2629,19 +2629,16 @@\n petidos%0A\n-%09%09%09\n %09%09// %7Del\n@@ -2641,20 +2641,16 @@\n  %7Delse%7B%0A\n-%09%09%09%09\n %09%09// %09co\n@@ -2675,68 +2675,32 @@\n = 0%0A\n-%09%09%09%09\n %09%09// %7D%0A\n-%09%09%09%09%09%09%0A%09%09%09%09%09%7D%0A%09%09%09%09%09%0A%09%09%09%09%09%0A%09%09%09%09%09/*%0A%09%09%09%09\n+%0A%09%7D%0A%0A%0A%09/*%0A\n %09vetor%0A\n-%09%09%09%09\n %09str\n@@ -2709,20 +2709,16 @@\n t (a,b)%0A\n-%09%09%09%09\n %09variave\n@@ -2738,26 +2738,17 @@\n epetido%0A\n-%09%09%09%09%09%0A%09%09%09%09\n+%0A\n %09add no \n@@ -2792,26 +2792,17 @@\n ntidade%0A\n-%09%09%09%09%09%0A%09%09%09%09\n+%0A\n %09alterar\n@@ -2863,26 +2863,17 @@\n l a %22a%22%0A\n-%09%09%09%09%09%0A%09%09%09%09\n+%0A\n %09retorna\n@@ -2883,51 +2883,14 @@\n mes%0A\n-%09%09%09%09%09%0A%09%09%09%09%09%0A%09%09%09%09%09*/%0A%09%09%09%09%09%0A%09%09%09%09%09return times\n+%0A%0A%09*/%0A\n %0A%09%0A%09\n",
+            "lines": "290"
+        },
+        {
+            "label": "2026-04-01_13-25-32",
+            "content": "@@ -2086,17 +2086,16 @@\n = 0; i %3C\n-=\n  len(vet\n@@ -2096,16 +2096,18 @@\n en(vet) \n+-1\n ; i++%7B%0A%09\n@@ -2386,16 +2386,340 @@\n  1%0A%09%09%09%7D%0A\n+%09%09%09%0A%09%09%09%0A%09%09%09// if(valorAtual == proximoValor)%7B%0A%09%09%09%09// %09contadorDeRepetidos++%0A%09%09%09%09// %09times%5Bi%5D.Two = contadorDeRepetidos%0A%09%09%09%09// %7D%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09// if(valorAtual == proximoValor)%7B%0A%09%09%09%09%09// %09contadorDeRepetidos++%0A%09%09%09%09%09// %09times%5Bi%5D.Two =  contadorDeRepetidos%0A%09%09%09%09%09// %7Delse%7B%0A%09%09%09%09%09%09// %09contadorDeRepetidos = 0%0A%09%09%09%09%09%09// %7D%0A%09%09%09%09%09%09%0A%09%09%09%09\n %09%7D%0A%09%09%09%09%09\n",
+            "lines": "290"
+        },
+        {
+            "label": "2026-04-01_13-28-07",
+            "content": "@@ -2078,32 +2078,33 @@\n %09for i := 0; i %3C\n+=\n  len(vet) -1; i+\n@@ -2097,18 +2097,16 @@\n en(vet) \n--1\n ; i++%7B%0A%09\n",
+            "lines": "275"
+        },
+        {
+            "label": "2026-04-01_13-28-15",
+            "content": "@@ -1995,15 +1995,18 @@\n r %7B%0A\n+%09\n %0A%09\n-times\n+// mapa\n  := \n@@ -2014,89 +2014,105 @@\n ake(\n-%5B%5DPair)%0A%0A%0A%09for i, valorAtual := range vet%7B%0A%0A%09%09if(i %3C len(vet) - 1)%7B%0A%09%09%09break%0A%09%09%7D%0A\n+map%5Bint%5Dint)%0A%0A%09times := %5B%5DPair%7B%7D%0A%09contadorDeRepetidos := 1%0A%0A%09for i := 0; i %3C len(vet) -1; i++%7B%0A%09%09\n %0A%09%09v\n@@ -2120,16 +2120,26 @@\n lorAtual\n+ := vet%5Bi%5D\n %0A%09%09proxi\n@@ -2161,44 +2161,8 @@\n i+1%5D\n-%0A%09%09contador := 1%0A%09%09valorChecado := 0\n %0A%0A%09%09\n@@ -2208,538 +2208,228 @@\n ador\n-++%0A%09%09%7Delse%7B%0A%09%09%09times = append(times, Pair%7Bvalor, contador%7D)%0A%09%09%7D%0A%09%7D%0A%0A%09%0A%09return times%0A%0A%09/*%0A%090 e 1%0A%09li o 3 %0A%09o proximo numero depois do 3 n%C3%A3o %C3%A9 3%0A%09ent%C3%A3o eu adiciono apenas (3,1) no meu times%0A%09ent%C3%A3o o contador de recorrencia fica 1%0A%0A%091 e 2%0A%09li o 5%0A%09o proximo numero %C3%A9 igual a 5(sim)%0A%09ent%C3%A3o o contador de recorrencia aumenta +1%0A%0A%092 e 3%0A%09li o 5%0A%09o proximo numero %C3%A9 igual a 5(sim)%0A%09ent%C3%A3o o contador de recorrencia aumenta +1%0A%0A%094%0A%09li o 5%0A%09o proximo numero %C3%A9 igual a 5(sim)%0A%09ent%C3%A3o o contador de recorrencia aumenta +1%0A%0A%09*/%0A\n+DeRepetidos++%0A%09%09%09// times%5Bi%5D.Two = contadorDeRepetidos%0A%09%09%09//alterar%0A%09%09%09%7Delse%7B%0A%09%09%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contadorDeRepetidos %7D)%0A%09%09%09%09contadorDeRepetidos = 1%0A%09%09%09%7D%0A%09%7D%0A%09%09%09%09%09%0A%09\n %09%09%09%09%0A\n+%09%09%09%09\n %09/*%0A\n+%09%09%09%09\n %09vetor%0A\n+%09%09%09%09\n %09str\n@@ -2438,16 +2438,20 @@\n t (a,b)%0A\n+%09%09%09%09\n %09variave\n@@ -2472,17 +2472,25 @@\n petido%0A%09\n-%0A\n+%09%09%09%09%0A%09%09%09%09\n %09add no \n@@ -2535,17 +2535,25 @@\n tidade%0A%09\n-%0A\n+%09%09%09%09%0A%09%09%09%09\n %09alterar\n@@ -2615,17 +2615,25 @@\n  a %22a%22%0A%09\n-%0A\n+%09%09%09%09%0A%09%09%09%09\n %09retorna\n@@ -2644,419 +2644,54 @@\n es%0A%09\n-%0A%09%0A%09*/%0A%09%09%09%0A%09%0A%09/*%0A%0Atimes := %5B%5DPair%7B%7D%0AcontadorDeRepetidos := 1%0Atamanho := len(vet)%0A%0A//len(vet) -1%0Afor i := 0; i %3C len(vet) -1 ; i++%7B%0A%09%0A%09valorAtual := vet%5Bi%5D%0A%09proximoValor := vet%5Bi+1%5D%0A%0A%09if(valorAtual == proximoValor)%7B%0A%09%09contadorDeRepetidos++%0A%09%09// times%5Bi%5D.Two = contadorDeRepetidos%0A%09%09//alterar%0A%09%09%7Delse%7B%0A%09%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contadorDeRepetidos %7D)%0A%09%09%09contadorDeRepetidos = 1%0A%09%09%7D%0A%7D%09%09%0A%09*/%0A%0A%0A\n+%09%09%09%09%0A%09%09%09%09%09%0A%09%09%09%09%09*/%0A%09%09%09%09%09%0A%09%09%09%09%09return times%0A%09%0A%09\n // _\n@@ -2697,16 +2697,17 @@\n _ = vet%0A\n+%09\n // retur\n",
+            "lines": "275"
+        },
+        {
+            "label": "2026-04-01_20-03-22",
+            "content": "@@ -2013,18 +2013,16 @@\n e(%5B%5DPair\n-%7B%7D\n )%0A%0A%0A%09for\n@@ -2147,19 +2147,16 @@\n  := 1%0A%09%09\n-// \n valorChe\n",
+            "lines": "325"
+        },
+        {
+            "label": "2026-04-01_20-03-45",
+            "content": "@@ -2002,24 +2002,29 @@\n imes := \n+make(\n %5B%5DPair%7B%7D\n %0A%0A%0A%09for \n@@ -2015,16 +2015,17 @@\n %5B%5DPair%7B%7D\n+)\n %0A%0A%0A%09for \n",
+            "lines": "325"
+        },
+        {
+            "label": "2026-04-01_20-04-04",
+            "content": "@@ -2085,16 +2085,29 @@\n ak%0A%09%09%7D%0A%0A\n+%09%09valorAtual%0A\n %09%09proxim\n",
+            "lines": "325"
+        },
+        {
+            "label": "2026-04-01_20-04-16",
+            "content": "@@ -2244,21 +2244,16 @@\n ir%7Bvalor\n-Atual\n , contad\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-04-30",
+            "content": "@@ -2067,17 +2067,17 @@\n (vet) - \n-2\n+1\n )%7B%0A%09%09%09br\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-05-01",
+            "content": "@@ -2066,17 +2066,18 @@\n n(vet) -\n-1\n+ 2\n )%7B%0A%09%09%09br\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-13-37",
+            "content": "@@ -2071,18 +2071,8 @@\n ) -1\n- %7C%7C i == 0\n )%7B%0A%09\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-14-01",
+            "content": "@@ -1996,51 +1996,8 @@\n  %7B%0A%0A\n-%09if(len(vet) == 0)%7B%09%0A%09%09return %5B%5DPair%7B%7D%0A%09%7D%0A%0A\n %09tim\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-15-28",
+            "content": "@@ -2058,23 +2058,9 @@\n r%7B%7D%0A\n-%09contador := 1\n %0A\n+\n %0A%09fo\n@@ -2110,16 +2110,26 @@\n (vet) -1\n+ %7C%7C i == 0\n )%7B%0A%09%09%09br\n@@ -2164,17 +2164,31 @@\n et%5Bi+1%5D%0A\n-\n %09\n+%09contador := 1\n %0A%09%09// va\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-16-05",
+            "content": "@@ -2054,18 +2054,16 @@\n %5DPair%7B%7D%0A\n-%09%0A\n %09contado\n@@ -2073,71 +2073,96 @@\n = 1%0A\n-%09valor := %5B0%5D%0A%0A%09for i := 0 ; i %3C len(vetor); i++%7B%0A%0A%09%09if(v\n+%0A%09for i, valorAtual := range vet%7B%0A%0A%09%09if(i %3C len(vet) -1)%7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09proximoV\n alor \n-=\n+:\n = ve\n@@ -2167,16 +2167,74 @@\n vet%5Bi+1%5D\n+%0A%09%0A%09%09// valorChecado := 0%0A%0A%09%09if(valorAtual == proximoValor\n )%7B%0A%09%09%09co\n@@ -2286,16 +2286,21 @@\n ir%7Bvalor\n+Atual\n , contad\n@@ -2308,44 +2308,8 @@\n r%7D)%0A\n-%09%09%09contador = 1%0A%09%09%09valor = vet%5Bi+1%5D%0A\n %09%09%7D%0A\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-19-11",
+            "content": "@@ -2078,23 +2078,19 @@\n %0A%09valor \n- \n := \n-vet\n %5B0%5D%0A%0A%09fo\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-19-40",
+            "content": "@@ -2115,16 +2115,18 @@\n  len(vet\n+or\n ); i++%7B%0A\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-19-48",
+            "content": "@@ -2260,15 +2260,8 @@\n +1%5D%0A\n-%09%09%09i--%0A\n %09%09%7D%0A\n",
+            "lines": "324"
+        },
+        {
+            "label": "2026-04-01_20-20-55",
+            "content": "@@ -2126,43 +2126,8 @@\n i++%7B\n-%0A%09%09if(i %3C len(vet)-1)%7B%0A%09%09%09break%0A%09%09%7D\n %0A%0A%09%09\n@@ -2256,16 +2256,23 @@\n et%5Bi+1%5D%0A\n+%09%09%09i--%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "325"
+        },
+        {
+            "label": "2026-04-01_20-23-02",
+            "content": "@@ -2212,50 +2212,8 @@\n e%7B%0A%09\n-%09%09contador = 1%0A%09%09%09valor = vet%5Bi+1%5D%0A%09%09%7D%0A%09%09%0A\n %09%09ti\n@@ -2255,16 +2255,56 @@\n tador%7D)%0A\n+%09%09%09contador = 1%0A%09%09%09valor = vet%5Bi+1%5D%0A%09%09%7D%0A\n %09%7D%0A%0A%09%0A%09r\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_20-24-24",
+            "content": "@@ -2122,16 +2122,51 @@\n t); i++%7B\n+%0A%09%09if(i %3C len(vet)-1)%7B%0A%09%09%09break%0A%09%09%7D\n %0A%0A%09%09if(v\n@@ -2247,16 +2247,18 @@\n +1%5D%0A%09%09%7D%0A\n+%09%09\n %0A%09%09times\n@@ -2301,47 +2301,8 @@\n r%7D)%0A\n-%0A%09%09%09%09if(i %3C len(vet)-1)%7B%0A%09%09%09break%0A%09%09%7D%0A%0A\n %09%7D%0A%0A\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-25-41",
+            "content": "@@ -2094,33 +2094,8 @@\n 0%5D%0A%0A\n-%09tamanho := len(vet) +1%0A%0A\n %09for\n@@ -2108,23 +2108,24 @@\n 0 ; i %3C \n-tamanho\n+len(vet)\n ; i++%7B%0A%0A\n@@ -2165,32 +2165,72 @@\n dor++%0A%09%09%7Delse%7B%0A%09\n+%09%09contador = 1%0A%09%09%09valor = vet%5Bi+1%5D%0A%09%09%7D%0A%0A\n %09%09times = append\n@@ -2264,51 +2264,47 @@\n r%7D)%0A\n+%0A%09\n %09%09%09\n-contador = 1%0A%09%09%09valor = vet%5Bi+1%5D\n+if(i %3C len(vet)-1)%7B%0A%09%09%09break\n %0A%09%09%7D%0A%0A\n-%0A%0A\n %09%7D%0A%0A\n",
+            "lines": "330"
+        },
+        {
+            "label": "2026-04-01_20-26-51",
+            "content": "@@ -2090,16 +2090,41 @@\n vet%5B0%5D%0A%0A\n+%09tamanho := len(vet) +1%0A%0A\n %09for i :\n@@ -2137,24 +2137,23 @@\n i %3C \n-len(vet)\n+tamanho\n ; i++%7B%0A%0A\n %0A%09%09i\n@@ -2148,17 +2148,16 @@\n ; i++%7B%0A%0A\n-%0A\n %09%09if(val\n@@ -2289,48 +2289,9 @@\n %09%7D%0A%0A\n-%09%09%0A%09%09if(i+1 %3C len(vet) -1)%7B%0A%09%09%09break%0A%09%09%7D\n+%0A\n %0A%09%7D%0A\n",
+            "lines": "329"
+        },
+        {
+            "label": "2026-04-01_20-33-32",
+            "content": "@@ -2128,44 +2128,8 @@\n +%7B%0A%0A\n-%09%09if(vet%5Bi+1%5D == nil)%7B%0A%09%09%09break%0A%09%09%7D%0A\n %0A%09%09i\n@@ -2262,16 +2262,56 @@\n 1%5D%0A%09%09%7D%0A%0A\n+%09%09%0A%09%09if(i+1 %3C len(vet) -1)%7B%0A%09%09%09break%0A%09%09%7D\n %0A%09%7D%0A%0A%09%0A%09\n",
+            "lines": "330"
+        },
+        {
+            "label": "2026-04-01_20-34-41",
+            "content": "@@ -2130,49 +2130,19 @@\n %0A%0A%09%09\n-proximoValor :=vet%5Bi+1%5D%0A%09%09if(proximoValor\n+if(vet%5Bi+1%5D\n  == \n",
+            "lines": "330"
+        },
+        {
+            "label": "2026-04-01_20-35-43",
+            "content": "@@ -2155,17 +2155,16 @@\n 1%5D%0A%09%09if(\n-!\n proximoV\n@@ -2163,24 +2163,31 @@\n proximoValor\n+ == nil\n )%7B%0A%09%09%09break%0A\n",
+            "lines": "331"
+        },
+        {
+            "label": "2026-04-01_20-35-53",
+            "content": "@@ -2155,16 +2155,17 @@\n 1%5D%0A%09%09if(\n+!\n proximoV\n@@ -2172,21 +2172,10 @@\n alor\n- == nil)%7B%0A%09%09%09\n+)%7B\n %0A%09%09%09\n",
+            "lines": "331"
+        },
+        {
+            "label": "2026-04-01_20-36-06",
+            "content": "@@ -2072,19 +2072,16 @@\n r := 1%0A%09\n-// \n valor  :\n@@ -2126,19 +2126,16 @@\n i++%7B%0A%0A%09%09\n-// \n proximoV\n@@ -2152,19 +2152,16 @@\n %5Bi+1%5D%0A%09%09\n-// \n if(proxi\n@@ -2177,22 +2177,22 @@\n = nil)%7B%0A\n+%09%09%09\n %0A%09%09\n-// \n %09break%0A%09\n@@ -2196,19 +2196,13 @@\n k%0A%09%09\n-// \n %7D%0A%0A%09%09\n-// \n if(v\n@@ -2222,19 +2222,16 @@\n +1%5D)%7B%0A%09%09\n-// \n %09contado\n@@ -2236,19 +2236,16 @@\n dor++%0A%09%09\n-// \n %7Delse%7B%0A%09\n@@ -2245,19 +2245,16 @@\n else%7B%0A%09%09\n-// \n %09times =\n@@ -2293,19 +2293,16 @@\n dor%7D)%0A%09%09\n-// \n %09contado\n@@ -2309,19 +2309,16 @@\n r = 1%0A%09%09\n-// \n %09valor =\n@@ -2333,60 +2333,9 @@\n %5D%0A%09%09\n-// %7D%0A%0A%09%09times = append(times, Pair%7Bvalor, contador%7D)\n+%7D\n %0A%0A%0A%09\n",
+            "lines": "332"
+        },
+        {
+            "label": "2026-04-01_20-40-05",
+            "content": "@@ -2395,21 +2395,20 @@\n , Pair%7Bv\n-et%5Bi%5D\n+alor\n , contad\n",
+            "lines": "334"
+        },
+        {
+            "label": "2026-04-01_20-40-22",
+            "content": "@@ -2079,13 +2079,13 @@\n %09// \n-atual\n+valor\n   :=\n@@ -2110,17 +2110,16 @@\n  0 ; i %3C\n-=\n  len(vet\n@@ -2131,20 +2131,101 @@\n +%7B%0A%0A\n-%0A\n %09%09\n-if(vet%5Bi%5D\n+// proximoValor :=vet%5Bi+1%5D%0A%09%09// if(proximoValor == nil)%7B%0A%0A%09%09// %09break%0A%09%09// %7D%0A%0A%09%09// if(valor\n  == \n@@ -2237,16 +2237,19 @@\n +1%5D)%7B%0A%09%09\n+// \n %09contado\n@@ -2254,16 +2254,19 @@\n dor++%0A%09%09\n+// \n %7Delse%7B%0A%09\n@@ -2258,32 +2258,35 @@\n +%0A%09%09// %7Delse%7B%0A%09%09\n+// \n %09times = append(\n@@ -2313,24 +2313,27 @@\n ontador%7D)%0A%09%09\n+// \n %09contador = \n@@ -2336,16 +2336,19 @@\n r = 1%0A%09%09\n+// \n %09valor =\n@@ -2359,17 +2359,69 @@\n %5Bi+1%5D%0A%09%09\n-%7D\n+// %7D%0A%0A%09%09times = append(times, Pair%7Bvet%5Bi%5D, contador%7D)\n %0A%0A%0A%09%7D%0A%0A%09\n",
+            "lines": "334"
+        },
+        {
+            "label": "2026-04-01_20-44-21",
+            "content": "@@ -2209,21 +2209,20 @@\n , Pair%7Bv\n-et%5Bi%5D\n+alor\n , contad\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_20-44-36",
+            "content": "@@ -2093,17 +2093,16 @@\n vet%5B0%5D%0A%0A\n-%0A\n %09for i :\n@@ -2246,19 +2246,16 @@\n  = 1%0A%09%09%09\n-// \n valor = \n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_20-45-07",
+            "content": "@@ -2072,16 +2072,19 @@\n r := 1%0A%09\n+// \n atual  :\n@@ -2104,17 +2104,17 @@\n or i := \n-1\n+0\n  ; i %3C= \n@@ -2133,23 +2133,8 @@\n +%7B%0A%0A\n-%09%09%09// 0       1\n %0A%09%09i\n@@ -2145,23 +2145,24 @@\n t%5Bi%5D == \n-atual  \n+vet%5Bi+1%5D\n )%7B%0A%09%09%09co\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-46-13",
+            "content": "@@ -2259,28 +2259,8 @@\n = 1%0A\n-%09%09%09atual = vetor%5Bi%5D%0A\n %09%09%09/\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-46-44",
+            "content": "@@ -2265,24 +2265,26 @@\n %09atual = vet\n+or\n %5Bi%5D%0A%09%09%09// va\n",
+            "lines": "329"
+        },
+        {
+            "label": "2026-04-01_20-46-49",
+            "content": "@@ -1996,63 +1996,8 @@\n  %7B%0A%0A\n-%09%0A%09times := %5B%5DPair%7B%7D%0A%09contador := 1%0A%09atual  := vet%5B0%5D%0A%0A\n %09if(\n@@ -2038,91 +2038,62 @@\n %0A%09%7D%0A\n-%09\n %0A%09\n-if(len(vet) == 1)%7B%0A%09%09return \n times \n+:\n = \n-append(times, Pair%7Bvet%5Bi%5D, contador%7D)%0A%09%7D%0A%0A%09%0A\n+%5B%5DPair%7B%7D%0A%09%0A%09contador := 1%0A%09atual  := vet%5B0%5D\n %0A%0A%0A%09\n",
+            "lines": "329"
+        },
+        {
+            "label": "2026-04-01_20-48-06",
+            "content": "@@ -2113,16 +2113,23 @@\n = 1)%7B%0A%09%09\n+return \n times = \n@@ -2170,23 +2170,8 @@\n r%7D)%0A\n-%09%09return times%0A\n %09%7D%0A%0A\n",
+            "lines": "336"
+        },
+        {
+            "label": "2026-04-01_20-48-27",
+            "content": "@@ -2144,17 +2144,17 @@\n air%7Bvet%5B\n-0\n+i\n %5D, conta\n",
+            "lines": "337"
+        },
+        {
+            "label": "2026-04-01_20-48-35",
+            "content": "@@ -2089,16 +2089,109 @@\n ir%7B%7D%0A%09%7D%0A\n+%09%0A%09if(len(vet) == 1)%7B%0A%09%09times = append(times, Pair%7Bvet%5B0%5D, contador%7D)%0A%09%09return times%0A%09%7D%0A%0A%09%0A%0A%0A\n %0A%09for i \n@@ -2316,20 +2316,16 @@\n air%7B\n-One:\n vet%5Bi%5D, \n Two:\n@@ -2312,36 +2312,32 @@\n s, Pair%7Bvet%5Bi%5D, \n-Two:\n contador%7D)%0A%09%09%09at\n@@ -2338,38 +2338,38 @@\n %0A%09%09%09\n-atual = vet%5Bi%5D%0A%09%09%09contador = 1\n+contador = 1%0A%09%09%09atual = vet%5Bi%5D\n %0A%09%09%09\n",
+            "lines": "337"
+        },
+        {
+            "label": "2026-04-01_20-50-00",
+            "content": "@@ -1996,51 +1996,9 @@\n  %7B%0A%0A\n-%0A%09if(len(vet) == 0)%7B%09%0A%09%09return %5B%5DPair%7B%7D%0A%09%7D%0A\n+%09\n %0A%09ti\n@@ -2047,16 +2047,59 @@\n vet%5B0%5D%0A%0A\n+%09if(len(vet) == 0)%7B%09%0A%09%09return %5B%5DPair%7B%7D%0A%09%7D%0A%0A\n %09for i :\n@@ -2103,24 +2103,25 @@\n i := 1 ; i %3C\n+=\n  len(vet); i\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-50-31",
+            "content": "@@ -2159,16 +2159,18 @@\n == atual\n+  \n )%7B%0A%09%09%09co\n@@ -2221,21 +2221,22 @@\n air%7BOne:\n-atual\n+vet%5Bi%5D\n , Two:co\n@@ -2280,23 +2280,45 @@\n r = 1%0A%09%09\n+%09// valor = vet%5Bi+1%5D%0A%09%09\n %7D%0A\n-%09%7D\n %0A%0A%09\n+%7D\n %0A%0A%09%0A%09ret\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_20-53-29",
+            "content": "@@ -2287,62 +2287,8 @@\n %09%7D%0A%0A\n-%09times = append(times, Pair%7BOne:atual, Two:contador%7D)%0A\n %09%0A%0A%09\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_20-56-00",
+            "content": "@@ -2284,19 +2284,16 @@\n %09%7D%0A%09%7D%0A%0A%09\n-// \n times = \n@@ -2339,16 +2339,17 @@\n dor%7D)%0A%09%0A\n+%0A\n %09%0A%09retur\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_21-10-18",
+            "content": "@@ -2280,24 +2280,27 @@\n  1%0A%09%09%7D%0A%09%7D%0A%0A%09\n+// \n times = appe\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_21-14-35",
+            "content": "@@ -2106,17 +2106,16 @@\n  1 ; i %3C\n-=\n  len(vet\n@@ -2284,19 +2284,16 @@\n %09%7D%0A%09%7D%0A%0A%09\n-// \n times = \n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_21-21-09",
+            "content": "@@ -2102,24 +2102,25 @@\n i := 1 ; i %3C\n+=\n  len(vet); i\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_21-21-17",
+            "content": "@@ -2106,17 +2106,16 @@\n  1 ; i %3C\n-=\n  len(vet\n@@ -2280,24 +2280,27 @@\n  1%0A%09%09%7D%0A%09%7D%0A%0A%09\n+// \n times = appe\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_21-21-31",
+            "content": "@@ -2102,24 +2102,25 @@\n i := 1 ; i %3C\n+=\n  len(vet); i\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_21-21-36",
+            "content": "@@ -2284,19 +2284,16 @@\n %09%7D%0A%09%7D%0A%0A%09\n-// \n times = \n@@ -2337,17 +2337,16 @@\n tador%7D)%0A\n-%0A\n %09%0A%09%0A%09ret\n",
+            "lines": "327"
+        },
+        {
+            "label": "2026-04-01_21-22-07",
+            "content": "@@ -2280,24 +2280,27 @@\n  1%0A%09%09%7D%0A%09%7D%0A%0A%09\n+// \n times = appe\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_21-25-10",
+            "content": "@@ -2336,16 +2336,19 @@\n ntador%7D)\n+%0A%0A%09\n %0A%09%0A%09retu\n@@ -2361,73 +2361,712 @@\n es%0A%0A\n-%7D%0A%0Afunc mnext(vet %5B%5Dint) %5B%5Dint %7B%0A%0A%09listaDePosicoes := make(%5B%5Dint,\n+%09/*%0A%090 e 1%0A%09li o 3 %0A%09o proximo numero depois do 3 n%C3%A3o %C3%A9 3%0A%09ent%C3%A3o eu adiciono apenas (3,1) no meu times%0A%09ent%C3%A3o o contador de recorrencia fica 1%0A%0A%091 e 2%0A%09li o 5%0A%09o proximo numero %C3%A9 igual a 5(sim)%0A%09ent%C3%A3o o contador de recorrencia aumenta +1%0A%0A%092 e 3%0A%09li o 5%0A%09o proximo numero %C3%A9 igual a 5(sim)%0A%09ent%C3%A3o o contador de recorrencia aumenta +1%0A%0A%094%0A%09li o 5%0A%09o proximo numero %C3%A9 igual a 5(sim)%0A%09ent%C3%A3o o contador de recorrencia aumenta +1%0A%0A%09*/%0A%09%09%09%09%0A%09/*%0A%09vetor%0A%09struct (a,b)%0A%09variavel contadorDeRepetido%0A%09%0A%09add no vetor do tipo Struct, o valor e a quantidade%0A%09%0A%09alterar valor do %22b%22 quando o proximo o valor de %22a%22 for igual a %22a%22%0A%09%0A%09retorna times%0A%09%0A%09%0A%09*/%0A%09%09%09%0A%09%0A%09/*%0A%0Atimes := %5B%5DPair%7B%7D%0AcontadorDeRepetidos := 1%0Atamanho :=\n  len\n@@ -3074,15 +3074,12 @@\n vet)\n-)\n %0A%0A\n-%09if(\n+//\n len(\n@@ -3087,47 +3087,326 @@\n et) \n-== 0)%7B%0A%09%09return listaDePosicoes%0A%09%7D%0A%0A%0A%0A%09\n+-1%0Afor i := 0; i %3C len(vet) -1 ; i++%7B%0A%09%0A%09valorAtual := vet%5Bi%5D%0A%09proximoValor := vet%5Bi+1%5D%0A%0A%09if(valorAtual == proximoValor)%7B%0A%09%09contadorDeRepetidos++%0A%09%09// times%5Bi%5D.Two = contadorDeRepetidos%0A%09%09//alterar%0A%09%09%7Delse%7B%0A%09%09%09times = append(times, Pair%7BOne: vet%5Bi%5D, Two:contadorDeRepetidos %7D)%0A%09%09%09contadorDeRepetidos = 1%0A%09%09%7D%0A%7D%09%09%0A%09*/%0A%0A%0A\n // _\n@@ -3412,17 +3412,16 @@\n _ = vet%0A\n-%09\n // retur\n@@ -3425,24 +3425,78 @@\n turn nil%0A%7D%0A%0A\n+func mnext(vet %5B%5Dint) %5B%5Dint %7B%0A%09_ = vet%0A%09return nil%0A%7D%0A%0A\n func alone(v\n",
+            "lines": "328"
+        },
+        {
+            "label": "2026-04-01_21-31-26",
+            "content": "@@ -2481,38 +2481,16 @@\n es%0A%09%7D%0A%0A%0A\n-return listaDePosicoes\n %0A%09// _ =\n",
+            "lines": "270"
+        },
+        {
+            "label": "2026-04-01_21-31-34",
+            "content": "@@ -2464,23 +2464,29 @@\n urn \n-%5B%5Dint%7B0%7D\n+listaDePosicoes\n %0A%09%7D%0A%0A%0A\n-%09\n retu\n",
+            "lines": "270"
+        },
+        {
+            "label": "2026-04-01_21-32-22",
+            "content": "@@ -2460,31 +2460,24 @@\n %09return \n-listaDePosicoes\n+%5B%5Dint%7B0%7D\n %0A%09%7D%0A%0A%0A%09r\n",
+            "lines": "270"
+        },
+        {
+            "label": "2026-04-01_21-32-33",
+            "content": "@@ -2447,17 +2447,17 @@\n vet) == \n-1\n+0\n )%7B%0A%09%09ret\n@@ -2484,14 +2484,8 @@\n %09%7D%0A%0A\n-%09for%0A%0A\n %0A%09re\n",
+            "lines": "270"
+        },
+        {
+            "label": "2026-04-01_21-32-52",
+            "content": "@@ -2481,16 +2481,19 @@\n es%0A%09%7D%0A%0A%09\n+for\n %0A%0A%0A%09retu\n",
+            "lines": "272"
+        },
+        {
+            "label": "2026-04-01_21-32-59",
+            "content": "@@ -2485,185 +2485,8 @@\n %7D%0A%0A%09\n-atual := vet%5B0%5D%0A%0A%09for i := 1; i %3C len(vet); i++%7B%0A%0A%09%09// if(atual %3C 0 && vet%5Bi%5D %3E 0) %7C%7C (vet%5Bi%5D %3E 0 && )%7B%0A%0A%09%09// %7D%0A%0A%09%09if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09%7D%0A%0A%09%7D\n %0A%0A%0A%09\n",
+            "lines": "272"
+        },
+        {
+            "label": "2026-04-01_21-39-47",
+            "content": "@@ -2534,27 +2534,14 @@\n ++%7B%0A\n+%0A\n %09%09\n-p := vet%5Bi+1%5D%0A%0A%09%09\n+// \n if(a\n@@ -2586,52 +2586,22 @@\n  && \n-p %3C 0\n )%7B%0A\n-%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09\n+%0A%09%09// \n %7D%0A%0A%09%09\n-// \n if(a\n@@ -2627,19 +2627,16 @@\n %3E 0)%7B%0A%09%09\n-// \n %09listaDe\n@@ -2653,19 +2653,16 @@\n %5D = 1%0A%09%09\n-// \n %7D%0A%0A%09%7D%0A%0A%0A\n",
+            "lines": "284"
+        },
+        {
+            "label": "2026-04-01_21-43-10",
+            "content": "@@ -2547,24 +2547,53 @@\n t%5Bi+1%5D%0A%0A%09%09if\n+(atual %3C 0 && vet%5Bi%5D %3E 0) %7C%7C \n (vet%5Bi%5D %3E 0 \n",
+            "lines": "285"
+        },
+        {
+            "label": "2026-04-01_21-43-36",
+            "content": "@@ -2481,19 +2481,16 @@\n es%0A%09%7D%0A%0A%09\n-// \n atual :=\n",
+            "lines": "285"
+        },
+        {
+            "label": "2026-04-01_21-43-43",
+            "content": "@@ -2481,16 +2481,19 @@\n es%0A%09%7D%0A%0A%09\n+// \n atual :=\n@@ -2497,17 +2497,17 @@\n  := vet%5B\n-1\n+0\n %5D%0A%0A%09for \n@@ -2511,17 +2511,17 @@\n or i := \n-2\n+1\n ; i %3C le\n@@ -2537,42 +2537,29 @@\n ++%7B%0A\n-%0A\n %09%09\n-if(atual %3C 0 && vet%5Bi%5D %3E 0) %7C%7C \n+p := vet%5Bi+1%5D%0A%0A%09%09if\n (vet\n@@ -2569,16 +2569,21 @@\n  %3E 0 && \n+p %3C 0\n )%7B%0A%09%09%09li\n",
+            "lines": "285"
+        },
+        {
+            "label": "2026-04-01_21-44-19",
+            "content": "@@ -2533,19 +2533,16 @@\n i++%7B%0A%0A%09%09\n-// \n if(atual\n@@ -2584,19 +2584,16 @@\n && )%7B%0A%09%09\n-// \n %09listaDe\n@@ -2614,16 +2614,16 @@\n 1%0A%09%09\n-// \n %7D%0A%0A%09%09\n+// \n if(a\n@@ -2645,24 +2645,27 @@\n %5Bi%5D %3E 0)%7B%0A%09%09\n+// \n %09listaDePosi\n@@ -2674,24 +2674,27 @@\n es%5Bi%5D = 1%0A%09%09\n+// \n %7D%0A%0A%09%7D%0A%0A%0A%09ret\n",
+            "lines": "284"
+        },
+        {
+            "label": "2026-04-01_21-44-29",
+            "content": "@@ -2508,17 +2508,17 @@\n or i := \n-1\n+2\n ; i %3C le\n",
+            "lines": "284"
+        },
+        {
+            "label": "2026-04-01_21-45-04",
+            "content": "@@ -2692,144 +2692,8 @@\n %09%7D%0A%0A\n-%09invertido := vet%5Blen(vet)-1%5D%0A%09for i := len(vet) -2; i %3E= 0; i--%7B%0A%0A%09%09if(invertido %3E 0 && vet%5Bi%5D %3C 0)%7B%0A%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09%7D%0A%0A%09%7D%0A\n %0A%09re\n",
+            "lines": "284"
+        },
+        {
+            "label": "2026-04-01_21-48-52",
+            "content": "@@ -2738,17 +2738,17 @@\n n(vet) -\n-1\n+2\n ; i %3E= 0\n",
+            "lines": "292"
+        },
+        {
+            "label": "2026-04-01_21-49-06",
+            "content": "@@ -2718,17 +2718,16 @@\n vet)-1%5D%0A\n-%0A\n %09for i :\n@@ -2738,17 +2738,17 @@\n n(vet) -\n-2\n+1\n ; i %3E= 0\n",
+            "lines": "292"
+        },
+        {
+            "label": "2026-04-01_21-50-28",
+            "content": "@@ -2481,19 +2481,16 @@\n es%0A%09%7D%0A%0A%09\n-// \n atual :=\n@@ -2499,19 +2499,16 @@\n et%5B1%5D%0A%0A%09\n-// \n for i :=\n@@ -2531,21 +2531,21 @@\n ; i++%7B%0A%0A\n+%09\n %09// \n-%09\n if(atual\n@@ -2563,24 +2563,44 @@\n %5Bi%5D %3E 0)\n+ %7C%7C (vet%5Bi%5D %3E 0 && )\n %7B%0A\n+%09\n %09// %09\n-%09\n listaDeP\n@@ -2618,20 +2618,79 @@\n = 1%0A\n+%09\n %09// \n+%7D%0A%0A%09%09if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09\n %09%7D%0A%0A%09\n-// \n %7D%0A%0A%09\n@@ -2715,17 +2715,17 @@\n en(vet)-\n-2\n+1\n %5D%0A%0A%09for \n@@ -2771,17 +2771,17 @@\n vertido \n-%3C\n+%3E\n  0 && ve\n@@ -2777,33 +2777,33 @@\n o %3E 0 && vet%5Bi%5D \n-%3E\n+%3C\n  0)%7B%0A%09%09%09listaDeP\n",
+            "lines": "293"
+        },
+        {
+            "label": "2026-04-01_21-52-33",
+            "content": "@@ -2666,17 +2666,17 @@\n n(vet) -\n-1\n+2\n ; i %3E= 0\n",
+            "lines": "289"
+        },
+        {
+            "label": "2026-04-01_21-52-46",
+            "content": "@@ -2481,16 +2481,19 @@\n es%0A%09%7D%0A%0A%09\n+// \n atual :=\n@@ -2498,24 +2498,27 @@\n := vet%5B1%5D%0A%0A%09\n+// \n for i := 1; \n@@ -2541,316 +2541,87 @@\n +%7B%0A%0A\n-%09\n %09// \n-if(vet%5Bi%5D %3C 0)%7B%0A%09%09// %09continue%0A%09%09// %7D%0A%0A%09%09if(i %3E 0)%7B%0A%09%09%09if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if(i %3C len(vet)-1)%7B%0A%09%09%09if( vet%5Bi%5D %3E 0 && vet%5Bi+1%5D %3C 0)%7B%0A%09%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09%09%0A%09%09%7D%0A%0A%0A%0A%0A%0A%09%09%09// if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09%09%09// %09listaDePosicoes%5Bi%5D = 1%0A%09%09%09// %7D%0A%0A%0A%09%7D%0A%0A%0A%09// \n+%09if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09// %09%09listaDePosicoes%5Bi%5D = 1%0A%09// %09%7D%0A%0A%09// %7D%0A%0A%09\n inve\n@@ -2643,27 +2643,24 @@\n n(vet)-2%5D%0A%0A%09\n-// \n for i := len\n@@ -2680,27 +2680,24 @@\n = 0; i--%7B%0A%0A%09\n-// \n %09if(invertid\n@@ -2711,35 +2711,32 @@\n & vet%5Bi%5D %3E 0)%7B%0A%09\n-// \n %09%09listaDePosicoe\n@@ -2741,35 +2741,29 @@\n oes%5Bi%5D = 1%0A%09\n-// \n %09%7D%0A%0A%09\n-// \n %7D%0A%0A%09return l\n",
+            "lines": "289"
+        },
+        {
+            "label": "2026-04-01_22-06-08",
+            "content": "@@ -2749,61 +2749,189 @@\n %0A%09%09%09\n-%09%0A%09\n+%0A\n %09%09%7D%0A%0A\n-%09%09%7D%0A%09%7D%0A%0A%09return listaDePosicoes%0A%0A%09// if(atual\n+%0A%0A%0A%0A%09%09%09// if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09%09%09// %09listaDePosicoes%5Bi%5D = 1%0A%09%09%09// %7D%0A%0A%0A%09%7D%0A%0A%0A%09// invertido := vet%5Blen(vet)-2%5D%0A%0A%09// for i := len(vet) -1; i %3E= 0; i--%7B%0A%0A%09// %09if(invertido\n  %3C 0\n@@ -2948,24 +2948,25 @@\n  %3E 0)%7B%0A%09// %09\n+%09\n listaDePosic\n@@ -2980,19 +2980,77 @@\n = 1%0A%09// \n+%09\n %7D%0A%0A\n+%09// %7D%0A%0A%09return listaDePosicoes%0A%09// _ = vet%0A%09// return nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "311"
+        },
+        {
+            "label": "2026-04-01_22-07-48",
+            "content": "@@ -2481,19 +2481,16 @@\n es%0A%09%7D%0A%0A%09\n-// \n atual :=\n@@ -2497,16 +2497,16 @@\n  vet%5B1%5D%0A\n+\n %0A%09for i \n@@ -2532,27 +2532,28 @@\n  i++%7B%0A%0A%09\n-%0A%09%09\n+%09// \n if(vet%5Bi\n -1%5D %3C 0 \n@@ -2548,13 +2548,65 @@\n et%5Bi\n--1\n %5D %3C\n+ 0)%7B%0A%09%09// %09continue%0A%09%09// %7D%0A%0A%09%09if(i %3E 0)%7B%0A%09%09%09if(atual %3C\n  0 &\n@@ -2620,16 +2620,17 @@\n %5D %3E 0)%7B%0A\n+%09\n %09%09%09lista\n@@ -2649,20 +2649,22 @@\n %5D = 1%0A%09%09\n+%09\n %7D%0A%09%09\n+%7D\n %0A%0A%09%09if(i\n",
+            "lines": "296"
+        },
+        {
+            "label": "2026-04-01_22-09-35",
+            "content": "@@ -2480,16 +2480,37 @@\n oes%0A%09%7D%0A%0A\n+%09// atual := vet%5B1%5D%0A%0A\n %09for i :\n@@ -2517,17 +2517,16 @@\n = 1; i %3C\n-=\n  len(vet\n@@ -2534,16 +2534,18 @@\n ; i++%7B%0A%0A\n+%09%0A\n %09%09if(vet\n@@ -2603,16 +2603,17 @@\n %0A%09%09%7D%0A%09%09%0A\n+%0A\n %09%09if(i %3C\n@@ -2729,24 +2729,93 @@\n DePosicoes%0A%0A\n+%09// if(atual %3C 0 && vet%5Bi%5D %3E 0)%7B%0A%09// %09listaDePosicoes%5Bi%5D = 1%0A%09// %7D%0A%0A%0A\n %7D%0A%0Afunc alon\n",
+            "lines": "292"
+        },
+        {
+            "label": "2026-04-01_22-10-37",
+            "content": "@@ -2492,24 +2492,25 @@\n  i := 1; i %3C\n+=\n  len(vet); i\n@@ -2747,131 +2747,9 @@\n t %7B%0A\n-%0A%0A%09listaDePosicoes := make(%5B%5Dint, len(vet))%0A%0A%09if(len(vet) == 1)%7B%0A%09%09return listaDePosicoes%0A%09%7D%0A%0A%09return listaDePosicoes%0A%0A%09// \n+%09\n _ = \n@@ -2753,19 +2753,16 @@\n  = vet%0A%09\n-// \n return n\n",
+            "lines": "283"
+        },
+        {
+            "label": "2026-04-01_22-14-26",
+            "content": "@@ -2808,28 +2808,11 @@\n == 1\n- && vet%5B0%5D %3E 0\n )%7B%0A\n-%09%09%0A\n %09%09re\n@@ -2820,16 +2820,23 @@\n urn \n-%5B%5Dint%7B1%7D\n+listaDePosicoes\n %0A%09%7D%0A\n",
+            "lines": "293"
+        },
+        {
+            "label": "2026-04-01_22-15-17",
+            "content": "@@ -2391,26 +2391,8 @@\n t %7B%0A\n-%09//revidsar depois\n %0A%09li\n@@ -2788,19 +2788,16 @@\n vet))%0A%0A%09\n-// \n if(len(v\n@@ -2825,19 +2825,16 @@\n 0)%7B%0A%09%09%0A%09\n-// \n %09return \n@@ -2843,19 +2843,16 @@\n int%7B1%7D%0A%09\n-// \n %7D%0A%0A%09retu\n",
+            "lines": "294"
+        },
+        {
+            "label": "2026-04-01_22-16-50",
+            "content": "@@ -2798,32 +2798,35 @@\n nt, len(vet))%0A%0A%09\n+// \n if(len(vet) == 1\n@@ -2846,16 +2846,19 @@\n 0)%7B%0A%09%09%0A%09\n+// \n %09return \n@@ -2871,213 +2871,11 @@\n 1%7D%0A%09\n-%7D%0A%0A%09%09for i := 1; i %3C len(vet); i++%7B%0A%0A%09%09if(vet%5Bi-1%5D %3E 0 && vet%5Bi%5D %3E 0)%7B%0A%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09%7D%0A%09%09%0A%09%09if(i %3C len(vet)-1)%7B%0A%09%09%09if( vet%5Bi%5D %3E 0 && vet%5Bi+1%5D %3E 0)%7B%0A%09%09%09%09listaDePosicoes%5Bi%5D = 1%0A%09%09%09%09%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09\n+// \n %7D%0A%0A%09\n",
+            "lines": "294"
+        },
+        {
+            "label": "2026-04-01_22-18-10",
+            "content": "@@ -2857,17 +2857,17 @@\n n %5B%5Dint%7B\n-0\n+1\n %7D%0A%09%7D%0A%0A%09%09\n@@ -3471,127 +3471,9 @@\n t %7B%0A\n-%0A%0A%0A%09for i := 0 %3C len(vet); i++%7B%0A%09%09if(vet%5Bi%5D == value)%7B%0A%09%09%09vet = append(vet%5B:i%5D, vet%5Bi+1:%5D...)%0A%09%09%7D%0A%09%7D%0A%0A%09return vet%0A%0A%09// \n+%09\n _ = \n@@ -3477,19 +3477,16 @@\n  = vet%0A%09\n-// \n _ = valu\n@@ -3488,19 +3488,16 @@\n  value%0A%09\n-// \n return n\n",
+            "lines": "309"
+        },
+        {
+            "label": "2026-04-02_08-15-44",
+            "content": "@@ -3481,17 +3481,16 @@\n r i := 0\n-;\n  %3C len(v\n",
+            "lines": "320"
+        },
+        {
+            "label": "2026-04-02_08-15-54",
+            "content": "@@ -3474,34 +3474,32 @@\n %0A%0A%0A%0A%09for i := 0;\n- i\n  %3C len(vet); i++\n",
+            "lines": "320"
+        },
+        {
+            "label": "2026-04-02_08-16-16",
+            "content": "@@ -3468,16 +3468,18 @@\n %5Dint %7B%0A%0A\n+%0A%0A\n %09for i :\n@@ -3570,59 +3570,67 @@\n )%0A%09%09\n-%09fmt.Printf(%22%25d:%25d%22, vet%5Bi%5D, i)%0A%09%09%7D%0A%09%7D%0A%0A%09\n+%7D%0A%09%7D%0A%0A%09return vet%0A%0A%09// _ = vet%0A%09// _ = value%0A%09// \n return \n-vet\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "320"
+        },
+        {
+            "label": "2026-04-02_08-27-08",
+            "content": "@@ -3565,19 +3565,16 @@\n ...)%0A%09%09%09\n-// \n fmt.Prin\n",
+            "lines": "315"
+        },
+        {
+            "label": "2026-04-02_08-28-27",
+            "content": "@@ -3569,11 +3569,41 @@\n %0A%09%09%09\n-i--\n+// fmt.Printf(%22%25d:%25d%22, vet%5Bi%5D, i)\n %0A%09%09%7D\n",
+            "lines": "315"
+        },
+        {
+            "label": "2026-04-02_08-38-00",
+            "content": "@@ -3393,292 +3393,41 @@\n t %7B%0A\n-%0A%09posicoes := make(%5B%5Dint, len(vet))%0A%0A    for _, valor := range posList%7B%0A      posicoes%5Bvalor%5D = 1%0A%09%7D%0A%0A    novaLista := %5B%5Dint%7B%7D%0A%0A    for i := 0; i %3C len(posicoes); i++%7B%0A        if(posicoes%5Bi%5D == 0)%7B%0A            novaLista = append(novaLista, vet%5Bi%5D)%0A        %7D%0A    %7D%0A%0A%09return novaLista%0A%0A\n+%09_ = vet%0A%09_ = posList%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "315"
+        },
+        {
+            "label": "2026-04-02_09-03-18",
+            "content": "@@ -3157,59 +3157,16 @@\n t %7B%0A\n-%0A%09if(len(vet) == 1)%7B%0A%09%09return 0%0A%09%7D%0A%0A%09contador := 0%0A\n+%09_ = vet\n %0A%09re\n@@ -3673,16 +3673,17 @@\n aLista%0A%0A\n+%0A\n %7D%0A%0Afunc \n",
+            "lines": "330"
+        },
+        {
+            "label": "2026-04-02_09-07-01",
+            "content": "@@ -3190,19 +3190,16 @@\n  0%0A%09%7D%0A%0A%09\n-// \n contador\n",
+            "lines": "335"
+        },
+        {
+            "label": "2026-04-02_09-07-06",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n\t\"sort\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n/*\nfunc abs(valor int) int{\n    if(valor > 0){\n        return valor\n    }\n\n    return -valor\n}\n\nfunc occurr(vet []int) []Pair {\n\n    mapa := make(map[int]Pair, len(vet))\n\tcontagem := []Pair{}\n\t// ordem := []int{}\n\t\n    for _,valor := range vet{\n\t\telemento := abs(valor)\n\t\t\n        _,existe := mapa[elemento]\n        info := mapa[elemento]\n        \n        if(existe){\n\t\t\tinfo.Two++\n\t\t\t}else{\n\t\t\t\tinfo.One = elemento\n\t\t\t\tinfo.Two = 1   \n\t\t\t\t// ordem = append(ordem, elemento) \n\t\t\t\tcontagem = append(contagem, Pair{elemento, 1})\n\t\t\t}\n\t\t\tmapa[elemento] = info\n\t\t\t\n\t\t}\n\t\t\n\t// \n\t\n\t// for _,valor := range ordem{\n\t// \tcontagem = append(contagem, mapa[valor])\n\t// }\n\n\tsort.Ints(contagem)\n    \n\treturn contagem\n\n    // for _, valor := range mapa{\n    //     contagem = append(contagem, valor)\n    // }\n\n\t//teste 01\n\n\t// for i := 0; i < len(mapa);i++{\n\t// \t//vetor\n\t// \tfor chave,valor := range mapa{\n\t// \t\t//mapa\n\t// \t\tif(abs(vet[i]) == chave){\n\t// \t\t\t//add contagem na pos i\n\t// \t\t\tcontagem = append(contagem, valor)\n\t// \t\t}\n\t// \t}\n\t// }\n\n\t// teste 2\n\t// for i := 0; i < len(vet);i++{\n\t\t\n\t// \tfor chave, valor := range mapa{\n\t// \t\tif(vet[i] == chave){\n\t// \t\t\tcontagem = append(contagem, valor)\n\t// \t\t}\n\t// \t}\n\t// }\n\n\n}*/\n\nfunc abs(valor int) int {\n    if valor >= 0 { // corrigido aqui\n        return valor\n    }\n    return -valor\n}\n\nfunc occurr(vet []int) []Pair {\n\n\tmapa := make(map[int]Pair)\n    chave := []int{}\n\t\n    for _, valor := range vet {\n\t\telemento := abs(valor)\n\t\t\n        info, existe := mapa[elemento] // 1 acesso ao map\n\t\t\n        if existe {\n\t\t\tinfo.Two++\n\t\t\t} else {\n\t\t\t\tinfo = Pair{One: elemento, Two: 1}\n\t\t\t\tchave = append(chave, elemento)\n\t\t\t}\n\t\t\t\n\t\t\tmapa[elemento] = info\n\t\t}\n\t\t\n\tsort.Ints(chave)\n    contagem := []Pair{}\n\n    for _, valor := range chave{\n        contagem = append(contagem, mapa[valor])\n    }\n\n    return contagem\n}\n\nfunc teams(vet []int) []Pair {\n\n\n\tif(len(vet) == 0){\t\n\t\treturn []Pair{}\n\t}\n\n\ttimes := []Pair{}\n\tcontador := 1\n\tatual  := vet[0]\n\n\tfor i := 1 ; i < len(vet); i++{\n\n\t\t\t// 0       1\n\t\tif(vet[i] == atual){\n\t\t\tcontador++\n\t\t}else{\n\t\t\ttimes = append(times, Pair{One:atual, Two:contador})\n\t\t\tatual = vet[i]\n\t\t\tcontador = 1\n\t\t}\n\t}\n\n\ttimes = append(times, Pair{One:atual, Two:contador})\n\t\n\treturn times\n\n}\n\nfunc mnext(vet []int) []int {\n\t//revidsar depois\n\tlistaDePosicoes := make([]int, len(vet))\n\n\tif(len(vet) == 1){\n\t\treturn listaDePosicoes\n\t}\n\n\tfor i := 1; i < len(vet); i++{\n\n\t\tif(vet[i-1] < 0 && vet[i] > 0){\n\t\t\tlistaDePosicoes[i] = 1\n\t\t}\n\t\t\n\t\tif(i < len(vet)-1){\n\t\t\tif( vet[i] > 0 && vet[i+1] < 0){\n\t\t\t\tlistaDePosicoes[i] = 1\n\t\t\t\t\n\t\t\t}\n\n\t\t}\n\t}\n\n\treturn listaDePosicoes\n\n}\n\nfunc alone(vet []int) []int {\n\n\n\tlistaDePosicoes := make([]int, len(vet))\n\n\tif(len(vet) == 1 && vet[0] > 0){\n\t\t\n\t\treturn []int{0}\n\t}\n\n\t\tfor i := 1; i < len(vet); i++{\n\n\t\tif(vet[i-1] > 0 && vet[i] > 0){\n\t\t\tlistaDePosicoes[i] = 1\n\t\t}\n\t\t\n\t\tif(i < len(vet)-1){\n\t\t\tif( vet[i] > 0 && vet[i+1] > 0){\n\t\t\t\tlistaDePosicoes[i] = 1\n\t\t\t\t\n\t\t\t}\n\n\t\t}\n\t}\n\n\treturn listaDePosicoes\n\n\t// _ = vet\n\t// return nil\n}\n\nfunc couple(vet []int) int {\n\n\tif(len(vet) == 1){\n\t\treturn 0\n\t}\n\n\t// contador := 0\n\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\n\tposicoes := make([]int, len(vet))\n\n    for _, valor := range posList{\n      posicoes[valor] = 1\n\t}\n\n    novaLista := []int{}\n\n    for i := 0; i < len(posicoes); i++{\n        if(posicoes[i] == 0){\n            novaLista = append(novaLista, vet[i])\n        }\n    }\n\n\treturn novaLista\n\n}\n\nfunc clear(vet []int, value int) []int {\n\n\tfor i := 0; i < len(vet); i++{\n\t\tif(vet[i] == value){\n\t\t\tvet = append(vet[:i], vet[i+1:]...)\n\t\t\ti--\n\t\t}\n\t}\n\n\treturn vet\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "335"
+        }
+    ]
+}
