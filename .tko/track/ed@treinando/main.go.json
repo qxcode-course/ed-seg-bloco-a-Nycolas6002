@@ -1,0 +1,404 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_08-55-30",
+            "content": "@@ -352,19 +352,16 @@\n n 0%0A%09%7D%0A%09\n-// \n i := 0%0A%0A\n@@ -385,18 +385,19 @@\n sum(vet%5B\n+i+\n 1\n-:\n %5D) %0A%0A%09//\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-03_08-55-49",
+            "content": "@@ -375,17 +375,17 @@\n urn vet%5B\n-0\n+i\n %5D + sum(\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-03_08-55-55",
+            "content": "@@ -318,19 +318,16 @@\n int %7B%0A%0A%09\n-// \n if(len(v\n@@ -338,19 +338,16 @@\n == 1)%7B%0A%09\n-// \n %09return \n@@ -353,18 +353,23 @@\n  0%0A%09\n-// %7D%0A%0A%09// \n+%7D%0A%09// i := 0%0A%0A%09\n retu\n@@ -396,16 +396,19 @@\n 1:%5D) %0A%0A%09\n+// \n _ = vet%0A\n@@ -400,32 +400,35 @@\n  %0A%0A%09// _ = vet%0A%09\n+// \n return 0%0A%7D%0A%0A// m\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-03_08-57-44",
+            "content": "@@ -98,103 +98,9 @@\n g %7B%0A\n-%0A%09if(len(vet) == 0)%7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%0A%09if(len(vet) == 1)%7B%0A%09%09return%0A%09%7D%0A%0A%09return tostr(vet)%0A%09// \n+%09\n _ = \n@@ -104,19 +104,16 @@\n  = vet%0A%09\n-// \n return %22\n@@ -488,87 +488,8 @@\n nt %7B\n-%0A%0A%09// if(len(vet) == 1)%7B%0A%09// %09return 0%0A%09// %7D%0A%0A%09// return vet%5B0%5D * sum(vet%5B1:%5D) \n %0A%09_ \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-03_09-34-58",
+            "content": "@@ -161,19 +161,16 @@\n %09%09return\n- %22%22\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-04-03_09-35-08",
+            "content": "@@ -186,20 +186,16 @@\n ostr(vet\n-%5B1:%5D\n )%0A%09// _ \n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-04-03_09-35-22",
+            "content": "@@ -166,73 +166,13 @@\n urn \n-resultado%0A%09%7D%0A%0A%09resultado := %22%22%0A%09resultado += strconv.Itoa(vet%5B0%5D)\n+%22%22%0A%09%7D\n %0A%0A%09r\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-04-03_09-36-54",
+            "content": "@@ -137,25 +137,8 @@\n %09%7D%0A%0A\n-%09resultado := %22%22%0A\n %09if(\n@@ -176,16 +176,33 @@\n ado%0A%09%7D%0A%0A\n+%09resultado := %22%22%0A\n %09resulta\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-04-03_09-37-07",
+            "content": "@@ -67,30 +67,8 @@\n %0A)%0A%0A\n-var resultado string%0A%0A\n func\n@@ -134,19 +134,16 @@\n %5D%22%0A%09%7D%0A%0A%09\n-// \n resultad\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-04-03_09-37-41",
+            "content": "@@ -89,29 +89,8 @@\n ng%0A%0A\n-func formatar()%7B%0A%0A%7D%0A%0A\n func\n@@ -256,15 +256,8 @@\n %5B0%5D)\n- + %22, %22\n %0A%0A%09r\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-04-03_09-38-31",
+            "content": "@@ -103,54 +103,11 @@\n tar(\n-vet int%5B%5D)%7B%0A%0A%09if(len(vet) == 1)%7B%0A%0A%09%7D%0A%0A%09return \n+)%7B%0A\n %0A%7D%0A%0A\n@@ -229,15 +229,8 @@\n urn \n-%22%5B%22 +  \n resu\n@@ -238,14 +238,8 @@\n tado\n- + %22%5D%22\n %0A%09%7D%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-03_09-40-27",
+            "content": "@@ -85,19 +85,16 @@\n string%0A%0A\n-// \n func for\n@@ -112,19 +112,16 @@\n nt%5B%5D)%7B%0A%0A\n-// \n %09if(len(\n@@ -137,18 +137,12 @@\n )%7B%0A%0A\n-// \n %09%7D%0A%0A\n-// \n %09ret\n@@ -146,19 +146,16 @@\n return %0A\n-// \n %7D%0A%0Afunc \n@@ -212,32 +212,35 @@\n eturn %22%5B%5D%22%0A%09%7D%0A%0A%09\n+// \n resultado := %22%22%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-03_09-40-48",
+            "content": "@@ -193,27 +193,24 @@\n  string %7B%0A%0A%09\n-// \n if(len(vet) \n@@ -213,27 +213,24 @@\n et) == 0)%7B%0A%09\n-// \n %09return %22%5B%5D%22\n@@ -227,34 +227,28 @@\n eturn %22%5B%5D%22%0A%09\n-// \n %7D%0A%0A%09\n-// \n resultado :=\n@@ -252,19 +252,16 @@\n  := %22%22%0A%09\n-// \n if(len(v\n@@ -264,35 +264,32 @@\n en(vet) == 1)%7B%0A%09\n-// \n %09return %22%5B%22 +  r\n@@ -304,26 +304,20 @@\n  + %22%5D%22%0A%09\n-// \n %7D%0A%0A%09\n-// \n resultad\n@@ -351,19 +351,16 @@\n  %22, %22%0A%0A%09\n-// \n return t\n@@ -376,151 +376,8 @@\n 1:%5D)\n-%0A%0A%09palavras := make(%5B%5Dstring, len(vet))%0A%0A%09for _,valor := range palavras%7B%0A%09%09palavras = append(palavras,strconv.Itoa(valor))%0A%09%7D%0A%0A%09return palavras\n %0A%09//\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-03_19-34-35",
+            "content": "@@ -186,18 +186,16 @@\n  %5B%5Dint) \n-%5B%5D\n string %7B\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-04-03_19-34-53",
+            "content": "@@ -63,19 +63,16 @@\n ngs%22%0A)%0A%0A\n-// \n var resu\n@@ -168,10 +168,40 @@\n  %7D%0A%0A\n-/*\n+func tostr(vet %5B%5Dint) %5B%5Dstring %7B\n %0A%0A%09/\n@@ -549,80 +549,8 @@\n ras%0A\n-*/%0A%0Afunc tostr(vet %5B%5Dint) string %7B%0A%0A%09if(len(vet) == 0)%7B%0A%09%09return %22%22%0A%09%7D%0A%0A\n %09// \n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-04-03_19-37-54",
+            "content": "@@ -594,21 +594,8 @@\n %09%7D%0A%0A\n-%09return %22oi%22%0A\n %09// \n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-04-03_19-38-04",
+            "content": "@@ -584,18 +584,16 @@\n return %22\n-%5B%5D\n %22%0A%09%7D%0A%0A%09r\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-04-03_19-38-38",
+            "content": "@@ -524,136 +524,8 @@\n s%0A*/\n-%0Afunc printar(numero int) string%7B%0A%0A%09elementoConvetirdo := strconv.Itoa(numero)%0A%0A%09resultado := %22%5B%22 + elementoConvetirdo + %22%5D%22%0A%0A%0A%7D\n %0A%0Afu\n@@ -596,62 +596,16 @@\n %09%7D%0A%0A\n-%09final := printar(vet%5B0%5D)%0A%09// tostr(vet%5B1:%5D)%0A%0A\n %09return \n fina\n@@ -604,13 +604,12 @@\n urn \n-final\n+%22oi%22\n %0A%09//\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-04-03_19-44-23",
+            "content": "@@ -650,27 +650,8 @@\n %5D%22%0A%0A\n-%09return resultado%0A%09\n %0A%7D%0A%0A\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-04-03_19-44-42",
+            "content": "@@ -642,17 +642,17 @@\n irdo + %22\n-,\n+%5D\n %22%0A%0A%09retu\n@@ -664,16 +664,17 @@\n sultado%0A\n+%09\n %0A%7D%0A%0Afunc\n@@ -788,21 +788,8 @@\n :%5D)%0A\n-%09final += %22%5D%22\n %0A%09re\n@@ -798,17 +798,16 @@\n rn final\n- \n %0A%09// _ =\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-04-03_19-46-06",
+            "content": "@@ -742,34 +742,8 @@\n %09%7D%0A%0A\n-%09// if(len(vet))%7B%0A%0A%09// %7D%0A%0A\n %09fin\n@@ -765,16 +765,19 @@\n et%5B0%5D)%0A%09\n+// \n tostr(ve\n@@ -783,16 +783,29 @@\n et%5B1:%5D)%0A\n+%09final += %22%5D%22\n %0A%09return\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-04-03_19-47-13",
+            "content": "@@ -768,24 +768,8 @@\n  %7D%0A%0A\n-%09tostr(vet%5B1:%5D)%0A\n %09fin\n@@ -789,16 +789,32 @@\n (vet%5B0%5D)\n+%0A%09tostr(vet%5B1:%5D)\n %0A%0A%09retur\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-04-03_19-47-36",
+            "content": "@@ -739,16 +739,19 @@\n %5D%22%0A%09%7D%0A%0A%09\n+// \n if(len(v\n@@ -757,96 +757,52 @@\n vet)\n- == 1)%7B%0A%09%09%0A%09%7D%0A%0A%09// final := printar(vet%5B0%5D)%0A%09// tostr(vet%5B1:%5D)%0A%09elemento := strconv.Itoa\n+)%7B%0A%0A%09// %7D%0A%0A%09tostr(vet%5B1:%5D)%0A%09final := printar\n (vet\n@@ -819,20 +819,13 @@\n urn \n-%22%5B%22 +  + %22%5D%22\n+final\n  %0A%09/\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-04-03_19-56-34",
+            "content": "@@ -862,24 +862,16 @@\n n %22%5B%22 + \n-elemento\n  + %22%5D%22 %0A\n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-04-03_19-56-43",
+            "content": "@@ -739,19 +739,16 @@\n %5D%22%0A%09%7D%0A%0A%09\n-// \n if(len(v\n@@ -762,19 +762,16 @@\n 1)%7B%0A%09%09%0A%09\n-// \n %7D%0A%0A%09// f\n@@ -794,16 +794,35 @@\n vet%5B0%5D)%0A\n+%09// tostr(vet%5B1:%5D)%0A\n %09element\n@@ -851,59 +851,10 @@\n 0%5D)%0A\n+%0A\n %09\n-tostr(vet%5B1:%5D)%0A%0A%09return %22%5B%22 + elemento + %22%5D%22 %0A%09// \n retu\n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-04-03_20-03-17",
+            "content": "@@ -835,26 +835,16 @@\n et%5B0%5D)%0A%09\n-%0A%0A%09return \n tostr(ve\n@@ -849,22 +849,19 @@\n vet%5B1:%5D)\n- \n+%0A\n %0A%09\n-// \n return %22\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-03_20-04-43",
+            "content": "@@ -801,16 +801,28 @@\n et%5B0%5D)%0A%09\n+elemento := \n strconv.\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-04-03_20-04-54",
+            "content": "@@ -801,24 +801,16 @@\n et%5B0%5D)%0A%09\n-Println(\n strconv.\n@@ -821,17 +821,16 @@\n (vet%5B0%5D)\n-)\n %0A%09%0A%0A%09ret\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-04-03_20-06-27",
+            "content": "@@ -801,20 +801,16 @@\n et%5B0%5D)%0A%09\n-fmt.\n Println(\n@@ -832,18 +832,16 @@\n t%5B0%5D))%0A%09\n-%0A%09\n %0A%0A%09retur\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-04-03_20-06-36",
+            "content": "@@ -835,16 +835,17 @@\n et%5B0%5D))%0A\n+%09\n %0A%09%0A%0A%09ret\n@@ -847,22 +847,16 @@\n %0A%09return\n- %22%5B%22 +\n  tostr(v\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-07-45",
+            "content": "@@ -613,16 +613,22 @@\n ltado :=\n+ %22%5B%22 +\n  element\n@@ -639,16 +639,21 @@\n vetirdo \n++ %22,%22\n %0A%0A%09retur\n@@ -739,16 +739,19 @@\n %5D%22%0A%09%7D%0A%0A%09\n+// \n if(len(v\n@@ -767,55 +767,13 @@\n %7B%0A%09%09\n-reuturn fmt.Printf(%22%25v%22strconv.Itoa(vet%5B0%5D))%09%0A%09\n+%0A%09// \n %7D%0A%0A%09\n@@ -814,16 +814,11 @@\n rint\n-f(%22%25v, %22\n+ln(\n strc\n@@ -868,21 +868,16 @@\n et%5B1:%5D) \n-+ %22%5D%22\n %0A%09// ret\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-09-03",
+            "content": "@@ -747,24 +747,25 @@\n  == 1)%7B%0A%09%09re\n+u\n turn fmt.Pri\n@@ -772,17 +772,16 @@\n ntf(%22%25v%22\n-,\n strconv.\n@@ -846,18 +846,16 @@\n f(%22%25v, %22\n-, \n strconv.\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-09-25",
+            "content": "@@ -728,19 +728,16 @@\n %5D%22%0A%09%7D%0A%0A%09\n-// \n if(len(v\n@@ -740,35 +740,32 @@\n en(vet) == 1)%7B%0A%09\n-// \n %09return fmt.Prin\n@@ -796,19 +796,16 @@\n %5B0%5D))%09%0A%09\n-// \n %7D%0A%0A%09// f\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-09-39",
+            "content": "@@ -850,17 +850,16 @@\n Printf(%22\n-%5B\n %25v, %22, s\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-10-31",
+            "content": "@@ -850,16 +850,17 @@\n Printf(%22\n+%5B\n %25v, %22, s\n@@ -887,24 +887,30 @@\n %0A%0A%09%0A%0A%09return\n+ %22%5B%22 +\n  tostr(vet%5B1\n@@ -912,16 +912,22 @@\n vet%5B1:%5D)\n+ + %22%5D%22\n %0A%09// ret\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-11-08",
+            "content": "@@ -524,709 +524,8 @@\n s%0A*/\n-%0A%0A/*escrevendo como eu acho que deve ser o passo a passo para resolver o problema.%0A%0Ase o vetor n%C3%A3o tiver nada eu retorno %5B%5D%0A%0Acaso contrario eu tenho que usar a return tostr(vet%5B1;%5D) para ficar chamando sempre a fun%C3%A7%C3%A3o%0A%0Aa%C3%AD eu tenho que tratar a impress%C3%A3o que no final tem que me exibir nesse formato %5B%22numero%22, %22numero2%22%5D%0A%0Atenho que usar a fun%C3%A7%C3%A3o printar que criei para fazer a formata%C3%A7%C3%A3o que eu quero passando como argumento o numero que estou percorrendo agora%0Aem seguida converto ele para string e retorno ele para a fun%C3%A7%C3%A3o.%0A%0Aa partir daqui n%C3%A3o sei muito bem como desenvolver mas valide esse meu raciocinio e diga se est%C3%A1 coerente fale sobre ele, mas n%C3%A3o me d%C3%AA dicas de como resolver o problema%0A%0A%0A*/\n %0Afun\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-03_20-19-56",
+            "content": "@@ -1419,25 +1419,20 @@\n %09return \n-elementos\n+%22%5B%5D%22\n %0A%09%7D%0A%0A%09//\n@@ -1584,59 +1584,8 @@\n %5D))%0A\n-%09elementos := %22%22%0A%09elementos += strconv.Itoa(vet%5B0%5D)\n %0A%09%0A%0A\n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-04-03_20-24-38",
+            "content": "@@ -1394,25 +1394,8 @@\n  %7B%0A%0A\n-%09elementos := %22%22%0A\n %09if(\n@@ -1585,16 +1585,33 @@\n et%5B0%5D))%0A\n+%09elementos := %22%22%0A\n %09element\n",
+            "lines": "175"
+        },
+        {
+            "label": "2026-04-03_20-24-48",
+            "content": "@@ -1561,19 +1561,16 @@\n et%5B0%5D)%0A%09\n-// \n fmt.Prin\n",
+            "lines": "175"
+        },
+        {
+            "label": "2026-04-03_20-25-10",
+            "content": "@@ -1606,19 +1606,16 @@\n t%5B0%5D))%0A%09\n-// \n elemento\n@@ -1641,19 +1641,26 @@\n et%5B0%5D)%0A%09\n- \n+%0A\n %0A%09\n+return \n tostr(ve\n@@ -1670,27 +1670,8 @@\n :%5D)%0A\n-%09%0A%09return vet%5B0%5D%0A%09%0A\n %09// \n",
+            "lines": "175"
+        },
+        {
+            "label": "2026-04-03_20-30-16",
+            "content": "@@ -1651,19 +1651,8 @@\n %09 %0A%09\n-%0A%09%0A%09return \n tost\n@@ -1661,16 +1661,33 @@\n vet%5B1:%5D)\n+%0A%09%0A%09return vet%5B0%5D\n %0A%09%0A%09// r\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_20-30-39",
+            "content": "@@ -1390,16 +1390,32 @@\n ring %7B%0A%0A\n+%09elementos := %22%22\n %0A%09if(len\n@@ -1436,19 +1436,25 @@\n %09return \n-%22%5B%5D\n+elementos\n %0A%09%7D%0A%0A%09//\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_20-32-21",
+            "content": "@@ -1423,17 +1423,16 @@\n turn %22%5B%5D\n-%22\n %0A%09%7D%0A%0A%09//\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_20-32-27",
+            "content": "@@ -1540,16 +1540,19 @@\n et%5B0%5D)%0A%09\n+// \n fmt.Prin\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_20-32-46",
+            "content": "@@ -1433,51 +1433,88 @@\n %09%7D%0A%0A\n-%0A%0A%09%0A%09 %0A%09%0A%09%0A%09return vet%5B0%5D, tostr(vet%5B1:%5D)%0A%09\n+%09// if(len(vet) == 1)%7B%0A%09// %09return fmt.Printf(%22%25v%22,strconv.Itoa(vet%5B0%5D))%09%0A%09// %7D%0A\n %0A%09//\n@@ -1540,19 +1540,16 @@\n et%5B0%5D)%0A%09\n-// \n fmt.Prin\n@@ -1619,16 +1619,48 @@\n vet%5B0%5D)%0A\n+%09 %0A%09%0A%09%0A%09return tostr(vet%5B1:%5D)%0A%09%0A\n %09// retu\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_20-38-17",
+            "content": "@@ -1454,18 +1454,17 @@\n n vet%5B0%5D\n- +\n+,\n  tostr(v\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-38-28",
+            "content": "@@ -1433,97 +1433,33 @@\n %09%7D%0A%0A\n-%09if(len(vet) == 1)%7B%0A%09%09return %22%5B%22 + vet%5B0%5D + %22%5D%22%0A%09%7D%0A\n %0A%0A\n+%09\n %0A%09\n+ \n %0A%09\n- \n %0A%09%0A%09\n-elemento := vet%5B0%5D%0A%09\n return \n+vet%5B0%5D\n  + t\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-41-08",
+            "content": "@@ -1491,19 +1491,16 @@\n %09%0A%09 %0A%09%0A%09\n-// \n elemento\n@@ -1519,16 +1519,17 @@\n return  \n++\n  tostr(v\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-41-17",
+            "content": "@@ -1457,82 +1457,31 @@\n %09%09re\n-sultado := %22%5B%22%0A%09%09resultado\n+turn %22%5B%22\n  +\n-=\n  vet%5B0%5D\n-%0A%09%09resultado\n  +\n-=\n  %22\n-%5B%22%0A%09%09return resultado\n+%5D%22\n %0A%09%7D%0A\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-42-16",
+            "content": "@@ -1483,36 +1483,22 @@\n tado += \n-strconv.Itoa(\n vet%5B0%5D\n-)\n %0A%09%09resul\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-03_20-42-42",
+            "content": "@@ -1520,17 +1520,17 @@\n ado += %22\n-%5D\n+%5B\n %22%0A%09%09retu\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-03_20-42-53",
+            "content": "@@ -1453,24 +1453,45 @@\n 1)%7B%0A%09%09re\n-turn %22%5B%22\n+sultado := %22%5B%22%0A%09%09resultado +=\n  strconv\n@@ -1503,23 +1503,55 @@\n (vet%5B0%5D)\n+%0A%09%09resultado\n  +\n+=\n  %22%5D%22%0A\n+%09%09return resultado%0A\n %09%7D%0A%0A%0A%0A%09%0A\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-03_20-44-39",
+            "content": "@@ -1461,18 +1461,16 @@\n turn %22%5B%22\n- +\n  strconv\n@@ -1534,16 +1534,17 @@\n return  \n+ \n tostr(ve\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-44-57",
+            "content": "@@ -1535,19 +1535,16 @@\n %09return \n-%22%5B%22\n  tostr(v\n@@ -1550,22 +1550,16 @@\n vet%5B1:%5D)\n- + %22%5D%22\n %0A%09%0A%09// f\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-45-36",
+            "content": "@@ -1538,18 +1538,16 @@\n turn %22%5B%22\n- +\n  tostr(v\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-45-45",
+            "content": "@@ -1539,35 +1539,12 @@\n urn \n- strconv.Itoa(vet%5B0%5D)+ %22, %22\n+%22%5B%22 \n + to\n@@ -1556,16 +1556,21 @@\n et%5B1:%5D) \n++ %22%5D%22\n %0A%09%0A%09// f\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-46-47",
+            "content": "@@ -1527,37 +1527,32 @@\n  vet%5B0%5D%0A%09return \n-%22%5B%22 +\n  strconv.Itoa(ve\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-47-08",
+            "content": "@@ -1583,20 +1583,17 @@\n vet%5B1:%5D)\n-%5B1:%5D\n+ \n %0A%09%0A%09// f\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-48-25",
+            "content": "@@ -1495,16 +1495,25 @@\n %22%5D%22%0A%09%7D%0A%0A\n+%0A%0A%09%0A%09 %0A%09%0A\n %09// elem\n@@ -1527,17 +1527,16 @@\n  vet%5B0%5D%0A\n-%0A\n %09return \n@@ -1557,25 +1557,24 @@\n Itoa(vet%5B0%5D)\n- \n + %22, %22+ tost\n@@ -1998,16 +1998,19 @@\n int %7B%0A%0A%09\n+// \n if(len(v\n@@ -2013,32 +2013,35 @@\n en(vet) == 1)%7B%0A%09\n+// \n %09return 0%0A%09%7D%0A%0A%09r\n@@ -2035,20 +2035,26 @@\n turn 0%0A%09\n+// \n %7D%0A%0A%09\n+// \n return v\n@@ -2077,19 +2077,16 @@\n 1:%5D) %0A%0A%09\n-// \n _ = vet%0A\n@@ -2082,27 +2082,24 @@\n %0A%0A%09_ = vet%0A%09\n-// \n return 0%0A%7D%0A%0A\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-04-03_20-51-35",
+            "content": "@@ -2146,32 +2146,35 @@\n  %5B%5Dint) int %7B%0A%0A%09\n+// \n if(len(vet) == 1\n@@ -2169,32 +2169,35 @@\n en(vet) == 1)%7B%0A%09\n+// \n %09return 0%0A%09%7D%0A%0A%09r\n@@ -2183,36 +2183,42 @@\n %0A%09// %09return 0%0A%09\n+// \n %7D%0A%0A%09\n+// \n return vet%5B0%5D * \n@@ -2232,19 +2232,16 @@\n %5B1:%5D) %0A%09\n-// \n _ = vet%0A\n@@ -2233,35 +2233,32 @@\n 1:%5D) %0A%09_ = vet%0A%09\n-// \n return 0%0A%7D%0A%0A// m\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-52-10",
+            "content": "@@ -1998,33 +1998,33 @@\n %09if(len(vet) == \n-0\n+1\n )%7B%0A%09%09return 0%0A%09%7D\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-52-35",
+            "content": "@@ -1,3184 +1,82 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0A// var resultado string%0A%0A// func formatar(vet int%5B%5D)%7B%0A%0A// %09if(len(vet) == 1)%7B%0A%0A// %09%7D%0A%0A// %09return %0A// %7D%0A%0A/*%0A%0A%09// if(len(vet) == 0)%7B%0A%09// %09return %22%5B%5D%22%0A%09// %7D%0A%0A%09// resultado := %22%22%0A%09// if(len(vet) == 1)%7B%0A%09// %09return %22%5B%22 +  resultado + %22%5D%22%0A%09// %7D%0A%0A%09// resultado += strconv.Itoa(vet%5B0%5D) + %22, %22%0A%0A%09// return tostr(vet%5B1:%5D)%0A%0A%09palavras := make(%5B%5Dstring, len(vet))%0A%0A%09for _,valor := range palavras%7B%0A%09%09palavras = append(palavras,strconv.Itoa(valor))%0A%09%7D%0A%0A%09return palavras%0A*/%0A%0A/*escrevendo como eu acho que deve ser o passo a passo para resolver o problema.%0A%0Ase o vetor n%C3%A3o tiver nada eu retorno %5B%5D%0A%0Acaso contrario eu tenho que usar a return tostr(vet%5B1;%5D) para ficar chamando sempre a fun%C3%A7%C3%A3o%0A%0Aa%C3%AD eu tenho que tratar a impress%C3%A3o que no final tem que me exibir nesse formato %5B%22numero%22, %22numero2%22%5D%0A%0Atenho que usar a fun%C3%A7%C3%A3o printar que criei para fazer a formata%C3%A7%C3%A3o que eu quero passando como argumento o numero que estou percorrendo agora%0Aem seguida converto ele para string e retorno ele para a fun%C3%A7%C3%A3o.%0A%0Aa partir daqui n%C3%A3o sei muito bem como desenvolver mas valide esse meu raciocinio e diga se est%C3%A1 coerente fale sobre ele, mas n%C3%A3o me d%C3%AA dicas de como resolver o problema%0A%0A%0A*/%0Afunc printar(numero int) string%7B%0A%0A%09elementoConvetirdo := strconv.Itoa(numero)%0A%0A%09resultado := elementoConvetirdo %0A%0A%09return resultado%0A%0A%7D%0A%0Afunc tostr(vet %5B%5Dint) string %7B%0A%0A%0A%09if(len(vet) == 0)%7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%0A%09if(len(vet) == 1)%7B%0A%09%09return %22%5B%22 + strconv.Itoa(vet%5B0%5D) + %22%5D%22%0A%09%7D%0A%0A%09// elemento := vet%5B0%5D%0A%0A%09return %22%5B%22 + strconv.Itoa(vet%5B0%5D) + %22, %22+ tostr(vet%5B1:%5D)%5B1:%5D%0A%09%0A%09// final := printar(vet%5B0%5D)%0A%09// fmt.Printf(%22%25v, %22, strconv.Itoa(vet%5B0%5D))%0A%09// elementos += strconv.Itoa(vet%5B0%5D)%0A%09// return %22%5B%22 + elemento + %22%5D%22 %0A%09// return %22%5B%22 + elemento + %22%5D%22 %0A%09// _ = vet%0A%09// return %22%22%0A%7D%0A%0Afunc tostrrev(vet %5B%5Dint) string %7B%0A%09_ = vet%0A%09return %22%22%0A%7D%0A%0A// reverse: inverte os elementos do slice%0Afunc reverse(vet %5B%5Dint) %7B%0A%09_ = vet%0A%7D%0A%0A// sum: soma dos elementos do slice%0Afunc sum(vet %5B%5Dint) int %7B%0A%0A%09if(len(vet) == 0)%7B%0A%09%09return 0%0A%09%7D%0A%0A%09return vet%5B0%5D + sum(vet%5B1:%5D) %0A%0A%09// _ = vet%0A%09// return 0%0A%7D%0A%0A// mult: produto dos elementos do slice%0Afunc mult(vet %5B%5Dint) int %7B%0A%0A%09if(len(vet) == 0)%7B%0A%09%09return vet%5B0%5D%0A%09%7D%0A%0A%09return vet%5B0%5D * sum(vet%5B1:%5D) %0A%09// _ = vet%0A%09// return 0%0A%7D%0A%0A// min: retorna o %C3%ADndice e valor do menor valor%0A// crie uma fun%C3%A7%C3%A3o recursiva interna do modelo%0A// var rec func(v %5B%5Dint) (int, int)%0A// para fazer uma recurs%C3%A3o que retorna valor e %C3%ADndice%0Afunc min(vet %5B%5Dint) int %7B%0A%09_ = vet%0A%09return 0%0A%7D%0A%0Afunc main() %7B%0A%09var vet %5B%5Dint%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09for %7B%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09line := scanner.Text()%0A%09%09args := strings.Fields(line)%0A%09%09fmt.Println(%22$%22 + line)%0A%0A%09%09switch args%5B0%5D %7B%0A%09%09case %22end%22:%0A%09%09%09return%0A%09%09case %22read%22:%0A%09%09%09vet = nil%0A%09%09%09for _, arg := range args%5B1:%5D %7B%0A%09%09%09%09if val, err := strconv.Atoi(arg); err == nil %7B%0A%09%09%09%09%09vet = append(vet, val)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09case %22tostr%22:%0A%09%09%09fmt.Println(tostr(vet))%0A%09%09case %22torev%22:%0A%09%09%09fmt.Println(tostrrev(vet))%0A%09%09case %22reverse%22:%0A%09%09%09reverse(vet)%0A%09%09case %22sum%22:%0A%09%09%09fmt.Println(sum(vet))%0A%09%09case %22mult%22:%0A%09%09%09fmt.Println(mult(vet))%0A%09%09case %22min%22:%0A%09%09%09fmt.Println(min(vet))%0A%09%09default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)%0A%09%09%7D%0A%09%7D%0A%7D\n+@@ -2161,33 +2161,33 @@%0A %2509if(len(vet) == %0A-0%0A+1%0A )%257B%250A%2509%2509return 0%250A%2509%257D\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-03_20-53-28",
+            "content": "@@ -2182,17 +2182,22 @@\n %09return \n-1\n+vet%5B0%5D\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-53-45",
+            "content": "@@ -2161,33 +2161,33 @@\n %09if(len(vet) == \n-1\n+0\n )%7B%0A%09%09return vet%5B\n@@ -2182,22 +2182,17 @@\n %09return \n-vet%5B0%5D\n+1\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-54-38",
+            "content": "@@ -2210,20 +2210,19 @@\n et%5B0%5D * \n-mult\n+sum\n (vet%5B1:%5D\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-55-24",
+            "content": "@@ -2182,17 +2182,22 @@\n %09return \n-1\n+vet%5B0%5D\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-55-36",
+            "content": "@@ -2161,33 +2161,33 @@\n %09if(len(vet) == \n-0\n+1\n )%7B%0A%09%09return 1%0A%09%7D\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_20-56-22",
+            "content": "@@ -1221,16 +1221,151 @@\n ema%0A%0A%0A*/\n+%0Afunc printar(numero int) string%7B%0A%0A%09elementoConvetirdo := strconv.Itoa(numero)%0A%0A%09resultado := elementoConvetirdo %0A%0A%09return resultado%0A%0A%7D\n %0A%0Afunc t\n@@ -1828,119 +1828,9 @@\n g %7B%0A\n-%0A%09%0A%09if(len(vet) == 0)%7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%0A%09if(len(vet) == 1)%7B%0A%09%09return %22%5B%22 + strconv.Itoa(vet%5B0%5D) + %22%5D%22%0A%09%7D%0A%0A%09// \n+%09\n _ = \n@@ -1826,35 +1826,32 @@\n ing %7B%0A%09_ = vet%0A%09\n-// \n return %22%22%0A%7D%0A%0A// \n@@ -1916,19 +1916,16 @@\n int) %7B%0A%09\n-// \n _ = vet%0A\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-04-03_21-03-13",
+            "content": "@@ -1805,24 +1805,27 @@\n // _ = vet%0A%09\n+// \n return %22%22%0A%7D%0A\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_21-03-19",
+            "content": "@@ -1804,144 +1804,26 @@\n %09// \n-%22%5B%22 + strconv.Itoa(vet%5B0%5D) + %22, %22+ tostr(vet%5B1:%5D)%5B1:%5D%0A%09return %22%5B%22 + strconv.Itoa(vet%5Blen(vet)-1:%5D) + strconv.Itoa(vet%5B0%5D)  %0A%0A%09// _ = vet\n+_ = vet%0A%09return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-04-03_21-14-04",
+            "content": "@@ -1893,16 +1893,18 @@\n len(vet)\n+-1\n :%5D) + st\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-04-03_21-14-14",
+            "content": "@@ -1868,24 +1868,28 @@\n n %22%5B%22 + \n-to\n str\n-rev\n+conv.Itoa\n (vet%5Blen\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-04-03_21-15-09",
+            "content": "@@ -1864,36 +1864,32 @@\n eturn %22%5B%22 + \n+to\n str\n-conv.Itoa\n+rev\n (vet%5Blen(vet\n@@ -1893,21 +1893,13 @@\n vet)\n--1\n :%5D) +\n- %22, %22+\n  str\n@@ -1916,25 +1916,13 @@\n vet%5B\n-:len(vet)-1%5D)%5B1:%5D\n+0%5D)  \n %0A%0A%09/\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-04-03_21-38-00",
+            "content": "@@ -1895,16 +1895,17 @@\n n(vet)-1\n+:\n %5D) + %22, \n@@ -1907,24 +1907,28 @@\n + %22, %22+ \n-to\n str\n-rev\n+conv.Itoa\n (vet%5B:le\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-04-03_21-39-25",
+            "content": "@@ -63,16 +63,454 @@\n ngs%22%0A)%0A%0A\n+// var resultado string%0A%0A// func formatar(vet int%5B%5D)%7B%0A%0A// %09if(len(vet) == 1)%7B%0A%0A// %09%7D%0A%0A// %09return %0A// %7D%0A%0A/*%0A%0A%09// if(len(vet) == 0)%7B%0A%09// %09return %22%5B%5D%22%0A%09// %7D%0A%0A%09// resultado := %22%22%0A%09// if(len(vet) == 1)%7B%0A%09// %09return %22%5B%22 +  resultado + %22%5D%22%0A%09// %7D%0A%0A%09// resultado += strconv.Itoa(vet%5B0%5D) + %22, %22%0A%0A%09// return tostr(vet%5B1:%5D)%0A%0A%09palavras := make(%5B%5Dstring, len(vet))%0A%0A%09for _,valor := range palavras%7B%0A%09%09palavras = append(palavras,strconv.Itoa(valor))%0A%09%7D%0A%0A\n %09return \n@@ -1251,24 +1251,25 @@\n ) string %7B%0A%0A\n+%0A\n %09if(len(vet)\n@@ -1356,24 +1356,48 @@\n ) + %22%5D%22%0A%09%7D%0A%0A\n+%09// elemento := vet%5B0%5D%0A%0A\n %09return %22%5B%22 \n@@ -1446,18 +1446,222 @@\n :%5D)%5B1:%5D%0A\n-\n %09%0A\n+%09// final := printar(vet%5B0%5D)%0A%09// fmt.Printf(%22%25v, %22, strconv.Itoa(vet%5B0%5D))%0A%09// elementos += strconv.Itoa(vet%5B0%5D)%0A%09// return %22%5B%22 + elemento + %22%5D%22 %0A%09// return %22%5B%22 + elemento + %22%5D%22 %0A%09// _ = vet%0A%09// return %22%22%0A\n %7D%0A%0Afunc \n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-04-04_08-55-53",
+            "content": "@@ -63,16 +63,36 @@\n ngs%22%0A)%0A%0A\n+%09return palavras%0A*/%0A\n %0A/*escre\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-04-04_09-09-07",
+            "content": "@@ -1885,43 +1885,8 @@\n t %7B%0A\n-%09if(len(vet) == 0)%7B%0A%09%09return -1%0A%09%7D%0A\n %09_ =\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-04-04_09-17-05",
+            "content": "@@ -1338,199 +1338,8 @@\n ) %7B%0A\n-%09    if len(vet) %3C= 1 %7B%0A        return%0A    %7D%0A%0A    // troca primeiro com %C3%BAltimo%0A    vet%5B0%5D, vet%5Blen(vet)-1%5D = vet%5Blen(vet)-1%5D, vet%5B0%5D%0A%0A    // recurs%C3%A3o no meio%0A    reserve(vet%5B1 : len(vet)-1%5D)%0A\n %09// \n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-04-04_09-22-21",
+            "content": "@@ -1498,20 +1498,20 @@\n o%0A    re\n-vers\n+serv\n e(vet%5B1 \n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-04-04_09-22-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n\n/*escrevendo como eu acho que deve ser o passo a passo para resolver o problema.\n\nse o vetor n\u00e3o tiver nada eu retorno []\n\ncaso contrario eu tenho que usar a return tostr(vet[1;]) para ficar chamando sempre a fun\u00e7\u00e3o\n\na\u00ed eu tenho que tratar a impress\u00e3o que no final tem que me exibir nesse formato [\"numero\", \"numero2\"]\n\ntenho que usar a fun\u00e7\u00e3o printar que criei para fazer a formata\u00e7\u00e3o que eu quero passando como argumento o numero que estou percorrendo agora\nem seguida converto ele para string e retorno ele para a fun\u00e7\u00e3o.\n\na partir daqui n\u00e3o sei muito bem como desenvolver mas valide esse meu raciocinio e diga se est\u00e1 coerente fale sobre ele, mas n\u00e3o me d\u00ea dicas de como resolver o problema\n\n\n*/\n\nfunc tostr(vet []int) string {\n\n\tif(len(vet) == 0){\n\t\treturn \"[]\"\n\t}\n\n\tif(len(vet) == 1){\n\t\treturn \"[\" + strconv.Itoa(vet[0]) + \"]\"\n\t}\n\n\treturn \"[\" + strconv.Itoa(vet[0]) + \", \"+ tostr(vet[1:])[1:]\n\t\n}\n\nfunc tostrrev(vet []int) string {\n\n\t\n\tif(len(vet) == 0){\n\t\treturn \"[]\"\n\t}\n\n\tif(len(vet) == 1){\n\t\treturn \"[\" + strconv.Itoa(vet[0]) + \"]\"\n\t}\n\n\t// \"[\" + strconv.Itoa(vet[0]) + \", \"+ tostr(vet[1:])[1:]\n\treturn \"[\" + strconv.Itoa(vet[len(vet)-1]) + \", \"+ tostrrev(vet[:len(vet)-1])[1:]\n\n\t// _ = vet\n}\n\n// reverse: inverte os elementos do slice\nfunc reverse(vet []int) {\n\t    if len(vet) <= 1 {\n        return\n    }\n\n    // troca primeiro com \u00faltimo\n    vet[0], vet[len(vet)-1] = vet[len(vet)-1], vet[0]\n\n    // recurs\u00e3o no meio\n    reverse(vet[1 : len(vet)-1])\n\t// _ = vet\n}\n\n// sum: soma dos elementos do slice\nfunc sum(vet []int) int {\n\n\tif(len(vet) == 0){\n\t\treturn 0\n\t}\n\n\treturn vet[0] + sum(vet[1:]) \n\n\t// _ = vet\n\t// return 0\n}\n\n// mult: produto dos elementos do slice\nfunc mult(vet []int) int {\n\n\tif(len(vet) == 0){\n\t\treturn 1\n\t}\n\n\treturn vet[0] * mult(vet[1:]) \n\t// _ = vet\n\t// return 0\n}\n\n// min: retorna o \u00edndice e valor do menor valor\n// crie uma fun\u00e7\u00e3o recursiva interna do modelo\n// var rec func(v []int) (int, int)\n// para fazer uma recurs\u00e3o que retorna valor e \u00edndice\nfunc min(vet []int) int {\n\tif(len(vet) == 0){\n\t\treturn -1\n\t}\n\t_ = vet\n\treturn 0\n}\n\nfunc main() {\n\tvar vet []int\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(\"$\" + line)\n\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"read\":\n\t\t\tvet = nil\n\t\t\tfor _, arg := range args[1:] {\n\t\t\t\tif val, err := strconv.Atoi(arg); err == nil {\n\t\t\t\t\tvet = append(vet, val)\n\t\t\t\t}\n\t\t\t}\n\t\tcase \"tostr\":\n\t\t\tfmt.Println(tostr(vet))\n\t\tcase \"torev\":\n\t\t\tfmt.Println(tostrrev(vet))\n\t\tcase \"reverse\":\n\t\t\treverse(vet)\n\t\tcase \"sum\":\n\t\t\tfmt.Println(sum(vet))\n\t\tcase \"mult\":\n\t\t\tfmt.Println(mult(vet))\n\t\tcase \"min\":\n\t\t\tfmt.Println(min(vet))\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "147"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_08-46-05",
+            "content": "@@ -147,17 +147,17 @@\n urn mdc(\n-b\n+a\n ,a%25b)%0A%0A%7D\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-03_08-46-19",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\n\tif(b % a == 0){\n\t\treturn a\n\t}\n\n\t// resultado := b % a\n\t// b = a\n\t// a = resultado\n\treturn mdc(b,a%b)\n\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n\n/*\n\tif(a == 0){\n\t\treturn b\n\t}\n\n\tif(b == 0){\n\t\treturn a\n\t}\n\n\tmaiorNumero := 0\n\tmenorNumero := 0\n\tif(a > b){\n\t\tmaiorNumero = a\n\t\tmenorNumero = b\n\t}else{\n\t\tmaiorNumero = b\n\t\tmenorNumero = a\n\t}\n\n\tq := maiorNumero / menorNumero\n\tr := a % b\n\tvalorA := b* r\n\n\n\treturn mdc(a,b)\n\n*/\n",
+            "lines": "52"
+        }
+    ]
+}

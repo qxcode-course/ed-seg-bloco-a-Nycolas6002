@@ -1,0 +1,194 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_20-21-27",
+            "content": "@@ -24,133 +24,8 @@\n t%22%0A%0A\n-func dividir(numero int)%7B%0A%0A    if(numero == 0)%7B%0A        return%0A    %7D%0A%0A    numero(numero/2)%0A    fmt.Println(numero, resto)%0A%0A%7D%0A\n %0Afun\n@@ -79,29 +79,8 @@\n o)%0A%0A\n-    dividir(numero)%0A%0A\n     \n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-02_20-28-37",
+            "content": "@@ -115,33 +115,8 @@\n /2)%0A\n-    resto := numero %25 2 %0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-02_20-29-21",
+            "content": "@@ -90,31 +90,30 @@\n %0A    %7D%0A%0A    \n-dividir\n+numero\n (numero/2)%0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-29-31",
+            "content": "@@ -254,11 +254,8 @@\n %0A   \n- //\n  fmt\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-31-13",
+            "content": "@@ -68,9 +68,9 @@\n  == \n-1\n+0\n )%7B%0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-32-20",
+            "content": "@@ -64,17 +64,17 @@\n mero == \n-2\n+1\n )%7B%0A     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-32-31",
+            "content": "@@ -64,17 +64,17 @@\n mero == \n-0\n+2\n )%7B%0A     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-32-42",
+            "content": "@@ -93,26 +93,16 @@\n   %7D%0A%0A   \n- numero :=\n  dividir\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-34-01",
+            "content": "@@ -94,19 +94,22 @@\n  %7D%0A%0A    \n-div\n+numero\n  := divi\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-34-11",
+            "content": "@@ -132,19 +132,22 @@\n esto := \n-div\n+numero\n  %25 2 %0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-34-19",
+            "content": "@@ -89,24 +89,31 @@\n n%0A    %7D%0A%0A   \n+ div :=\n  dividir(num\n@@ -132,22 +132,19 @@\n esto := \n-numero\n+div\n  %25 2 %0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-34-36",
+            "content": "@@ -51,24 +51,8 @@\n )%7B%0A%0A\n-    //caso base%0A\n     \n@@ -90,16 +90,38 @@\n %0A    %7D%0A%0A\n+    dividir(numero/2)%0A\n     rest\n@@ -167,38 +167,16 @@\n , resto)\n-%0A    dividir(numero/2)\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_20-35-19",
+            "content": "@@ -260,18 +260,16 @@\n r(numero\n-/2\n )%0A%0A    /\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-02_20-35-49",
+            "content": "@@ -106,38 +106,16 @@\n %0A    %7D%0A%0A\n-    dividir(numero/2)%0A\n     rest\n@@ -161,16 +161,38 @@\n , resto)\n+%0A    dividir(numero/2)\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-02_20-35-55",
+            "content": "@@ -131,19 +131,16 @@\n o/2)%0A   \n- //\n  resto :\n@@ -175,16 +175,23 @@\n n(numero\n+, resto\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-02_20-37-57",
+            "content": "@@ -81,9 +81,10 @@\n ero \n-%3C\n+==\n  0)%7B\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-02_20-38-06",
+            "content": "@@ -81,10 +81,9 @@\n ero \n-==\n+%3C\n  0)%7B\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-02_20-38-13",
+            "content": "@@ -113,63 +113,8 @@\n %0A   \n- numDividido := numero/2%0A    resto := numero %25 2%0A    //\n  div\n@@ -182,37 +182,8 @@\n mero\n-, resto)%0A    dividir(numero/2\n )%0A%0A%7D\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-02_20-43-07",
+            "content": "@@ -230,23 +230,18 @@\n ntln(num\n-Dividid\n+er\n o, resto\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-02_20-43-17",
+            "content": "@@ -106,38 +106,16 @@\n %0A    %7D%0A%0A\n-    dividir(numero/2)%0A\n     numD\n@@ -246,16 +246,38 @@\n , resto)\n+%0A    dividir(numero/2)\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-02_20-43-31",
+            "content": "@@ -106,16 +106,38 @@\n %0A    %7D%0A%0A\n+    dividir(numero/2)%0A\n     numD\n@@ -180,38 +180,16 @@\n ero %25 2%0A\n-    dividir(numero/2)%0A\n     // d\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-02_20-45-03",
+            "content": "@@ -24,80 +24,8 @@\n t%22%0A%0A\n-func printar(int numero, resto int )%7B%0A    fmt.Println(numero, resto)%0A%7D%0A%0A\n func\n@@ -232,27 +232,24 @@\n ero %25 2 %0A   \n- //\n  fmt.Println\n@@ -272,39 +272,8 @@\n sto)\n-%0A    printar(numDividido,resto)\n %0A%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-02_20-46-38",
+            "content": "@@ -33,26 +33,26 @@\n printar(\n+int \n numero\n- int\n , resto \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_20-46-57",
+            "content": "@@ -80,18 +80,16 @@\n n(numero\n-/2\n , resto)\n@@ -181,19 +181,16 @@\n   %7D%0A%0A   \n- //\n  numDivi\n@@ -359,18 +359,23 @@\n ntar(num\n-er\n+Dividid\n o,resto)\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_20-47-19",
+            "content": "@@ -250,24 +250,21 @@\n idir(num\n-Dividido\n+ero/2\n )%0A    //\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_20-48-15",
+            "content": "@@ -179,24 +179,27 @@\n n%0A    %7D%0A%0A   \n+ //\n  numDividido\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_20-48-20",
+            "content": "@@ -80,16 +80,18 @@\n n(numero\n+/2\n , resto)\n@@ -232,16 +232,41 @@\n ero %25 2%0A\n+    dividir(numDividido)%0A\n     // d\n@@ -368,46 +368,16 @@\n (num\n-Dividido,resto)%0A    dividir(numDividid\n+ero,rest\n o)%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_20-48-57",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func pri\n@@ -62,15 +62,12 @@\n  )%7B%0A\n-//\n     \n- \n fmt.\n@@ -89,19 +89,16 @@\n  resto)%0A\n-// \n %7D%0A%0Afunc \n@@ -207,11 +207,9 @@\n mero\n- / \n+/\n 2%0A  \n@@ -234,52 +234,8 @@\n %25 2%0A\n-    %0A    dividir(numDividido, resto)%0A%0A%7D%0A%0A/*%0A\n     \n@@ -325,19 +325,16 @@\n sto)%0A   \n- //\n  printar\n@@ -357,10 +357,35 @@\n to)%0A\n-*/\n+    dividir(numDividido)%0A%0A%7D\n %0A%0Afu\n@@ -439,36 +439,8 @@\n ro)%0A\n-    numeroDivido := numero/2\n %0A   \n@@ -458,21 +458,10 @@\n mero\n-Divido, resto\n+/2\n )%0A%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_21-34-35",
+            "content": "@@ -190,19 +190,16 @@\n   %7D%0A%0A   \n- //\n  numDivi\n@@ -217,16 +217,16 @@\n ero / 2%0A\n+\n     rest\n@@ -278,19 +278,153 @@\n  resto)%0A\n+%0A\n %7D%0A%0A\n+/*%0A    // dividir(numero/2)%0A    // resto := numero %25 2 %0A    // fmt.Println(numDividido, resto)%0A    // printar(numDividido,resto)%0A*/%0A%0A\n func mai\n@@ -519,22 +519,49 @@\n meroDivido, resto)%0A%0A\n+    // fmt.Println(numero)%0A\n %7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_21-41-15",
+            "content": "@@ -344,31 +344,8 @@\n %0A   \n- dividir(numero)%0A    //\n  num\n@@ -369,19 +369,16 @@\n ro/2%0A   \n- //\n  dividir\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-02_21-41-32",
+            "content": "@@ -237,18 +237,14 @@\n  := \n-(\n numero\n-/2)\n  %25 2\n@@ -264,21 +264,24 @@\n idir(num\n-ero/2\n+Dividido\n , resto)\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-02_21-42-19",
+            "content": "@@ -224,37 +224,8 @@\n / 2%0A\n-    novoNumero := numero / 2%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-02_21-44-47",
+            "content": "@@ -266,58 +266,22 @@\n  := \n+(\n n\n-ovoN\n umero\n+/2)\n  %25 2\n-%0A%0A    fmt.Println(novoNumero, resto)\n %0A   \n@@ -295,25 +295,23 @@\n ividir(n\n-ovoN\n umero\n+/2\n , resto)\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-02_21-45-37",
+            "content": "@@ -340,16 +340,23 @@\n voNumero\n+, resto\n )%0A%7D%0A%0Afun\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-02_21-46-04",
+            "content": "@@ -282,32 +282,8 @@\n  2%0A%0A\n-    dividir(novoNumero)%0A\n     \n@@ -318,16 +318,40 @@\n o)%0A    %0A\n+    dividir(novoNumero)%0A\n %7D%0A%0Afunc \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-02_21-46-15",
+            "content": "@@ -259,24 +259,28 @@\n   resto := n\n+ovoN\n umero %25 2%0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-02_21-49-21",
+            "content": "@@ -187,16 +187,49 @@\n %0A    %7D%0A%0A\n+    // numDividido := numero / 2%0A\n     novo\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-04_09-36-34",
+            "content": "package main\nimport \"fmt\"\n\n// func printar(numero int, resto int ){\n//     fmt.Println(numero, resto)\n// }\n\nfunc dividir(numero int){\n\n    //caso base\n    if(numero == 0){\n        return\n    }\n\n    novoNumero := numero / 2\n    resto := numero % 2\n\n    dividir(novoNumero)\n    fmt.Println(novoNumero, resto)\n    \n}\n\nfunc main() {\n    numero := 0\n\n    fmt.Scan(&numero)\n    dividir(numero)\n    // numeroDivido := numero/2\n    // dividir(numeroDivido, resto)\n\n}\n",
+            "lines": "31"
+        }
+    ]
+}
