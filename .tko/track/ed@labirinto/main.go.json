@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_14-37-48",
+            "content": "@@ -397,36 +397,8 @@\n  '#'\n- %7C%7C grid%5Brow%5D%5Bcolumn%5D == '.'\n )%7B%0A%09\n@@ -485,39 +485,16 @@\n rue%0A%09%7D%0A%0A\n-grid%5Brow%5D%5Bcolumn%5D = '.'\n %0A%09// gri\n@@ -531,20 +531,16 @@\n h(grid, \n-Pos%7B\n row-1, c\n@@ -548,18 +548,8 @@\n lumn\n-%7D, endPos \n ) %7C%7C\n@@ -562,20 +562,16 @@\n h(grid, \n-Pos%7B\n row+1, c\n@@ -575,25 +575,16 @@\n , column\n-%7D, endPos\n ) %7C%7C sea\n@@ -585,36 +585,32 @@\n %7C%7C search(grid, \n-Pos%7B\n row, column-1%7D, \n@@ -606,25 +606,16 @@\n column-1\n-%7D, endPos\n ) %7C%7C sea\n@@ -624,20 +624,16 @@\n h(grid, \n-Pos%7B\n row, col\n@@ -641,26 +641,38 @@\n mn+1\n-%7D, endPos))%7B%0A%09%09// \n+) )%7B%0A%09%09grid%5Brow%5D%5Bcolumn%5D = '.'\n %0A%09%09r\n@@ -714,16 +714,17 @@\n mn%5D == '\n+ \n ')%7B%0A%09%09gr\n@@ -752,32 +752,8 @@\n %0A%09%7D%0A\n-%09grid%5Brow%5D%5Bcolumn%5D = ' '\n %0A%09re\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-04-06_14-51-51",
+            "content": "@@ -538,16 +538,39 @@\n  = '.'%0A%09\n+// grid%5Brow%5D%5Bcolumn%5D ==\n  %0A%0A%09if( \n@@ -745,16 +745,21 @@\n dPos))%7B%0A\n+%09%09// \n %0A%09%09retur\n@@ -830,17 +830,16 @@\n  '.'%0A%09%7D%0A\n-%0A\n %09grid%5Bro\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-04-06_14-52-19",
+            "content": "@@ -64,19 +64,16 @@\n  %7B%0A%09row \n-   \n int%0A%09col\n@@ -110,17 +110,22 @@\n %5B%5Drune, \n-p\n+startP\n os, endP\n@@ -135,16 +135,89 @@\n Pos)\n- \n bool %7B%0A\n+%09// starPos tem dois valores linha e coluna %0A%0A%09//definindo linha e coluna%0A\n %09row\n@@ -232,17 +232,22 @@\n  := \n-p\n+startP\n os.row, \n pos.\n@@ -242,17 +242,22 @@\n os.row, \n-p\n+startP\n os.colum\n@@ -266,45 +266,48 @@\n %0A%09//\n- 1. fora da matriz\n+caso base\n %0A%09if\n- \n+(\n row \n-%3C 0 %7C%7C row\n+%3E= len(grid) %7C%7C column\n  %3E= \n@@ -314,27 +314,27 @@\n len(grid\n+%5B0%5D\n ) %7C%7C \n-column\n+row\n  %3C 0 %7C%7C \n@@ -340,32 +340,20 @@\n  column \n-%3E= len(grid%5B0%5D) \n+%3C 0)\n %7B%0A%09%09retu\n@@ -369,41 +369,12 @@\n %09%7D%0A%0A\n-%09// 2. parede ou j%C3%A1 visitado%0A\n %09if\n- \n+(\n grid\n@@ -421,17 +421,17 @@\n %5D == '.'\n- \n+)\n %7B%0A%09%09retu\n@@ -447,37 +447,12 @@\n %09%7D%0A%0A\n-%09// 3. chegou no destino%0A\n %09if\n- \n+(\n row \n@@ -492,16 +492,17 @@\n .column \n+)\n %7B%0A%09%09retu\n@@ -517,52 +517,8 @@\n %09%7D%0A%0A\n-%09// 4. marca como visitado temporariamente%0A%09\n grid\n@@ -541,36 +541,16 @@\n '.'%0A\n-%0A%09// 5. tenta os 4 lados\n+%09 %0A\n %0A%09if\n+(\n  sea\n@@ -566,19 +566,17 @@\n  Pos%7Brow\n- - \n+-\n 1, colum\n@@ -577,39 +577,38 @@\n  column%7D, endPos\n+ \n ) %7C%7C\n-%0A%09%09\n+ \n search(grid, Pos\n@@ -611,19 +611,17 @@\n  Pos%7Brow\n- + \n++\n 1, colum\n@@ -626,35 +626,33 @@\n umn%7D, endPos) %7C%7C\n-%0A%09%09\n+ \n search(grid, Pos\n@@ -667,11 +667,9 @@\n lumn\n- - \n+-\n 1%7D, \n@@ -678,19 +678,17 @@\n dPos) %7C%7C\n-%0A%09%09\n+ \n search(g\n@@ -711,11 +711,9 @@\n lumn\n- + \n++\n 1%7D, \n@@ -719,17 +719,17 @@\n  endPos)\n- \n+)\n %7B%0A%0A%09%09ret\n@@ -746,35 +746,68 @@\n %7D%0A%0A%09\n-// 6. backtracking (desfaz)\n+%0A%09if(grid%5Brow%5D%5Bcolumn%5D == '')%7B%0A%09%09grid%5Brow%5D%5Bcolumn%5D = '.'%0A%09%7D%0A\n %0A%09gr\n@@ -842,16 +842,17 @@\n n false%0A\n+%0A\n %7D%0A%0A%09// _\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-06_14-53-07",
+            "content": "@@ -344,38 +344,18 @@\n mn%5D \n-!= ' ' %7B%0A%09%09return false%0A%09%7D%0A%09%0A%09\n+== '#' %7C%7C \n grid\n@@ -373,12 +373,33 @@\n n%5D =\n+=\n  '.'\n+ %7B%0A%09%09return false%0A%09%7D\n %0A%0A%09/\n@@ -532,16 +532,41 @@\n riamente\n+%0A%09grid%5Brow%5D%5Bcolumn%5D = '.'\n %0A%0A%09// 5.\n@@ -862,24 +862,78 @@\n rn false%0A%7D%0A%0A\n+%09// _, _, _ = grid, startPos, endPos%0A%09// return false%0A\n func main() \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-04-06_14-54-56",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\trow    int\n\tcolumn int\n}\n\nfunc search(grid [][]rune, pos, endPos Pos) bool {\n\trow, column := pos.row, pos.column\n\n\t// 1. fora da matriz\n\tif row < 0 || row >= len(grid) || column < 0 || column >= len(grid[0]) {\n\t\treturn false\n\t}\n\n\t// 2. parede ou j\u00e1 visitado\n\tif grid[row][column] != ' ' {\n\t\treturn false\n\t}\n\t\n\tgrid[row][column] = '.'\n\n\t// 3. chegou no destino\n\tif row == endPos.row && column == endPos.column {\n\t\treturn true\n\t}\n\n\t// 4. marca como visitado temporariamente\n\n\t// 5. tenta os 4 lados\n\tif search(grid, Pos{row - 1, column}, endPos) ||\n\t\tsearch(grid, Pos{row + 1, column}, endPos) ||\n\t\tsearch(grid, Pos{row, column - 1}, endPos) ||\n\t\tsearch(grid, Pos{row, column + 1}, endPos) {\n\n\t\treturn true\n\t}\n\n\t// 6. backtracking (desfaz)\n\tgrid[row][column] = ' '\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "85"
+        }
+    ]
+}
