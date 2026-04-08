@@ -1,0 +1,194 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_16-13-58",
+            "content": "@@ -830,17 +830,17 @@\n n.Walk(-\n-2\n+3\n 0) // vo\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_15-51-15",
+            "content": "@@ -830,17 +830,17 @@\n n.Walk(-\n-3\n+2\n 0) // vo\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_15-51-29",
+            "content": "@@ -830,17 +830,17 @@\n n.Walk(-\n-2\n+3\n 0) // vo\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_15-55-58",
+            "content": "@@ -736,35 +736,32 @@\n da sem riscar%0A%09%09\n-// \n pen.Down()%0A%0A%09%09//\n@@ -754,27 +754,24 @@\n n.Down()%0A%0A%09%09\n-// \n pen.DrawCirc\n@@ -805,27 +805,24 @@\n  pequeno%0A%0A%09%09\n-// \n pen.Up()%0A%09%09/\n@@ -820,19 +820,16 @@\n .Up()%0A%09%09\n-// \n pen.Walk\n@@ -830,17 +830,17 @@\n n.Walk(-\n-3\n+2\n 0) // vo\n@@ -856,19 +856,16 @@\n iscar%0A%09%09\n-// \n pen.Down\n@@ -870,19 +870,16 @@\n wn()%0A%0A%09%09\n-// \n pen.Left\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_16-05-54",
+            "content": "@@ -744,16 +744,19 @@\n iscar%0A%09%09\n+// \n pen.Down\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_16-06-09",
+            "content": "@@ -758,16 +758,19 @@\n wn()%0A%0A%09%09\n+// \n pen.Draw\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_16-06-19",
+            "content": "@@ -1,795 +1,4 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc randInt(min, max int) int %7B%0A%09return min + rand.Intn(max-min+1)%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura%0A%09pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho%0A%09pen.SetPosition(250, 500) // move o pincel para x 250, y 500%0A%09pen.SetHeading(90)        // coloca o pincel apontando para cima%0A%09pen.Walk(100)             // anda 100 pixels%0A%09pen.Left(30)              // dobra 30 graus para esquerda%0A%09pen.Walk(100)             // anda 100 pixels%0A%09pen.DrawCircle(50)        // desenha um c%C3%ADrculo de raio 50%0A%09pen.Right(60)             // gira para direita 60 graus%0A%09pen.Walk(150)%0A%09for range 10 %7B%0A%0A%09%09%0A%09%7D%0A%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A%0A/*%0A%0A\n pack\n@@ -985,7 +985,4 @@\n )%0A%7D%0A\n-%0A*/\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_16-12-24",
+            "content": "@@ -292,18 +292,18 @@\n on(250, \n-2\n 5\n+0\n 0) // mo\n@@ -698,16 +698,18 @@\n e 10 %7B%0A%0A\n+%09%09\n %0A%09%7D%0A%0A%09pe\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-07_16-13-08",
+            "content": "@@ -399,19 +399,16 @@\n a cima%0A%09\n-// \n pen.Walk\n@@ -441,27 +441,24 @@\n 100 pixels%0A%09\n-// \n pen.Left(30)\n@@ -504,19 +504,16 @@\n querda%0A%09\n-// \n pen.Walk\n@@ -550,19 +550,16 @@\n pixels%0A%09\n-// \n pen.Draw\n@@ -610,19 +610,16 @@\n aio 50%0A%09\n-// \n pen.Righ\n@@ -667,19 +667,16 @@\n  graus%0A%09\n-// \n pen.Walk\n@@ -701,37 +701,8 @@\n 0 %7B%0A\n-%09%09pen.Left(45)%0A%09%09pen.Walk(50)\n %0A%0A%09%7D\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-07_16-14-21",
+            "content": "@@ -726,18 +726,18 @@\n en.Left(\n-90\n+45\n )%0A%09%09pen.\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-07_16-15-08",
+            "content": "@@ -749,28 +749,8 @@\n 50)%0A\n-%09%09pen.Right(60)     \n %0A%09%7D%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-07_16-16-11",
+            "content": "@@ -764,26 +764,8 @@\n (60)\n-%0A%09%09%09%09pen.Walk(50)%0A\n     \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-07_16-16-53",
+            "content": "@@ -703,27 +703,8 @@\n 50)%0A\n-%09var left int = 30%0A\n %09for\n@@ -730,26 +730,11 @@\n eft(\n-left)%0A%09%09left += 10\n+90)\n %0A%09%09p\n@@ -747,22 +747,16 @@\n k(50)%0A%09%09\n-%0A%09%09// \n pen.Righ\n@@ -759,27 +759,26 @@\n Right(60)%0A%09%09\n-// \n+%09%09\n pen.Walk(50)\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-07_16-19-09",
+            "content": "@@ -704,22 +704,20 @@\n 0)%0A%09var \n-numero\n+left\n  int = 3\n@@ -749,24 +749,20 @@\n eft(\n-numero)%0A%09%09numero\n+left)%0A%09%09left\n  += \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-20-01",
+            "content": "@@ -785,9 +785,9 @@\n alk(\n-4\n+5\n 0)%0A%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-20-19",
+            "content": "@@ -790,16 +790,19 @@\n 0)%0A%09%09%0A%09%09\n+// \n pen.Righ\n@@ -805,24 +805,27 @@\n Right(60)%0A%09%09\n+// \n pen.Walk(50)\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-20-45",
+            "content": "@@ -700,19 +700,16 @@\n k(150)%0A%09\n-// \n var nume\n@@ -757,19 +757,16 @@\n mero)%0A%09%09\n-// \n numero +\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-21-26",
+            "content": "@@ -750,18 +750,22 @@\n en.Left(\n-30\n+numero\n )%0A%09%09// n\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-21-36",
+            "content": "@@ -792,19 +792,16 @@\n 0)%0A%09%09%0A%09%09\n-// \n pen.Righ\n@@ -804,27 +804,24 @@\n Right(60)%0A%09%09\n-// \n pen.Walk(50)\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-21-46",
+            "content": "@@ -749,15 +749,14 @@\n pen.\n-Right(9\n+Left(3\n 0)%0A%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-22-15",
+            "content": "@@ -792,45 +792,8 @@\n 40)%0A\n-%09%09pen.SetHeading(90) %0A%09%09pen.Walk(40)%0A\n %09%09%0A%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-07_16-23-24",
+            "content": "@@ -832,41 +832,8 @@\n %0A%09%09%0A\n-%09%09pen.Left(90)%0A%09%09pen.Walk(40)%0A%09%09%0A\n %09%09//\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-07_16-24-25",
+            "content": "@@ -829,39 +829,10 @@\n 40)%0A\n-%0A\n %09%09\n-pen.Left(90)%0A%09%09pen.Walk(50)%0A\n %0A%09%09p\n@@ -854,17 +854,17 @@\n en.Walk(\n-6\n+4\n 0)%0A%09%09%0A%09%09\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-07_16-25-43",
+            "content": "@@ -932,36 +932,16 @@\n 0)%0A     \n-%09pen.SetHeading(90) \n %0A%09%7D%0A%0A%09pe\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-07_16-26-12",
+            "content": "@@ -933,19 +933,16 @@\n )%0A     %09\n-// \n pen.SetH\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-07_16-26-37",
+            "content": "@@ -333,19 +333,16 @@\n  y 500%0A%09\n-// \n pen.SetH\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-07_16-27-54",
+            "content": "@@ -325,32 +325,35 @@\n a x 250, y 500%0A%09\n+// \n pen.SetHeading(9\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-07_16-28-02",
+            "content": "@@ -751,24 +751,42 @@\n n.Right(90)%0A\n+%09%09// numero += 10%0A\n %09%09pen.Walk(4\n@@ -788,22 +788,18 @@\n alk(40)%0A\n-%0A\n %09%09\n-// \n pen.SetH\n@@ -812,19 +812,16 @@\n (90) %0A%09%09\n-// \n pen.Walk\n@@ -891,39 +891,10 @@\n 60)%0A\n-%0A\n %09%09\n-pen.Left(90)%0A%09%09pen.Walk(70)%0A\n %0A%09%09/\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-07_16-29-19",
+            "content": "@@ -333,19 +333,16 @@\n  y 500%0A%09\n-// \n pen.SetH\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-07_16-30-28",
+            "content": "@@ -325,32 +325,35 @@\n a x 250, y 500%0A%09\n+// \n pen.SetHeading(9\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-07_16-30-45",
+            "content": "@@ -912,24 +912,8 @@\n 0)%0A%0A\n-%09%09pen.Left(90)%0A%0A\n %09%09//\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-07_16-31-31",
+            "content": "@@ -906,24 +906,84 @@\n Walk(70)%0A%0A%09%09\n+pen.Left(90)%0A%0A%09%09// pen.Right(60)%0A%09%09// pen.Walk(50)%0A     %09// \n pen.SetHeadi\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-04-07_16-31-59",
+            "content": "@@ -845,9 +845,9 @@\n alk(\n-7\n+5\n 0)%0A%0A\n@@ -872,17 +872,17 @@\n en.Walk(\n-9\n+6\n 0)%0A%0A%09%09pe\n@@ -903,18 +903,17 @@\n en.Walk(\n-10\n+7\n 0)%0A%0A%09%09pe\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-07_16-32-38",
+            "content": "@@ -766,17 +766,17 @@\n en.Walk(\n-1\n+4\n 0)%0A%0A%09%09//\n@@ -841,17 +841,17 @@\n en.Walk(\n-2\n+7\n 0)%0A%0A%09%09pe\n@@ -864,33 +864,33 @@\n (90)%0A%09%09pen.Walk(\n-4\n+9\n 0)%0A%0A%09%09pen.Left(9\n@@ -903,17 +903,18 @@\n en.Walk(\n-5\n+10\n 0)%0A%0A%09%09pe\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-07_16-33-17",
+            "content": "@@ -704,19 +704,29 @@\n 0)%0A%09\n+// var \n numero \n-:= 1\n+int = 3\n 0%0A%09f\n@@ -766,22 +766,18 @@\n en.Walk(\n-numero\n+10\n )%0A%0A%09%09// \n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-07_16-35-12",
+            "content": "@@ -704,34 +704,20 @@\n 0)%0A%09\n-var \n numero \n-float64  \n+:\n = 10\n-.0\n %0A%09fo\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-07_16-35-49",
+            "content": "@@ -773,39 +773,24 @@\n Walk(numero)\n-%0A%09%09numero += 10\n %0A%0A%09%09// pen.S\n@@ -849,38 +849,19 @@\n en.Walk(\n-numero)%0A%09%09numero += 10\n+20)\n %0A%0A%09%09pen.\n@@ -880,38 +880,19 @@\n en.Walk(\n-numero)%0A%09%09numero += 10\n+40)\n %0A%0A%09%09pen.\n@@ -915,33 +915,12 @@\n alk(\n-numero)%0A%09%09numero += 10%0A%09%09\n+50)%0A\n %0A%09%09p\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-07_16-36-41",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 250) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\t// pen.Walk(100)             // anda 100 pixels\n\t// pen.Left(30)              // dobra 30 graus para esquerda\n\t// pen.Walk(100)             // anda 100 pixels\n\t// pen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\t// pen.Right(60)             // gira para direita 60 graus\n\t// pen.Walk(150)\n\tvar numero float64  = 10.0\n\tfor range 10 {\n\t\tpen.Right(90)\n\t\tpen.Walk(numero)\n\t\tnumero += 10\n\n\t\t// pen.SetHeading(90) \n\t\t// pen.Walk(40)\n\n\t\tpen.Left(90)\n\t\tpen.Walk(numero)\n\t\tnumero += 10\n\n\t\tpen.Left(90)\n\t\tpen.Walk(numero)\n\t\tnumero += 10\n\n\t\tpen.Left(90)\n\t\tpen.Walk(numero)\n\t\tnumero += 10\n\t\t\n\t\tpen.SetHeading(90) \n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n\n/*\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.Left(30)              // dobra 30 graus para esquerda\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\tpen.Right(60)             // gira para direita 60 graus\n\tpen.Walk(150)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t\tpen.DrawCircle(10) //desenha um circulo pequeno\n\n\t\t// pen.Up()\n\t\t// pen.Walk(-30) // volta sem riscar\n\t\t// pen.Down()\n\n\t\t// pen.Left(36) // gira\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n\n*/",
+            "lines": "93"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_08-25-33",
+            "content": "@@ -395,19 +395,16 @@\n () %7B%0A   \n- //\n  vat qtd\n@@ -418,19 +418,16 @@\n  int%0A   \n- //\n  fmt.Sca\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_08-25-43",
+            "content": "@@ -395,16 +395,19 @@\n () %7B%0A   \n+ //\n  vat qtd\n@@ -417,24 +417,27 @@\n raus int%0A   \n+ //\n  fmt.Scan(&q\n@@ -485,19 +485,9 @@\n int,\n-qtdDegraus+\n+-\n 1)%0A \n@@ -518,19 +518,22 @@\n ltados)%0A\n-\n    \n+ //\n  formasD\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_08-28-12",
+            "content": "@@ -492,19 +492,16 @@\n s+1)%0A   \n- //\n  fmt.Pri\n@@ -544,24 +544,8 @@\n bir(\n-listaResultados,\n qtdD\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_08-28-37",
+            "content": "@@ -398,17 +398,17 @@\n %7B%0A    va\n-r\n+t\n  qtdDegr\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_08-28-43",
+            "content": "@@ -101,27 +101,24 @@\n  1)%7B%0A       \n- //\n  lista%5B0%5D = \n@@ -162,27 +162,24 @@\n  2)%7B%0A       \n- //\n  lista%5B1%5D = \n@@ -227,19 +227,16 @@\n %0A       \n- //\n  lista%5B2\n@@ -269,54 +269,67 @@\n  %7D%0A%0A\n+%0A%0A\n     if(\n-lista%5Bn%5D !=  0)%7B%0A        return\n+n %3E= 4)%7B%0A        lista%5Bn-1%5D = lista%5Bn-2%5D +\n  lista%5Bn\n %5D%0A  \n@@ -324,16 +324,18 @@\n  lista%5Bn\n+-4\n %5D%0A    %7D%0A\n@@ -345,120 +345,39 @@\n   re\n-sultado := formasDeSubir(lista, n-1) + formasDeSubir(lista, n-3)%0A%0A    lista%5Bn%5D = resultado%0A%0A    return resultado\n+turn formasDeSubir(lista ,n-1 )\n %0A%0A%0A%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_08-31-10",
+            "content": "@@ -604,28 +604,16 @@\n os)%0A    \n-fmt.Println(\n formasDe\n@@ -645,12 +645,11 @@\n Degraus)\n-)\n %0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_08-31-26",
+            "content": "@@ -277,19 +277,16 @@\n   %7D%0A%0A   \n- //\n  if(list\n@@ -306,15 +306,12 @@\n     \n-//\n     \n- \n retu\n@@ -329,21 +329,15 @@\n %0A   \n- //\n  %7D%0A%0A   \n- //\n  res\n@@ -404,19 +404,16 @@\n -3)%0A%0A   \n- //\n  lista%5Bn\n@@ -430,19 +430,16 @@\n ado%0A%0A   \n- //\n  return \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_08-54-17",
+            "content": "@@ -273,24 +273,27 @@\n 2%0A    %7D%0A%0A   \n+ //\n  if(lista%5Bn%5D\n@@ -301,28 +301,31 @@\n !=  0)%7B%0A    \n+//\n     \n+ \n return lista\n@@ -331,23 +331,29 @@\n a%5Bn%5D%0A   \n+ //\n  %7D%0A%0A   \n+ //\n  resulta\n@@ -412,24 +412,27 @@\n a, n-3)%0A%0A   \n+ //\n  lista%5Bn%5D = \n@@ -445,16 +445,19 @@\n ado%0A%0A   \n+ //\n  return \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_08-54-26",
+            "content": "package main\nimport \"fmt\"\n\nfunc formasDeSubir(lista []int,n int) int{\n\n    //cassos base\n    if(n == 1){\n        // lista[0] = 1\n        return 1\n    }\n\n    if(n == 2){\n        // lista[1] = 1\n        return 1\n    }\n\n    if(n == 3){\n        // lista[2] = 2\n        return 2\n    }\n\n    if(lista[n] !=  0){\n        return lista[n]\n    }\n\n    resultado := formasDeSubir(lista, n-1) + formasDeSubir(lista, n-3)\n\n    lista[n] = resultado\n\n    return resultado\n\n\n}\n\nfunc main() {\n    var qtdDegraus int\n    fmt.Scan(&qtdDegraus)\n    listaResultados := make([]int,qtdDegraus+1)\n    // fmt.Println(listaResultados)\n    fmt.Println(formasDeSubir(listaResultados,qtdDegraus))\n}\n",
+            "lines": "41"
+        }
+    ]
+}

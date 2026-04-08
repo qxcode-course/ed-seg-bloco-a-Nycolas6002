@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_12-58-19",
+            "content": "@@ -174,24 +174,10 @@\n ) + \n-fibonacci(mes-2)\n+(2\n  - f\n@@ -193,9 +193,10 @@\n mes-\n-3\n+2)\n )%0A%0A \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-07_12-59-23",
+            "content": "@@ -138,50 +138,8 @@\n  %7D%0A%0A\n-    if(mes == 3)%7B%0A        return 2%0A    %7D%0A%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-07_12-59-58",
+            "content": "@@ -245,17 +245,17 @@\n cci(mes-\n-2\n+3\n )%0A%0A    r\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_13-00-43",
+            "content": "@@ -231,17 +231,32 @@\n es-2) - \n-1\n+fibonacci(mes-2)\n %0A%0A    re\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_13-22-55",
+            "content": "@@ -180,169 +180,8 @@\n  %7D%0A%0A\n-    if(mes %3E 3)%7B%0A            if( mes == 1)%7B%0A        return -1%0A    %7D%0A%0A    if(mes == 2)%7B%0A        return -1%0A    %7D%0A%0A    if(mes == 3)%7B%0A        return -2%0A    %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_13-25-57",
+            "content": "@@ -392,17 +392,17 @@\n es-2) - \n-2\n+1\n %0A%0A    re\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_13-26-27",
+            "content": "@@ -389,16 +389,20 @@\n i(mes-2)\n+ - 2\n %0A%0A    re\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_13-26-38",
+            "content": "@@ -172,24 +172,185 @@\n rn 2%0A    %7D%0A%0A\n+    if(mes %3E 3)%7B%0A            if( mes == 1)%7B%0A        return -1%0A    %7D%0A%0A    if(mes == 2)%7B%0A        return -1%0A    %7D%0A%0A    if(mes == 3)%7B%0A        return -2%0A    %7D%0A    %7D%0A%0A\n     resultad\n@@ -376,14 +376,8 @@\n 1) +\n-( -3 *\n  fib\n@@ -389,17 +389,16 @@\n i(mes-2)\n-)\n %0A%0A    re\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_14-12-08",
+            "content": "@@ -180,26 +180,8 @@\n  %7D%0A%0A\n-    if()%7B%0A%0A    %7D%0A%0A\n     \n@@ -214,17 +214,17 @@\n -1) +( -\n-2\n+3\n  * fibon\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_14-12-29",
+            "content": "@@ -179,19 +179,16 @@\n   %7D%0A%0A   \n- //\n  if()%7B%0A%0A\n@@ -194,11 +194,8 @@\n %0A   \n- //\n  %7D%0A%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-07_14-12-38",
+            "content": "@@ -184,34 +184,28 @@\n     \n+// \n if(\n-mes %3E 4\n )%7B%0A\n+%0A\n     \n-%0A   \n+//\n  %7D%0A%0A\n-%0A\n     \n@@ -235,12 +235,18 @@\n mes-\n-2\n+1\n ) +\n+( -2 *\n  fib\n@@ -256,17 +256,18 @@\n cci(mes-\n-3\n+2)\n )%0A%0A    r\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-07_14-20-08",
+            "content": "package main\nimport \"fmt\"\n\nfunc fibonacci(mes int) int{\n    if( mes == 1){\n        return 1\n    }\n\n    if(mes == 2){\n        return 1\n    }\n\n    if(mes == 3){\n        return 2\n    }\n\n    if(mes > 4){\n    \n    }\n\n\n    resultado := fibonacci(mes-2) + fibonacci(mes-3)\n\n    return resultado\n\n}\n\nfunc main() {\n   var mes int\n   fmt.Scan(&mes);\n    fmt.Println(fibonacci(mes))\n}\n",
+            "lines": "32"
+        }
+    ]
+}
