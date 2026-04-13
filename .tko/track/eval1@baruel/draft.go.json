@@ -1,0 +1,204 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-38-03",
+            "content": "@@ -161,145 +161,8 @@\n s)%0A%0A\n-    for i:=0; i %3C len(listaFiguras); i++%7B%0A        var elemento int%0A        fmt.Scan(&elemento)%0A        listaFiguras%5Bi%5D = elemento%0A    %7D%0A%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-13_16-39-27",
+            "content": "@@ -115,19 +115,16 @@\n as)%0A%0A   \n- //\n  listaFi\n@@ -159,45 +159,8 @@\n ras)\n-%0A    mapaFiguras := make(map%5Bint%5Dint)\n %0A%0A  \n@@ -175,26 +175,33 @@\n =0; i %3C \n-qtd\n+len(lista\n Figuras\n+)\n ; i++%7B%0A \n@@ -264,344 +264,73 @@\n     \n-existe, valor := mapaFiguras%5Belemento%5D%0A        if(existe)%7B%0A            mapaFiguras%5Belemento%5D++%0A        %7Delse%7B%0A            mapaFiguras%5Belemento%5D = 1%0A        %7D%0A    %7D%0A%0A    fmt.Println(mapaFiguras)%0A%0A    // for i:=0; i %3C len(listaFiguras); i++%7B%0A    //     var elemento int%0A    //     fmt.Scan(&elemento)%0A    //     listaFiguras%5Bi%5D = elemento\n+listaFiguras%5Bi%5D = elemento%0A    %7D%0A%0A    // for i range qtdFiguras%7B%0A\n %0A   \n@@ -335,27 +335,24 @@\n    // %7D%0A%0A   \n- //\n  fmt.Println\n@@ -380,19 +380,16 @@\n das)%0A   \n- //\n  fmt.Pri\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-13_16-42-51",
+            "content": "@@ -305,9 +305,13 @@\n te, \n-_\n+valor\n  := \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_16-43-02",
+            "content": "@@ -349,16 +349,8 @@\n iste\n- == true\n )%7B%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_16-43-25",
+            "content": "@@ -296,18 +296,18 @@\n     \n- _,\n  existe\n+, _\n  := \n@@ -345,16 +345,24 @@\n f(existe\n+ == true\n )%7B%0A     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_16-43-45",
+            "content": "@@ -115,16 +115,19 @@\n as)%0A%0A   \n+ //\n  listaFi\n@@ -388,47 +388,8 @@\n %5D++%0A\n-            listaFiguras%5Bi%5D = elemento%0A\n     \n@@ -453,20 +453,16 @@\n %7D%0A    %7D%0A\n-    \n %0A    fmt\n@@ -487,41 +487,8 @@\n as)%0A\n-    fmt.Println(listaFiguras)%0A%0A%0A%0A\n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_16-45-30",
+            "content": "@@ -142,16 +142,28 @@\n ke(%5B%5Dint\n+, qtdFiguras\n )%0A    ma\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-45-43",
+            "content": "@@ -146,10 +146,8 @@\n %5Dint\n-,0\n )%0A  \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-45-48",
+            "content": "@@ -136,15 +136,21 @@\n  := \n+make(\n %5B%5Dint\n-%7B%7D\n+,0)\n %0A   \n@@ -382,19 +382,16 @@\n         \n- //\n  listaFi\n@@ -414,65 +414,8 @@\n nto%0A\n-            listaFiguras = append(listaFiguras,elemento)%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-46-17",
+            "content": "@@ -545,233 +545,8 @@\n %0A   \n- for i:=0; i %3C len(listaFiguras); i++%7B%0A        if(i %3C len(listaFiguras) -1)%7B%0A            fmt.Printf(%22%25v %22,valor)%0A        %7Delse%7B%0A            fmt.Printf(%22%25v%5Cn%22,valor)%0A        %7D%0A%0A%0A    %7D%0A    fmt.Println(len(listaFiguras))%0A%0A    //\n  fmt\n@@ -566,27 +566,24 @@\n Figuras)%0A   \n- //\n  fmt.Println\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_16-49-06",
+            "content": "@@ -647,31 +647,21 @@\n f(%22%25v %22,\n-listaFiguras%5Bi%5D\n+valor\n )%0A      \n@@ -699,31 +699,21 @@\n (%22%25v%5Cn%22,\n-listaFiguras%5Bi%5D\n+valor\n )%0A      \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-13_16-49-27",
+            "content": "@@ -542,39 +542,8 @@\n    %0A\n-    if(listaFiguras %3E= 1)%7B%0A    \n     \n@@ -588,20 +588,16 @@\n         \n-   \n- \n if(i %3C l\n@@ -618,20 +618,16 @@\n s) -1)%7B%0A\n-    \n         \n@@ -668,28 +668,24 @@\n i%5D)%0A        \n-    \n %7Delse%7B%0A     \n@@ -683,36 +683,32 @@\n se%7B%0A            \n-  \n-  \n fmt.Printf(%22%25v%5Cn\n@@ -730,24 +730,28 @@\n i%5D)%0A        \n+%7D%0A%0A%0A\n     %7D%0A      \n@@ -751,144 +751,8 @@\n %0A   \n-     %7D%0A         fmt.Println(len(listaFiguras))%0A    %7Delse%7B%0A        fmt.Println(%22N%22)%0A         fmt.Println(len(listaFiguras))%0A    %7D%0A%0A    //\n  fmt\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-13_16-50-53",
+            "content": "@@ -545,20 +545,16 @@\n %0A    if(\n-len(\n listaFig\n@@ -557,17 +557,16 @@\n aFiguras\n-)\n  %3E= 1)%7B%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_16-51-03",
+            "content": "@@ -92,27 +92,27 @@\n &qtd\n-Figuras,&qtdRepetid\n+Repetidas,&qtdFigur\n as)%0A\n@@ -199,23 +199,21 @@\n  i %3C qtd\n-Repetid\n+Figur\n as; i++%7B\n@@ -542,38 +542,8 @@\n    %0A\n-    listaFaltantes := %5B%5Dint%7B%7D%0A\n     \n@@ -652,16 +652,17 @@\n Figuras)\n+ \n -1)%7B%0A   \n@@ -788,24 +788,24 @@\n           %7D%0A\n+\n         %7D%0A%0A \n@@ -805,69 +805,8 @@\n    %7D\n-%0A%0A        for i:=1; i %3C= len(listaFiguras); i++%7B%0A%0A        %7D%0A%0A\n %0A   \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_16-59-53",
+            "content": "@@ -543,19 +543,16 @@\n     %0A   \n- //\n  listaFa\n@@ -841,19 +841,16 @@\n %0A       \n- //\n  for i:=\n@@ -889,19 +889,16 @@\n %0A       \n- //\n  %7D%0A%0A%0A   \n@@ -901,19 +901,16 @@\n %0A       \n- //\n   fmt.Pr\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-13_17-00-15",
+            "content": "@@ -544,20 +544,18 @@\n    %0A    \n-%0A   \n+//\n  listaFa\n@@ -573,17 +573,16 @@\n %5B%5Dint%7B%7D%0A\n-%0A\n     if(l\n@@ -837,16 +837,81 @@\n      %7D%0A%0A\n+        // for i:=1; i %3C= len(listaFiguras); i++%7B%0A%0A        // %7D%0A%0A\n %0A       \n@@ -990,298 +990,49 @@\n     \n-%7D%0A%0A    //faltosas%0A    for i:=1; i %3C= len(listaFiguras); i++%7B%0A            elemento := listaFiguras%5Bi%5D%0A%0A            _,existe := mapaFiguras%5Belemento%5D%0A            if(!existe)%7B%0A                listaFaltantes = app\n+     fmt.Println(l\n en\n-d\n (listaF\n-altantes, listaFiguras%5Bi%5D)%0A            %7D%0A        %7D%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A        \n+iguras))%0A    %7D\n %0A%0A  \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-13_17-04-47",
+            "content": "@@ -941,27 +941,24 @@\n faltosas%0A   \n- //\n  for i:=1; i\n@@ -984,27 +984,24 @@\n s); i++%7B%0A   \n- //\n          ele\n@@ -1025,27 +1025,24 @@\n uras%5Bi%5D%0A%0A   \n- //\n          _,e\n@@ -1076,26 +1076,24 @@\n to%5D%0A    \n-//\n         \n  if(!exi\n@@ -1084,17 +1084,16 @@\n         \n- \n if(!exis\n@@ -1096,27 +1096,24 @@\n existe)%7B%0A   \n- //\n             \n@@ -1169,27 +1169,24 @@\n uras%5Bi%5D)%0A   \n- //\n          %7D%0A \n@@ -1183,27 +1183,24 @@\n        %7D%0A   \n- //\n      %7D%0A%0A%0A%0A%0A%0A\n@@ -1206,16 +1206,24 @@\n %0A%0A%0A%0A%0A%0A%0A%0A\n+        \n %0A%0A    //\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-13_17-05-21",
+            "content": "@@ -548,19 +548,16 @@\n     %0A   \n- //\n  listaFa\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-13_17-05-27",
+            "content": "@@ -545,16 +545,48 @@\n   %0A    %0A\n+    // listaFaltantes := %5B%5Dint%7B%7D\n %0A%0A    if\n@@ -938,38 +938,10 @@\n     \n-listaFaltantes := %5B%5Dint%7B%7D%0A    \n+//\n falt\n@@ -944,24 +944,27 @@\n faltosas%0A   \n+ //\n  for i:=1; i\n@@ -995,24 +995,26 @@\n ++%7B%0A    \n+//\n         \n elemento\n@@ -1005,16 +1005,17 @@\n         \n+ \n elemento\n@@ -1034,24 +1034,27 @@\n uras%5Bi%5D%0A%0A   \n+ //\n          _,e\n@@ -1083,24 +1083,27 @@\n lemento%5D%0A   \n+ //\n          if(\n@@ -1107,32 +1107,35 @@\n if(!existe)%7B%0A   \n+ //\n              lis\n@@ -1183,32 +1183,35 @@\n aFiguras%5Bi%5D)%0A   \n+ //\n          %7D%0A     \n@@ -1213,44 +1213,16 @@\n     \n- %7D%0A%0A\n+//\n      \n-fmt.Println(listaFaltantes)\n+%7D\n %0A%0A%0A%0A\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-13_17-06-17",
+            "content": "@@ -931,19 +931,16 @@\n nt%7B%7D%0A   \n- //\n  faltosa\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_17-06-27",
+            "content": "@@ -984,10 +984,8 @@\n ras)\n-+1\n ; i+\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_17-06-45",
+            "content": "@@ -45,28 +45,25 @@\n  var qtd\n-FigurasTotal\n+Repetidas\n ,qtdFigu\n@@ -100,28 +100,25 @@\n ras,&qtd\n-FigurasTotal\n+Repetidas\n )%0A%0A    l\n@@ -203,20 +203,17 @@\n  qtd\n-FigurasTotal\n+Repetidas\n ; i+\n@@ -807,24 +807,68 @@\n %0A        %7D%0A%0A\n+%0A        //  fmt.Println(len(listaFiguras))%0A\n     %7Delse%7B%0A \n@@ -901,19 +901,16 @@\n   %7D%0A%0A   \n- //\n  listaFa\n@@ -934,19 +934,16 @@\n %7D%0A    //\n- //\n  faltosa\n@@ -943,35 +943,32 @@\n faltosas%0A   \n- //\n  for i:=\n 0; i %3C len(l\n@@ -947,38 +947,39 @@\n osas%0A    for i:=\n-0\n+1\n ; i %3C\n+=\n  len(listaFigura\n@@ -972,32 +972,34 @@\n en(listaFiguras)\n++1\n ; i++%7B%0A    //   \n@@ -997,21 +997,15 @@\n     \n-//\n        \n-  //\n  ele\n@@ -1034,26 +1034,24 @@\n i%5D%0A%0A    \n-//\n         \n  _,exist\n@@ -1042,17 +1042,16 @@\n         \n- \n _,existe\n@@ -1070,19 +1070,21 @@\n ras%5B\n-i+1\n+elemento\n %5D%0A   \n- //\n     \n@@ -1100,27 +1100,24 @@\n existe)%7B%0A   \n- //\n             \n@@ -1173,27 +1173,24 @@\n uras%5Bi%5D)%0A   \n- //\n          %7D%0A%0A\n@@ -1192,131 +1192,19 @@\n   %7D%0A\n-%0A    //     for chave, valor := range mapaFiguras%7B%0A%0A    //     if()%7B%0A            %0A    //     %7D%0A    // %7D%0A    //  %7D%0A%0A%0A%0A    //\n+     %7D%0A%0A   \n   fm\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-13_17-11-34",
+            "content": "@@ -549,16 +549,22 @@\n  %7D%0A    %0A\n+    %0A%0A\n %0A    if(\n@@ -862,24 +862,27 @@\n )%0A    %7D%0A%0A   \n+ //\n  listaFaltan\n@@ -902,16 +902,19 @@\n %7D%0A    //\n+ //\n  faltosa\n@@ -914,24 +914,27 @@\n faltosas%0A   \n+ //\n  for i:=0; i\n@@ -955,32 +955,35 @@\n guras); i++%7B%0A   \n+ //\n          // elem\n@@ -1015,37 +1015,30 @@\n     \n+//\n     \n-for chave, valor := range\n+     _,existe :=\n  map\n@@ -1045,22 +1045,28 @@\n aFiguras\n-%7B%0A\n+%5Bi+1%5D\n %0A   \n+ //\n         \n@@ -1073,26 +1073,24 @@\n  if(\n-chave != i+1\n+!existe\n )%7B%0A   \n+ //\n     \n@@ -1142,16 +1142,31 @@\n es, \n-i+1\n+listaFiguras%5Bi%5D\n )%0A   \n+ //\n     \n@@ -1181,39 +1181,40 @@\n     \n+//\n     \n-%0A            // _,existe :=\n+ for chave, valor := range\n  map\n@@ -1225,39 +1225,25 @@\n uras\n-%5Bi+1%5D\n+%7B%0A\n %0A    \n- \n+//\n      \n-  // if(!existe\n+if(\n )%7B%0A \n@@ -1257,80 +1257,22 @@\n     \n-//\n+%0A\n     \n- listaFaltantes = append(listaFaltantes, listaFiguras%5Bi%5D)%0A        \n+//     %7D%0A\n     \n@@ -1280,21 +1280,18 @@\n / %7D%0A    \n-%7D%0A   \n+//\n   %7D%0A%0A%0A%0A \n@@ -1292,16 +1292,19 @@\n %7D%0A%0A%0A%0A   \n+ //\n   fmt.Pr\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-13_17-13-48",
+            "content": "@@ -1008,17 +1008,21 @@\n  chave, \n-_\n+valor\n  := rang\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-13_17-13-56",
+            "content": "@@ -1128,30 +1128,8 @@\n +1)%0A\n-                break%0A\n     \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-13_17-14-26",
+            "content": "@@ -1054,17 +1054,17 @@\n f(chave \n-=\n+!\n = i+1)%7B%0A\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-13_17-14-34",
+            "content": "@@ -887,16 +887,31 @@\n %5B%5Dint%7B%7D%0A\n+    // faltosas\n %0A    for\n@@ -952,205 +952,8 @@\n %0A   \n-     _, existe := mapaFiguras%5Bi+1%5D%0A        if(!existe)%7B%0A            listaFaltantes = append(listaFaltantes, i+1)%0A        %7D%0A    %7D%0A%0A    // faltosas%0A    // for i:=0; i %3C len(listaFiguras); i++%7B%0A    //\n     \n@@ -988,27 +988,24 @@\n uras%5Bi%5D%0A%0A   \n- //\n      for cha\n@@ -1045,32 +1045,16 @@\n         \n-%0A    //         \n if(chave\n@@ -1062,27 +1062,24 @@\n == i+1)%7B%0A   \n- //\n             \n@@ -1124,26 +1124,24 @@\n s, i+1)%0A    \n-//\n             \n@@ -1140,17 +1140,16 @@\n         \n- \n break%0A  \n@@ -1145,27 +1145,24 @@\n    break%0A   \n- //\n          %7D%0A%0A\n@@ -1169,27 +1169,24 @@\n         %0A   \n- //\n          // \n@@ -1213,27 +1213,24 @@\n ras%5Bi+1%5D%0A   \n- //\n          // \n@@ -1241,27 +1241,24 @@\n existe)%7B%0A   \n- //\n          // \n@@ -1317,27 +1317,24 @@\n uras%5Bi%5D)%0A   \n- //\n          // \n@@ -1338,28 +1338,22 @@\n // %7D%0A   \n- //\n  %7D%0A   \n- //\n   %7D%0A%0A%0A%0A \n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-13_17-18-08",
+            "content": "@@ -1067,365 +1067,8 @@\n  %7D%0A%0A\n-    if(len(listaFaltantes) == 0)%7B%0A        fmt.Println(%22N%22)%0A    %7Delse%7B%0A        for i:=0; i %3C len(listaFaltantes); i++%7B%0A            if(i %3C len(listaFaltantes)-1)%7B%0A                fmt.Printf(%22%25v %22,listaFaltantes%5Bi%5D)%0A            %7Delse%7B%0A                fmt.Printf(%22%25v%5Cn%22,listaFaltantes%5Bi%5D)%0A            %7D%0A        %7D%0A    %7D%0A%0A        //  fmt.Println(listaFaltantes)%0A%0A\n     \n@@ -1575,24 +1575,56 @@\n    //  %7D%0A%0A%0A%0A\n+     fmt.Println(listaFaltantes)\n %0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-04-13_17-19-26",
+            "content": "@@ -1090,17 +1090,18 @@\n tantes) \n-%3E\n+==\n  0)%7B%0A   \n@@ -1097,32 +1097,60 @@\n  == 0)%7B%0A        \n+fmt.Println(%22N%22)%0A    %7Delse%7B%0A\n         for i:=0\n@@ -1376,53 +1376,8 @@\n   %7D%0A\n-        %0A    %7Delse%7B%0A        fmt.Println(%22N%22)%0A\n     \n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_17-19-55",
+            "content": "@@ -1066,19 +1066,16 @@\n   %7D%0A%0A   \n- //\n  if(len(\n@@ -1095,27 +1095,24 @@\n s) %3E 0)%7B%0A   \n- //\n             \n@@ -1147,35 +1147,32 @@\n antes); i++%7B%0A   \n- //\n          if(i %3C \n@@ -1194,27 +1194,24 @@\n tes)-1)%7B%0A   \n- //\n             \n@@ -1242,35 +1242,32 @@\n altantes%5Bi%5D)%0A   \n- //\n          %7Delse%7B%0A\n@@ -1265,27 +1265,24 @@\n   %7Delse%7B%0A   \n- //\n             \n@@ -1314,35 +1314,32 @@\n altantes%5Bi%5D)%0A   \n- //\n          %7D%0A    /\n@@ -1337,23 +1337,20 @@\n   %7D%0A    \n-//\n     \n- \n %7D%0A      \n@@ -1355,19 +1355,16 @@\n     %0A   \n- //\n  %7Delse%7B%0A\n@@ -1362,27 +1362,24 @@\n   %7Delse%7B%0A   \n- //\n      fmt.Pri\n@@ -1387,27 +1387,24 @@\n tln(%22N%22)%0A   \n- //\n  %7D%0A%0A        \n@@ -1398,24 +1398,27 @@\n   %7D%0A%0A       \n+ //\n   fmt.Printl\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_17-20-39",
+            "content": "@@ -902,39 +902,41 @@\n r i:=0; i %3C \n-qtd\n+len(lista\n Figuras\n-Total\n+)\n ; i++%7B%0A     \n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_17-21-50",
+            "content": "@@ -860,19 +860,16 @@\n   %7D%0A%0A   \n- //\n  listaFa\n@@ -899,17 +899,17 @@\n  for i:=\n-1\n+0\n ; i %3C qt\n@@ -935,19 +935,16 @@\n %0A       \n- //\n  _, exis\n@@ -969,27 +969,24 @@\n i+1%5D%0A       \n- //\n  if(!existe)\n@@ -990,27 +990,24 @@\n te)%7B%0A       \n- //\n      listaFa\n@@ -1048,80 +1048,8 @@\n +1)%0A\n-        // %7D%0A        if(mapaFiguras%5B1%5D == 0)%7B%0A%0A            fmt.Print(i)%0A\n     \n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_17-27-52",
+            "content": "@@ -1517,19 +1517,16 @@\n %0A       \n- //\n   fmt.Pr\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-13_17-28-03",
+            "content": "@@ -1092,17 +1092,17 @@\n Figuras%5B\n-i\n+1\n %5D == 0)%7B\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-13_17-28-16",
+            "content": "@@ -856,24 +856,27 @@\n )%0A    %7D%0A%0A   \n+ //\n  listaFaltan\n@@ -890,27 +890,24 @@\n %5B%5Dint%7B%7D%0A%0A   \n- //\n  for i:=1; i\n@@ -935,23 +935,20 @@\n ++%7B%0A    \n-//\n     \n- \n // _, ex\n@@ -971,27 +971,24 @@\n ras%5Bi+1%5D%0A   \n- //\n      // if(!\n@@ -995,27 +995,24 @@\n existe)%7B%0A   \n- //\n      //     \n@@ -1055,27 +1055,24 @@\n es, i+1)%0A   \n- //\n      // %7D%0A  \n@@ -1068,27 +1068,24 @@\n     // %7D%0A   \n- //\n      if(mapa\n@@ -1102,27 +1102,24 @@\n  == 0)%7B%0A%0A   \n- //\n          fmt\n@@ -1127,27 +1127,24 @@\n Print(i)%0A   \n- //\n      %7D%0A    /\n@@ -1141,26 +1141,26 @@\n    %7D%0A   \n- //\n  %7D%0A%0A   \n+ //\n  if(len(\n@@ -1180,24 +1180,27 @@\n s) %3E 0)%7B%0A   \n+ //\n             \n@@ -1235,32 +1235,35 @@\n antes); i++%7B%0A   \n+ //\n          if(i %3C \n@@ -1281,32 +1281,35 @@\n ltantes)-1)%7B%0A   \n+ //\n              fmt\n@@ -1336,32 +1336,35 @@\n altantes%5Bi%5D)%0A   \n+ //\n          %7Delse%7B%0A\n@@ -1358,32 +1358,35 @@\n       %7Delse%7B%0A   \n+ //\n              fmt\n@@ -1414,32 +1414,35 @@\n altantes%5Bi%5D)%0A   \n+ //\n          %7D%0A     \n@@ -1435,24 +1435,27 @@\n        %7D%0A   \n+ //\n      %7D%0A     \n@@ -1457,24 +1457,27 @@\n         %0A   \n+ //\n  %7Delse%7B%0A    \n@@ -1467,32 +1467,35 @@\n    // %7Delse%7B%0A   \n+ //\n      fmt.Println\n@@ -1495,32 +1495,35 @@\n Println(%22N%22)%0A   \n+ //\n  %7D%0A%0A        //  \n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-13_17-28-42",
+            "content": "@@ -887,24 +887,27 @@\n %5B%5Dint%7B%7D%0A%0A   \n+ //\n  for i:=1; i\n@@ -931,27 +931,33 @@\n l; i++%7B%0A    \n+//\n    \n+  //\n  _, existe :\n@@ -975,27 +975,33 @@\n as%5Bi+1%5D%0A    \n+//\n    \n+  //\n  if(!existe)\n@@ -1002,27 +1002,33 @@\n xiste)%7B%0A    \n+//\n    \n+  //\n      listaFa\n@@ -1073,27 +1073,111 @@\n     \n+//\n    \n+  //\n  %7D%0A    \n+//     if(mapaFiguras%5Bi%5D == 0)%7B%0A%0A    //         fmt.Print(i)%0A    //     %7D%0A    // \n %7D%0A%0A   \n- //\n  if(\n@@ -1201,27 +1201,24 @@\n s) %3E 0)%7B%0A   \n- //\n             \n@@ -1253,35 +1253,32 @@\n antes); i++%7B%0A   \n- //\n          if(i %3C \n@@ -1300,27 +1300,24 @@\n tes)-1)%7B%0A   \n- //\n             \n@@ -1348,35 +1348,32 @@\n altantes%5Bi%5D)%0A   \n- //\n          %7Delse%7B%0A\n@@ -1371,27 +1371,24 @@\n   %7Delse%7B%0A   \n- //\n             \n@@ -1420,35 +1420,32 @@\n altantes%5Bi%5D)%0A   \n- //\n          %7D%0A    /\n@@ -1438,27 +1438,24 @@\n        %7D%0A   \n- //\n      %7D%0A     \n@@ -1461,19 +1461,16 @@\n     %0A   \n- //\n  %7Delse%7B%0A\n@@ -1468,27 +1468,24 @@\n   %7Delse%7B%0A   \n- //\n      fmt.Pri\n@@ -1493,27 +1493,24 @@\n tln(%22N%22)%0A   \n- //\n  %7D%0A%0A        \n@@ -1504,24 +1504,27 @@\n   %7D%0A%0A       \n+ //\n   fmt.Printl\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-13_17-30-09",
+            "content": "@@ -903,32 +903,30 @@\n  i:=\n-0\n+1\n ; i %3C \n-len(lista\n+qtd\n Figuras\n-)\n+Total\n ; i+\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_17-30-21",
+            "content": "@@ -1062,24 +1062,27 @@\n %7D%0A    %7D%0A%0A   \n+ //\n  if(len(list\n@@ -1098,24 +1098,27 @@\n s) %3E 0)%7B%0A   \n+ //\n             \n@@ -1153,32 +1153,35 @@\n antes); i++%7B%0A   \n+ //\n          if(i %3C \n@@ -1199,32 +1199,35 @@\n ltantes)-1)%7B%0A   \n+ //\n              fmt\n@@ -1254,32 +1254,35 @@\n altantes%5Bi%5D)%0A   \n+ //\n          %7Delse%7B%0A\n@@ -1277,32 +1277,34 @@\n      %7Delse%7B%0A    \n+//\n             fmt.\n@@ -1291,32 +1291,33 @@\n   //            \n+ \n fmt.Printf(%22%25v%5Cn\n@@ -1332,32 +1332,35 @@\n altantes%5Bi%5D)%0A   \n+ //\n          %7D%0A     \n@@ -1353,24 +1353,27 @@\n        %7D%0A   \n+ //\n      %7D%0A     \n@@ -1375,24 +1375,27 @@\n         %0A   \n+ //\n  %7Delse%7B%0A    \n@@ -1385,32 +1385,35 @@\n    // %7Delse%7B%0A   \n+ //\n      fmt.Println\n@@ -1413,32 +1413,35 @@\n Println(%22N%22)%0A   \n+ //\n  %7D%0A%0A         fmt\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_17-30-33",
+            "content": "@@ -1402,19 +1402,16 @@\n %0A       \n- //\n   fmt.Pr\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_17-30-41",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var qtdFigurasTotal,qtdFiguras int\n\n    fmt.Scan(&qtdFiguras,&qtdFigurasTotal)\n\n    listaFiguras := []int{}\n    mapaFiguras := make(map[int]int)\n\n    for i:=0; i < qtdFigurasTotal; i++{\n        var elemento int\n        fmt.Scan(&elemento)\n        _, existe := mapaFiguras[elemento]\n        if(existe){\n            mapaFiguras[elemento]++\n            // listaFiguras[i] = elemento\n            listaFiguras = append(listaFiguras,elemento)\n        }else{\n            mapaFiguras[elemento] = 1\n        }\n    }\n    \n\n    if(len(listaFiguras) >= 1){\n        for i:=0; i < len(listaFiguras); i++{\n            if(i < len(listaFiguras)-1){\n                fmt.Printf(\"%v \",listaFiguras[i])\n            }else{\n                fmt.Printf(\"%v\\n\",listaFiguras[i])\n            }\n        }\n\n    }else{\n        fmt.Println(\"N\")\n    }\n\n    listaFaltantes := []int{}\n\n    for i:=0; i < len(listaFiguras); i++{\n        _, existe := mapaFiguras[i+1]\n        if(!existe){\n            listaFaltantes = append(listaFaltantes, i+1)\n        }\n    }\n\n    if(len(listaFaltantes) > 0){\n                for i:=0; i < len(listaFaltantes); i++{\n            if(i < len(listaFaltantes)-1){\n                fmt.Printf(\"%v \",listaFaltantes[i])\n            }else{\n                fmt.Printf(\"%v\\n\",listaFaltantes[i])\n            }\n        }\n        \n    }else{\n        fmt.Println(\"N\")\n    }\n\n        //  fmt.Println(listaFaltantes)\n\n    // faltosas\n    // for i:=0; i < len(listaFiguras); i++{\n    //         // elemento := listaFiguras[i]\n\n    //     for chave, _ := range mapaFiguras{\n\n            \n    //         if(chave == i+1){\n    //             listaFaltantes = append(listaFaltantes, i+1)\n    //             break\n    //         }\n\n        \n    //         // _,existe := mapaFiguras[i+1]\n    //         // if(!existe){\n    //         //     listaFaltantes = append(listaFaltantes, listaFiguras[i])\n    //         // }\n    // }\n    //  }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    // fmt.Println(len(listaFiguras))\n\n    // fmt.Println(mapaFiguras)\n    // fmt.Println(listaFiguras)\n\n\n\n\n    // for i:=0; i < len(listaFiguras); i++{\n    //     var elemento int\n    //     fmt.Scan(&elemento)\n    //     listaFiguras[i] = elemento\n    // }\n\n    // fmt.Println(qtdFiguras,qtdRepetidas)\n    // fmt.Println(listaFiguras)\n}\n",
+            "lines": "116"
+        }
+    ]
+}
