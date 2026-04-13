@@ -12,9 +12,9 @@ func diagonal(s string, k int){
     // jefferson 9
 
     // Println
+    fmt.Println(string(s[0]))
     diagonal(s[1:],k-1)
     fmt.Print(strings.Repeat(" ", k))
-    fmt.Println(string(s[0]))
 
 }
 

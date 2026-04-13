@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_13-09-09",
+            "content": "@@ -93,13 +93,12 @@\n r n \n-float\n+int \n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-08_13-09-24",
+            "content": "@@ -33,19 +33,16 @@\n %0A   \n- //\n  %22math%22%0A\n )%0A%0A/\n@@ -37,16 +37,16 @@\n  %22math%22%0A\n+\n )%0A%0A// fu\n@@ -120,11 +120,8 @@\n %0A   \n- //\n  res\n@@ -171,51 +171,8 @@\n  - 4\n-%0A%0A    resultado := (5+n * 5+n ) - (n*n) - 4\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-08_13-10-34",
+            "content": "@@ -92,18 +92,20 @@\n   var n \n-in\n+floa\n t%0A    fm\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-10-41",
+            "content": "@@ -211,16 +211,19 @@\n - (n*n) \n+- 4\n %0A    %0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-11-15",
+            "content": "@@ -203,16 +203,24 @@\n * 5+n ) \n+- (n*n) \n %0A    %0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-11-32",
+            "content": "@@ -194,22 +194,18 @@\n  := \n-(\n (5+n\n-)\n  * \n-(\n 5+n\n-)\n  ) %0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-12-00",
+            "content": "@@ -211,19 +211,8 @@\n ) ) \n-- (n*n) - 4\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-12-07",
+            "content": "@@ -214,16 +214,20 @@\n  - (n*n)\n+ - 4\n %0A    %0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-12-15",
+            "content": "@@ -190,16 +190,17 @@\n tado := \n+(\n (5+n) * \n@@ -204,16 +204,26 @@\n  * (5+n)\n+ ) - (n*n)\n %0A    %0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-12-34",
+            "content": "@@ -203,20 +203,16 @@\n  * (5+n)\n- - 4\n %0A    %0A%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-12-42",
+            "content": "@@ -189,18 +189,16 @@\n ltado :=\n- (\n  (5+n) *\n@@ -209,17 +209,8 @@\n n) -\n- (n*n) )-\n  4%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-13-08",
+            "content": "@@ -191,17 +191,19 @@\n ado := (\n-4\n+ (5\n +n) * (5\n@@ -209,30 +209,21 @@\n 5+n)\n-%0A%0A    resultado -= n*n\n+ - (n*n) )- 4\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-08_13-13-56",
+            "content": "@@ -199,17 +199,17 @@\n 4+n) * (\n-4\n+5\n +n)%0A%0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-08_13-14-00",
+            "content": "@@ -203,17 +203,16 @@\n  * (4+n)\n- \n %0A%0A    re\n@@ -229,28 +229,8 @@\n  n*n\n-%0A%0A    resultado -= 4\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-08_13-14-43",
+            "content": "@@ -208,16 +208,50 @@\n +n) \n--n*n -4%0A\n+%0A%0A    resultado -= n*n%0A%0A    resultado -= 4\n %0A   \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-08_13-15-11",
+            "content": "@@ -15,16 +15,17 @@\n mport (%0A\n+%0A\n     %22fmt\n@@ -30,51 +30,47 @@\n mt%22%0A\n-)%0A%0Afunc padrao(n int) int%7B%0A%0A%0A    resultado%0A\n+    // %22math%22%0A)%0A%0A// func padrao()%7B%0A%0A// \n %7D%0A%0Af\n@@ -114,16 +114,75 @@\n an(&n)%0A%0A\n+    // resultado := math.Pow(5+n, 2) - math.Pow(n, 2) - 4%0A%0A\n     resu\n@@ -212,21 +212,23 @@\n -n*n -4%0A\n+%0A\n     %0A\n+%0A\n     fmt.\n@@ -239,27 +239,143 @@\n tln(\n-padrao(n))%0A        %0A\n+resultado)%0A%0A%0A        %0A%0A    /*%0A    1 -%3E 25 -%3E 20           x%C2%B2 -4 - x%C2%B2 %0A    2 -%3E 36 -%3E 28%0A    3 -%3E 49 -%3E 36%0A    4 -%3E 52 -%3E 44      %0A    */\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_16-32-20",
+            "content": "@@ -28,19 +28,16 @@\n fmt%22%0A)%0A%0A\n-// \n func pad\n@@ -54,19 +54,16 @@\n  int%7B%0A%0A%0A\n-// \n     resu\n@@ -68,19 +68,16 @@\n sultado%0A\n-// \n %7D%0A%0Afunc \n@@ -164,42 +164,12 @@\n     \n-fmt.Println(resultado)%0A    %0A    //\n+%0A   \n  fmt\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-09_16-32-38",
+            "content": "@@ -28,16 +28,19 @@\n fmt%22%0A)%0A%0A\n+// \n func pad\n@@ -60,179 +60,29 @@\n t%7B%0A%0A\n-    //caso base%0A    if(n == 1)%7B%0A        return 20%0A    %7D%0A%0A    //passo recursivo%0A%0A    resultado := resultado(n-1) + 8%0A%0A    //retorno%0A    return resultado%0A%0A%0A    // resultado%0A\n+%0A//     resultado%0A// \n %7D%0A%0Af\n@@ -133,11 +133,8 @@\n %0A   \n- //\n  res\n@@ -169,20 +169,50 @@\n  -4%0A    \n-%0A   \n+fmt.Println(resultado)%0A    %0A    //\n  fmt.Pri\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-09_16-46-52",
+            "content": "@@ -150,21 +150,24 @@\n tado := \n-padra\n+resultad\n o(n-1) +\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_16-47-10",
+            "content": "package main\nimport (\n    \"fmt\"\n)\n\nfunc padrao(n int) int{\n\n    //caso base\n    if(n == 1){\n        return 20\n    }\n\n    //passo recursivo\n\n    resultado := padrao(n-1) + 8\n\n    //retorno\n    return resultado\n\n\n    // resultado\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    // resultado := (4+n) * (4+n) -n*n -4\n    \n    fmt.Println(padrao(n))\n        \n\n}\n",
+            "lines": "33"
+        }
+    ]
+}

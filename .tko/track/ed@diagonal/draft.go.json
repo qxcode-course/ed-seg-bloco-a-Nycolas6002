@@ -132,7 +132,27 @@
         },
         {
             "label": "2026-04-07_14-50-05",
-            "content": "package main\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\n\nfunc diagonal(s string, k int){\n    if len(s) == 0 {\n        return\n    }\n    // jefferson 9\n\n    // Println\n    diagonal(s[1:],k-1)\n    fmt.Print(strings.Repeat(\" \", k))\n    fmt.Println(string(s[0]))\n\n}\n\nfunc main() {\n    var palavra string\n    fmt.Scan(&palavra)\n    qtdCaracteres := len(palavra)\n    // fmt.Println(diagonal(palavra, qtdCaracteres))\n    diagonal(palavra, qtdCaracteres)\n}\n",
+            "content": "@@ -193,22 +193,30 @@\n rint\n-ln\n (string\n-(s%5B0%5D\n+s.Repeat(%22 %22, k\n ))%0A \n@@ -227,38 +227,30 @@\n mt.Print\n+ln\n (string\n-s.Repeat(%22 %22, k\n+(s%5B0%5D\n ))%0A%0A%7D%0A%0Af\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-10_19-08-31",
+            "content": "@@ -152,24 +152,48 @@\n Println%0A    \n+diagonal(s%5B1:%5D,k-1)%0A    \n fmt.Println(\n@@ -208,32 +208,8 @@\n %5B0%5D)\n-)%0A    diagonal(s%5B1:%5D,k-1\n )%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-10_19-08-37",
+            "content": "@@ -182,16 +182,40 @@\n (s%5B0%5D))%0A\n+    diagonal(s%5B1:%5D,k-1)%0A\n     fmt.\n@@ -247,32 +247,8 @@\n  k))\n-%0A    diagonal(s%5B1:%5D,k-1)\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-10_19-08-47",
+            "content": "@@ -186,32 +186,8 @@\n %5D))%0A\n-    diagonal(s%5B1:%5D,k-1)%0A\n     \n@@ -219,16 +219,40 @@\n %22 %22, k))\n+%0A    diagonal(s%5B1:%5D,k-1)\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-10_19-08-55",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\n\nfunc diagonal(s string, k int){\n    if len(s) == 0 {\n        return\n    }\n    // jefferson 9\n\n    // Println\n    fmt.Println(string(s[0]))\n    diagonal(s[1:],k-1)\n    fmt.Print(strings.Repeat(\" \", k))\n\n}\n\nfunc main() {\n    var palavra string\n    fmt.Scan(&palavra)\n    qtdCaracteres := len(palavra)\n    // fmt.Println(diagonal(palavra, qtdCaracteres))\n    diagonal(palavra, qtdCaracteres)\n}\n",
             "lines": "27"
         }
     ]

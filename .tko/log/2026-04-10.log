@@ -1,0 +1,33 @@
+2026-04-10 09:50:21, MOVE, v:1, k:ed@enesimo, mode:DOWN
+2026-04-10 09:50:28, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-04-10 09:50:21, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-04-10 09:54:17, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-04-10 09:57:47, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-04-10 10:01:33, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-04-10 10:07:09, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-04-10 18:59:26, SELF, v:1, k:ed@fib1, self:1, rate:100, study:60, concept:1
+2026-04-10 19:00:12, SELF, v:1, k:ed@fib2, self:1, rate:100, study:90
+2026-04-10 19:00:34, SELF, v:1, k:ed@padroes1, self:1, rate:100, study:30
+2026-04-10 19:00:49, SELF, v:1, k:ed@padroes2, self:1, rate:100, study:30
+2026-04-10 19:01:26, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-10 19:01:42, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-10 19:02:02, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:50, concept:1
+2026-04-10 19:04:21, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-04-10 19:04:38, MOVE, v:1, k:ed@sufixos, mode:BACK
+2026-04-10 19:05:04, SELF, v:1, k:ed@sufixos, self:1, rate:100, study:35, concept:1
+2026-04-10 19:05:37, MOVE, v:1, k:ed@escada, mode:PICK
+2026-04-10 19:06:06, MOVE, v:1, k:ed@escada, mode:BACK
+2026-04-10 19:06:22, SELF, v:1, k:ed@escada, self:1, rate:100, study:90, concept:1
+2026-04-10 19:06:33, MOVE, v:1, k:ed@binomiais, mode:PICK
+2026-04-10 19:06:54, MOVE, v:1, k:ed@binomiais, mode:BACK
+2026-04-10 19:07:06, SELF, v:1, k:ed@binomiais, self:1, rate:100, study:60, concept:1
+2026-04-10 19:07:38, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-04-10 19:07:43, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-04-10 19:07:58, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-04-10 19:08:01, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0
+2026-04-10 19:08:31, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0, size:27
+2026-04-10 19:08:37, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0, size:27
+2026-04-10 19:08:47, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0, size:27
+2026-04-10 19:08:55, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0, size:27
+2026-04-10 19:09:00, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-04-10 19:08:53, MOVE, v:1, k:ed@diagonal, mode:EDIT

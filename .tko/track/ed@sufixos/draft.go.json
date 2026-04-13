@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-09_16-56-58",
+            "content": "@@ -20,16 +20,19 @@\n  %22fmt%22%0A%0A\n+// \n func imp\n@@ -70,11 +70,20 @@\n nt) \n-%7B%0A%0A\n+string%7B%0A%0A// \n     \n@@ -95,16 +95,19 @@\n so base%0A\n+// \n     if(t\n@@ -120,16 +120,19 @@\n  == 1)%7B%0A\n+// \n         \n@@ -153,19 +153,25 @@\n %5B0%5D%0A\n+// \n     %7D%0A%0A\n+//\n     \n+ \n //pa\n@@ -189,73 +189,12 @@\n vo%0A%0A\n-    Println(palavra%5B1:%5D)%0A    imprimir(palavra%5B1:%5D, tamanho-1)%0A%0A%0A%0A\n+%0A// \n     \n@@ -206,16 +206,19 @@\n orno%0A%0A%0A%0A\n+// \n %7D%0A%0Afunc \n@@ -308,27 +308,24 @@\n alavra)%0A%0A   \n- //\n  fmt.Println\n@@ -341,16 +341,19 @@\n 1:%5D)%0A   \n+ //\n  imprimi\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-09_16-59-48",
+            "content": "@@ -165,20 +165,16 @@\n vo%0A%0A    \n-fmt.\n Println(\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-09_16-59-57",
+            "content": "@@ -194,39 +194,8 @@\n :%5D)%0A\n-    novaPalavra := palavra%5B1:%5D%0A\n     \n@@ -207,19 +207,19 @@\n mir(\n-novaP\n+p\n alavra\n+%5B1:%5D\n , ta\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-09_17-00-27",
+            "content": "@@ -129,17 +129,16 @@\n alavra%5B0\n-:\n %5D%0A    %7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-00-47",
+            "content": "@@ -113,29 +113,23 @@\n         \n- fmt.Println(\n+return \n palavra%5B\n@@ -129,18 +129,18 @@\n alavra%5B0\n+:\n %5D\n-)\n %0A    %7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-01-21",
+            "content": "@@ -135,17 +135,16 @@\n alavra%5B0\n-:\n %5D)%0A    %7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-01-33",
+            "content": "@@ -185,33 +185,33 @@\n Println(palavra%5B\n-0\n+1\n :%5D)%0A    novaPala\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-01-45",
+            "content": "@@ -101,17 +101,17 @@\n anho == \n-0\n+1\n )%7B%0A     \n@@ -117,14 +117,33 @@\n     \n-return\n+ fmt.Println(palavra%5B0:%5D)\n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-02-10",
+            "content": "@@ -179,16 +179,46 @@\n ra%5B0:%5D)%0A\n+    novaPalavra := palavra%5B1:%5D\n %0A    imp\n@@ -223,27 +223,27 @@\n mprimir(\n-p\n+novaP\n alavra\n-%5B1:%5D\n , tamanh\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-02-33",
+            "content": "@@ -150,16 +150,46 @@\n ursivo%0A%0A\n+    fmt.Println(palavra%5B0:%5D)%0A%0A\n     impr\n@@ -221,38 +221,8 @@\n -1)%0A\n-    fmt.Println(palavra%5B0:%5D)%0A%0A\n %0A%0A%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-09_17-02-41",
+            "content": "package main\nimport \"fmt\"\n\nfunc imprimir(palavra string, tamanho int) {\n\n    // caso base\n    if(tamanho == 0){\n        return\n    }\n\n    //passo recursivo\n\n    imprimir(palavra[1:], tamanho-1)\n    fmt.Println(palavra[0:])\n\n\n\n\n    //retorno\n\n\n\n}\n\nfunc main() {\n    // fmt.Println(\"Hello, World!\")\n    var palavra string\n    fmt.Scan(&palavra)\n\n    // fmt.Println(palavra[1:])\n    imprimir(palavra, len(palavra))\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}
