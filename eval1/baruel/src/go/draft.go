@@ -38,15 +38,16 @@ func main() {
 
     listaFaltantes := []int{}
 
-    for i:=0; i < len(listaFiguras); i++{
-        _, existe := mapaFiguras[i+1]
-        if(!existe){
-            listaFaltantes = append(listaFaltantes, i+1)
+    for i:=1; i <= qtdFiguras; i++{
+        // valor, _ := 
+        // fmt.Println(mapaFiguras[i])
+        if(mapaFiguras[i] == 0){
+            listaFaltantes = append(listaFaltantes, i)
         }
     }
 
     if(len(listaFaltantes) > 0){
-                for i:=0; i < len(listaFaltantes); i++{
+        for i:=0; i < len(listaFaltantes); i++{
             if(i < len(listaFaltantes)-1){
                 fmt.Printf("%v ",listaFaltantes[i])
             }else{
@@ -58,59 +59,5 @@ func main() {
         fmt.Println("N")
     }
 
-        //  fmt.Println(listaFaltantes)
 
-    // faltosas
-    // for i:=0; i < len(listaFiguras); i++{
-    //         // elemento := listaFiguras[i]
-
-    //     for chave, _ := range mapaFiguras{
-
-            
-    //         if(chave == i+1){
-    //             listaFaltantes = append(listaFaltantes, i+1)
-    //             break
-    //         }
-
-        
-    //         // _,existe := mapaFiguras[i+1]
-    //         // if(!existe){
-    //         //     listaFaltantes = append(listaFaltantes, listaFiguras[i])
-    //         // }
-    // }
-    //  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // fmt.Println(len(listaFiguras))
-
-    // fmt.Println(mapaFiguras)
-    // fmt.Println(listaFiguras)
-
-
-
-
-    // for i:=0; i < len(listaFiguras); i++{
-    //     var elemento int
-    //     fmt.Scan(&elemento)
-    //     listaFiguras[i] = elemento
-    // }
-
-    // fmt.Println(qtdFiguras,qtdRepetidas)
-    // fmt.Println(listaFiguras)
 }
