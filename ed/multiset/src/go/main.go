@@ -28,7 +28,7 @@ type MultiSet struct{
 //Init
 func NewMultiSet(capacity int) *MultiSet{
 	return &MultiSet{
-		data: make([]int,0,capacity),
+		data: make([]int,capacity),
 		size: 0,
 		capacity: capacity,
 	}
@@ -40,20 +40,163 @@ func Show(ms *MultiSet){
 	fmt.Printf("[%s]\n", Join(ms.data[:ms.size], ", "))
 }
 
-//Insert
-func Insert(ms *MultiSet, value int){
+func (ms* MultiSet) findPosition(value int) int{
 
-	ms.size += 1
+	left := 0
+	right := ms.size
 
-	ms.data = append(ms.data, value)
+	for left < right{
+		middle := (left + right) / 2
+
+		if(ms.data[middle] < value){
+			left = middle + 1
+		}else{
+			right = middle
+		}
+
+	}
+
+	return left
 
 }
 
-//Search
-func Search(value int) bool, int{
+func (ms *MultiSet) Expand(newCapacity int){
 
+	if(newCapacity <= ms.capacity){
+		return
+	}
+
+	newData := make([]int, newCapacity)
+
+	for i := 0; i < ms.size; i++{
+		newData[i] = ms.data[i]
+	}
+
+	ms.data = newData
+	ms.capacity = newCapacity
+
+}
+
+func (ms *MultiSet) insert(value int, index int){
+
+	if(ms.size == ms.capacity){
+		newCapacity := 1
+
+		if(ms.capacity > 0){
+			newCapacity = ms.capacity * 2
+		}
+
+		ms.Expand(newCapacity)
+	}
+
+	for i := ms.size; i > index; i--{
+		ms.data[i] = ms.data[i-1]
+
+	}
+
+	ms.data[index] = value
+	ms.size++
+
+}
+
+
+func (ms *MultiSet) Insert(value int){
+
+	index := ms.findPosition(value)
+	ms.insert(value, index)
+}
+
+
+func (ms *MultiSet) Contains(value int) bool{
+
+	for i := 0; i < ms.size;i++{
+		if(ms.data[i] == value){
+			return true
+		}
+	}
+
+	return false
+	
+}
+
+func (ms *MultiSet) Count(value int) int{
+
+	var count int
+	for i := 0; i < ms.size; i++{
+		if(ms.data[i] == value){
+			count++
+		}
+	}
+
+	return count
+
+}
+
+func (ms *MultiSet) erase(value int) error {
+
+	for i := 0 ; i < ms.size; i++ {
+		if(ms.data[i] == value){
+			return nil
+		}
+	}
+
+	return fmt.Errorf("value not found")
+
+}
+
+
+func (ms *MultiSet) Erase(value int) {
+
+	returnFunction := ms.erase(value)
+
+	if(returnFunction == nil ){
+
+		var index int
+
+		for i := 0; i < ms.size;i++{
+			if(ms.data[i] == value){
+				index = i
+				break
+			}
+		}
+
+		for index < ms.size-1 {
+			ms.data[index] = ms.data[index + 1]
+			index++
+		}
+
+		ms.size--
+	}else{
+		fmt.Println(returnFunction)
+	}
+
+
+}
+
+func (ms *MultiSet) Unique() int{
 	
 
+	if(ms.size == 0){
+		return 0
+	}
+
+	count := 1
+	variableAux := ms.data[0]
+
+	for i := 0; i < ms.size; i++{
+		if(variableAux != ms.data[i]){
+			count++
+			variableAux = ms.data[i]
+		}
+
+	}
+
+	return count
+
+}
+
+func (ms *MultiSet) Clear(){
+	ms.size = 0
 }
 
 
@@ -81,19 +224,25 @@ func main() {
 		case "insert":
 			for _, part := range args[1:] {
 				value, _ := strconv.Atoi(part)
-				Insert(ms, value)
+				ms.Insert(value)
 			}
 		case "show":
 			Show(ms)
-
 		case "erase":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(args[1])
+			ms.Erase(value)
 		case "contains":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(args[1])
+			fmt.Println(ms.Contains(value))
 		case "count":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(args[1])
+			fmt.Println(ms.Count(value))
 		case "unique":
+			fmt.Println(ms.Unique())
+			// ms.Unique()
 		case "clear":
+			ms.Clear()
+
 		default:
 			fmt.Println("fail: comando invalido")
 		}

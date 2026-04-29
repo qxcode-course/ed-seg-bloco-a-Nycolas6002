@@ -23,6 +23,7 @@ func NewSet( capacity int) *Set{
 		capacity: capacity,
 	}
 
+
 }
 /*-----------------------------------String-----------------------------------*/
 func (s *Set) String() string{
@@ -65,6 +66,7 @@ func (s *Set) BinarySearch(value int) int{
 
 	return -1
 }
+
 /*-----------------------------------Contains-----------------------------------*/
 func (s *Set) Contains(value int) bool{
 
@@ -76,34 +78,12 @@ func (s *Set) Contains(value int) bool{
 
 }
 
-/*-----------------------------------Insert-----------------------------------*/
-func (s *Set) insert( index int, value int) {
 
-	if(s.size == s.capacity){
-		s.Reserve(s.capacity * 2)
-	}
-
-	s.size++
-	s.data[index] = value
-
-}
-
-// func (s *Set) Insert(value int) {
-
-// 	if(s.BinarySearch(value) != -1){
-// 		return
-// 	}
-
-
-// 	s.size++
-// 	s.data[0] = value
-
-// }
 
 /*-----------------------------------Reserve-----------------------------------*/
 func (s *Set) Reserve(newCapacity int) {
 
-	if(s.capacity <= newCapacity){
+	if(newCapacity <= s.capacity){
 		return
 	}
 
@@ -117,6 +97,87 @@ func (s *Set) Reserve(newCapacity int) {
 	s.capacity = newCapacity	
 
 }
+
+
+
+func (s *Set) findPosition(value int) int {
+
+	left := 0
+	rigth := s.size 
+
+	for left < rigth{
+
+		middle := (left + rigth) / 2
+
+		if(s.data[middle] < value){
+			left = middle + 1
+		}else{
+			rigth = middle
+		}
+	}
+
+	return left
+
+}
+
+/*-----------------------------------insert-----------------------------------*/
+func (s *Set) insert (index int ,value int) {
+
+
+	if(s.size == s.capacity){
+		newCapacity := 1
+
+		if(s.capacity > 0){
+			newCapacity = s.capacity * 2
+		}
+
+		s.Reserve(newCapacity)
+	}
+	
+	for i := s.size; i > index ;i--{
+		s.data[i] = s.data[i-1] 
+	}
+	
+	s.data[index] = value
+	s.size++
+	
+}
+
+/*-----------------------------------Insert-----------------------------------*/
+func (s *Set) Insert (value int) {
+
+	if(s.Contains(value)){
+		return
+	}
+
+	index := s.findPosition(value)
+	s.insert(index,value)
+
+}
+
+/*-----------------------------------erase-----------------------------------*/
+func (s *Set) erase(index int){
+
+	for i := index; i < s.size - 1; i++{
+		s.data[i] = s.data[i+1]
+	}
+
+	s.size--
+}
+
+/*-----------------------------------Erase-----------------------------------*/
+func (s *Set) Erase(value int) bool{
+
+	index := s.BinarySearch(value) 
+	if( index == -1){
+		fmt.Println("value not found")
+		return false
+	}
+
+	s.erase(index)
+	return true
+}
+
 
 func main() {
 	var line, cmd string
@@ -140,24 +201,22 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			s = NewSet(value)
 		case "insert":
-			// for _, part := range parts[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// 	s.insert(value)
-			// }
-			for index, part := range parts[1:] {
+			for _, part := range parts[1:] {
 				value, _ := strconv.Atoi(part)
-				s.insert(strconv.Atoi(index),value)
+				s.Insert(value)
 			}
 		case "show":
 			fmt.Println(s.String())
-			fmt.Println(s.size, s.capacity)
+			// fmt.Println(s.size, s.capacity)
 			// fmt.Println(s.data)
 		case "erase":
-			// value, _ := strconv.Atoi(parts[1])
+			value, _ := strconv.Atoi(parts[1])
+			s.Erase(value)
 		case "contains":
 			value, _ := strconv.Atoi(parts[1])
-			s.Contains(value)
+			fmt.Println(s.Contains(value))
 		case "clear":
+			s.size = 0
 		default:
 			fmt.Println("fail: comando invalido")
 		}

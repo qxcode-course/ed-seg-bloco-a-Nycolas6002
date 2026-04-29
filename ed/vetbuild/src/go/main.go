@@ -65,8 +65,6 @@ func (v *Vector) PushBack( value int) {
 	v.data[v.size] = value 
 	v.size++
 	
-	// v.data = append(v.data, value)
-	
 }
 /*---------------------------------------------PopBack---------------------------------------------*/
 
