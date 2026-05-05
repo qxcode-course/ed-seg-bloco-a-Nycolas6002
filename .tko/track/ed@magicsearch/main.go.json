@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-04_10-32-53",
+            "content": "@@ -113,45 +113,8 @@\n nt %7B\n-%0A%0A%09if(len(slice) == 0)%7B%0A%09%09return 0%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-04_10-34-47",
+            "content": "@@ -112,19 +112,16 @@\n int %7B%0A%0A%09\n-// \n if(len(s\n@@ -134,19 +134,16 @@\n == 0)%7B%0A%09\n-// \n %09return \n@@ -149,11 +149,8 @@\n  0%0A%09\n-// \n %7D%0A%09%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-04_10-35-25",
+            "content": "@@ -68,16 +68,21 @@\n )%0A%0Afunc \n+Magic\n Search(s\n@@ -106,169 +106,63 @@\n  int\n- )%7B%0A%0A%09ultimo := 0%0A%0A%09for index,valueSlice := range slice%7B%0A%09%09if(valueS\n+) int %7B%0A%0A%09// if(len(s\n lice\n+)\n  == \n-value)%7B%0A%09%09%09ultimo = index%0A%09%09%7D%0A%09%7D %0A%0A%7D%0A%0Afunc MagicSearch(slice %5B%5Dint, value int) int %7B%0A\n+0)%7B%0A%09// %09return 0%0A%09// %7D%0A%09\n %0A%09le\n@@ -264,90 +264,8 @@\n dle%5D\n- == value)%7B%0A%09%09%09left = Search(slice, value)%0A%09%09%09return left%0A%09%09%7Delse if(slice%5Bmiddle%5D\n  %3C v\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-04_10-42-26",
+            "content": "@@ -99,20 +99,16 @@\n ue int )\n- int\n %7B%0A%0A%09ulti\n@@ -212,24 +212,8 @@\n %7D %0A%0A\n-%09return ultimo%0A%0A\n %7D%0A%0Af\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-04_10-42-57",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc Search(slice []int, value int ) int{\n\n\tultimo := 0\n\n\tfor index,valueSlice := range slice{\n\t\tif(valueSlice == value){\n\t\t\tultimo = index\n\t\t}\n\t} \n\n\treturn ultimo\n\n}\n\nfunc MagicSearch(slice []int, value int) int {\n\n\tleft := 0\n\trigth :=  len(slice)\n\n\tfor left < rigth{\n\n\t\tmiddle := (left + rigth)/2\n\n\t\tif(slice[middle] == value){\n\t\t\tleft = Search(slice, value)\n\t\t\treturn left\n\t\t}else if(slice[middle] < value){\n\t\t\tleft = middle + 1\n\t\t}else{\n\t\t\trigth = middle\n\t\t}\n\n\t}\n\n\treturn left\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "63"
+        }
+    ]
+}

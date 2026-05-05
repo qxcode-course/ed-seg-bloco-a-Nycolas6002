@@ -239,10 +239,8 @@ func main() {
 			fmt.Println(ms.Count(value))
 		case "unique":
 			fmt.Println(ms.Unique())
-			// ms.Unique()
 		case "clear":
 			ms.Clear()
-
 		default:
 			fmt.Println("fail: comando invalido")
 		}
