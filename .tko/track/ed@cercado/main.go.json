@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_02-11-35",
+            "content": "@@ -99,17 +99,16 @@\n %5Bi%5D%5Bj%5D =\n-=\n  'X')%7B%0A%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-17_02-11-45",
+            "content": "@@ -142,26 +142,26 @@\n  'T'%0A%0A%09dfs(b\n-o\n r\n+o\n ad, i+1,j)//\n@@ -167,26 +167,26 @@\n /down%0A%09dfs(b\n-o\n r\n+o\n ad, i-1,j)//\n@@ -190,26 +190,26 @@\n )//up%0A%09dfs(b\n-o\n r\n+o\n ad, i,j+1)//\n@@ -220,18 +220,18 @@\n t%0A%09dfs(b\n-o\n r\n+o\n ad, i,j-\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-17_02-12-03",
+            "content": "@@ -143,26 +143,26 @@\n 'T'%0A%0A%09dfs(bo\n-a\n r\n+a\n d, i+1,j)//d\n@@ -168,26 +168,26 @@\n down%0A%09dfs(bo\n-a\n r\n+a\n d, i-1,j)//u\n@@ -191,26 +191,26 @@\n //up%0A%09dfs(bo\n-a\n r\n+a\n d, i,j+1)//r\n@@ -217,26 +217,26 @@\n ight%0A%09dfs(bo\n-a\n r\n+a\n d, i,j-1)//l\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-17_02-12-20",
+            "content": "@@ -835,27 +835,11 @@\n %7D%0A%0A%0A\n-%09return board%0A%0A%09// \n+%0A%0A%09\n _ = \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-17_02-12-47",
+            "content": "@@ -87,154 +87,28 @@\n %7B%0A%0A%09\n-rows := len(board)%0A%09cols := len(board%5B0%5D)%0A%0A%09if(i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= rows %7C%7C j %3E= cols)%7B%0A%09%09return%0A%09%7D%0A%0A%09if(board%5Bi%5D%5Bj%5D == 'X' %7C%7C board%5Bi%5D%5Bj%5D == 'T\n+if(board%5Bi%5D%5Bj%5D == 'X\n ')%7B%0A\n@@ -834,185 +834,10 @@\n %09%7D%0A%0A\n+%0A\n %09\n-for i := 0; i %3C rows;i++%7B%0A%09%09for j := 0; j %3C cols; j++%7B%0A%09%09%09if(board%5Bi%5D%5Bj%5D == 'T')%7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'O'%0A%09%09%09%7D%0A%09%09%09if(board%5Bi%5D%5Bj%5D == 'O')%7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%0A%09// \n retu\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-17_02-33-51",
+            "content": "@@ -1069,12 +1069,34 @@\n %09%09%09%7D\n-else\n+%0A%09%09%09if(board%5Bi%5D%5Bj%5D == 'O')\n %7B%0A%09%09\n@@ -1120,17 +1120,16 @@\n X'%0A%09%09%09%7D%0A\n-%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-05-17_02-36-51",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dfs(board [][]byte, i int, j int){\n\n\trows := len(board)\n\tcols := len(board[0])\n\n\tif(i < 0 || j < 0 || i >= rows || j >= cols){\n\t\treturn\n\t}\n\n\tif(board[i][j] == 'X' || board[i][j] == 'T'){\n\t\treturn\n\t}\n\n\tboard[i][j] = 'T'\n\n\tdfs(board, i+1,j)//down\n\tdfs(board, i-1,j)//up\n\tdfs(board, i,j+1)//right\n\tdfs(board, i,j-1)//left\n}\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\n\trows := len(board)\t\n\tcols := len(board[0])\n\n\t/*percorrendo as bordas do quadrado*/\n\n\t/*parte de cima*/\n\tfor j := 0; j < cols;j++{\n\t\tif(board[0][j] == 'O'){\n\t\t\tdfs(board, 0 , j)\n\t\t}\n\t}\n\n\t/*lado esquerda*/\n\tfor i := 0; i < rows;i++{\n\t\tif(board[i][0] == 'O'){\n\t\t\tdfs(board, i , 0)\n\t\t}\n\t}\n\n\t/*lado direito*/\n\tfor i := 0; i < rows;i++{\n\t\tif(board[i][cols - 1] == 'O'){\n\t\t\tdfs(board, i , cols - 1)\n\t\t}\n\t}\n\n\t/*parte de baixo*/\n\tfor j := 0; j < cols; j++{\n\t\tif(board[rows-1][j] == 'O'){\n\t\t\tdfs(board, rows - 1, j)\n\t\t}\n\t}\n\n\tfor i := 0; i < rows;i++{\n\t\tfor j := 0; j < cols; j++{\n\t\t\tif(board[i][j] == 'T'){\n\t\t\t\tboard[i][j] = 'O'\n\t\t\t}else{\n\t\t\t\tboard[i][j] = 'X'\n\t\t\t}\n\n\t\t}\n\t}\n\n\n\t// return board\n\n\t// _ = board\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "98"
+        }
+    ]
+}

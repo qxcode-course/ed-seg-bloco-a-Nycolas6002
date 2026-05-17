@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_00-50-05",
+            "content": "@@ -345,12 +345,18 @@\n rid%5B\n-i%5D%5Bj\n+rows%5D%5Bcols\n %5D ==\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-17_00-50-50",
+            "content": "@@ -45,510 +45,19 @@\n %0A)%0A%0A\n-/*a fun%C3%A7%C3%A3o dfs vai servir apenas para eu percorrer todos os caminhos da ilha. E ent%C3%A3o eu irei %22apagar onde tem 1%22*/%0Afunc dfs(grid %5B%5D%5B%5Dbyte, i int, j int)%7B%0A%0A%09rows := len(grid)%0A%09cols := len(grid%5B0%5D)%0A%0A%09if(i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= rows %7C%7C j %3E= cols )%7B%0A%09%09return%0A%09%7D%0A%0A%09if(grid%5Bi%5D%5Bj%5D == '0')%7B%0A%09%09return%0A%09%7D%0A%0A%09grid%5Bi%5D%5Bj%5D = '0'%0A%0A%09/*walk to right,left,up,down*/%0A%09dfs(grid, i+1, j) //down%0A%09dfs(grid, i-1, j) //up%0A%09dfs(grid, i, j+1) //right%0A%09dfs(grid, i, j-1) //left%0A%0A%09//condi%C3%A7%C3%A3o de parada%0A%09//passo recursivo%0A%09//retorno\n+func dfs()%7B\n %0A%0A%7D%0A\n@@ -317,19 +317,19 @@\n  0; j %3C \n-col\n+row\n s ; j++%7B\n@@ -376,22 +376,15 @@\n %09%09%09%09\n+// \n dfs(\n-grid, i, j\n )%0A%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-17_01-16-03",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n/*a fun\u00e7\u00e3o dfs vai servir apenas para eu percorrer todos os caminhos da ilha. E ent\u00e3o eu irei \"apagar onde tem 1\"*/\nfunc dfs(grid [][]byte, i int, j int){\n\n\trows := len(grid)\n\tcols := len(grid[0])\n\n\tif(i < 0 || j < 0 || i >= rows || j >= cols ){\n\t\treturn\n\t}\n\n\tif(grid[i][j] == '0'){\n\t\treturn\n\t}\n\n\tgrid[i][j] = '0'\n\n\t/*walk to right,left,up,down*/\n\tdfs(grid, i+1, j) //down\n\tdfs(grid, i-1, j) //up\n\tdfs(grid, i, j+1) //right\n\tdfs(grid, i, j-1) //left\n\n\t//condi\u00e7\u00e3o de parada\n\t//passo recursivo\n\t//retorno\n\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\n\n\trows := len(grid)\n\tcols := len(grid[0])\n\tcount := 0\n\n\tfor i:= 0; i < rows ;i++{\n\t\tfor j:= 0; j < cols ; j++{\n\n\t\t\tif(grid[i][j] == '1'){\n\t\t\t\tcount++\n\t\t\t\tdfs(grid, i, j)\n\t\t\t}\n\n\t\t}\n\t}\n\n\t/*\n\t\tpercorrer linha e coluna\n\t\t\tse achei 1\n\t\t\taumento o count em 1 \n\t\t\tfa\u00e7o a busca em profundidade\n\t*/\n\t//\n\t// _ := grid\n\t// return 0\n\n\treturn count\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "84"
+        }
+    ]
+}

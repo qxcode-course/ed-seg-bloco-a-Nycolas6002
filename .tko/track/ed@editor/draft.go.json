@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_19-22-18",
+            "content": "@@ -42,18 +42,18 @@\n o%22%0A    %22\n+i\n o\n-s\n %22%0A)%0A%0Afun\n@@ -96,12 +96,13 @@\n .New\n-Read\n+Scann\n er(o\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-12_19-23-33",
+            "content": "@@ -122,23 +122,20 @@\n var \n-entrada\n+nome\n  string%0A\n     \n@@ -130,20 +130,33 @@\n  string%0A\n-    \n+%09var idade int%0A%0A%09\n fmt.Fsca\n@@ -171,430 +171,21 @@\n r, &\n-entrada)%0A%0A    var palavra := %5B%5Drune%7B%7D%0A    var cursor := 0%0A%0A    for _, caractere := range entrada %7B%0A%0A        %5Babc%3C%3C%3C%5D%0A%0A        switch caractere %7B%0A%0A        case 'R':%0A%0A        case 'B':%0A%0A        case 'D':%0A%0A        case '%3E':%0A            cursor++%0A        case '%3C':%0A            cursor--%0A        default:%0A            palavra = append(palavra, caractere )%0A            cursor++%0A        %7D%0A%0A    %7D%0A%0A    fmt.Printf(%22%25c%22,palavra)%0A    %0A%0A\n+nome, &idade)\n %0A%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-12_20-03-00",
+            "content": "@@ -167,24 +167,28 @@\n trada)%0A%0A    \n+var \n palavra := %5B\n@@ -195,24 +195,28 @@\n %5Drune%7B%7D%0A    \n+var \n cursor := 0%0A\n@@ -268,11 +268,8 @@\n     \n- //\n  %5Bab\n@@ -433,187 +433,82 @@\n     \n-if(cursor %3E 0)%7B%0A                cursor--%0A            %7D%0A        default:%0A          %0A            palavra = append(palavra%5B:cursor%5D, append(%5B%5Drune%7Bcaractere%7D, palavra%5Bcursor:%5D...)...\n+cursor--%0A        default:%0A            palavra = append(palavra, caractere \n )%0A  \n@@ -562,18 +562,16 @@\n intf(%22%25c\n-%5Cn\n %22,palavr\n@@ -581,254 +581,8 @@\n     \n-fmt.Printf(%22cursor: %25d%5Cn%22,cursor)%0A%0A    for i := 0; i %3C= len(palavra); i++%7B%0A%0A        if i == cursor%7B%0A            fmt.Print(%22%7C%22)%0A        %7D%0A%0A        if(i %3C len(palavra))%7B%0A            fmt.Printf(%22%25c%22, palavra%5Bi%5D)%0A        %7D%0A%0A    %7D%0A%0A    fmt.Println()%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-12_20-43-12",
+            "content": "@@ -487,39 +487,24 @@\n         \n-    fmt.Println(cursor)\n+default:\n %0A       \n@@ -500,32 +500,26 @@\n lt:%0A        \n-default:\n+  \n %0A           \n@@ -638,80 +638,16 @@\n     \n-    fmt.Println(cursor)%0A        %7D%0A%0A    %7D%0A%0A    fmt.Println(%22-----------%22)\n+%7D%0A%0A    %7D\n %0A%0A  \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-12_20-52-05",
+            "content": "@@ -384,19 +384,16 @@\n         \n- //\n  cursor+\n@@ -482,35 +482,32 @@\n    %7D%0A           \n- //\n  fmt.Println(cur\n@@ -658,19 +658,16 @@\n         \n- //\n  fmt.Pri\n@@ -672,48 +672,11 @@\n rint\n-f(%22caractere:%25c cursor:%25d,%5Cn%22,caractere,\n+ln(\n curs\n@@ -696,27 +696,24 @@\n %0A%0A    %7D%0A%0A   \n- //\n  fmt.Println\n@@ -728,27 +728,24 @@\n -----%22)%0A%0A   \n- //\n  fmt.Printf(\n@@ -763,19 +763,16 @@\n vra)%0A   \n- //\n  fmt.Pri\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-05-12_20-58-24",
+            "content": "@@ -485,32 +485,35 @@\n    %7D%0A           \n+ //\n  fmt.Println(cur\n@@ -656,32 +656,35 @@\n or++%0A           \n+ //\n  fmt.Printf(%22car\n@@ -738,32 +738,35 @@\n    %7D%0A%0A    %7D%0A%0A   \n+ //\n  fmt.Println(%22--\n@@ -777,24 +777,27 @@\n -----%22)%0A%0A   \n+ //\n  fmt.Printf(\n@@ -811,24 +811,27 @@\n palavra)%0A   \n+ //\n  fmt.Printf(\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-05-12_20-59-41",
+            "content": "@@ -377,57 +377,8 @@\n %3E':%0A\n-            if()%7B%0A                %0A            %7D%0A\n     \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-05-12_21-02-25",
+            "content": "@@ -316,28 +316,25 @@\n se 'R':%0A\n-    \n+%0A\n         \n palavra \n@@ -329,109 +329,18 @@\n     \n-palavra = append(palavra%5B:cursor%5D, append(%5B%5Drune%7B'%5Cn'%7D, palavra%5Bcursor:%5D...)...)%0A            cursor++\n+case 'B':%0A\n %0A   \n@@ -354,152 +354,12 @@\n se '\n-B\n+D\n ':%0A\n-            if(cursor %3E 0)%7B%0A                palavra = append(palavra%5B:cursor-1%5D, palavra%5Bcursor:%5D...)%0A                cursor--%0A            %7D\n %0A   \n@@ -361,37 +361,36 @@\n %0A%0A        case '\n-D\n+%3E\n ':%0A\n-%0A\n             if(c\n@@ -392,133 +392,27 @@\n  if(\n-cursor %3C len(palavra))%7B%0A                palavra = append(palavra%5B:cursor%5D, palavra%5Bcursor+1:%5D...)%0A                // cursor--\n+)%7B%0A                \n %0A   \n@@ -430,109 +430,27 @@\n     \n-%0A\n     \n-%0A\n     \n-    case '%3E':%0A            if(cursor %3C len(palavra))%7B%0A                cursor++%0A            %7D\n+// cursor++\n %0A   \n@@ -534,35 +534,32 @@\n    %7D%0A           \n- //\n  fmt.Println(cur\n@@ -710,19 +710,16 @@\n         \n- //\n  fmt.Pri\n@@ -785,27 +785,24 @@\n %0A%0A    %7D%0A%0A   \n- //\n  fmt.Println\n@@ -817,27 +817,24 @@\n -----%22)%0A%0A   \n- //\n  fmt.Printf(\n@@ -852,19 +852,16 @@\n vra)%0A   \n- //\n  fmt.Pri\n@@ -1099,10 +1099,14 @@\n ntln()%0A%0A\n+%0A%0A%0A%0A\n %7D%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-05-12_21-36-30",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"bufio\"\n    \"os\"\n)\n\nfunc main() {\n    \n    scanner := bufio.NewReader(os.Stdin)\n\n    var entrada string\n    fmt.Fscan(scanner, &entrada)\n\n    palavra := []rune{}\n    cursor := 0\n\n    for _, caractere := range entrada {\n\n        // [abc<<<]\n\n        switch caractere {\n\n        case 'R':\n            palavra = append(palavra[:cursor], append([]rune{'\\n'}, palavra[cursor:]...)...)\n            cursor++\n        case 'B':\n            if(cursor > 0){\n                palavra = append(palavra[:cursor-1], palavra[cursor:]...)\n                cursor--\n            }\n        case 'D':\n\n            if(cursor < len(palavra)){\n                palavra = append(palavra[:cursor], palavra[cursor+1:]...)\n                // cursor--\n            }\n    \n    \n        case '>':\n            if(cursor < len(palavra)){\n                cursor++\n            }\n        case '<':\n            if(cursor > 0){\n                cursor--\n            }\n            // fmt.Println(cursor)\n        default:\n            palavra = append(palavra[:cursor], append([]rune{caractere}, palavra[cursor:]...)...)\n            cursor++\n            // fmt.Printf(\"caractere:%c cursor:%d,\\n\",caractere,cursor)\n        }\n\n    }\n\n    // fmt.Println(\"-----------\")\n\n    // fmt.Printf(\"%c\\n\",palavra)\n    // fmt.Printf(\"cursor: %d\\n\",cursor)\n\n    for i := 0; i <= len(palavra); i++{\n\n        if i == cursor{\n            fmt.Print(\"|\")\n        }\n\n        if(i < len(palavra)){\n            fmt.Printf(\"%c\", palavra[i])\n        }\n\n    }\n\n    fmt.Println()\n\n}\n",
+            "lines": "76"
+        }
+    ]
+}
