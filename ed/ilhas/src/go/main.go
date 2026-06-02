@@ -38,7 +38,6 @@ func dfs(grid [][]byte, i int, j int){
 // Ela é a função que será chamada no LeetCode para resolver o problema
 func numIslands(grid [][]byte) int {
 
-
 	rows := len(grid)
 	cols := len(grid[0])
 	count := 0

@@ -10,13 +10,23 @@ import (
 
 func dfs(matrix [][]int, i int, j int){
 
-	rows := len(grid)
-    cols := len(grid[0])
+	rows := len(matrix)
+    cols := len(matrix[0])
 
     // fora da matriz
     if i < 0 || j < 0 || i >= rows || j >= cols {
         return
     }
+	
+	if(){
+		
+	}
+
+	
+	dfs(matrix, i+1,j )//down
+	dfs(matrix, i-1,j )//up
+	dfs(matrix, i,j+1 )//right
+	dfs(matrix, i,j-1)//left
 
 }
 
@@ -25,15 +35,17 @@ func longestIncreasingPath(matrix [][]int) int {
 	rows := len(matrix)
 	cols := len(matrix[0])
 
+	count := 0
+
 	for i := 0; i < rows; i++{
 		for j := 0; j < cols; j++{
+			count++
 			dfs(matrix, i, j)
 		}
 	}
 
-	//
-	// _ := matrix
-	// return 0
+	return count
+
 }
 
 // Não modifique a função main

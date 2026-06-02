@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-31_17-13-33",
+            "content": "@@ -17,641 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    // %22strings%22%0A)%0A%0Afunc backtracking(caracteres %5B%5Dstring, current %5B%5Dstring, using %5B%5Dbool)%7B%0A%0A    if(len(current) == len(caracteres))%7B%0A        for _, value := range current %7B%0A            fmt.Print(value)%0A        %7D%0A        fmt.Println()%0A%0A        return%0A    %7D%0A%0A    for i := 0; i %3C len(caracteres); i++ %7B%0A        %0A        if(using%5Bi%5D)%7B%0A            continue%0A        %7D%0A        //Escolher%0A        using%5Bi%5D = true%0A        current = append(current, caracteres%5Bi%5D)%0A%0A        //Explorar%0A        backtracking(caracteres, current, using )%0A%0A        //Voltar%0A        current = current%5B:len(current)-1%5D%0A        using%5Bi%5D = false%0A%0A    %7D%0A%0A%7D%0A\n+%22fmt%22\n %0Afun\n@@ -83,228 +83,30 @@\n rd)%0A\n-    \n %0A    \n-var caractere %5B%5Dstring%0A    %0A    for _, value := range word %7B%0A        caractere = append(caractere, string(value))%0A    %7D%0A%0A    using := make(%5B%5Dbool, len(caractere))%0A%0A%0A    backtracking(caractere, %5B%5Dstring%7B%7D, using )\n+fmt.Println(word)%0A\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-31_17-40-53",
+            "content": "@@ -46,19 +46,8 @@\n gs%22%0A\n-    %22sort%22%0A\n )%0A%0Af\n@@ -743,36 +743,8 @@\n ing%0A\n-    sort.Strings(caractere)%0A\n     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-31_17-54-21",
+            "content": "@@ -750,16 +750,44 @@\n %5Dstring%0A\n+    sort.Strings(caractere)%0A\n     %0A   \n@@ -878,36 +878,8 @@\n    %7D\n-%0A    sort.Strings(caractere)\n %0A%0A  \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-31_18-17-01",
+            "content": "@@ -851,37 +851,8 @@\n   %7D%0A\n-%0A    fmt.Println(caractere)%0A%0A\n     \n@@ -883,45 +883,8 @@\n %0A   \n- fmt.Println(caractere)%0A%0A    %0A%0A    //\n  usi\n@@ -923,19 +923,16 @@\n ))%0A%0A%0A   \n- //\n  backtra\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-31_18-18-19",
+            "content": "@@ -843,24 +843,53 @@\n lue))%0A    %7D%0A\n+%0A    fmt.Println(caractere)%0A%0A\n     sort.Str\n@@ -908,16 +908,53 @@\n re)%0A%0A   \n+ fmt.Println(caractere)%0A%0A    %0A%0A    //\n  using :\n@@ -989,16 +989,19 @@\n ))%0A%0A%0A   \n+ //\n  backtra\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-31_18-19-48",
+            "content": "package main\nimport (\n    \"fmt\"\n    // \"strings\"\n    \"sort\"\n)\n\nfunc backtracking(caracteres []string, current []string, using []bool){\n\n    if(len(current) == len(caracteres)){\n        for _, value := range current {\n            fmt.Print(value)\n        }\n        fmt.Println()\n\n        return\n    }\n\n    for i := 0; i < len(caracteres); i++ {\n        \n        if(using[i]){\n            continue\n        }\n        //Escolher\n        using[i] = true\n        current = append(current, caracteres[i])\n\n        //Explorar\n        backtracking(caracteres, current, using )\n\n        //Voltar\n        current = current[:len(current)-1]\n        using[i] = false\n\n    }\n\n}\n\nfunc main() {\n    \n    var word string\n\n    fmt.Scan(&word)\n    \n    var caractere []string\n    \n    for _, value := range word {\n        caractere = append(caractere, string(value))\n    }\n    sort.Strings(caractere)\n\n    using := make([]bool, len(caractere))\n\n\n    backtracking(caractere, []string{}, using )\n}\n",
+            "lines": "56"
+        }
+    ]
+}

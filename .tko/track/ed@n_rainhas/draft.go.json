@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_20-28-36",
+            "content": "@@ -765,26 +765,24 @@\n        total\n-Of\n Queens(numsQ\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-01_20-29-48",
+            "content": "@@ -430,17 +430,16 @@\n  return \n--\n x%0A    %7D%0A\n@@ -449,16 +449,17 @@\n  return \n+-\n x%0A%7D%0A%0Afun\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-01_20-31-51",
+            "content": "@@ -296,16 +296,18 @@\n itions%5Br\n+ow\n %5D-col)%7B%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-01_20-32-30",
+            "content": "@@ -428,16 +428,17 @@\n  return \n+-\n x%0A    %7D%0A\n@@ -448,23 +448,17 @@\n  return \n--x%0A    \n+x\n %0A%7D%0A%0Afunc\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-01_20-33-11",
+            "content": "@@ -428,17 +428,16 @@\n  return \n--\n x%0A    %7D%0A\n@@ -447,18 +447,23 @@\n  return \n+-\n x%0A\n+    \n %0A%7D%0A%0Afunc\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-01_20-33-27",
+            "content": "@@ -285,20 +285,16 @@\n row) == \n-abs(\n position\n@@ -302,17 +302,16 @@\n %5Br%5D-col)\n-)\n %7B%0A      \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-01_20-34-47",
+            "content": "package main\nimport \"fmt\"\n\nvar totalQueens int\n\nfunc isPositionValid(positions []int,row int,col int) bool{\n    \n    for r := 0; r < row; r++ {\n        //checando coluna\n        if(positions[r] == col){\n            return false\n        }\n\n        //checando diagonal\n        if(abs(r-row) == abs(positions[r]-col)){\n            return false\n        }\n        \n    }\n\n    return true\n\n}\n\nfunc abs(x int) int{\n\n    if(x < 0 ){\n        return -x\n    }\n    return x\n\n}\n\nfunc totalOfQueens(numsQuens []int, row int, n int){\n    //n reprensentando o qtd de rainhas e tamanho do tabuleiro\n    if(row == n){\n        totalQueens++\n        return\n    }\n\n    for col := 0; col < n; col++ {\n\n        if(isPositionValid(numsQuens,row,col)){\n\n            numsQuens[row] = col\n\n            totalOfQueens(numsQuens, row+1 , n)\n\n        }\n        \n    }\n\n}\n\nfunc main() {\n    var numsQuens int\n\n    fmt.Scan(&numsQuens)\n\n    position := make([]int, numsQuens)\n\n    totalOfQueens(position, 0, numsQuens)\n\n    fmt.Println(totalQueens)\n}\n",
+            "lines": "65"
+        }
+    ]
+}
