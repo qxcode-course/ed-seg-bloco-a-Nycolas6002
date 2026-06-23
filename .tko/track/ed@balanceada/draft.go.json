@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_19-45-12",
+            "content": "@@ -70,11 +70,8 @@\n %0A   \n- //\n  var\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-22_19-45-18",
+            "content": "@@ -62,24 +62,27 @@\n o string%0A   \n+ //\n  var pilha %5B\n@@ -150,275 +150,12 @@\n ao)%0A\n-%0A\n     \n-fmt.Println(expressao%5B0%5D)%0A%0A    for _, valor := range expressao%7B%0A        if(string(valor) == %22(%22)%7B%0A            pilha = append(pilha, string(valor))%0A        %7D%0A%0A        if(string(valor) == %22%5B%22)%7B%0A            pilha = append(pilha, string(valor))%0A        %7D%0A    %7D%0A    %0A\n %0A%0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-22_19-48-47",
+            "content": "@@ -160,23 +160,16 @@\n Println(\n-string(\n expressa\n@@ -173,17 +173,16 @@\n ssao%5B0%5D)\n-)\n %0A%0A    fo\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-22_19-49-00",
+            "content": "@@ -115,27 +115,24 @@\n pressao)%0A   \n- //\n  fmt.Println\n@@ -147,19 +147,16 @@\n ao)%0A%0A   \n- //\n  fmt.Pri\n@@ -224,23 +224,8 @@\n ao%7B%0A\n-        //push%0A\n     \n@@ -255,32 +255,8 @@\n  %22(%22\n- %7C%7C string(valor) == %22%5B%22\n )%7B%0A \n@@ -318,23 +318,8 @@\n  %7D%0A%0A\n-        //pop%0A%0A\n     \n@@ -347,425 +347,71 @@\n == %22\n-%5D%22 %7C%7C string(valor) == %22(%22)%7B%0A%0A            if(len(pilha) == 0)%7B%0A                fmt.Println(%22nao balanceado%22)%0A                return%0A            %7D%0A            %0A            if(pilha%5Blen(pilha)-1%5D == %22)%22 %7C%7C pilha%5Blen(pilha)-1%5D == %22%5D%22)%7B%0A                pilha = pilha%5B:len(pilha)-1%5D%0A            %7D%0A%0A        %7D%0A%0A    %7D%0A%0A    if(l\n+%5B%22)%7B%0A            pilha = app\n en\n+d\n (pilha\n-) %3E 0)%7B%0A        fmt.Println(%22nao balanceado%22)%0A    %7Delse%7B%0A        fmt.Println(%22balanceado%22)\n+, string(valor))%0A        %7D\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-22_19-57-42",
+            "content": "@@ -427,17 +427,17 @@\n or) == %22\n-)\n+(\n %22)%7B%0A%0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-22_19-58-19",
+            "content": "@@ -10,38 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22strings%22%0A)%0A\n func\n@@ -253,75 +253,48 @@\n     \n-caractere := string(valor)%0A        if(caractere == %22(%22 %7C%7C caractere\n+if(string(valor) == %22(%22 %7C%7C string(valor)\n  == \n@@ -333,25 +333,29 @@\n (pilha, \n-caractere\n+string(valor)\n )%0A      \n@@ -389,37 +389,45 @@\n  if(\n-caractere == %22%5D%22 %7C%7C caractere\n+string(valor) == %22%5D%22 %7C%7C string(valor)\n  == \n@@ -541,33 +541,32 @@\n n%0A            %7D%0A\n-%0A\n             //to\n@@ -565,14 +565,8 @@\n     \n-//topo\n %0A   \n@@ -578,16 +578,11 @@\n     \n-topo := \n+if(\n pilh\n@@ -600,58 +600,25 @@\n )-1%5D\n-%0A            //remove%0A            pilha :=\n+ == %22)%22 %7C%7C\n  pilha%5B\n-:\n len(\n@@ -630,103 +630,14 @@\n )-1%5D\n-%0A            %0A            if(caractere == %22)%22 && topo != %22()%22 %7C%7C caractere == %22%5D%22 && topo != %22%5B\n+ == %22%5D\n %22)%7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-22_20-07-49",
+            "content": "@@ -24,19 +24,16 @@\n %09%22fmt%22%0A%09\n-// \n %22strings\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-22_20-08-01",
+            "content": "@@ -23,16 +23,30 @@\n %0A%09%22fmt%22%0A\n+%09// %22strings%22%0A\n )%0Afunc m\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-22_20-08-23",
+            "content": "@@ -747,24 +747,25 @@\n & topo != %22(\n+)\n %22 %7C%7C caracte\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-22_20-08-35",
+            "content": "@@ -746,17 +746,17 @@\n && topo \n-=\n+!\n = %22(%22 %7C%7C\n@@ -781,17 +781,17 @@\n && topo \n-=\n+!\n = %22%5B%22)%7B%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-22_20-08-49",
+            "content": "@@ -746,17 +746,17 @@\n && topo \n-!\n+=\n = %22(%22 %7C%7C\n@@ -785,9 +785,9 @@\n opo \n-!\n+=\n = %22%5B\n@@ -810,59 +810,36 @@\n     \n-fmt.Println(%22nao balanceado%22)%0A               return\n+pilha = pilha%5B:len(pilha)-1%5D\n %0A   \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-22_20-11-17",
+            "content": "@@ -669,16 +669,17 @@\n   pilha \n+:\n = pilha%5B\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-22_20-11-31",
+            "content": "@@ -745,17 +745,17 @@\n && topo \n-=\n+!\n = %22(%22 %7C%7C\n@@ -780,17 +780,17 @@\n && topo \n-=\n+!\n = %22%5B%22)%7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-22_20-12-38",
+            "content": "@@ -745,17 +745,17 @@\n && topo \n-!\n+=\n = %22(%22 %7C%7C\n@@ -784,9 +784,9 @@\n opo \n-!\n+=\n = %22%5B\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-22_20-13-00",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    \n    var expressao string\n    var pilha []string\n    \n    fmt.Scan(&expressao)\n    // fmt.Println(expressao)\n\n    // fmt.Println(string(expressao[0]))\n\n    for _, valor := range expressao{\n        //push\n        caractere := string(valor)\n        if(caractere == \"(\" || caractere == \"[\"){\n            pilha = append(pilha, caractere)\n        }\n\n        //pop\n\n        if(caractere == \"]\" || caractere == \")\"){\n\n            if(len(pilha) == 0){\n                fmt.Println(\"nao balanceado\")\n                return\n            }\n\n            //topo\n            topo := pilha[len(pilha)-1]\n            //remove\n            pilha = pilha[:len(pilha)-1]\n            \n            if(caractere == \")\" && topo != \"(\" || caractere == \"]\" && topo != \"[\"){\n                fmt.Println(\"nao balanceado\")\n               return\n            }\n\n        }\n\n    }\n\n    if(len(pilha) > 0){\n        fmt.Println(\"nao balanceado\")\n    }else{\n        fmt.Println(\"balanceado\")\n    }\n    \n\n\n}\n",
+            "lines": "54"
+        }
+    ]
+}

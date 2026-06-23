@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_18-57-34",
+            "content": "@@ -896,91 +896,9 @@\n     \n-saida = append(saida, pilha%5Blen(pilha)-1%5D)%0A            pilha = pilha%5B:len(pilha)-1%5D\n+v\n %0A   \n@@ -966,53 +966,6 @@\n  %7D%0A%0A\n-%0A    fmt.Println(pilha)%0A    fmt.Println(saida)%0A\n %7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-22_19-00-03",
+            "content": "@@ -1070,17 +1070,9 @@\n ilha\n-%5B0%5D)%0A    \n+)\n %0A   \n@@ -1093,11 +1093,8 @@\n aida\n-%5B0%5D\n )%0A%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-22_19-00-31",
+            "content": "@@ -1075,15 +1075,16 @@\n 0%5D)%0A\n+    \n %0A   \n- //\n  fmt\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-22_19-00-53",
+            "content": "@@ -1044,27 +1044,24 @@\n %0A    %7D%0A%0A%0A   \n- //\n  fmt.Println\n@@ -1071,16 +1071,17 @@\n lha%5B0%5D)%0A\n+%0A\n     // f\n@@ -1104,169 +1104,7 @@\n %5B0%5D)\n-%0A%0A    for len(pilha) %3E 0%7B%0A        saida = append(saida, pilha%5Blen(pilha)-1%5D)%0A        pilha = pilha%5B:len(pilha)-1%5D%0A    %7D%0A%0A    fmt.Println(strings.Join(saida, %22 %22))\n %0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-22_19-03-53",
+            "content": "@@ -355,36 +355,24 @@\n or == %22+%22 %7C%7C\n-%0A           \n  valor == %22-\n@@ -371,36 +371,24 @@\n or == %22-%22 %7C%7C\n-%0A           \n  valor == %22*\n@@ -395,60 +395,20 @@\n %22 %7C%7C\n-%0A            valor == %22/%22 %7C%7C%0A            valor == %22%5E\n+ valor == %22*\n %22%0A%7D%0A\n@@ -747,29 +747,8 @@\n or)%0A\n-            continue%0A\n     \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-22_19-06-03",
+            "content": "@@ -1201,20 +1201,20 @@\n for len(\n-said\n+pilh\n a) %3E 0%7B%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-22_19-08-19",
+            "content": "@@ -1197,28 +1197,28 @@\n     for len(\n-pilh\n+said\n a) %3E 0%7B%0A    \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-22_19-08-34",
+            "content": "@@ -525,18 +525,16 @@\n fmt.Scan\n-ln\n (&expres\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-22_19-11-39",
+            "content": "@@ -545,36 +545,8 @@\n o)%0A%0A\n-    fmt.Println(expressao)%0A%0A\n     \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-22_19-12-19",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -19,57 +19,36 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strings%22%0A%09%22text/scanner%22%0A\n+    %22fmt%22%0A    %22strings%22%0A    \n )%0A  \n@@ -490,19 +490,16 @@\n () %7B%0A   \n- //\n  var exp\n@@ -512,27 +512,24 @@\n  string%0A%0A   \n- //\n  fmt.Scanln(\n@@ -540,27 +540,24 @@\n ressao)%0A%0A   \n- //\n  fmt.Println\n@@ -572,58 +572,13 @@\n ao)%0A\n-    scanner := bufio.NewScanner(os.Stdin)\n %0A    \n-var \n slic\n@@ -593,104 +593,36 @@\n res \n-%5B%5Dstring%0A%0A    if(scanner.Scan())%7B%0A        sliceCaracteres = strings.Fields(scanner.Text())%0A    %7D\n+:= strings.Fields(expressao)\n %0A%0A  \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-22_19-24-01",
+            "content": "@@ -49,16 +49,32 @@\n trings%22%0A\n+%09%22text/scanner%22%0A\n )%0A    %0A%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-22_19-24-11",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n    \n\nfunc verificaPrecendencia(valor string) int{\n\n    switch(valor){\n        case \"^\":\n            return 3\n        case \"*\", \"/\":\n            return 2\n        case \"+\", \"-\":\n            return 1\n        default:\n            return 0\n    }\n\n}\n\nfunc verificaOperador(valor string) bool{\n    return valor == \"+\" ||\n            valor == \"-\" ||\n            valor == \"*\" ||\n            valor == \"/\" ||\n            valor == \"^\"\n}\n\n\nfunc main() {\n    // var expressao string\n\n    // fmt.Scanln(&expressao)\n\n    // fmt.Println(expressao)\n    scanner := bufio.NewScanner(os.Stdin)\n    var sliceCaracteres []string\n\n    if(scanner.Scan()){\n        sliceCaracteres = strings.Fields(scanner.Text())\n    }\n\n    var pilha []string \n    var saida []string\n\n    for _, valor := range sliceCaracteres  {\n        \n        //determina se \u00e9 um operador\n        if(!verificaOperador(valor)){\n            saida = append(saida, valor)\n            continue\n        }\n        \n        for len(pilha) > 0 && verificaPrecendencia(pilha[len(pilha)-1]) >= verificaPrecendencia(valor) {\n            \n            saida = append(saida, pilha[len(pilha)-1])\n            pilha = pilha[:len(pilha)-1]\n            \n        }\n\n        pilha = append(pilha, valor)\n    }\n\n\n    // fmt.Println(pilha[0])\n    // fmt.Println(saida[0])\n\n    for len(pilha) > 0{\n        saida = append(saida, pilha[len(pilha)-1])\n        pilha = pilha[:len(pilha)-1]\n    }\n\n    fmt.Println(strings.Join(saida, \" \"))\n}\n",
+            "lines": "79"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_10-00-59",
+            "content": "@@ -82,18 +82,16 @@\n fmt.Scan\n-ln\n (&number\n@@ -132,19 +132,20 @@\n ake(%5B%5D%5B%5D\n-int\n+byte\n , number\n@@ -237,19 +237,20 @@\n  make(%5B%5D\n-int\n+byte\n , number\n@@ -322,60 +322,8 @@\n + %7B%0A\n-        var row string%0A        fmt.Scan(&row)      %0A\n     \n@@ -386,218 +386,8 @@\n     \n- if(row%5Bj%5D == '.')%7B%0A                tabuleiro%5Bi%5D%5Bj%5D = 0%0A            %7Delse%7B%0A                tabuleiro%5Bi%5D%5Bj%5D = int(row%5Bj%5D - '0')%0A            %7D%0A            // fmt.Println(tabuleiro%5Bi%5D%5Bj%5D)%0A        %7D%0A    %7D%0A%0A%0A    %0A//\n  fmt\n@@ -392,17 +392,16 @@\n mt.Scan(\n-&\n tabuleir\n@@ -418,215 +418,22 @@\n     \n-%0Afmt.Println(%22-----------------------%22)    %0A    for i := 0; i %3C numberOfColAndLines; i++ %7B%0A        for j := 0; j %3C numberOfColAndLines; j++ %7B  %0A            fmt.Println(tabuleiro%5Bi%5D%5Bj%5D)        %0A            //\n+  %0A           \n  fmt\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_10-34-51",
+            "content": "@@ -571,24 +571,67 @@\n           %7D%0A\n+            // fmt.Println(tabuleiro%5Bi%5D%5Bj%5D)\n %0A        %7D%0A \n@@ -637,16 +637,20 @@\n     %7D%0A%0A%0A\n+    \n %0A// fmt.\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-22_10-39-35",
+            "content": "@@ -23,1270 +23,8 @@\n mt%22%0A\n-%0A%0Afunc estaNaLinha(tabuleiro%5B%5D%5B%5D int,l int, element int) bool%7B%0A%0A    for c := 0; c %3C len(tabuleiro); c++ %7B%0A        if(tabuleiro%5Bl%5D%5Bc%5D == element)%7B%0A            return true%0A        %7D%0A    %7D%0A    %0A    return false%0A%7D%0A%0Afunc estaNaColuna(tabuleiro%5B%5D%5B%5D int,c int, element int) bool%7B%0A%0A    for l := 0; l %3C len(tabuleiro); l++ %7B%0A        if(tabuleiro%5Bl%5D%5Bc%5D == element)%7B%0A            return true%0A        %7D%0A    %7D%0A    %0A    return false%0A%7D%0A%0Afunc resolver(tabuleiro%5B%5D%5B%5Dint, index int) bool %7B%0A    /*Obs:%0A        index = a quantidade de casas na qual eu j%C3%A1 passei%0A        nl = a quantidade de linhas do meu tabuleiro%0A    */%0A%0A    nl := len(tabuleiro)%0A    //condi%C3%A7%C3%A3o de parada%0A    if(index == nl*nl)%7B%0A        return true%0A    %7D%0A%0A    //linhas e colunas%0A    l := index / nl%0A    c := index %25 nl%0A%0A    if(tabuleiro%5Bl%5D%5Bc%5D != 0) %7B%0A        return resolver(tabuleiro, index+1)%0A    %7D%0A%0A    //backtracking%0A%0A    for i := 1; i %3C= nl; i++ %7B%0A        //checar a linha,coluna e quadrante.%0A        element := i%0A        if(!estaNaLinha(tabuleiro, l, element) && !estaNaColuna(tabuleiro, c, element))%7B%0A            tabuleiro%5Bl%5D%5Bc%5D = element%0A            if (resolver(tabuleiro, index+1)) %7B%0A                return true%0A            %7D%0A            tabuleiro%5Bl%5D%5Bc%5D = 0%0A        %7D%0A        %0A    %7D%0A%0A    return false%0A%0A%7D%0A%0A\n func\n@@ -211,29 +211,8 @@\n ++ %7B\n-%0A%0A        //add linha\n %0A   \n@@ -268,37 +268,61 @@\n es)%0A\n-%0A        //pegando linha toda\n+    %7D%0A%0A    for i := 0; i %3C numberOfColAndLines; i++ %7B\n %0A   \n@@ -370,17 +370,16 @@\n )      %0A\n-%0A\n         \n@@ -597,36 +597,45 @@\n  %7D%0A%0A\n-    resolver(tabuleiro, 0)%0A%0A\n+%0A%0A// fmt.Scan(&tabuleiro%5Bi%5D%5Bj%5D)      \n %0Afmt\n@@ -795,16 +795,18 @@\n mt.Print\n+ln\n (tabulei\n@@ -835,17 +835,14 @@\n     \n-%7D%0A\n     \n-   \n+//\n  fmt\n@@ -850,19 +850,45 @@\n Println(\n-)%0A    %7D\n+tabuleiro%5Bi%5D%5Bj%5D)%0A        %7D%0A    %7D%0A\n %0A%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-22_11-31-59",
+            "content": "@@ -1886,11 +1886,8 @@\n )%0A%0A%0A\n-// \n fmt.\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-22_11-32-10",
+            "content": "@@ -17,37 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22math%22%0A)%0A    \n+%22fmt%22\n %0A%0A%0Af\n@@ -444,414 +444,8 @@\n %0A%7D%0A%0A\n-func estaNoQuadrante(tabuleiro%5B%5D%5B%5D int, lin int, col int, element int) bool %7B%0A%0A    dim := len(tabuleiro)%0A    lado := math.Sqrt(dim)%0A    StartL := ( lin / dim) * lado %0A    StartC := ( col / dim) *lado%0A%0A    for i := 0; i %3C sub; i++ %7B%0A        for j := 0; j %3C count; j++ %7B%0A            if(tabuleiro%5BStartL+i%5D%5BStartC+j%5D == element)%7B%0A                return true%0A            %7D%0A        %7D%0A    %7D%0A%0A    return false%0A%7D%0A%0A\n func\n@@ -985,16 +985,16 @@\n nt := i%0A\n+\n         \n@@ -1066,51 +1066,8 @@\n , c,\n- element) !estaNoQuadrante(tabuleiro, l, c,\n  ele\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-06-22_16-42-16",
+            "content": "@@ -1497,27 +1497,24 @@\n  c, element)\n- &&\n  !estaNoQuad\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-22_16-42-41",
+            "content": "@@ -595,46 +595,12 @@\n qrt(\n-float64(dim))%0A    // lado := dim * 0.5\n+dim)\n %0A   \n@@ -625,25 +625,20 @@\n  dim) * \n-int(\n lado\n-)\n  %0A    St\n@@ -659,26 +659,20 @@\n / dim) *\n- int(\n lado\n-)\n %0A%0A    fo\n@@ -685,25 +685,19 @@\n  0; i %3C \n-int(lado)\n+sub\n ; i++ %7B%0A\n@@ -724,17 +724,13 @@\n j %3C \n-int(lado)\n+count\n ; j+\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-22_16-44-38",
+            "content": "@@ -581,20 +581,16 @@\n lado := \n-int(\n math.Sqr\n@@ -604,17 +604,16 @@\n 64(dim))\n-)\n %0A    // \n@@ -652,28 +652,33 @@\n ( lin / \n-lado) * \n+dim) * int(\n lado\n+) \n %0A    Sta\n@@ -696,20 +696,24 @@\n l / \n-lado) * \n+dim) * int(\n lado\n+)\n %0A%0A  \n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-22_16-46-22",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"math\"\n)\n    \n\n\nfunc estaNaLinha(tabuleiro[][] int,l int, element int) bool{\n\n    for c := 0; c < len(tabuleiro); c++ {\n        if(tabuleiro[l][c] == element){\n            return true\n        }\n    }\n    \n    return false\n}\n\nfunc estaNaColuna(tabuleiro[][] int,c int, element int) bool{\n\n    for l := 0; l < len(tabuleiro); l++ {\n        if(tabuleiro[l][c] == element){\n            return true\n        }\n    }\n    \n    return false\n}\n\nfunc estaNoQuadrante(tabuleiro[][] int, lin int, col int, element int) bool {\n\n    dim := len(tabuleiro)\n    lado := int(math.Sqrt(float64(dim)))\n    // lado := dim * 0.5\n    StartL := ( lin / lado) * lado\n    StartC := ( col / lado) * lado\n\n    for i := 0; i < int(lado); i++ {\n        for j := 0; j < int(lado); j++ {\n            if(tabuleiro[StartL+i][StartC+j] == element){\n                return true\n            }\n        }\n    }\n\n    return false\n}\n\nfunc resolver(tabuleiro[][]int, index int) bool {\n    /*Obs:\n        index = a quantidade de casas na qual eu j\u00e1 passei\n        nl = a quantidade de linhas do meu tabuleiro\n    */\n\n    nl := len(tabuleiro)\n    //condi\u00e7\u00e3o de parada\n    if(index == nl*nl){\n        return true\n    }\n\n    //linhas e colunas\n    l := index / nl\n    c := index % nl\n\n    if(tabuleiro[l][c] != 0) {\n        return resolver(tabuleiro, index+1)\n    }\n\n    //backtracking\n\n    for i := 1; i <= nl; i++ {\n        //checar a linha,coluna e quadrante.\n        element := i\n        if(!estaNaLinha(tabuleiro, l, element) && !estaNaColuna(tabuleiro, c, element) && !estaNoQuadrante(tabuleiro, l, c, element)){\n            tabuleiro[l][c] = element\n            if (resolver(tabuleiro, index+1)) {\n                return true\n            }\n            tabuleiro[l][c] = 0\n        }\n        \n    }\n\n    return false\n\n}\n\nfunc main() {\n    \n    var numberOfColAndLines int\n    fmt.Scanln(&numberOfColAndLines)\n\n    tabuleiro := make([][]int, numberOfColAndLines)\n\n    for i := 0; i < numberOfColAndLines; i++ {\n\n        //add linha\n        tabuleiro[i] = make([]int, numberOfColAndLines)\n\n        //pegando linha toda\n        var row string\n        fmt.Scan(&row)      \n\n        for j := 0; j < numberOfColAndLines; j++ {  \n            if(row[j] == '.'){\n                tabuleiro[i][j] = 0\n            }else{\n                tabuleiro[i][j] = int(row[j] - '0')\n            }\n\n        }\n    }\n\n    resolver(tabuleiro, 0)\n\n\n// fmt.Println(\"-----------------------\")    \n    for i := 0; i < numberOfColAndLines; i++ {\n        for j := 0; j < numberOfColAndLines; j++ {  \n            fmt.Print(tabuleiro[i][j])        \n        }\n        fmt.Println()\n    }\n\n}\n",
+            "lines": "126"
+        }
+    ]
+}
