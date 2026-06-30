@@ -1,0 +1,9 @@
+2026-06-25 13:36:33, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-06-25 13:36:35, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0
+2026-06-25 13:36:43, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-06-25 13:36:50, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-06-25 13:36:51, EXEC, v:1, k:ed@enesimo, mode:FULL, size:23, fail:COMP
+2026-06-25 13:36:54, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-06-25 13:37:41, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-25 13:37:42, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:5
+2026-06-25 13:37:51, MOVE, v:1, k:ed@distancia, mode:BACK

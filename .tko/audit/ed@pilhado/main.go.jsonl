@@ -1,0 +1,3 @@
+{"ts":1782221105,"hash":"acb594bb294039b8652c3fa1797e963bdaf242278f89282884de8f1c51efc7f0","mode":"full","content":"H4sIADaJOmoC/ytITM5OTE9VyE3MzOPiyswtyC8qUdDg4lRKKk3LzFcCMtJyS0BUfrESlyYXFwAmA5VEMAAAAA=="}
+{"ts":1782221138,"hash":"0d3532f32a7f24a8e54cabc0acaffc650ddac48d17fe8ef9afac6194a6469cea","mode":"diff","ops":[{"tag":"insert","a1":8,"a2":8,"text":"func main(){\n\t\n}\n"}]}
+{"ts":1782841069,"hash":"ebcfc334e3a07f7490df1756032bef07f9c2c1762888b39f313235cda49c95e2","mode":"diff","ops":[{"tag":"insert","a1":9,"a2":9,"text":"\n\tvar l,c int\n\n\tfmt.Scan(&l, &c)\n"}]}

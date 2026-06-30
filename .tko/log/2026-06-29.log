@@ -1,0 +1,15 @@
+2026-06-29 22:47:39, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-06-29 22:47:43, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100, size:76
+2026-06-29 22:47:43, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-06-29 22:47:56, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-06-29 22:47:57, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100
+2026-06-29 22:47:58, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-06-29 22:50:18, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-06-29 22:50:23, EXEC, v:1, k:ed@enesimo, mode:FULL, fail:COMP
+2026-06-29 22:50:25, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-06-29 22:54:39, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-29 22:54:41, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-29 22:55:00, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-29 22:55:02, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-29 22:55:08, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-06-29 22:55:10, MOVE, v:1, k:ed@enesimo, mode:BACK

@@ -7,8 +7,13 @@
         },
         {
             "label": "2026-04-03_08-46-19",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\n\tif(b % a == 0){\n\t\treturn a\n\t}\n\n\t// resultado := b % a\n\t// b = a\n\t// a = resultado\n\treturn mdc(b,a%b)\n\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n\n/*\n\tif(a == 0){\n\t\treturn b\n\t}\n\n\tif(b == 0){\n\t\treturn a\n\t}\n\n\tmaiorNumero := 0\n\tmenorNumero := 0\n\tif(a > b){\n\t\tmaiorNumero = a\n\t\tmenorNumero = b\n\t}else{\n\t\tmaiorNumero = b\n\t\tmenorNumero = a\n\t}\n\n\tq := maiorNumero / menorNumero\n\tr := a % b\n\tvalorA := b* r\n\n\n\treturn mdc(a,b)\n\n*/\n",
+            "content": "@@ -84,16 +84,67 @@\n n a%0A%09%7D%0A%0A\n+%09// resultado := b %25 a%0A%09// b = a%0A%09// a = resultado%0A\n %09return \n@@ -154,16 +154,16 @@\n (b,a%25b)%0A\n-\n %0A%7D%0A%0Afunc\n@@ -232,401 +232,11 @@\n b))%0A\n+\n %7D%0A%0A\n-/* fiz com for no Mycompiler depois implementei a ideia com recurs%C3%A3o e melhorei a solu%C3%A7%C3%A3o%0A%0A    a := 276%0A    b := 192%0A%0A    resultado := 0%0A    mdc := 0%0A%0A%0A    for%7B%0A        if(b %25 a == 0)%7B%0A            mdc = a%0A            break%0A        %7D%0A%0A        %0A        resultado = b %25 a // 42%2530 = 12%0A        b = a // 42 passa a ser 30%0A        a = resultado // 30 / 12%0A        %0A%7D%0A    fmt.Println(mdc)%0A%0A%0A%0A*/%0A%0A\n /*%0A%09\n",
             "lines": "52"
+        },
+        {
+            "label": "2026-06-29_22-47-43",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\n\tif(b % a == 0){\n\t\treturn a\n\t}\n\n\treturn mdc(b,a%b)\n\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n\n/* fiz com for no Mycompiler depois implementei a ideia com recurs\u00e3o e melhorei a solu\u00e7\u00e3o\n\n    a := 276\n    b := 192\n\n    resultado := 0\n    mdc := 0\n\n\n    for{\n        if(b % a == 0){\n            mdc = a\n            break\n        }\n\n        \n        resultado = b % a // 42%30 = 12\n        b = a // 42 passa a ser 30\n        a = resultado // 30 / 12\n        \n}\n    fmt.Println(mdc)\n\n\n\n*/\n\n/*\n\tif(a == 0){\n\t\treturn b\n\t}\n\n\tif(b == 0){\n\t\treturn a\n\t}\n\n\tmaiorNumero := 0\n\tmenorNumero := 0\n\tif(a > b){\n\t\tmaiorNumero = a\n\t\tmenorNumero = b\n\t}else{\n\t\tmaiorNumero = b\n\t\tmenorNumero = a\n\t}\n\n\tq := maiorNumero / menorNumero\n\tr := a % b\n\tvalorA := b* r\n\n\n\treturn mdc(a,b)\n\n*/\n",
+            "lines": "76"
         }
     ]
 }

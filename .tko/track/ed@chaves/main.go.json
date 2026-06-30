@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_10-17-46",
+            "content": "@@ -96,17 +96,16 @@\n  letra %3C\n-=\n  'P'; le\n@@ -179,309 +179,6 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C 15; i++ %7B%0A%0A%09%09// var time1, time2 string%0A%0A%09%09time1 := fila.Dequeue()%0A%09%09time2 := fila.Dequeue()%0A%0A%09%09var golsTime1, golsTime2 int%0A%0A%09%09fmt.Scan(&golsTime1, golsTime2)%0A%0A%09%09if(golsTime1 %3E golsTime2)%7B%0A%09%09%09fila.Enqueue(time1)%0A%09%09%7Delse%7B%0A%09%09%09fila.Enqueue(time2)%0A%09%09%7D%0A%09%09%0A%09%7D%0A%0A%09fmt.Println(fila.Dequeue())%0A%0A\n %7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-23_10-22-58",
+            "content": "@@ -145,19 +145,16 @@\n tra))%0A%09%09\n-// \n fmt.Prin\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-23_10-23-10",
+            "content": "@@ -345,17 +345,16 @@\n sTime1, \n-&\n golsTime\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-23_10-23-37",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\n\tfila := NewQueue[string]()\n\n\tfor letra := 'A'; letra <= 'P'; letra++ {\n\t\tfila.Enqueue(string(letra))\n\t\t// fmt.Println(string(letra))\n\t}\n\n\tfor i := 0; i < 15; i++ {\n\n\t\t// var time1, time2 string\n\n\t\ttime1 := fila.Dequeue()\n\t\ttime2 := fila.Dequeue()\n\n\t\tvar golsTime1, golsTime2 int\n\n\t\tfmt.Scan(&golsTime1, &golsTime2)\n\n\t\tif(golsTime1 > golsTime2){\n\t\t\tfila.Enqueue(time1)\n\t\t}else{\n\t\t\tfila.Enqueue(time2)\n\t\t}\n\t\t\n\t}\n\n\tfmt.Println(fila.Dequeue())\n\n}\n",
+            "lines": "37"
+        }
+    ]
+}

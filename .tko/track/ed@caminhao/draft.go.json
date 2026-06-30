@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-30_13-38-49",
+            "content": "@@ -119,17 +119,16 @@\n mt.Scan(\n-&\n n)%0A%0A    \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-30_13-39-45",
+            "content": "@@ -256,490 +256,25 @@\n     \n-// indiceProcurado := -1%0A%0A    //iniciando em cada bomba%0A    for inicio := 0; inicio %3C n; inicio++ %7B%0A%0A        // tanque := 0%0A        // consegueChegar := true%0A%0A        //percorrendo todas as bombas%0A        for passo := 0; passo %3C n; passo++ %7B%0A%0A            passoAtual := (inicio + passo) %25 n%0A            fmt.Println(passoAtual)%0A            fmt.Println(bomba%5BpassoAtual%5D.distancia)%0A            fmt.Println(bomba%5BpassoAtual%5D.gasolina)%0A        %7D%0A    %7D%0A%0A    // fmt.Println(indiceProcurado\n+fmt.Println(bomba\n )%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-30_14-03-27",
+            "content": "@@ -133,17 +133,16 @@\n    bomba\n-s\n  := make\n@@ -202,25 +202,24 @@\n .Scan(&bomba\n-s\n %5Bi%5D.gasolina\n@@ -226,17 +226,16 @@\n , &bomba\n-s\n %5Bi%5D.dist\n@@ -251,16 +251,19 @@\n   %7D%0A%0A   \n+ //\n  indiceP\n@@ -356,24 +356,27 @@\n + %7B%0A%0A       \n+ //\n  tanque := 0\n@@ -379,24 +379,27 @@\n := 0%0A       \n+ //\n  consegueChe\n@@ -545,35 +545,32 @@\n  %25 n%0A           \n- //\n  fmt.Println(%22pa\n@@ -570,16 +570,8 @@\n tln(\n-%22passo%22,\n pass\n@@ -581,35 +581,32 @@\n ual)%0A           \n- //\n  fmt.Println(%22ga\n@@ -606,93 +606,13 @@\n tln(\n-%22gasolina%22,bombas%5BpassoAtual%5D.gasolina)%0A            // fmt.Println(%22distancia%22,bombas\n+bomba\n %5Bpas\n@@ -642,19 +642,16 @@\n         \n- //\n  fmt.Pri\n@@ -659,59 +659,13 @@\n tln(\n-%22------------------%22)%0A%0A            tanque += \n bomba\n-s\n %5Bpas\n@@ -685,251 +685,19 @@\n lina\n-%0A%0A            tanque -= bombas%5BpassoAtual%5D.distancia%0A%0A            if(tanque %3C 0)%7B%0A                consegueChegar = false%0A                break%0A            %7D%0A        %7D%0A%0A        if(consegueChegar)%7B%0A            indiceProcurado = inicio%0A        %7D%0A\n+)%0A        %7D\n %0A   \n@@ -699,24 +699,27 @@\n %7D%0A    %7D%0A%0A   \n+ //\n  fmt.Println\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-30_14-14-10",
+            "content": "package main\nimport \"fmt\"\n\ntype info struct {\n    gasolina int\n    distancia int\n}\n\nfunc main() {\n\n    var n int\n    fmt.Scan(&n)\n\n    bombas := make([]info, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&bombas[i].gasolina, &bombas[i].distancia)\n    }\n\n    indiceProcurado := -1\n\n    //iniciando em cada bomba\n    for inicio := 0; inicio < n; inicio++ {\n\n        tanque := 0\n        consegueChegar := true\n\n        //percorrendo todas as bombas\n        for passo := 0; passo < n; passo++ {\n\n            passoAtual := (inicio + passo) % n\n            // fmt.Println(\"passo\",passoAtual)\n            // fmt.Println(\"gasolina\",bombas[passoAtual].gasolina)\n            // fmt.Println(\"distancia\",bombas[passoAtual].distancia)\n            // fmt.Println(\"------------------\")\n\n            tanque += bombas[passoAtual].gasolina\n\n            tanque -= bombas[passoAtual].distancia\n\n            if(tanque < 0){\n                consegueChegar = false\n                break\n            }\n        }\n\n        if(consegueChegar){\n            indiceProcurado = inicio\n        }\n\n    }\n\n    fmt.Println(indiceProcurado)\n    \n\n}\n",
+            "lines": "56"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+2026-06-23 09:55:39, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-23 09:56:10, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-23 09:58:58, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-06-23 09:59:10, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-23 09:58:58, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-23 09:58:58, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-23 09:58:58, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-23 10:14:38, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-23 10:17:46, EXEC, v:1, k:ed@chaves, mode:FREE, size:56
+2026-06-23 10:20:16, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-23 10:22:53, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-23 10:22:54, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-23 10:22:56, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-23 10:22:59, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:77
+2026-06-23 10:23:10, EXEC, v:1, k:ed@chaves, mode:FULL, rate:10, size:77
+2026-06-23 10:23:37, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:77
+2026-06-23 10:23:40, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-23 10:23:52, SELF, v:1, k:ed@chaves, self:1, rate:100, study:30
+2026-06-23 10:25:05, MOVE, v:1, k:ed@pilhado, mode:DOWN
+2026-06-23 10:25:11, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-23 10:24:06, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-23 10:25:05, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-23 10:25:38, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-23 10:25:05, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-23 10:51:57, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-23 10:53:14, MOVE, v:1, k:ed@caminho, mode:DOWN
+2026-06-23 10:53:22, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-06-23 10:55:34, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-06-23 10:55:52, MOVE, v:1, k:ed@detonate, mode:DOWN
+2026-06-23 10:56:05, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-06-23 10:53:14, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-23 10:53:14, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-23 10:53:14, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-23 10:55:52, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-23 11:04:21, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-06-23 11:07:40, MOVE, v:1, k:ed@serial, mode:DOWN
+2026-06-23 11:07:47, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-23 11:07:40, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-23 11:07:40, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-23 11:47:57, MOVE, v:1, k:ed@serial, mode:BACK
