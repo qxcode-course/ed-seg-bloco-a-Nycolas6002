@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-
 	"strconv"
 	"strings"
 )
@@ -15,39 +14,20 @@ type Node struct {
 	Right *Node
 }
 
-// MyShow imprime a árvore binária de forma formatada.
-func MyShow(node *Node, nivel int) {
-
-	//caso base
-	if(node == nil){
-
-		for i := 0; i < nivel; i++ {
-			fmt.Print("....")
-		}
-		fmt.Println("#")
-		return
-	}
-
-	//folha
-	if(node.Left == nil && node.Right == nil){
-		for i := 0; i < nivel; i++ {
-			fmt.Print("....")
-		}
-		fmt.Println(node.Value)
-		return
-	}
-
-	MyShow(node.Left, nivel+1)
-
-	for i := 0; i < nivel; i++ {
-		fmt.Print("....")
-	}
-
-	fmt.Println(node.Value)
-
-	MyShow(node.Right, nivel+1)
-
+func BstInsert(values []int) *Node {
+	// TODO
+	_ = values
+	return nil
 }
+
+// Dica: crie um vetor compartilhado e vá preenchendo conforme anda na recursão
+// Depois use o strings.Join para gerar o serial
+func Serialize(root *Node) string {
+	// TODO
+	_ = root
+	return ""
+}
+
 // -----------------------------------------------------------------------------------
 func BShow(node *Node, history string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
@@ -77,24 +57,18 @@ func BShow(node *Node, history string) {
 	}
 }
 
-func create(parts *[]string) *Node {
-	elem := (*parts)[0]
-	*parts = (*parts)[1:]
-	if elem == "#" {
-		return nil
-	}
-	value, _ := strconv.Atoi(elem)
-	node := &Node{Value: value}
-	node.Left = create(parts)
-	node.Right = create(parts)
-	return node
-}
-
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
-	root := create(&parts)
+	values := make([]int, 0, len(parts))
+	for _, elem := range parts {
+		v, err := strconv.Atoi(elem)
+		if err == nil {
+			values = append(values, v)
+		}
+	}
+	root := BstInsert(values)
 	BShow(root, "") // Chama a função de impressão formatada
-	MyShow(root, 0) // Chama a função de impressão personalizada
+	fmt.Println(Serialize((root)))
 }

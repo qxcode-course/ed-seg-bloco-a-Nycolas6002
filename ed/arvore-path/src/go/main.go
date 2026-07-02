@@ -15,53 +15,51 @@ type Node struct {
 	Right *Node
 }
 
-// MyShow imprime a árvore binária de forma formatada.
-func MyShow(node *Node, nivel int) {
-
+// retorne o caminho até o nó ou ! se não existir
+// você pode fazer recursivo ou interativo
+// também pode criar funções auxiliares se achar necessário
+func findPath(node *Node, value int) string {
+	
 	//caso base
 	if(node == nil){
-
-		for i := 0; i < nivel; i++ {
-			fmt.Print("....")
-		}
-		fmt.Println("#")
-		return
+		return "!"
 	}
 
-	//folha
-	if(node.Left == nil && node.Right == nil){
-		for i := 0; i < nivel; i++ {
-			fmt.Print("....")
-		}
-		fmt.Println(node.Value)
-		return
+	if(node.Value == value){
+		return "x"
 	}
 
-	MyShow(node.Left, nivel+1)
+	//esquerda
+	left := findPath(node.Left,value)
 
-	for i := 0; i < nivel; i++ {
-		fmt.Print("....")
+	if(left != "!"){
+		return "l" + left
 	}
 
-	fmt.Println(node.Value)
+	//direita
+	right := findPath(node.Right,value)
 
-	MyShow(node.Right, nivel+1)
+	if(right != "!"){
+		return "r" + right
+	}
 
+	return "!"
 }
-// -----------------------------------------------------------------------------------
-func BShow(node *Node, history string) {
+
+// ----------------------------------------------------------------------------------
+func BShow(node *Node, heranca string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
-		BShow(node.Left, history+"l")
+		BShow(node.Left, heranca+"l")
 	}
-	for i := 0; i < len(history)-1; i++ {
-		if history[i] != history[i+1] {
+	for i := 0; i < len(heranca)-1; i++ {
+		if heranca[i] != heranca[i+1] {
 			fmt.Print("│   ")
 		} else {
 			fmt.Print("    ")
 		}
 	}
-	if history != "" {
-		if history[len(history)-1] == 'l' {
+	if heranca != "" {
+		if heranca[len(heranca)-1] == 'l' {
 			fmt.Print("╭───")
 		} else {
 			fmt.Print("╰───")
@@ -73,7 +71,7 @@ func BShow(node *Node, history string) {
 	}
 	fmt.Println(node.Value)
 	if node.Left != nil || node.Right != nil {
-		BShow(node.Right, history+"r")
+		BShow(node.Right, heranca+"r")
 	}
 }
 
@@ -94,7 +92,10 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
+	scanner.Scan()
+	value, _ := strconv.Atoi(scanner.Text())
 	root := create(&parts)
+	fmt.Println("Arvore:")
 	BShow(root, "") // Chama a função de impressão formatada
-	MyShow(root, 0) // Chama a função de impressão personalizada
+	fmt.Println("Caminho:", findPath(root, value))
 }

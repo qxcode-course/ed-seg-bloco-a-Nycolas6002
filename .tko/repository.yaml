@@ -19,6 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@bfs
 - ed@tree
 flags:
   inbox: all
