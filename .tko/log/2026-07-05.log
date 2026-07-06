@@ -1,0 +1,67 @@
+2026-07-05 10:01:47, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-05 10:42:22, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0
+2026-07-05 10:51:21, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-05 10:53:25, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-05 10:53:42, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-05 10:53:57, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:96
+2026-07-05 10:56:28, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-05 10:59:12, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:112, fail:COMP
+2026-07-05 10:59:26, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:112, fail:COMP
+2026-07-05 10:59:57, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:114, fail:COMP
+2026-07-05 11:00:05, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-05 11:00:07, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-05 11:00:08, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:114, fail:COMP
+2026-07-05 11:00:28, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:114
+2026-07-05 11:00:53, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:114
+2026-07-05 11:01:12, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-05 11:01:54, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:100, size:113
+2026-07-05 11:01:57, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-05 11:02:29, SELF, v:1, k:ed@bst_serial, self:1, rate:100, study:30, concept:1, problem:1
+2026-07-05 11:02:35, MOVE, v:1, k:ed@bst_remove, mode:DOWN
+2026-07-05 11:03:06, MOVE, v:1, k:ed@bst_remove, mode:PICK
+2026-07-05 11:03:25, MOVE, v:1, k:ed@bst_remove, mode:BACK
+2026-07-05 11:01:53, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-05 11:02:34, MOVE, v:1, k:ed@bst_remove, mode:EDIT
+2026-07-05 11:06:26, MOVE, v:1, k:ed@bst_remove, mode:EDIT
+2026-07-05 11:09:12, MOVE, v:1, k:ed@bst_remove, mode:PICK
+2026-07-05 11:09:13, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:12, size:101
+2026-07-05 11:11:26, MOVE, v:1, k:ed@bst_remove, mode:EDIT
+2026-07-05 11:12:01, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:12, size:115
+2026-07-05 11:13:56, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:37, size:123
+2026-07-05 11:16:25, MOVE, v:1, k:ed@bst_remove, mode:EDIT
+2026-07-05 11:17:00, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:75, size:136
+2026-07-05 11:16:58, MOVE, v:1, k:ed@bst_remove, mode:EDIT
+2026-07-05 11:22:15, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:75, size:136
+2026-07-05 11:22:20, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:100, size:136
+2026-07-05 11:22:22, MOVE, v:1, k:ed@bst_remove, mode:BACK
+2026-07-05 11:22:47, SELF, v:1, k:ed@bst_remove, self:1, rate:100, study:30, concept:1, problem:1
+2026-07-05 11:23:01, SELF, v:1, k:ed@bst_remove, self:1, rate:100, study:30, concept:1, problem:1, debug:1
+2026-07-05 11:23:09, MOVE, v:1, k:ed@bst_remove, mode:PICK
+2026-07-05 11:23:11, EXEC, v:1, k:ed@bst_remove, mode:FULL, rate:100
+2026-07-05 11:23:11, MOVE, v:1, k:ed@bst_remove, mode:BACK
+2026-07-05 11:23:26, SELF, v:1, k:ed@bst_remove, self:1, rate:100, concept:1, problem:1
+2026-07-05 11:37:45, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-07-05 11:42:10, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-07-05 11:42:18, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-07-05 11:53:53, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-07-05 11:54:34, SELF, v:1, k:ed@n_rainhas, self:1, rate:100, guided:1
+2026-07-05 11:55:00, SELF, v:1, k:ed@n_rainhas, self:1, rate:100, study:40, guided:1, concept:1, problem:1, code:1
+2026-07-05 11:55:36, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-07-05 11:56:10, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-07-05 11:56:13, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-07-05 11:56:48, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-07-05 11:57:18, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-07-05 11:57:22, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-07-05 11:57:52, MOVE, v:1, k:ed@n_rainhas, mode:DOWN
+2026-07-05 11:57:59, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-07-05 11:57:52, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-07-05 12:00:02, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-07-05 12:04:02, EXEC, v:1, k:ed@n_rainhas, mode:FULL, size:36, fail:COMP
+2026-07-05 12:04:03, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-07-05 12:05:08, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-07-05 12:06:43, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-07-05 12:06:44, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100, size:57
+2026-07-05 12:06:48, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-07-05 12:07:21, SELF, v:1, k:ed@n_rainhas, self:1, rate:100, study:15, concept:1
+2026-07-05 12:07:37, SELF, v:1, k:ed@n_rainhas, self:1, rate:100, study:60, concept:1
+2026-07-05 12:06:41, MOVE, v:1, k:ed@n_rainhas, mode:EDIT

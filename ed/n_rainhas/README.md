@@ -1,6 +1,6 @@
 # N-Rainhas
 
-![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/n_rainhas/assets/cover.jpg)
+![_](assets/cover.jpg)
 
 O problema das **N-Rainhas** consiste em posicionar `N` rainhas em um tabuleiro de xadrez `N x N` de forma que **nenhuma rainha ataque outra**. Ou seja:
 

@@ -19,7 +19,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
+- ed@dfs
+- ed@backtrack
 - ed@tree
 flags:
   inbox: all
@@ -31,4 +32,4 @@ audit:
   interval_seconds: null
 lang: go
 selected: ed@serial
-selected_index: 8
+selected_index: 14

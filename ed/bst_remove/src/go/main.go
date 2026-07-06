@@ -15,6 +15,7 @@ type Node struct {
 }
 
 func insert(node *Node, value int) *Node{
+
 	if(node == nil){
 		return &Node{Value: value,}
 	}
@@ -28,43 +29,58 @@ func insert(node *Node, value int) *Node{
 	}
 
 	return node
+
 }
 
 func BstInsert(values []int) *Node {
-
 	var root *Node
 
-	for _,value := range values {
-		root = insert(root,value)
+	for _,value := range values{
+		root = insert(root, value)
 	}
 
-	return  root
-
+	return root
 }
 
-// Dica: crie um vetor compartilhado e vá preenchendo conforme anda na recursão
-// Depois use o strings.Join para gerar o serial
-func Serialize(root *Node) string {
-
-	parts := []string{}
-
-	serialize(root, &parts)
-
-	return strings.Join(parts, " ")
-
-}
-
-func serialize(node *Node, parts *[]string){
+func BstRemove(node *Node, value int) *Node {
 
 	if(node == nil){
-		*parts = append(*parts, "#")
-		return
+		return nil
 	}
 
-	*parts = append(*parts, strconv.Itoa(node.Value))
+	if(value < node.Value){
+		node.Left = BstRemove(node.Left, value)
+		return node
+	}
 
-	serialize(node.Left, parts)
-	serialize(node.Right, parts)
+	if(value > node.Value){
+		node.Right = BstRemove(node.Right, value)
+		return node
+	}
+
+	if(node.Left == nil && node.Right == nil){
+		return nil
+	}
+
+	if(node.Left == nil ){
+		return node.Right
+	}
+	
+	if(node.Right == nil ){
+		return node.Left
+	}
+
+	left := node.Left
+
+	for left.Right != nil{
+		left = left.Right
+	}
+
+	node.Value = left.Value
+
+	node.Left = BstRemove(node.Left, left.Value)
+
+	return node
 }
 
 // -----------------------------------------------------------------------------------
@@ -107,7 +123,14 @@ func main() {
 			values = append(values, v)
 		}
 	}
+	scanner.Scan()
+	toRemove, _ := strconv.Atoi(scanner.Text())
+
+	_ = toRemove // Ignora o valor a ser removido, pois não está implementado
 	root := BstInsert(values)
+	fmt.Println("original:")
 	BShow(root, "") // Chama a função de impressão formatada
-	fmt.Println(Serialize((root)))
+	root = BstRemove(root, toRemove)
+	fmt.Println("modificado:")
+	BShow(root, "") // Chama a função de impressão formatada da árvore modificada
 }
