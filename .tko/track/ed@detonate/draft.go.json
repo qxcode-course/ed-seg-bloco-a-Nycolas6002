@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_09-47-24",
+            "content": "@@ -37,749 +37,39 @@\n ) %7B%0A\n-%0A    var n, m int%0A    fmt.Scan(&n, &m)%0A%0A    bombs := make(%5B%5D%5B%5Dint, n)%0A%0A    for i := 0; i %3C n; i++ %7B%0A        bombs%5Bi%5D = make(%5B%5Dint, 3)%0A        fmt.Scan(&bombs%5Bi%5D%5B0%5D, &bombs%5Bi%5D%5B1%5D,&bombs%5Bi%5D%5B2%5D)%0A    %7D%0A%0A    graph := make(%5B%5D%5B%5Dint, n)%0A%0A    for i := 0; i %3C n; i++ %7B%0A        x1 := bombs%5Bi%5D%5B0%5D%0A        y1 := bombs%5Bi%5D%5B1%5D%0A        r := bombs%5Bi%5D%5B2%5D%0A%0A        for j := 0; j %3C n; j++ %7B%0A            if i == j %7B%0A                continue%0A            %7D%0A%0A            x2 := bombs%5Bj%5D%5B0%5D%0A            y2 := bombs%5Bj%5D%5B1%5D%0A%0A            dx := int64(x1- x2)%0A            dy := int64(y1 - y2)%0A%0A            dist2 := dx*dx + dy*dy%0A%0A            r2 := int64(r) * int64(r)%0A%0A            if(dist2 %3C= r2)%7B%0A                graph%5Bi%5D = append(graph%5Bi%5D, j)%0A            %7D%0A        %7D%0A    %7D%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-06_10-04-43",
+            "content": "@@ -23,210 +23,8 @@\n mt%22%0A\n-%0Afunc dfs(v int, graph %5B%5D%5B%5Dint, visited %5B%5Dbool) int%7B%0A%0A    visited%5Bv%5D = true%0A    count := 1%0A%0A    for _,next := range graph%5Bv%5D %7B%0A        if(!visited%5Bnext%5D)%7B%0A            count += dfs()%0A        %7D%0A    %7D%0A%0A%7D%0A%0A\n func\n@@ -780,213 +780,6 @@\n  %7D%0A%0A\n-    ans :=0%0A%0A    for i := 0; i %3C n; i++ %7B%0A        visited := make(%5B%5Dbool,n)%0A        cur := dfs(i, graph, visited)%0A        %0A        if(cur %3E ans)%7B%0A            ans = cur%0A        %7D%0A    %7D%0A%0A    fmt.Println(ans)%0A%0A\n %7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-06_10-10-44",
+            "content": "@@ -203,26 +203,8 @@\n dfs(\n-next,graph,visited\n )%0A  \n@@ -222,25 +222,8 @@\n  %7D%0A%0A\n-    return count%0A\n %7D%0A%0Af\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-06_10-11-01",
+            "content": "package main\nimport \"fmt\"\n\nfunc dfs(v int, graph [][]int, visited []bool) int{\n\n    visited[v] = true\n    count := 1\n\n    for _,next := range graph[v] {\n        if(!visited[next]){\n            count += dfs(next,graph,visited)\n        }\n    }\n\n    return count\n}\n\nfunc main() {\n\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    bombs := make([][]int, n)\n\n    for i := 0; i < n; i++ {\n        bombs[i] = make([]int, 3)\n        fmt.Scan(&bombs[i][0], &bombs[i][1],&bombs[i][2])\n    }\n\n    graph := make([][]int, n)\n\n    for i := 0; i < n; i++ {\n        x1 := bombs[i][0]\n        y1 := bombs[i][1]\n        r := bombs[i][2]\n\n        for j := 0; j < n; j++ {\n            if i == j {\n                continue\n            }\n\n            x2 := bombs[j][0]\n            y2 := bombs[j][1]\n\n            dx := int64(x1- x2)\n            dy := int64(y1 - y2)\n\n            dist2 := dx*dx + dy*dy\n\n            r2 := int64(r) * int64(r)\n\n            if(dist2 <= r2){\n                graph[i] = append(graph[i], j)\n            }\n        }\n    }\n\n    ans :=0\n\n    for i := 0; i < n; i++ {\n        visited := make([]bool,n)\n        cur := dfs(i, graph, visited)\n        \n        if(cur > ans){\n            ans = cur\n        }\n    }\n\n    fmt.Println(ans)\n\n}\n",
+            "lines": "71"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+2026-07-06 09:44:21, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-06 09:47:24, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:5
+2026-07-06 09:47:54, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-06 09:56:51, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-06 10:01:54, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-06 10:04:43, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:43
+2026-07-06 10:06:47, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-06 10:10:44, EXEC, v:1, k:ed@detonate, mode:FULL, size:70, fail:COMP
+2026-07-06 10:11:01, EXEC, v:1, k:ed@detonate, mode:FULL, rate:100, size:71
+2026-07-06 10:11:05, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-06 10:11:43, SELF, v:1, k:ed@detonate, self:1, rate:100, study:20, problem:1, code:1, refactor:1
+2026-07-06 10:10:57, MOVE, v:1, k:ed@detonate, mode:EDIT

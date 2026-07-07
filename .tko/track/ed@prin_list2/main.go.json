@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_01-52-08",
+            "content": "@@ -152,308 +152,18 @@\n g %7B%0A\n-%0A%09out := %22%5B %22%0A%0A%09for it := l.Front(); it != nil; it.Next() %7B%0A%0A%09%09value := it.Value.(int)%0A%09%09if it == sword %7B%0A%09%09%09if(value %3E 0)%7B%0A%09%09%09%09out += fmt.Sprintf(%22%25d%3E%22, it.Value)%0A%09%09%09%7Delse%7B%0A%09%09%09%09out += fmt.Sprintf(%22%3C%25d %22, it.Value)%0A%09%09%09%7D%0A%09%09%7Delse%7B%0A%09%09%09out += fmt.Sprintf(%22%25d %22, it.Value)%0A%09%09%7D%0A%09%7D%0A%0A%09out += %22 %5D%22%0A%09return out\n+%09return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-07_02-08-19",
+            "content": "@@ -552,77 +552,19 @@\n t %7B%0A\n-%0A%09it = it.Next()%09%0A%0A%09if(it == nil)%7B%0A%09%09return l.Front()%0A%09%7D%0A%09%0A%09return it\n+%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-07_02-13-49",
+            "content": "@@ -605,16 +605,17 @@\n nt()%0A%09%7D%0A\n+%09\n %0A%09return\n@@ -718,64 +718,8 @@\n nt %7B\n-%0A%0A%09it = it.Prev()%0A%09%0A%09if(it == nil)%7B%0A%09%09return l.Back()%0A%09%7D\n %0A%09re\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-07_02-15-29",
+            "content": "@@ -774,26 +774,33 @@\n %0A%09%7D%0A%09return \n-it\n+l.Front()\n %0A%7D%0A%0Afunc mai\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-07_02-19-00",
+            "content": "@@ -302,17 +302,20 @@\n (%22%25d%3E%22, \n-v\n+it.V\n alue)%0A%09%09\n@@ -349,25 +349,28 @@\n ntf(%22%3C%25d %22, \n-v\n+it.V\n alue)%0A%09%09%09%7D%0A%09\n@@ -406,17 +406,20 @@\n (%22%25d %22, \n-v\n+it.V\n alue)%0A%09%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-07_02-21-32",
+            "content": "@@ -195,21 +195,16 @@\n  != nil;\n- it =\n  it.Next\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-07_02-22-11",
+            "content": "@@ -304,17 +304,16 @@\n ntf(%22%25d%3E\n- \n %22, value\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-07_02-22-45",
+            "content": "@@ -430,16 +430,17 @@\n out += %22\n+ \n %5D%22%0A%09retu\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-07_02-22-57",
+            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *list.List, sword *list.Element) string {\n\n\tout := \"[ \"\n\n\tfor it := l.Front(); it != nil; it = it.Next() {\n\n\t\tvalue := it.Value.(int)\n\t\tif it == sword {\n\t\t\tif(value > 0){\n\t\t\t\tout += fmt.Sprintf(\"%d> \", value)\n\t\t\t}else{\n\t\t\t\tout += fmt.Sprintf(\"<%d \", value)\n\t\t\t}\n\t\t}else{\n\t\t\tout += fmt.Sprintf(\"%d \", value)\n\t\t}\n\t}\n\n\tout += \"]\"\n\treturn out\n}\n\n// move para frente na lista circular\nfunc Next(l *list.List, it *list.Element) *list.Element {\n\n\tit = it.Next()\t\n\n\tif(it == nil){\n\t\treturn l.Front()\n\t}\n\n\treturn it\n}\n\n// move para tras na lista circular\nfunc Prev(l *list.List, it *list.Element) *list.Element {\n\n\tit = it.Prev()\n\t\n\tif(it == nil){\n\t\treturn l.Back()\n\t}\n\treturn it\n}\n\nfunc main() {\n\tvar qtd, chosen, fase int\n\tfmt.Scan(&qtd, &chosen, &fase)\n\tl := list.New()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i * fase)\n\t\tfase = -fase\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tif sword.Value.(int) > 0 {\n\t\t\tl.Remove(Next(l, sword))\n\t\t\tsword = Next(l, sword)\n\t\t} else {\n\t\t\tl.Remove(Prev(l, sword))\n\t\t\tsword = Prev(l, sword)\n\t\t}\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "77"
+        }
+    ]
+}

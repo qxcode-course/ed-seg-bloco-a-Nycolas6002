@@ -7,12 +7,32 @@ import (
 
 // mostra a lista com o elemento sword destacado
 func ToStr(l *DList[int], sword *DNode[int]) string {
-	return ""
+
+	var out []string
+
+	for it := l.Front(); it != l.End(); it = it.Next() {
+		if(it == sword){
+			out = append(out, fmt.Sprintf(">%d",it.Value))
+		}else{
+			out = append(out, fmt.Sprintf("%d", it.Value))
+		}
+
+	}
+
+	return "[" + strings.Join(out, " ") +"]"
 }
 
 // move para frente na lista circular
 func Next(l *DList[int], it *DNode[int]) *DNode[int] {
-	return nil
+
+	it = it.Next()
+
+	if(it == l.End()){
+		return l.Front()
+	}
+
+	return it
+
 }
 
 func main() {
